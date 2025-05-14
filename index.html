@@ -1,27 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RCDLand Themed Page</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Hello, RCD Land!</title>
-  </head>
-  <body>
-    <h1>Hello, RCD Land!</h1>
+  <!-- Custom Theme -->
+  <style>
+    :root {
+      --bs-primary: #ffc600;  
+      --bs-success: #00c655;      
+      --bs-dark: #000000;
+      --bs-body-color: #333;
+      --bs-heading-color: #94c120;
+      --bs-link-color: #004aad;
+      --bs-link-hover-color: #002c75;
+    }
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    body {
+      background-color: #fff;
+      color: var(--bs-body-color);
+    }
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    .navbar {
+      background-color: var(--bs-primary);
+    }
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-  </body>
+    .navbar .nav-link,
+    .navbar-brand {
+      color: black;
+      font-weight: bold;
+    }
+
+    .navbar .nav-link:hover {
+      color: #ffffff;
+    }
+
+    h2, .section-title {
+      color: var(--bs-heading-color);
+      font-weight: 700;
+    }
+
+    .btn-success {
+      background-color: var(--bs-success);
+      border: none;
+    }
+
+    .btn-success:hover {
+      background-color: #00b14a;
+    }
+
+    footer {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">RCD Land, Inc.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Properties</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Welcome to RCDLand</h1>
+      <p class="lead">Quality Homes. Excellent Communities.</p>
+      <a href="#" class="btn btn-success btn-lg">Inquire Now</a>
+    </div>
+  </header>
+
+  <!-- News & Updates Section -->
+  <section class="container my-5">
+    <h2 class="section-title mb-3">News & Updates</h2>
+    <p>Get to know the latest news and updates about RCD Homes.</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="News 1">
+          <div class="card-body">
+            <h5 class="card-title">Entrepreneur of the Year 2015</h5>
+            <p class="card-text">Mr. Roland Delantar competed for the EY Award.</p>
+            <a href="#" class="btn btn-success">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="News 2">
+          <div class="card-body">
+            <h5 class="card-title">APEA Award 2016</h5>
+            <p class="card-text">Recognized for entrepreneurship excellence in property development.</p>
+            <a href="#" class="btn btn-success">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="News 3">
+          <div class="card-body">
+            <h5 class="card-title">Asia CEO Awards 2018</h5>
+            <p class="card-text">Awarded Circle of Excellence for SME Company of the Year.</p>
+            <a href="#" class="btn btn-success">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <div class="container">
+      <p>&copy; 2025 RCD Land, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
