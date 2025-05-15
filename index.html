@@ -2,138 +2,129 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RCDLand Themed Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RCD Land, Inc.</title>
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Custom Theme -->
   <style>
-    :root {
-      --bs-primary: #ffc600;  
-      --bs-success: #00c655;      
-      --bs-dark: #000000;
-      --bs-body-color: #333;
-      --bs-heading-color: #94c120;
-      --bs-link-color: #004aad;
-      --bs-link-hover-color: #002c75;
-    }
-
     body {
-      background-color: #fff;
-      color: var(--bs-body-color);
+      font-family: 'Poppins', sans-serif;
     }
 
-    .navbar {
-      background-color: var(--bs-primary);
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: #00c655;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
     }
 
-    .navbar .nav-link,
-    .navbar-brand {
-      color: black;
-      font-weight: bold;
-    }
-
-    .navbar .nav-link:hover {
-      color: #ffffff;
-    }
-
-    h2, .section-title {
-      color: var(--bs-heading-color);
-      font-weight: 700;
-    }
-
-    .btn-success {
-      background-color: var(--bs-success);
-      border: none;
-    }
-
-    .btn-success:hover {
-      background-color: #00b14a;
-    }
-
-    footer {
-      background-color: #f4f4f4;
-      color: #333;
+    .nav-link:hover::after {
+      transform: scaleX(1);
     }
   </style>
 </head>
-<body>
+<body class="bg-white text-gray-800">
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">RCD Land, Inc.</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Properties</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<nav class="bg-[#ffc600] h-[81px] shadow-md flex flex-col items-center justify-center">
+  <div class="flex items-center justify-center space-x-10">
+    <a href="#" class="text-[28px] font-bold tracking-wide text-gray-900 leading-none">RCD Land, Inc.</a>
+    <ul class="hidden md:flex items-center space-x-5 font-semibold">
+      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Home</a></li>
+      <li><a class="nav-link relative hover:text-[#00c655]" href="#">About</a></li>
+      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Properties</a></li>
+      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Guides</a></li>
+      <li><a class="nav-link relative hover:text-[#00c655]" href="#">What's New</a></li>
+      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Contact</a></li>
+      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Careers</a></li>
+      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Inquire Now</a></li>
+    </ul>
+  </div>
+</nav>
 
   <!-- Hero Section -->
-  <header class="text-center py-5">
-    <div class="container">
-      <h1 class="display-4">Welcome to RCDLand</h1>
-      <p class="lead">Quality Homes. Excellent Communities.</p>
-      <a href="#" class="btn btn-success btn-lg">Inquire Now</a>
+  <header class="text-center py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl font-bold mb-4">Welcome to RCDLand</h1>
+      <p class="text-lg mb-6">Quality Homes. Excellent Communities.</p>
+      <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-6 py-3 rounded-lg font-semibold text-lg">INQUIRE NOW</a>
     </div>
   </header>
 
   <!-- News & Updates Section -->
-  <section class="container my-5">
-    <h2 class="section-title mb-3">News & Updates</h2>
-    <p>Get to know the latest news and updates about RCD Homes.</p>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="News 1">
-          <div class="card-body">
-            <h5 class="card-title">Entrepreneur of the Year 2015</h5>
-            <p class="card-text">Mr. Roland Delantar competed for the EY Award.</p>
-            <a href="#" class="btn btn-success">Read More</a>
-          </div>
+  <section class="container mx-auto px-4 my-12">
+    <h2 class="text-3xl font-bold text-[#94c120] mb-6">News & Updates</h2>
+    <p class="mb-8">Get to know the latest news and updates about RCD Homes.</p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x200" alt="News 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold text-lg mb-2">Entrepreneur of the Year 2015</h5>
+          <p class="mb-4">Mr. Roland Delantar competed for the EY Award.</p>
+          <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-4 py-2 rounded">READ MORE</a>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="News 2">
-          <div class="card-body">
-            <h5 class="card-title">APEA Award 2016</h5>
-            <p class="card-text">Recognized for entrepreneurship excellence in property development.</p>
-            <a href="#" class="btn btn-success">Read More</a>
-          </div>
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x200" alt="News 2" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold text-lg mb-2">APEA Award 2016</h5>
+          <p class="mb-4">Recognized for entrepreneurship excellence in property development.</p>
+          <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-4 py-2 rounded">READ MORE</a>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="News 3">
-          <div class="card-body">
-            <h5 class="card-title">Asia CEO Awards 2018</h5>
-            <p class="card-text">Awarded Circle of Excellence for SME Company of the Year.</p>
-            <a href="#" class="btn btn-success">Read More</a>
-          </div>
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x200" alt="News 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold text-lg mb-2">Asia CEO Awards 2018</h5>
+          <p class="mb-4">Awarded Circle of Excellence for SME Company of the Year.</p>
+          <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-4 py-2 rounded">READ MORE</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-4">
-    <div class="container">
-      <p>&copy; 2025 RCD Land, Inc. All rights reserved.</p>
+  <footer class="bg-gray-100 py-12 text-sm text-gray-700">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div>
+          <h3 class="font-bold text-lg mb-2">RCD LAND, INC.</h3>
+          <p>RCD Land, Inc. is a real estate development company who makes your dream home come to life. Building Quality Homes Since 1987</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Contact Us</h3>
+          <p>Main Office: (02) 8-893-7451/52 local 108</p>
+          <p>Phone (Manila): (02) 8-403-3490</p>
+          <p>Sales & Marketing: (02) 8-617-5364</p>
+          <p>Mobile: (+63) 917-7001-109 (GLOBE)</p>
+          <p>Fax: 519-8703</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Email</h3>
+          <p>For Inquiries: inquiry@rcdland.com</p>
+          <p>For Customer Care: rcd.csr@rcdland.com</p>
+          <h3 class="font-semibold mt-4 mb-2">Find us in</h3>
+          <p>5th Flr. Unit 501 & 505 Chateau de Baie Condo., Roxas Blvd. corner Airport Road, Parañaque City</p>
+          <p>Unit 309 - Loans & Accounts Management</p>
+          <p>Unit 409 - Sales & Marketing</p>
+        </div>
+      </div>
+      <div class="mt-8 bssrder-t pt-4 text-center">
+        <p>Business Hours: Mondays to Thursday 8am-6pm | Fridays 8am-5pm</p>
+        <p class="mt-2">Home | About | Property | Blog | Contact</p>
+        <p class="mt-2">&copy; 2025 RCD LAND, INC. All Rights Reserved.</p>
+        <p class="mt-1">Designed by IT Department</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Bootstrap Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
