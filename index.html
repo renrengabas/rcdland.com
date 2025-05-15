@@ -34,24 +34,45 @@
 </head>
 <body class="bg-white text-gray-800">
 
-<nav class="bg-[#ffc600] h-[81px] shadow-md flex flex-col items-center justify-center">
+<nav class="bg-[#ffc600] h-[81px] shadow-md flex flex-col items-center justify-center fixed top-0 left-0 w-full z-50">
   <div class="flex items-center justify-center space-x-10">
     <a href="#" class="text-[28px] font-bold tracking-wide text-gray-900 leading-none">RCD Land, Inc.</a>
-    <ul class="hidden md:flex items-center space-x-5 font-semibold">
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Home</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">About</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Properties</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Guides</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">What's New</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Contact</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Careers</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Inquire Now</a></li>
-    </ul>
+      <div class="flex md:hidden">
+        <button id="menuToggle" class="text-gray-900 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+        <div id="mobileMenu" class="hidden flex-col space-y-4 md:flex md:flex-row md:space-y-0 md:space-x-5 absolute md:static bg-[#ffc600] w-full md:w-auto left-0 top-[81px] md:top-auto px-4 md:px-0 py-4 md:py-0 z-50 font-semibold">
+        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">Home</a>
+        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">About</a>
+        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">Properties</a>
+        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">Guides</a>
+        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">What's New</a>
+        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">Contact</a>
+        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">Careers</a>
+        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">Inquire Now</a>
+      </div>
+    </div>
   </div>
 </nav>
 
+<!-- Mobile Menu Toggle Script -->
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
   <!-- Hero Section -->
-  <header class="text-center py-16 bg-white">
+  <header class="text-center pt-[100px] py-16 bg-white">
     <div class="container mx-auto px-4">
       <h1 class="text-4xl font-bold mb-4">Welcome to RCDLand</h1>
       <p class="text-lg mb-6">Quality Homes. Excellent Communities.</p>
@@ -93,38 +114,68 @@
 
   <!-- Footer -->
   <footer class="bg-gray-100 py-12 text-sm text-gray-700">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div>
-          <h3 class="font-bold text-lg mb-2">RCD LAND, INC.</h3>
-          <p>RCD Land, Inc. is a real estate development company who makes your dream home come to life. Building Quality Homes Since 1987</p>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-2">Contact Us</h3>
-          <p>Main Office: (02) 8-893-7451/52 local 108</p>
-          <p>Phone (Manila): (02) 8-403-3490</p>
-          <p>Sales & Marketing: (02) 8-617-5364</p>
-          <p>Mobile: (+63) 917-7001-109 (GLOBE)</p>
-          <p>Fax: 519-8703</p>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-2">Email</h3>
-          <p>For Inquiries: inquiry@rcdland.com</p>
-          <p>For Customer Care: rcd.csr@rcdland.com</p>
-          <h3 class="font-semibold mt-4 mb-2">Find us in</h3>
-          <p>5th Flr. Unit 501 & 505 Chateau de Baie Condo., Roxas Blvd. corner Airport Road, Parañaque City</p>
-          <p>Unit 309 - Loans & Accounts Management</p>
-          <p>Unit 409 - Sales & Marketing</p>
-        </div>
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Company Info -->
+      <div>
+        <h3 class="font-bold text-lg mb-2">RCD LAND, INC.</h3>
+        <p>RCD Land, Inc. is a real estate development company who makes your dream home come to life. Building Quality Homes Since 1987</p>
       </div>
-      <div class="mt-8 bssrder-t pt-4 text-center">
-        <p>Business Hours: Mondays to Thursday 8am-6pm | Fridays 8am-5pm</p>
-        <p class="mt-2">Home | About | Property | Blog | Contact</p>
-        <p class="mt-2">&copy; 2025 RCD LAND, INC. All Rights Reserved.</p>
-        <p class="mt-1">Designed by IT Department</p>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-4xl font-semibold mb-2 flex items-center">
+          <svg class="w-10 h-10 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z"/>
+          </svg>
+          Contact Us
+        </h3>
+        <p>Main Office:<a href="tel:0288937451"> (02) 8-893-7451/</a></p>
+        <p><a href="tel:0288937451">52 local 108</a></p>
+        <p>Phone (Manila): <a href="tel:0284033490">(02)8-403-3490</a></p>
+        <p>Sales & Marketing: <a href="tel:0286175364">(02) 8-617-5364</a></p>
+        <p>Mobile: <a href="tel:639177001109">(+63) 917-7001-109</a>(GLOBE)</p>
+
+        <h3 class="font-semibold mt-4 mb-2 flex items-center">
+          <svg class="w-5 h-5 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+              d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+          </svg>
+          Email
+        </h3>
+        <p>For Inquiries: <a href="mailto:inquiry@rcdland.com">inquiry@rcdland.com</a></p>
+        <p>For Customer Care: <a href="mailto:rcd.csr@rcdland.com">rcd.csr@rcdland.com</a></p>
+      </div>
+
+      <!-- Location Info -->
+      <div>
+        <h3 class="text-4xl font-semibold mb-2 flex items-center">
+          <svg class="w-10 h-10 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+              clip-rule="evenodd" />
+          </svg>
+          Find us in
+        </h3>
+        <p><A href="https://maps.app.goo.gl/h1TfTrETZJSj1oQY9">5th Flr. Unit 501 & 505 Chateau de Baie Condo., Roxas Blvd. corner Airport Road, Parañaque City</A></p>
+        <p>Unit 309 - Loans & Accounts Management</p>
+        <p>Unit 409 - Sales & Marketing</p>
+
+        <div class="flex items-start mt-3">
+          <svg class="w-7 h-7 text-gray-800 mt-1 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+          </svg>
+          <p>Business Hours: Mondays to Thursday 8am–6pm | Fridays 8am–5pm</p>
+        </div>
       </div>
     </div>
-  </footer>
 
+    <div class="mt-8 border-t pt-4 text-center">
+      <p class="mt-2">&copy; 2025 RCD LAND, INC. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
