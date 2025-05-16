@@ -47,15 +47,15 @@
       </div>
 
       <!-- Navigation Links -->
-        <div id="mobileMenu" class="hidden flex-col space-y-4 md:flex md:flex-row md:space-y-0 md:space-x-5 absolute md:static bg-[#ffc600] w-full md:w-auto left-0 top-[81px] md:top-auto px-4 md:px-0 py-4 md:py-0 z-50 font-semibold">
-        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">Home</a>
-        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">About</a>
-        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">Properties</a>
-        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">Guides</a>
-        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">What's New</a>
-        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">Contact</a>
-        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">Careers</a>
-        <a class="nav-link relative hover:text-[#00c655] py-2 md:py-0" href="#">Inquire Now</a>
+        <div id="mobileMenu" class="hidden md:flex md:flex-row md:space-x-5 absolute md:static bg-[#ffc600] w-full md:w-auto left-0 top-[81px] md:top-auto px-4 md:px-0 py-4 md:py-0 z-50 font-semibold flex-col md:flex-row">
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Home</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">About</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Properties</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Guides</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">What's New</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Contact</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Careers</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Inquire Now</p>
       </div>
     </div>
   </div>
@@ -63,13 +63,13 @@
 
 <!-- Mobile Menu Toggle Script -->
 <script>
-  const menuToggle = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
 
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
 </script>
+
+
 
   <!-- Hero Section -->
   <header class="text-center pt-[100px] py-16 bg-white">
@@ -120,6 +120,17 @@
       <div>
         <h3 class="font-bold text-lg mb-2">RCD LAND, INC.</h3>
         <p>RCD Land, Inc. is a real estate development company who makes your dream home come to life. Building Quality Homes Since 1987</p>
+        <br>
+      <div>
+        <h3 class="mb-2 flex items-center font-semibold">
+          <svg class="w-7 h-7 text-gray-800 mt-1 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+          </svg>
+           Business Hours</h3>
+          <p>Mondays to Thursday 8am-6pm</p>
+          <p>Fridays 8am-5pm</p>
+        </div>
       </div>
 
       <!-- Contact Info -->
@@ -131,11 +142,11 @@
           </svg>
           Contact Us
         </h3>
-        <p>Main Office:<a href="tel:0288937451"> (02) 8-893-7451/</a></p>
-        <p><a href="tel:0288937451">52 local 108</a></p>
-        <p>Phone (Manila): <a href="tel:0284033490">(02)8-403-3490</a></p>
-        <p>Sales & Marketing: <a href="tel:0286175364">(02) 8-617-5364</a></p>
-        <p>Mobile: <a href="tel:639177001109">(+63) 917-7001-109</a>(GLOBE)</p>
+        <p>Main Office:<a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300"> (02) 8-893-7451</a>/</p>
+        <p><a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300">52 local 108</a></p>
+        <p>Phone (Manila): <a href="tel:0284033490" class="hover:text-yellow-500 transition-colors duration-300">(02)8-403-3490</a></p>
+        <p>Sales & Marketing: <a href="tel:0286175364" class="hover:text-yellow-500 transition-colors duration-300">(02) 8-617-5364</a></p>
+        <p>Mobile: <a href="tel:639177001109" class="hover:text-yellow-500 transition-colors duration-300">(+63) 917-7001-109</a>(GLOBE)</p>
 
         <h3 class="font-semibold mt-4 mb-2 flex items-center">
           <svg class="w-5 h-5 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -144,8 +155,8 @@
           </svg>
           Email
         </h3>
-        <p>For Inquiries: <a href="mailto:inquiry@rcdland.com">inquiry@rcdland.com</a></p>
-        <p>For Customer Care: <a href="mailto:rcd.csr@rcdland.com">rcd.csr@rcdland.com</a></p>
+        <p>For Inquiries: <a href="mailto:inquiry@rcdland.com" class="hover:text-yellow-500 transition-colors duration-300">inquiry@rcdland.com</a></p>
+        <p>For Customer Care: <a href="mailto:rcd.csr@rcdland.com" class="hover:text-yellow-500 transition-colors duration-300">rcd.csr@rcdland.com</a></p>
       </div>
 
       <!-- Location Info -->
@@ -158,17 +169,9 @@
           </svg>
           Find us in
         </h3>
-        <p><A href="https://maps.app.goo.gl/h1TfTrETZJSj1oQY9">5th Flr. Unit 501 & 505 Chateau de Baie Condo., Roxas Blvd. corner Airport Road, Parañaque City</A></p>
+        <p><A href="https://maps.app.goo.gl/h1TfTrETZJSj1oQY9" target="_blank" class="hover:text-yellow-500 transition-colors duration-300">5th Flr. Unit 501 & 505 Chateau de Baie Condo., Roxas Blvd. corner Airport Road, Parañaque City</A></p>
         <p>Unit 309 - Loans & Accounts Management</p>
         <p>Unit 409 - Sales & Marketing</p>
-
-        <div class="flex items-start mt-3">
-          <svg class="w-7 h-7 text-gray-800 mt-1 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
-          </svg>
-          <p>Business Hours: Mondays to Thursday 8am–6pm | Fridays 8am–5pm</p>
-        </div>
       </div>
     </div>
 
