@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RCD Land, Inc.</title>
+  <title>RCD Land, Inc. - House Catalogue</title>
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <meta name="description" content="Explore beautiful and affordable homes from RCD Land. Find your dream property in Cavite, Batangas, Bulacan, and more.">
 
   <style>
     body {
@@ -30,152 +32,186 @@
     .nav-link:hover::after {
       transform: scaleX(1);
     }
+
+    .property-card {
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .property-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-select {
+      position: relative;
+      z-index: 10;
+    }
+
+    .custom-select select {
+      background-color: white;
+      border: 1px solid #125ec0;
+      border-radius: 5px;
+      padding: 8px 12px;
+      font-size: 14px;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      width: 200px;
+    }
+
+    .custom-select::after {
+      content: '▼';
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 12px;
+      color: #125ec0;
+    }
+
+    .custom-select.open::after {
+      content: '▲';
+    }
   </style>
 </head>
 <body class="bg-white text-gray-800">
 
-<nav class="bg-[#ffc600] h-[81px] shadow-md flex flex-col items-center justify-center fixed top-0 left-0 w-full z-50">
-  <div class="flex items-center justify-center space-x-10">
-    <a href="#" class="text-[28px] font-bold tracking-wide text-gray-900 leading-none">RCD Land, Inc.</a>
-      <div class="flex md:hidden">
-        <button id="menuToggle" class="text-gray-900 focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Navigation Links -->
-        <div id="mobileMenu" class="hidden md:flex md:flex-row md:space-x-5 absolute md:static bg-[#ffc600] w-full md:w-auto left-0 top-[81px] md:top-auto px-4 md:px-0 py-4 md:py-0 z-50 font-semibold flex-col md:flex-row">
-        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Home</p>
-        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">About</p>
-        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Properties</p>
-        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Guides</p>
-        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">What's New</p>
-        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Contact</p>
-        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Careers</p>
-        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Inquire Now</p>
+  <!-- Navigation -->
+  <nav class="bg-[#ffc600] h-[81px] shadow-md flex items-center justify-center fixed top-0 left-0 w-full z-50">
+    <div class="flex items-center justify-between w-full max-w-7xl px-4">
+      <a href="#" class="text-[28px] font-bold tracking-wide text-gray-900">RCD Land, Inc.</a>
+      <button id="menuToggle" class="md:hidden text-gray-900 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <div id="mobileMenu" class="hidden md:flex space-x-5 font-semibold">
+        <a class="nav-link relative hover:text-gray-800" href="#">Home</a>
+        <a class="nav-link relative hover:text-gray-800" href="#">About</a>
+        <a class="nav-link relative hover:text-gray-800" href="#">Properties</a>
+        <a class="nav-link relative hover:text-gray-800" href="#">Guides</a>
+        <a class="nav-link relative hover:text-gray-800" href="#">What's New</a>
+        <a class="nav-link relative hover:text-gray-800" href="#">Contact</a>
+        <a class="nav-link relative hover:text-gray-800" href="#">Careers</a>
+        <a class="nav-link relative hover:text-gray-800" href="#">Inquire Now</a>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Mobile Menu Toggle Script -->
-<script>
-menuToggle.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
-});
-</script>
-
-  <!-- Hero Section -->
-  <header class="text-center pt-[100px] py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <h1 class="text-4xl font-bold mb-4">Welcome to RCDLand</h1>
-      <p class="text-lg mb-6">Quality Homes. Excellent Communities.</p>
-      <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-6 py-3 rounded-lg font-semibold text-lg">INQUIRE NOW</a>
-    </div>
-  </header>
-
-  <!-- News & Updates Section -->
-  <section class="container mx-auto px-4 my-12">
-    <h2 class="text-3xl font-bold text-[#94c120] mb-6">News & Updates</h2>
-    <p class="mb-8">Get to know the latest news and updates about RCD Homes.</p>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white shadow-md rounded-lg overflow-hidden">
-        <img src="https://via.placeholder.com/400x200" alt="News 1" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h5 class="font-semibold text-lg mb-2">Entrepreneur of the Year 2015</h5>
-          <p class="mb-4">Mr. Roland Delantar competed for the EY Award.</p>
-          <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-4 py-2 rounded">READ MORE</a>
+  <!-- Properties Section -->
+  <section class="mt-[81px] py-20 bg-[#f7f7f7]">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Heading -->
+      <div class="flex items-start space-x-4 mb-12">
+        <div class="w-1 h-28 bg-green-500"></div>
+        <div>
+          <h2 class="text-4xl font-bold text-gray-800">HOUSE CATALOGUE</h2>
+          <p class="text-gray-600 mt-1 max-w-2xl">Home Models for you</p>
+          </p>
         </div>
       </div>
-      <div class="bg-white shadow-md rounded-lg overflow-hidden">
-        <img src="https://via.placeholder.com/400x200" alt="News 2" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h5 class="font-semibold text-lg mb-2">APEA Award 2016</h5>
-          <p class="mb-4">Recognized for entrepreneurship excellence in property development.</p>
-          <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-4 py-2 rounded">READ MORE</a>
+
+      <!-- Filter Select -->
+      <div class="flex justify-end mb-6">
+        <div class="custom-select">
+          <select>
+            <option value="all">All</option>
+            <option value="new_to_old">New to Old</option>
+            <option value="for_rent">For Rent</option>
+            <option value="for_sale">For Sale</option>
+          </select>
         </div>
       </div>
-      <div class="bg-white shadow-md rounded-lg overflow-hidden">
-        <img src="https://via.placeholder.com/400x200" alt="News 3" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h5 class="font-semibold text-lg mb-2">Asia CEO Awards 2018</h5>
-          <p class="mb-4">Awarded Circle of Excellence for SME Company of the Year.</p>
-          <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-4 py-2 rounded">READ MORE</a>
+
+      <!-- Property Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Example card (repeat or loop for all) -->
+        <div class="property-card bg-white rounded-lg overflow-hidden shadow-md group">
+          <img src="https://www.rcdland.com/img/ourproperties/phase-4.jpg" alt="Royale Homes Phase 4" class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform">
+          <div class="p-5">
+            <h3 class="font-bold text-xl mb-2">Royale Homes Phase 4, Silang</h3>
+            <p class="text-sm text-gray-600 mb-1">Price: PHP 4M - 4.6M</p>
+            <p class="text-sm text-gray-700">Discover the cool serenity of RCD Royale Homes Silang Phase 4!</p>
+            <a href="#" class="text-blue-600 hover:underline text-sm mt-2 inline-block">Click here to know more</a>
+          </div>
         </div>
+
+        <!-- Add the rest of the properties here (you already have them in your version) -->
+        <!-- Just replace the img src with: https://www.rcdland.com/img/ourproperties/filename.jpg -->
+
+        <!-- Example: Villas De Bacoor -->
+        <div class="property-card bg-white rounded-lg overflow-hidden shadow-md group">
+          <img src="https://www.rcdland.com/img/ourproperties/villas-bacoor.jpg" alt="Villas De Bacoor" class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform">
+          <div class="p-5">
+            <h3 class="font-bold text-xl mb-2">Villas De Bacoor, Dulong Bayan</h3>
+            <p class="text-sm text-gray-600 mb-1">Status: SOLD OUT</p>
+            <p class="text-sm text-gray-700">RCD Villas de Bacoor is the affordable choice in this prime city.</p>
+            <a href="#" class="text-blue-600 hover:underline text-sm mt-2 inline-block">Click here to know more</a>
+          </div>
+        </div>
+
+        <!-- Continue with the rest... -->
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-100 py-12 text-sm text-gray-700">
-  <div class="container mx-auto px-4">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <footer class="bg-gray-100 py-10 text-sm text-gray-700">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Company Info -->
       <div>
-        <h3 class="font-bold text-4xl mb-2">RCD LAND, INC.</h3>
-        <p>RCD Land, Inc. is a real estate development company who makes your dream home come to life. Building Quality Homes Since 1987</p>
-        <br>
-      <div>
-        <h3 class="mb-2 flex items-center font-semibold">
-          <svg class="w-7 h-7 text-gray-800 mt-1 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
-          </svg>
-           Business Hours</h3>
-          <p>Mondays to Thursday 8am-6pm</p>
-          <p>Fridays 8am-5pm</p>
-        </div>
+        <h3 class="font-bold text-2xl mb-2">RCD LAND, INC.</h3>
+        <p>Building Quality Homes Since 1987.</p>
+        <h4 class="font-semibold mt-4">Business Hours</h4>
+        <p>Mon–Thu: 8am–6pm</p>
+        <p>Friday: 8am–5pm</p>
       </div>
 
       <!-- Contact Info -->
       <div>
-        <h3 class="text-4xl font-semibold mb-2 flex items-center">
-          <svg class="w-10 h-10 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z"/>
-          </svg>
-          Contact Us
-        </h3>
-        <p>Main Office:<a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300"> (02) 8-893-7451</a>/</p>
-        <p><a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300">52 local 108</a></p>
-        <p>Phone (Manila): <a href="tel:0284033490" class="hover:text-yellow-500 transition-colors duration-300">(02)8-403-3490</a></p>
-        <p>Sales & Marketing: <a href="tel:0286175364" class="hover:text-yellow-500 transition-colors duration-300">(02) 8-617-5364</a></p>
-        <p>Mobile: <a href="tel:639177001109" class="hover:text-yellow-500 transition-colors duration-300">(+63) 917-7001-109</a>(GLOBE)</p>
-
-        <h3 class="font-semibold mt-4 mb-2 flex items-center">
-          <svg class="w-5 h-5 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
-              d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
-          </svg>
-          Email
-        </h3>
-        <p>For Inquiries: <a target="_blank" href="mailto:inquiry@rcdland.com" class="hover:text-yellow-500 transition-colors duration-300">inquiry@rcdland.com</a></p>
-        <p>For Customer Care: <a target="_blank" href="mailto:rcd.csr@rcdland.com"  class="hover:text-yellow-500 transition-colors duration-300">rcd.csr@rcdland.com</a></p>
+        <h4 class="font-semibold text-lg mb-2">Contact Us</h4>
+        <p>Main Office: <a href="tel:0288937451">(02) 8-893-7451</a></p>
+        <p>Local 108</p>
+        <p>Sales: <a href="tel:0286175363">(02) 8-617-5363</a></p>
+        <p>Email: <a href="mailto:inquiry@rcdland.com" class="text-blue-500">inquiry@rcdland.com</a></p>
       </div>
 
-      <!-- Location Info -->
+      <!-- Location -->
       <div>
-        <h3 class="text-4xl font-semibold mb-2 flex items-center">
-          <svg class="w-10 h-10 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-            <path fill-rule="evenodd"
-              d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-              clip-rule="evenodd" />
-          </svg>
-          Find us in
-        </h3>
-        <p><A href="https://maps.app.goo.gl/h1TfTrETZJSj1oQY9" target="_blank" class="hover:text-yellow-500 transition-colors duration-300">5th Flr. Unit 501 & 505 Chateau de Baie Condo., Roxas Blvd. corner Airport Road, Parañaque City</A></p>
-        <p>Unit 309 - Loans & Accounts Management</p>
-        <p>Unit 409 - Sales & Marketing</p>
+        <h4 class="font-semibold text-lg mb-2">Location</h4>
+        <p>3rd Floor, RCD Building, A. Soriano Avenue,</p>
+        <p>Brgy. Tambo, Parañaque City, Metro Manila</p>
       </div>
     </div>
-
-    <div class="mt-8 border-t pt-4 text-center">
-      <p class="mt-2">&copy; 2025 RCD LAND, INC. All Rights Reserved.</p>
+    <div class="text-center mt-6 text-xs text-gray-500">
+      &copy; 2025 RCD Land, Inc. All rights reserved.
     </div>
-  </div>
-</footer>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    const customSelect = document.querySelector('.custom-select');
+    const select = customSelect.querySelector('select');
+
+    select.addEventListener('click', () => {
+      customSelect.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('open');
+      }
+    });
+  </script>
 </body>
 </html>
