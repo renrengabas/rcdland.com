@@ -8,6 +8,10 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Flowbite Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</html>
+
   <link rel="icon" type="image/x-icon" href="favicon.png">
 
   <style>
@@ -69,20 +73,20 @@ menuToggle.addEventListener('click', () => {
 </script>
 
 <!-- Carousel -->
-<div id="animation-carousel" class="relative w-full" data-carousel="static">
+<div id="animation-carousel" class="relative w-full" data-carousel="slide" data-carousel-interval="5000">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
          <!-- Item 1 -->
-        <div class="hidden duration-200 ease-linear" data-carousel-item>
-            <img src="/img/main-src-imgs/carousel/royale-virtual-tour.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        <div class="hidden duration-200 ease-linear" data-carousel-item="active">
+            <img src="./img/main-src-imgs/carousel/royale-virtual-tour.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 2 -->
         <div class="hidden duration-200 ease-linear" data-carousel-item>
-            <img src="/img/main-src-imgs/carousel/brooky-cover.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="./img/main-src-imgs/carousel/brooky-cover.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 3 -->
         <div class="hidden duration-200 ease-linear" data-carousel-item="active">
-            <img src="/img/main-src-imgs/carousel/careers-cover.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="./img/main-src-imgs/carousel/careers-cover.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
     </div>
     <!-- Slider controls -->
