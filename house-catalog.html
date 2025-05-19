@@ -68,141 +68,48 @@ menuToggle.addEventListener('click', () => {
 });
 </script>
 
-<div class="parallax">
-  <div class="overlay">
-
-    <!-- Project-header content -->
-
-    <div class="container">
-      <div class="proj-header mx-auto max-w-[90%] lg:max-w-[80%] text-center lg:text-left text-white">
-        <div>
-          <img src="img/project-logo/bf-homes.png" alt="" class="img-a img-fluid mx-auto lg:mx-0" style="width: 400px;">
-          <h1 class="proj-title">Inside the Largest </h1>
-          <h1 class="proj-title">Village of Asia</h1>
-          <p class="header-text" style="">Encompassing the cities of Las Piñas, Parañaque, and Muntinlupa, going between cities is </p>
-          <p class="header-text style="">made more convenient and hassle-free with the village’s exit gates connecting to the main </p>
-          <p class="header-text style="">roads.</p>
-        </div>
-      </div> 
+  <!-- Hero Section -->
+  <header class="text-center pt-[100px] py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl font-bold mb-4">Welcome to RCDLand</h1>
+      <p class="text-lg mb-6">Quality Homes. Excellent Communities.</p>
+      <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-6 py-3 rounded-lg font-semibold text-lg">INQUIRE NOW</a>
     </div>
+  </header>
 
-  </div>
-</div>
-
-<style>
-  @media (min-width: 992px) {
-    .proj-header {
-      padding-top: 300px; 
-      color: white;
-    }
-    .proj-title{
-      color: white; 
-      font-size: 60px;
-    }
-    .overlay {
-      content: ' ';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 90%;
-      z-index: 1;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 0%) 27%, rgb(0 0 0 / 33%) 90%);
-    }
-  }
-  @media (min-width: 576px) {
-    .parallax {
-      height: 90vh;
-    }
-    .overlay {
-      content: ' ';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 90%;
-      z-index: 1;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 0%) 27%, rgb(0 0 0 / 33%) 90%);
-    }
-    .proj-header {
-      padding-top: 250px; 
-      color: white;
-    }
-    .proj-title{
-      color: white; 
-      font-size: 60px;
-      text-shadow: 2px 2px 4px #000000;
-    }
-    .header-text{
-      text-align: justify; 
-      text-justify: inter-word; 
-      padding-right: 50px;
-    }
-  }
-  @media (max-width: 767px){
-    .parallax {
-      height: 90vh;
-    }
-    .overlay {
-      content: ' ';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 90%;
-      z-index: 1;
-    }
-    .proj-header {
-      padding-top: 250px; 
-      color: white;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-    .proj-title{
-      color: white; 
-      font-size: 45px;
-      text-shadow: 3px 3px 2px #000000;
-    }
-    .header-text { 
-      color: white;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-  }
-
-  .parallax { 
-    background-image: url(img/parallax-bg/bf-townhomes-2.jpg);
-    height: 77vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  @media only screen and (max-device-width: 1024px) {
-    .parallax {
-      background-attachment: scroll;
-    }
-  }
-</style>
-
-<!-- Intro Single star -->
-<section class="intro-single" style="padding-top: 40px;"></section>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 col-lg-8">
-      <div class="title-single-box">
-        <h1 class="title-single">RCD BF HOMES</h1>
-        <span class="color-text-a">Parañaque City</span>
+  <!-- News & Updates Section -->
+  <section class="container mx-auto px-4 my-12">
+    <h2 class="text-3xl font-bold text-[#94c120] mb-6">News & Updates</h2>
+    <p class="mb-8">Get to know the latest news and updates about RCD Homes.</p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x200" alt="News 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold text-lg mb-2">Entrepreneur of the Year 2015</h5>
+          <p class="mb-4">Mr. Roland Delantar competed for the EY Award.</p>
+          <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-4 py-2 rounded">READ MORE</a>
+        </div>
+      </div>
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x200" alt="News 2" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold text-lg mb-2">APEA Award 2016</h5>
+          <p class="mb-4">Recognized for entrepreneurship excellence in property development.</p>
+          <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-4 py-2 rounded">READ MORE</a>
+        </div>
+      </div>
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x200" alt="News 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold text-lg mb-2">Asia CEO Awards 2018</h5>
+          <p class="mb-4">Awarded Circle of Excellence for SME Company of the Year.</p>
+          <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-4 py-2 rounded">READ MORE</a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-<!-- Footer -->
+  <!-- Footer -->
   <footer class="bg-gray-100 py-12 text-sm text-gray-700">
   <div class="container mx-auto px-4">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
