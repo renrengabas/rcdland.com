@@ -1,113 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>About us - RCD Land, Inc.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RCD Land, Inc.</title>
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
-      font-family: "Inter", sans-serif;
-      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
     }
-    .hero-overlay {
-      background: linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%);
-    }
-    .rotate-text {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-    }
-    .timeline-item:not(:last-child)::after {
+
+    .nav-link::after {
       content: '';
       position: absolute;
-      left: 6px;
-      top: 24px;
-      height: calc(100% - 24px);
-      width: 2px;
-      background-color: #00A651;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: #00c655;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
     }
   </style>
 </head>
 <body class="bg-white text-gray-800">
-  <!-- Header/Navigation -->
-  <header class="bg-yellow-400 shadow-sm sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex-shrink-0 font-extrabold text-xl text-gray-900">
-          RCD Land, Inc.
-        </div>
-        
-        <!-- Mobile menu button -->
-        <div class="md:hidden">
-          <button type="button" class="text-gray-900 hover:text-gray-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <i class="fas fa-bars text-xl"></i>
-          </button>
-        </div>
-        
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-6 font-medium text-sm">
-          <a class="hover:text-green-700 transition-colors" href="#">Home</a>
-          <a class="text-green-700 font-semibold border-b-2 border-green-700 pb-1" href="#">About</a>
-          <div class="relative group">
-            <button class="hover:text-green-700 transition-colors flex items-center">
-              Properties <i class="fas fa-chevron-down ml-1 text-xs"></i>
-            </button>
-            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 py-1 w-48">
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Residential</a>
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Commercial</a>
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Pre-selling</a>
-            </div>
-          </div>
-          <a class="hover:text-green-700 transition-colors" href="#">Guides</a>
-          <div class="relative group">
-            <button class="hover:text-green-700 transition-colors flex items-center">
-              What's New <i class="fas fa-chevron-down ml-1 text-xs"></i>
-            </button>
-            <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 py-1 w-48">
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">News</a>
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Events</a>
-              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Promos</a>
-            </div>
-          </div>
-          <a class="hover:text-green-700 transition-colors" href="#">Contact</a>    
-          <a class="hover:text-green-700 transition-colors" href="#">Careers</a>
-          <button class="hover:text-green-700 transition-colors flex items-center">
-               Inquire Now <i class="fas fa-chevron-down ml-1 text-xs"></i>
-          </button>
-        </div>
-      </div>
-      
-      <!-- Mobile Menu -->
-      <div class="md:hidden hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-md rounded-md mt-2">
-          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Home</a>
-          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium bg-gray-100 text-green-700">About</a>
-          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Properties</a>
-          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Guides</a>
-          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">What's New</a>
-          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Contact</a>
-          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Careers</a>
-          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Inquire Now</a>
-        </div>
-      </div>
-    </nav>
-  </header>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+<nav class="bg-[#ffc600] h-[81px] shadow-md flex flex-col items-center justify-center fixed top-0 left-0 w-full z-50">
+  <div class="flex items-center justify-center space-x-10">
+    <a href="#" class="text-[28px] font-bold tracking-wide text-gray-900 leading-none">RCD Land, Inc.</a>
+      <div class="flex md:hidden">
+        <button id="menuToggle" class="text-gray-900 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+        <div id="mobileMenu" class="hidden md:flex md:flex-row md:space-x-5 absolute md:static bg-[#ffc600] w-full md:w-auto left-0 top-[81px] md:top-auto px-4 md:px-0 py-4 md:py-0 z-50 font-semibold flex-col md:flex-row">
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Home</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">About</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Properties</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Guides</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">What's New</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Contact</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Careers</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Inquire Now</p>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[81px] mt-10">
     <!-- Page Title -->
     <div class="flex items-center mb-10">
-      <div class="w-1 h-12 bg-green-700 mr-4"></div>
-      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900">About us</h1>
+      <div class="w-1 h-20 bg-green-500 mr-6"></div>
+      <h1 class="text-2xl md:text-4xl font-semibold text-gray-900">About us</h1>
     </div>
 
     <!-- Hero Section -->
     <div class="relative rounded-xl overflow-hidden mb-16">
       <img alt="Two people, a man and a woman, looking at blueprints on a table in an office environment with natural light"
       class="w-full max-w-5xl mx-auto h-[400px] md:h-[500px] object-cover"
-      src="C:\Users\lhpatulot\Downloads\Pictures\slide-about-1.jpg"/>
+      src="C:\Users\lhpatulot\Downloads\aboutus-images\slide-about-1.jpg"/>
       <div class="absolute bottom-8 left-8 bg-green-500/70 text-black p-6 md:p-8 w-full md:w-[38%] rounded-lg shadow-xl">
         <h2 class="text-2xl md:text-3xl font-bold leading-tight">
           Building Quality Homes —<br/>Since 1987
@@ -170,7 +136,7 @@
 
     <!-- Left Image + Caption -->
   <div class="md:w-1/2 flex items-center mt-80 md:mt-55 w-full flex flex-col items-start">
-  <img src="C:\Users\lhpatulot\Downloads\Pictures\about-2.jpg" 
+  <img src="C:\Users\lhpatulot\Downloads\aboutus-images\about-2.jpg" 
     alt="RCD Office" 
     class="w-full max-w-[400px] h-auto rounded-xl shadow-lg object-cover"/>
    </div>
@@ -247,7 +213,7 @@
    <div class="flex flex-col md:flex-row md:items-start md:space-x-16">
     <div class="flex-shrink-0 mb-10 md:mb-0 md:w-1/3">
      <img alt="RCD Group logo with two yellow houses and sun rays behind, text 'RCD GROUP Improving Lives RCD LAND, INC. BUILDING QUALITY HOMES SINCE 1987' on a yellowish background" 
-     class="w-full h-auto object-contain" height="500" src="C:\Users\lhpatulot\Downloads\Pictures\rcd-vision-mission.jpg" width="500"/>
+     class="w-full h-auto object-contain" height="500" src="C:\Users\lhpatulot\Downloads\aboutus-images\rcd-vision-mission.jpg" width="500"/>
     </div>
     <div class="md:w-2/3 space-y-12">
      <section>
@@ -292,57 +258,40 @@
     Our three main undertakings:
   </h2>
   <section class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
-    <article class="text-center">
-      <div
-        class="inline-flex border-4 border-yellow-400 p-6 mb-4 justify-center items-center text-black-500"
-      >
-        <i class="fas fa-home text-6xl"></i>
-      </div>
-      <h3 class="text-lg md:text-xl font-extrabold leading-tight">
-        Realizing
-        <br />
-        Dreams
-      </h3>
-      <p class="text-xs md:text-sm text-gray-600 mt-2 max-w-xs mx-auto">
-        and fulfilling every Filipino’s housing needs by providing quality and
-        affordable homes.
-      </p>
-    </article>
-
-    <article class="text-center">
-      <div
-        class="inline-flex border-4 border-yellow-400 p-6 mb-4 justify-center items-center text-black-500"
-      >
-        <i class="fas fa-check-square text-6xl"></i>
-      </div>
-      <h3 class="text-lg md:text-xl font-extrabold leading-tight">
-        Creating
-        <br />
-        Opportunities
-      </h3>
-      <p class="text-xs md:text-sm text-gray-600 mt-2 max-w-xs mx-auto">
-        for all the members of the organization by providing a platform for
-        Career Advancement and Financial Success.
-      </p>
-    </article>
-
-    <article class="text-center">
-      <div
-        class="inline-flex border-4 border-yellow-400 p-6 mb-4 justify-center items-center text-black-500"
-      >
-        <i class="fas fa-key text-6xl"></i>
-      </div>
-      <h3 class="text-lg md:text-xl font-extrabold leading-tight">
-        Delivering
-        <br />
-        Commitments
-      </h3>
-      <p class="text-xs md:text-sm text-gray-600 mt-2 max-w-xs mx-auto">
-        with consciousness of its role in Nation Building that will create impact
-        in home provision and wealth creation.
-      </p>
-    </article>
-  </section>
+      <article class="text-center">
+        <div class="inline-flex border-4 border-yellow-400 p-10 mb-4 justify-center items-center text-black-500">
+          <i class="fas fa-home text-6xl"></i>
+        </div>
+        <h3 class="text-lg md:text-xl font-extrabold leading-tight">
+          Realizing<br />Dreams
+        </h3>
+        <p class="text-xs md:text-sm text-gray-600 mt-2 max-w-xs mx-auto">
+          and fulfilling every Filipino’s housing needs by providing quality and affordable homes.
+        </p>
+      </article>
+      <article class="text-center">
+        <div class="inline-flex border-4 border-yellow-400 p-10 mb-4 justify-center items-center text-black-500">
+          <i class="fas fa-check-square text-6xl"></i>
+        </div>
+        <h3 class="text-lg md:text-xl font-extrabold leading-tight">
+          Creating<br />Opportunities
+        </h3>
+        <p class="text-xs md:text-sm text-gray-600 mt-2 max-w-xs mx-auto">
+          for all the members of the organization by providing a platform for Career Advancement and Financial Success.
+        </p>
+      </article>
+      <article class="text-center">
+        <div class="inline-flex border-4 border-yellow-400 p-10 mb-4 justify-center items-center text-black-500">
+          <i class="fas fa-key text-6xl"></i>
+        </div>
+        <h3 class="text-lg md:text-xl font-extrabold leading-tight">
+          Delivering<br />Commitments
+        </h3>
+        <p class="text-xs md:text-sm text-gray-600 mt-2 max-w-xs mx-auto">
+          with consciousness of its role in Nation Building that will create impact in home provision and wealth creation.
+        </p>
+      </article>
+    </section>
 </main>
    <section class="text-center max-w-4xl mx-auto">
     <h2 class="text-2xl md:text-4xl font-semibold mb-6">
@@ -353,15 +302,17 @@
     drive our vision to success. Just like the core of every dream, HOPE exemplifies our company’s four 
     fundamental values in helping Filipinos achieve their dreams. HOPE stands for:
     </p>
+
      <!-- Values Section -->
    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center">
+
     <!-- HONESTY -->
     <div>
      <div class="mx-auto w-50 h-50 rounded-full  flex items-center justify-center mb-6">
       <img alt="White icon of a hand on a heart inside a dark green circle" 
       class="w-18 h-18" height="72" 
-      src="C:\Users\lhpatulot\Downloads\Pictures\honesty.png" width="160"/>
+      src="C:\Users\lhpatulot\Downloads\aboutus-images\honesty.png" width="160"/>
      </div>
      <h3 class="font-extrabold text-gray-700 mb-2">
       HONESTY
@@ -370,12 +321,13 @@
       Being fair and truthful is essential in building our people’s trust, RCD Land Inc. practices honesty in all its undertakings to further build and protect the core of our mission.
      </p>
     </div>
+
     <!-- ONENESS -->
     <div>
      <div class="mx-auto w-50 h-50 rounded-full  flex items-center justify-center mb-6">
       <img alt="White icon of two hands shaking inside a dark green circle" 
       class="w-18 h-18" height="72" 
-      src="C:\Users\lhpatulot\Downloads\Pictures\oneness.png" width="160"/>
+      src="C:\Users\lhpatulot\Downloads\aboutus-images\oneness.png" width="160"/>
      </div>
      <h3 class="font-extrabold text-gray-700 mb-2">
       ONENESS
@@ -384,12 +336,13 @@
       Working towards one common goal drives the unity of our company, RCD Land Inc. exemplifies oneness in helping its people fulfill their dreams.
      </p>
     </div>
+
     <!-- PROACTIVE -->
     <div>
      <div class="mx-auto w-50 h-50 rounded-full  flex items-center justify-center mb-6">
       <img alt="White icon of a lightbulb inside a dark green circle" 
       class="w-18 h-18" height="72" 
-      src="C:\Users\lhpatulot\Downloads\Pictures\proactive.png" width="160"/>
+      src="C:\Users\lhpatulot\Downloads\aboutus-images\proactive.png" width="160"/>
      </div>
      <h3 class="font-extrabold text-gray-700 mb-2">
       PROACTIVE
@@ -398,12 +351,13 @@
       Constantly moving forward, looking to the future, and making things happen—proactiveness help us to act in anticipation of long-term effects to make efficient and effective decisions.
      </p>
     </div>
+
     <!-- EXCELLENCE -->
     <div>
      <div class="mx-auto w-50 h-50 rounded-full flex items-center justify-center mb-6">
       <img alt="White icon of a medal inside a dark green circle" 
       class="w-18 h-18" height="72" 
-      src="C:\Users\lhpatulot\Downloads\Pictures\excellence.png" width="160"/>
+      src="C:\Users\lhpatulot\Downloads\aboutus-images\excellence.png" width="160"/>
      </div>
      <h3 class="font-extrabold text-gray-700 mb-2">
       EXCELLENCE
@@ -441,13 +395,24 @@
 </main>
  
  <!-- Footer -->
-<footer class="text-sm text-gray-700 mt-16">
-  <div class="max-w-screen-xl mx-auto px-4 py-12">
+  <footer class="bg-gray-100 py-12 text-sm text-gray-700">
+  <div class="container mx-auto px-4">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Company Info -->
       <div>
-        <h3 class="font-bold text-lg mb-2">RCD LAND, INC.</h3>
-        <p>RCD Land, Inc. is a real estate development company who makes your dream home come to life. <strong>Building Quality Homes Since 1987</strong></p>
+        <h3 class="font-bold text-4xl mb-2">RCD LAND, INC.</h3>
+        <p>RCD Land, Inc. is a real estate development company who makes your dream home come to life. Building Quality Homes Since 1987</p>
+        <br>
+      <div>
+        <h3 class="mb-2 flex items-center font-semibold">
+          <svg class="w-7 h-7 text-gray-800 mt-1 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+          </svg>
+           Business Hours</h3>
+          <p>Mondays to Thursday 8am-6pm</p>
+          <p>Fridays 8am-5pm</p>
+        </div>
       </div>
 
       <!-- Contact Info -->
@@ -455,15 +420,15 @@
         <h3 class="text-4xl font-semibold mb-2 flex items-center">
           <svg class="w-10 h-10 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735
-               1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z"/>
+              d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z"/>
           </svg>
           Contact Us
         </h3>
-        <p>Main Office: <a href="tel:0288937451">(02) 8-893-7451 / 52 local 108</a></p>
-        <p>Phone (Manila): <a href="tel:0284033490">(02)8-403-3490</a></p>
-        <p>Sales & Marketing: <a href="tel:0286175364">(02) 8-617-5364</a></p>
-        <p>Mobile: <a href="tel:639177001109">(+63) 917-7001-109</a> (GLOBE)</p>
+        <p>Main Office:<a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300"> (02) 8-893-7451</a>/</p>
+        <p><a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300">52 local 108</a></p>
+        <p>Phone (Manila): <a href="tel:0284033490" class="hover:text-yellow-500 transition-colors duration-300">(02)8-403-3490</a></p>
+        <p>Sales & Marketing: <a href="tel:0286175364" class="hover:text-yellow-500 transition-colors duration-300">(02) 8-617-5364</a></p>
+        <p>Mobile: <a href="tel:639177001109" class="hover:text-yellow-500 transition-colors duration-300">(+63) 917-7001-109</a>(GLOBE)</p>
 
         <h3 class="font-semibold mt-4 mb-2 flex items-center">
           <svg class="w-5 h-5 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -472,8 +437,8 @@
           </svg>
           Email
         </h3>
-        <p>For Inquiries: <a href="mailto:inquiry@rcdland.com">inquiry@rcdland.com</a></p>
-        <p>For Customer Care: <a href="mailto:rcd.csr@rcdland.com">rcd.csr@rcdland.com</a></p>
+        <p>For Inquiries: <a target="_blank" href="mailto:inquiry@rcdland.com" class="hover:text-yellow-500 transition-colors duration-300">inquiry@rcdland.com</a></p>
+        <p>For Customer Care: <a target="_blank" href="mailto:rcd.csr@rcdland.com"  class="hover:text-yellow-500 transition-colors duration-300">rcd.csr@rcdland.com</a></p>
       </div>
 
       <!-- Location Info -->
@@ -481,28 +446,19 @@
         <h3 class="text-4xl font-semibold mb-2 flex items-center">
           <svg class="w-10 h-10 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd"
-              d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112
-               6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+              d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
               clip-rule="evenodd" />
           </svg>
-          Find us at
+          Find us in
         </h3>
-        <p><a href="https://maps.app.goo.gl/h1TfTrETZJSj1oQY9">5th Flr. Unit 501 & 505 Chateau de Baie Condo., Roxas Blvd. corner Airport Road, Parañaque City</a></p>
+        <p><A href="https://maps.app.goo.gl/h1TfTrETZJSj1oQY9" target="_blank" class="hover:text-yellow-500 transition-colors duration-300">5th Flr. Unit 501 & 505 Chateau de Baie Condo., Roxas Blvd. corner Airport Road, Parañaque City</A></p>
         <p>Unit 309 - Loans & Accounts Management</p>
         <p>Unit 409 - Sales & Marketing</p>
-
-        <div class="flex items-start mt-3">
-          <svg class="w-7 h-7 text-gray-800 mt-1 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
-          </svg>
-          <p>Business Hours: Mondays to Thursday 8am–6pm | Fridays 8am–5pm</p>
-        </div>
       </div>
     </div>
 
-    <div class="mt-12 border-t pt-6 text-center">
-      <p class="text-gray-500">&copy; 2025 RCD LAND, INC. All Rights Reserved.</p>
+    <div class="mt-8 border-t pt-4 text-center">
+      <p class="mt-2">&copy; 2025 RCD LAND, INC. All Rights Reserved.</p>
     </div>
   </div>
 </footer>
