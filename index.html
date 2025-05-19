@@ -73,7 +73,7 @@ menuToggle.addEventListener('click', () => {
 </script>
 
 <!-- Carousel -->
-<div id="animation-carousel" class="relative w-full" data-carousel="slide" data-carousel-interval="5000">
+<div id="animation-carousel" class="relative w-full pt-[81px]" data-carousel="slide" data-carousel-interval="5000">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
          <!-- Item 1 -->
@@ -85,7 +85,7 @@ menuToggle.addEventListener('click', () => {
             <img src="./img/main-src-imgs/carousel/brooky-cover.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 3 -->
-        <div class="hidden duration-200 ease-linear" data-carousel-item="active">
+        <div class="hidden duration-200 ease-linear" data-carousel-item=>
             <img src="./img/main-src-imgs/carousel/careers-cover.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
     </div>
@@ -106,16 +106,12 @@ menuToggle.addEventListener('click', () => {
             <span class="sr-only">Next</span>
         </span>
     </button>
+    <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+  <button type="button" class="w-8 h-2 bg-white rounded-none" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+  <button type="button" class="w-8 h-2 bg-white/50 hover:bg-white rounded-none" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+  <button type="button" class="w-8 h-2 bg-white/50 hover:bg-white rounded-none" aria-label="Slide 3" data-carousel-slide-to="2"></button>
 </div>
-
-<!-- Hero Section -->
-<header class="text-center pt-[100px] py-16 bg-white">
-  <div class="container mx-auto px-4">
-    <h1 class="text-4xl font-bold mb-4">Welcome to RCDLand</h1>
-    <p class="text-lg mb-6">Quality Homes. Excellent Communities.</p>
-    <a href="#" class="bg-[#00c655] hover:bg-[#00b14a] text-white px-6 py-3 rounded-lg font-semibold text-lg">INQUIRE NOW</a>
-  </div>
-</header>
+</div>
 
 <!-- Additional Sections (to replicate full main page layout) -->
 <section class="bg-[#f6f6f6] py-16">
