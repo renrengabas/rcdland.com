@@ -8,11 +8,13 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      box-sizing: border-box;
     }
 
     .nav-link::after {
@@ -33,7 +35,7 @@
     }
   </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-white text-gray-800 w-full">
 
 <nav class="bg-[#ffc600] h-[81px] shadow-md flex flex-col items-center justify-center fixed top-0 left-0 w-full z-50">
   <div class="flex items-center justify-center space-x-10">
@@ -136,7 +138,7 @@
 
     <!-- Left Image + Caption -->
   <div class="md:w-1/2 flex items-center mt-80 md:mt-55 w-full flex flex-col items-start">
-  <img src="C:\Users\lhpatulot\Downloads\aboutus-images\about-2.jpg" 
+  <img src="./img/aboutus-src/about-2.jpg" 
     alt="RCD Office" 
     class="w-full max-w-[400px] h-auto rounded-xl shadow-lg object-cover"/>
    </div>
@@ -213,7 +215,7 @@
    <div class="flex flex-col md:flex-row md:items-start md:space-x-16">
     <div class="flex-shrink-0 mb-10 md:mb-0 md:w-1/3">
      <img alt="RCD Group logo with two yellow houses and sun rays behind, text 'RCD GROUP Improving Lives RCD LAND, INC. BUILDING QUALITY HOMES SINCE 1987' on a yellowish background" 
-     class="w-full h-auto object-contain" height="500" src="C:\Users\lhpatulot\Downloads\aboutus-images\rcd-vision-mission.jpg" width="500"/>
+     class="w-full h-auto object-contain" height="500" src="./img/aboutus-src/rcd-vision-mission.jpg" width="500"/>
     </div>
     <div class="md:w-2/3 space-y-12">
      <section>
@@ -312,7 +314,7 @@
      <div class="mx-auto w-50 h-50 rounded-full  flex items-center justify-center mb-6">
       <img alt="White icon of a hand on a heart inside a dark green circle" 
       class="w-18 h-18" height="72" 
-      src="C:\Users\lhpatulot\Downloads\aboutus-images\honesty.png" width="160"/>
+      src="./img/aboutus-src/honesty.png" width="160"/>
      </div>
      <h3 class="font-extrabold text-gray-700 mb-2">
       HONESTY
@@ -327,7 +329,7 @@
      <div class="mx-auto w-50 h-50 rounded-full  flex items-center justify-center mb-6">
       <img alt="White icon of two hands shaking inside a dark green circle" 
       class="w-18 h-18" height="72" 
-      src="C:\Users\lhpatulot\Downloads\aboutus-images\oneness.png" width="160"/>
+      src="./img/aboutus-src/oneness.png" width="160"/>
      </div>
      <h3 class="font-extrabold text-gray-700 mb-2">
       ONENESS
@@ -342,7 +344,7 @@
      <div class="mx-auto w-50 h-50 rounded-full  flex items-center justify-center mb-6">
       <img alt="White icon of a lightbulb inside a dark green circle" 
       class="w-18 h-18" height="72" 
-      src="C:\Users\lhpatulot\Downloads\aboutus-images\proactive.png" width="160"/>
+      src="./img/aboutus-src/proactive.png" width="160"/>
      </div>
      <h3 class="font-extrabold text-gray-700 mb-2">
       PROACTIVE
@@ -357,7 +359,7 @@
      <div class="mx-auto w-50 h-50 rounded-full flex items-center justify-center mb-6">
       <img alt="White icon of a medal inside a dark green circle" 
       class="w-18 h-18" height="72" 
-      src="C:\Users\lhpatulot\Downloads\aboutus-images\excellence.png" width="160"/>
+      src="./img/aboutus-src/excellence.png" width="160"/>
      </div>
      <h3 class="font-extrabold text-gray-700 mb-2">
       EXCELLENCE
@@ -378,25 +380,25 @@
     <img alt="Asia CEO Awards 2018 logo with gold text and map on black background" 
       class="object-contain" 
       style="width: 200px; height: 200px;" 
-      src="C:\Users\lhpatulot\Downloads\asia ceo.jpg" />
+      src="./img/aboutus-src/asia ceo.jpg" />
     <img alt="APEA Asia Pacific Entrepreneurship Awards gold logo with hand and circular design on white background" 
       class="object-contain" 
       style="width: 200px; height: 200px;" 
-      src="C:\Users\lhpatulot\Downloads\apea.png" />
+      src="./img/aboutus-src/apea.png" />
     <img alt="EY Entrepreneur Of The Year 2015 Finalist logo in gray on white background" 
       class="object-contain" 
       style="width: 200px; height: 200px;" 
-      src="C:\Users\lhpatulot\Downloads\ey.png" />
+      src="./img/aboutus-src/ey.png" />
     <img alt="Subdivision & Housing Developers Association, Inc. SHDA green logo with text on white background" 
       class="object-contain" 
       style="width: 200px; height: 200px;" 
-      src="C:\Users\lhpatulot\Downloads\shda.png" />
+      src="./img/aboutus-src/shda.png" />
   </div>
 </main>
  
  <!-- Footer -->
-  <footer class="bg-gray-100 py-12 text-sm text-gray-700">
-  <div class="container mx-auto px-4">
+  <footer class="bg-gray-100 w-full py-12 text-sm text-gray-700">
+  <div class="max-w-7xl mx-auto px-4">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Company Info -->
       <div>
