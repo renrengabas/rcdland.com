@@ -31,77 +31,39 @@
       transform: scaleX(1);
     }
 
-    .property-card {
-      position: relative;
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
-      will-change: transform;
-    }
-    .property-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-    }
-    .property-card img {
-      transition: transform 0.5s ease;
-    }
-    .property-card:hover img {
-      transform: scale(1.05);
-    }
-    .hover-text {
-      opacity: 0;
-      visibility: hidden;
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      color: white;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-
-    /* Show text when card is hovered */
-    .property-card:hover .hover-text {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* Custom Select */
-    .custom-select {
-      position: relative;
-      z-index: 10;
-    }
-
-    .custom-select select {
-      background-color: white;
-      border: 1px solid #125ec0;
-      border-radius: 5px;
-      padding: 8px 12px;
-      font-size: 14px;
-      font-weight: 600;
-      outline: none;
-      cursor: pointer;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      width: 200px;
-    }
-
-    .custom-select::after {
-  content: '▼'; /* down arrow */
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  transition: transform 0.3s ease;
-  font-size: 12px;
-  color: #125ec0;
-}
-
-.custom-select.open::after {
-  content: '▲'; /* up arrow when open */
-}
 
 .text-shadow {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
+
+ .property-card .overlay-content > *:not(h3) {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 20px;
+  }
+
+  .property-card:hover .overlay-content > *:not(h3) {
+    opacity: 1;
+  }
+
+  .overlay-content {
+    transition: background 0.5s ease;
+  }
+
+  .property-card .overlay-content {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  transition: background 0.5s ease;
+  padding: 20px;
+}
+
+.property-card:hover .overlay-content {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+.property-card .overlay-content h3 {
+  margin-bottom: 16px; 
+}
+
 
     
   </style>
@@ -159,140 +121,627 @@ menuToggle.addEventListener('click', () => {
     <!-- Start of updated property cards with overlay text -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
- <!-- Property Card 1 -->
-<div class="relative shadow-md rounded-lg overflow-hidden group">
-  <img src="img/ourproperties/phase-4.jpg" alt="Royale Homes Phase 4" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-  <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
+<!-- Property Card 1 -->
+<div class="relative shadow-md rounded-lg overflow-hidden property-card">
+  <img src="img/ourproperties/phase-4.jpg" alt="Royale Homes Phase 4" class="w-full h-[490px] object-cover">
+  
+  
+
+  <!-- Overlay Info -->
+  <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/60 to-transparent text-white p-4 overlay-content">
     <h3 class="font-semibold text-3xl text-shadow">Single-attached 63</h3>
-    <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 4M - PHP 4.6M</p>
-    <p class="text-sm">Discover the cool serenity of RCD Royale Homes Silang Phase 4!</p>
-    <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+    <p class="text-sm mt-6">
+      RCD Royale Homes Silang Phase 4 features Single-attached 63 as its house model. This unit has a minimum lot area of 100sqm and floor area of 63sqm. It has a living area, dining area, kitchen, 3 toilet and bath, provision for 3 bedrooms, and a carport.
+    </p>
+    <p class="text-sm mt-4">PHP 4M - PHP 4.6M</p>
+
+    <!-- Icons and Features -->
+    <div class="flex space-x-4 items-center mt-4 text-sm text-white">
+
+      <!-- Bathroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 21h10M7 10h10M10 3h4a2 2 0 012 2v2H8V5a2 2 0 012-2zM5 10v4a4 4 0 004 4h6a4 4 0 004-4v-4" />
+        </svg>
+        <span>3 Baths</span>
+      </div>
+
+      <!-- Bedroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 10h18M7 10v6m10-6v6m-6-6v6m-9 6h18v-2a2 2 0 00-2-2H5a2 2 0 00-2 2v2z" />
+        </svg>
+        <span>3 Beds</span>
+      </div>
+
+      <!-- Parking -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6h3a2 2 0 110 4h-3m0 6h3a2 2 0 100-4h-3v4zM5 16V6h3a2 2 0 110 4H5m0 6h3a2 2 0 100-4H5v4z" />
+        </svg>
+        <span>1 Parking</span>
+      </div>
+    </div>
+    
+  <!-- Centered Rectangular Buttons -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <a href="#show-details" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Show Details
+      </a>
+      <a href="#reserve-now" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Reserve Now
+      </a>
+    </div>
   </div>
 </div>
 
-  <!-- Property Card 2 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/house-catalogue/commercial.jpg" alt="Royale Homes Balayan" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
-      <h3 class="font-semibold text-3xl text-shadow">Commercial Lot</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 2M - PHP 2.6M</p>
-      <p class="text-sm">RCD Royale Homes Balayan is an 80,141 sqm subdivision which has a total of 509 saleable units</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+ <!-- Property Card 2 -->
+<div class="relative shadow-md rounded-lg overflow-hidden property-card">
+  <img src="img/house-catalogue/commercial.jpg" alt="Royale Homes Balayan" class="w-full h-[490px] object-cover">
+
+  <!-- Overlay Info -->
+  <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/60 to-transparent text-white p-4 overlay-content">
+    <h3 class="font-semibold text-3xl text-shadow">Commercial Lot</h3>
+    <p class="text-sm mt-6">
+      RCD Royale Homes' Commercial Lot ranges from 313 sqm to 547 sqm.
+    </p>
+    <p class="text-sm mt-4">PHP 4.2M - PHP 7.9M</p>
+
+    
+
+ <!-- Centered Rectangular Buttons -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <a href="#show-details" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Show Details
+      </a>
+      <a href="#reserve-now" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Reserve Now
+      </a>
     </div>
   </div>
+</div>
 
-  <!-- Property Card 3 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/house-catalogue/daffodil.jpg" alt="RCD BF Homes" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
-      <h3 class="font-semibold text-3xl text-shadow">Daffodil</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 6.3M - PHP 7.3M</p>
-      <p class="text-sm">Inside the largest village of Asia, RCD BF Homes Parañaque is your affordable option in this prime location.</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+ <!-- Property Card 3 -->
+<div class="relative shadow-md rounded-lg overflow-hidden property-card">
+  <img src="img/house-catalogue/daffodil.jpg" alt="RCD BF Homes" class="w-full h-[490px] object-cover">
+  
+  <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/60 to-transparent text-white p-4 overlay-content">
+    <h3 class="font-semibold text-3xl text-shadow">Daffodil</h3>
+    <p class="text-sm mt-6">
+      RCD Homes' Daffodil Model is a 54 square meter home on a 69 square meter lot. It includes a living area, dining & kitchen, provision for 2 bedrooms, 2 toilets & baths, and a service area.
+    </p>
+    <p class="text-sm mt-4">PHP 1,530,000 - PHP 1.7M</p>
+
+    <div class="flex space-x-4 items-center mt-4 text-sm text-white">
+
+      <!-- Bathroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 21h10M7 10h10M10 3h4a2 2 0 012 2v2H8V5a2 2 0 012-2zM5 10v4a4 4 0 004 4h6a4 4 0 004-4v-4" />
+        </svg>
+        <span>2 Baths</span>
+      </div>
+
+      <!-- Bedroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 10h18M7 10v6m10-6v6m-6-6v6m-9 6h18v-2a2 2 0 00-2-2H5a2 2 0 00-2 2v2z" />
+        </svg>
+        <span>2 Beds</span>
+      </div>
+
+      <!-- Parking -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6h3a2 2 0 110 4h-3m0 6h3a2 2 0 100-4h-3v4zM5 16V6h3a2 2 0 110 4H5m0 6h3a2 2 0 100-4H5v4z" />
+        </svg>
+        <span>1 Parking</span>
+      </div> 
+    </div>
+    <!-- Centered Rectangular Buttons -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <a href="#show-details" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Show Details
+      </a>
+      <a href="#reserve-now" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Reserve Now
+      </a>
     </div>
   </div>
+</div>
+  
 
-  <!-- Property Card 4 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/house-catalogue/daphne.jpg" alt="Royale Homes Silang" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
-      <h3 class="font-semibold text-3xl text-shadow">Daphne</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 2.3M - PHP 6.8M</p>
-      <p class="text-sm">Live your suburban dreams in RCD Royale Homes Silang!</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+<!-- Property Card 4 -->
+<div class="relative shadow-md rounded-lg overflow-hidden property-card">
+  <img src="img/house-catalogue/daphne.jpg" alt="Royale Homes Silang" class="w-full h-[490px] object-cover">
+
+  <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/60 to-transparent text-white p-4 overlay-content">
+    <h3 class="font-semibold text-3xl text-shadow">Daphne</h3>
+    <p class="text-sm mt-6">
+      RCD Homes' Daphne Model is a 54 square meter home on a 69 square meter lot. It includes a living area, dining & kitchen, provision for 2 bedrooms, 2 toilets & baths, and a service area.
+    </p>
+    <p class="text-sm mt-4">PHP 1,530,000 - PHP 1.7M</p>
+
+    <div class="flex space-x-4 items-center mt-4 text-sm text-white">
+
+      <!-- Bathroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 21h10M7 10h10M10 3h4a2 2 0 012 2v2H8V5a2 2 0 012-2zM5 10v4a4 4 0 004 4h6a4 4 0 004-4v-4" />
+        </svg>
+        <span>2 Baths</span>
+      </div>
+
+      <!-- Bedroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 10h18M7 10v6m10-6v6m-6-6v6m-9 6h18v-2a2 2 0 00-2-2H5a2 2 0 00-2 2v2z" />
+        </svg>
+        <span>2 Beds</span>
+      </div>
+
+      <!-- Parking -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6h3a2 2 0 110 4h-3m0 6h3a2 2 0 100-4h-3v4zM5 16V6h3a2 2 0 110 4H5m0 6h3a2 2 0 100-4H5v4z" />
+        </svg>
+        <span>1 Parking</span>
+      </div>
+    </div>
+    <!-- Centered Rectangular Buttons -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <a href="#show-details" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Show Details
+      </a>
+      <a href="#reserve-now" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Reserve Now
+      </a>
     </div>
   </div>
+</div>
 
-  <!-- Property Card 5 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/house-catalogue/th36.jpg" alt="Royale Homes Tuy" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
-      <h3 class="font-semibold text-3xl text-shadow">Townhouse 36</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 750K - PHP 1.7M</p>
-      <p class="text-sm">Your adventure awaits in RCD Royale Homes Tuy! With famous beaches and hiking spots...</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+ <!-- Property Card 5 -->
+<div class="relative shadow-md rounded-lg overflow-hidden property-card">
+  <img src="img/house-catalogue/th36.jpg" alt="Royale Homes Tuy" class="w-full h-[490px] object-cover">
+  <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/60 to-transparent text-white p-4 overlay-content">
+    <h3 class="font-semibold text-3xl text-shadow">Townhouse 36</h3>
+    <p class="text-sm mt-6">
+      RCD Homes' Townhouse 36 Model is a 36 square meter home on a 40 square meter lot. It includes a living area, dining & kitchen, provision for 2 bedrooms, 1 toilet & bath, and a service area.
+    </p>
+    <p class="text-sm mt-4">PHP 680K - 950K</p>
+    <div class="flex space-x-4 items-center mt-4 text-sm text-white">
+
+      <!-- Bathroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 21h10M7 10h10M10 3h4a2 2 0 012 2v2H8V5a2 2 0 012-2zM5 10v4a4 4 0 004 4h6a4 4 0 004-4v-4" />
+        </svg>
+        <span>1 Bath</span>
+      </div>
+
+      <!-- Bedroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 10h18M7 10v6m10-6v6m-6-6v6m-9 6h18v-2a2 2 0 00-2-2H5a2 2 0 00-2 2v2z" />
+        </svg>
+        <span>2 Beds</span>
+      </div>
+
+      <!-- Parking -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6h3a2 2 0 110 4h-3m0 6h3a2 2 0 100-4h-3v4zM5 16V6h3a2 2 0 110 4H5m0 6h3a2 2 0 100-4H5v4z" />
+        </svg>
+        <span>0 Parking</span>
+      </div>
+    </div>
+    <!-- Centered Rectangular Buttons -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <a href="#show-details" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Show Details
+      </a>
+      <a href="#reserve-now" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Reserve Now
+      </a>
     </div>
   </div>
-
+</div>
+  
   <!-- Property Card 6 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/house-catalogue/th47.jpg" alt="Royale Homes Norzagaray" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
-      <h3 class="font-semibold text-3xl text-shadow">Townhouse 47</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 1.3M - PHP 1.7M</p>
-      <p class="text-sm">For that balanced lifestyle, RCD Royale Homes Bulacan is the best choice for you!</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+<div class="relative shadow-md rounded-lg overflow-hidden property-card">
+  <img src="img/house-catalogue/th47.jpg" alt="Royale Homes Norzagaray" class="w-full h-[490px] object-cover">
+  <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/60 to-transparent text-white p-4 overlay-content">
+    <h3 class="font-semibold text-3xl text-shadow">Townhouse 47</h3>
+    <p class="text-sm mt-6">
+      RCD Homes' Townhouse 47 Model is a 47 square meter home on a 40 square meter lot. It includes a living area, dining & kitchen, provision for 2 bedrooms, 1 toilet & bath, and a service area.
+    </p>
+    <p class="text-sm mt-4">PHP 830K - 1.1M</p>
+    <div class="flex space-x-4 items-center mt-4 text-sm text-white">
+
+      <!-- Bathroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 21h10M7 10h10M10 3h4a2 2 0 012 2v2H8V5a2 2 0 012-2zM5 10v4a4 4 0 004 4h6a4 4 0 004-4v-4" />
+        </svg>
+        <span>1 Bath</span>
+      </div>
+
+      <!-- Bedroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 10h18M7 10v6m10-6v6m-6-6v6m-9 6h18v-2a2 2 0 00-2-2H5a2 2 0 00-2 2v2z" />
+        </svg>
+        <span>2 Beds</span>
+      </div>
+
+      <!-- Parking -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6h3a2 2 0 110 4h-3m0 6h3a2 2 0 100-4h-3v4zM5 16V6h3a2 2 0 110 4H5m0 6h3a2 2 0 100-4H5v4z" />
+        </svg>
+        <span>0 Parking</span>
+      </div>
+    </div>
+  <!-- Centered Rectangular Buttons -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <a href="#show-details" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Show Details
+      </a>
+      <a href="#reserve-now" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Reserve Now
+      </a>
     </div>
   </div>
+</div>
 
   <!-- Property Card 7 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/house-catalogue/dhalia.jpg" alt="Royale Homes Mariveles" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
-      <h3 class="font-semibold text-3xl text-shadow">Dhalia</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 730K - PHP 1.6M</p>
-      <p class="text-sm">RCD Royale Homes Bataan is a gated subdivision which offers 613 units of quality and affordable homes in a peaceful and tranquil community.</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+<div class="relative shadow-md rounded-lg overflow-hidden property-card">
+  <img src="img/house-catalogue/dhalia.jpg" alt="Royale Homes Mariveles" class="w-full h-[490px] object-cover">
+  <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/60 to-transparent text-white p-4 overlay-content">
+    <h3 class="font-semibold text-3xl text-shadow">Dhalia</h3>
+    <p class="text-sm mt-6">
+      RRCD Homes' WBH Dhalia Model is a 36 square meter home on a 40 square meter lot. It includes a living area, dining & kitchen, provision for 1 bedroom, 1 toilet & bath, and a service area.
+    </p>
+    <p class="text-sm mt-4">PHP 495K - 650K</p>
+    <div class="flex space-x-4 items-center mt-4 text-sm text-white">
+
+      <!-- Bathroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 21h10M7 10h10M10 3h4a2 2 0 012 2v2H8V5a2 2 0 012-2zM5 10v4a4 4 0 004 4h6a4 4 0 004-4v-4" />
+        </svg>
+        <span>1 Bath</span>
+      </div>
+
+      <!-- Bedroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 10h18M7 10v6m10-6v6m-6-6v6m-9 6h18v-2a2 2 0 00-2-2H5a2 2 0 00-2 2v2z" />
+        </svg>
+        <span>1 Bed</span>
+      </div>
+
+      <!-- Parking -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6h3a2 2 0 110 4h-3m0 6h3a2 2 0 100-4h-3v4zM5 16V6h3a2 2 0 110 4H5m0 6h3a2 2 0 100-4H5v4z" />
+        </svg>
+        <span>0 Parking</span>
+      </div>
+    </div>
+  <!-- Centered Rectangular Buttons -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <a href="#show-details" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Show Details
+      </a>
+      <a href="#reserve-now" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Reserve Now
+      </a>
     </div>
   </div>
+</div>
 
   <!-- Property Card 8 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/house-catalogue/th65.jpg" alt="Villas De Trece" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
-      <h3 class="font-semibold text-3xl text-shadow">Townhouse 65</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 680K - PHP 1.4M</p>
-      <p class="text-sm">Villas De Trece offers our homeowners to experience a suburban living but still accessible to the daily essentials of its people.</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
-    </div>
-  </div>
+<div class="relative shadow-md rounded-lg overflow-hidden property-card">
+  <img src="img/house-catalogue/th65.jpg" alt="Villas De Trece" class="w-full h-[490px] object-cover">
+  <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/60 to-transparent text-white p-4 overlay-content">
+    <h3 class="font-semibold text-3xl text-shadow">Townhouse 65</h3>
+    <p class="text-sm mt-6">
+      RCD Homes' Townhouse 65 Model is a 65 square meter home on a 40 square meter lot. It includes a living area, dining & kitchen, provision for 2 bedrooms, 2 toilet & baths, 1 car garage, and a service area.
+    </p>
+    <p class="text-sm mt-4">PHP 1.4M - 1.6M</p>
+    <div class="flex space-x-4 items-center mt-4 text-sm text-white">
 
-  <!-- Property Card 9 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/house-catalogue/bf-townhomes.jpg" alt="Villas De Trece" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
-      <h3 class="font-semibold text-3xl text-shadow">BF Townhomes</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 680K - PHP 1.4M</p>
-      <p class="text-sm">Villas De Trece offers our homeowners to experience a suburban living but still accessible to the daily essentials of its people.</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
-    </div>
-  </div>
+      <!-- Bathroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 21h10M7 10h10M10 3h4a2 2 0 012 2v2H8V5a2 2 0 012-2zM5 10v4a4 4 0 004 4h6a4 4 0 004-4v-4" />
+        </svg>
+        <span>2 Baths</span>
+      </div>
 
-  <!-- Property Card 10 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/house-catalogue/villas-th47.jpg" alt="Villas De Trece" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
-      <h3 class="font-semibold text-3xl text-shadow">Villas TH47</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 680K - PHP 1.4M</p>
-      <p class="text-sm">Villas De Trece offers our homeowners to experience a suburban living but still accessible to the daily essentials of its people.</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
-    </div>
-  </div>
+      <!-- Bedroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 10h18M7 10v6m10-6v6m-6-6v6m-9 6h18v-2a2 2 0 00-2-2H5a2 2 0 00-2 2v2z" />
+        </svg>
+        <span>2 Beds</span>
+      </div>
 
-  <!-- Property Card 11 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/house-catalogue/villas-commercial.jpg" alt="Villas De Trece" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
-      <h3 class="font-semibold text-3xl text-shadow">Villas Commercial</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 680K - PHP 1.4M</p>
-      <p class="text-sm">Villas De Trece offers our homeowners to experience a suburban living but still accessible to the daily essentials of its people.</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+      <!-- Parking -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6h3a2 2 0 110 4h-3m0 6h3a2 2 0 100-4h-3v4zM5 16V6h3a2 2 0 110 4H5m0 6h3a2 2 0 100-4H5v4z" />
+        </svg>
+        <span>1 Parking</span>
+      </div>
+    </div>
+    <!-- Centered Rectangular Buttons -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <a href="#show-details" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Show Details
+      </a>
+      <a href="#reserve-now" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Reserve Now
+      </a>
     </div>
   </div>
+</div>
+
+<!-- Property Card 9 -->
+<div class="relative shadow-md rounded-lg overflow-hidden property-card">
+  <img src="img/house-catalogue/th65.jpg" alt="Villas De Trece" class="w-full h-[490px] object-cover">
+  <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/60 to-transparent text-white p-4 overlay-content">
+    <h3 class="font-semibold text-3xl text-shadow">BF Townhomes</h3>
+    <p class="text-sm mt-6">
+      RCD Homes' BF Townhomes Model is a 54 square meter home on a regular 69 square meter lot. Its features include a living area, dining & kitchen, 3 Bedrooms, 3 toilet & bath, Garage, Laundry Area, Balcony and service area.
+    </p>
+    <p class="text-sm mt-4">PHP 6.3M TO PHP 7.3M</p>
+    <div class="flex space-x-4 items-center mt-4 text-sm text-white">
+
+      <!-- Bathroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 21h10M7 10h10M10 3h4a2 2 0 012 2v2H8V5a2 2 0 012-2zM5 10v4a4 4 0 004 4h6a4 4 0 004-4v-4" />
+        </svg>
+        <span>2 Baths</span>
+      </div>
+
+      <!-- Bedroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 10h18M7 10v6m10-6v6m-6-6v6m-9 6h18v-2a2 2 0 00-2-2H5a2 2 0 00-2 2v2z" />
+        </svg>
+        <span>2 Beds</span>
+      </div>
+
+      <!-- Parking -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6h3a2 2 0 110 4h-3m0 6h3a2 2 0 100-4h-3v4zM5 16V6h3a2 2 0 110 4H5m0 6h3a2 2 0 100-4H5v4z" />
+        </svg>
+        <span>1 Parking</span>
+      </div>
+    </div>
+  <!-- Centered Rectangular Buttons -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <a href="#show-details" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Show Details
+      </a>
+      <a href="#reserve-now" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Reserve Now
+      </a>
+    </div>
+  </div>
+</div>
+
+ <!-- Property Card 10 -->
+<div class="relative shadow-md rounded-lg overflow-hidden property-card">
+  <img src="img/house-catalogue/villas-th47.jpg" alt="Villas De Trece" class="w-full h-[490px] object-cover">
+  <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/60 to-transparent text-white p-4 overlay-content">
+    <h3 class="font-semibold text-3xl text-shadow">Villas TH47</h3>
+    <p class="text-sm mt-6">
+      RCD Homes' Villas TH47 Model is a 54 square meter home on a regular 69 square meter lot. It includes a living area, dining & kitchen, provision for 2 bedrooms, 2 toilet & baths, and a service area.
+    </p>
+    <p class="text-sm mt-4">PHP 1,530,000 - PHP 1.7M</p>
+    <div class="flex space-x-4 items-center mt-4 text-sm text-white">
+
+      <!-- Bathroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 21h10M7 10h10M10 3h4a2 2 0 012 2v2H8V5a2 2 0 012-2zM5 10v4a4 4 0 004 4h6a4 4 0 004-4v-4" />
+        </svg>
+        <span>2 Baths</span>
+      </div>
+
+      <!-- Bedroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 10h18M7 10v6m10-6v6m-6-6v6m-9 6h18v-2a2 2 0 00-2-2H5a2 2 0 00-2 2v2z" />
+        </svg>
+        <span>2 Beds</span>
+      </div>
+
+      <!-- Parking -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6h3a2 2 0 110 4h-3m0 6h3a2 2 0 100-4h-3v4zM5 16V6h3a2 2 0 110 4H5m0 6h3a2 2 0 100-4H5v4z" />
+        </svg>
+        <span>0 Parking</span>
+      </div>
+    </div>
+  <!-- Centered Rectangular Buttons -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <a href="#show-details" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Show Details
+      </a>
+      <a href="#reserve-now" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Reserve Now
+      </a>
+    </div>
+  </div>
+</div>
+
+ <!-- Property Card 11 -->
+<div class="relative shadow-md rounded-lg overflow-hidden property-card">
+  <img src="img/house-catalogue/villas-commercial.jpg" alt="Villas De Trece" class="w-full h-[490px] object-cover">
+  <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/60 to-transparent text-white p-4 overlay-content">
+    <h3 class="font-semibold text-3xl text-shadow">Villas Commercial</h3>
+    <p class="text-sm mt-6">
+      RCD Homes' Villas Commercial Unit Model is a 36 square meter home on a regular 40 square meter lot. It includes a living area, dining & kitchen, provision for 2 bedrooms, 1 toilet & bath, and a service area.
+    </p>
+    <p class="text-sm mt-4">PHP 1,530,000 - PHP 1.7M</p>
+    <div class="flex space-x-4 items-center mt-4 text-sm text-white">
+
+      <!-- Bathroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 21h10M7 10h10M10 3h4a2 2 0 012 2v2H8V5a2 2 0 012-2zM5 10v4a4 4 0 004 4h6a4 4 0 004-4v-4" />
+        </svg>
+        <span>1 Bath</span>
+      </div>
+
+      <!-- Bedroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 10h18M7 10v6m10-6v6m-6-6v6m-9 6h18v-2a2 2 0 00-2-2H5a2 2 0 00-2 2v2z" />
+        </svg>
+        <span>2 Beds</span>
+      </div>
+
+      <!-- Parking -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6h3a2 2 0 110 4h-3m0 6h3a2 2 0 100-4h-3v4zM5 16V6h3a2 2 0 110 4H5m0 6h3a2 2 0 100-4H5v4z" />
+        </svg>
+        <span>0 Parking</span>
+      </div>
+    </div>
+  <!-- Centered Rectangular Buttons -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <a href="#show-details" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Show Details
+      </a>
+      <a href="#reserve-now" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Reserve Now
+      </a>
+    </div>
+  </div>
+</div>
 
   <!-- Property Card 12 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/house-catalogue/trece-commercial.jpg" alt="Villas De Trece" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
-      <h3 class="font-semibold text-3xl text-shadow">Trece Commercial</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 680K - PHP 1.4M</p>
-      <p class="text-sm">Villas De Trece offers our homeowners to experience a suburban living but still accessible to the daily essentials of its people.</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+<div class="relative shadow-md rounded-lg overflow-hidden property-card">
+  <img src="img/house-catalogue/trece-commercial.jpg" alt="Villas De Trece" class="w-full h-[490px] object-cover">
+  <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/60 to-transparent text-white p-4 overlay-content">
+    <h3 class="font-semibold text-3xl text-shadow">Trece Commercial</h3>
+    <p class="text-sm mt-6">
+      RCD Homes' Trece Commercial Units Model is a 65 square meter home on a regular 55 square meter lot. It includes a living area, dining & kitchen, provision for 2 bedrooms, 1 toilet & bath, a carport, and a service area.
+    </p>
+    <p class="text-sm mt-4">PHP 1,530,000 - PHP 1.7M</p>
+    <div class="flex space-x-4 items-center mt-4 text-sm text-white">
+
+      <!-- Bathroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M7 21h10M7 10h10M10 3h4a2 2 0 012 2v2H8V5a2 2 0 012-2zM5 10v4a4 4 0 004 4h6a4 4 0 004-4v-4" />
+        </svg>
+        <span>1 Bath</span>
+      </div>
+
+      <!-- Bedroom -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 10h18M7 10v6m10-6v6m-6-6v6m-9 6h18v-2a2 2 0 00-2-2H5a2 2 0 00-2 2v2z" />
+        </svg>
+        <span>2 Beds</span>
+      </div>
+
+      <!-- Parking -->
+      <div class="flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16V6h3a2 2 0 110 4h-3m0 6h3a2 2 0 100-4h-3v4zM5 16V6h3a2 2 0 110 4H5m0 6h3a2 2 0 100-4H5v4z" />
+        </svg>
+        <span>0 Parking</span>
+      </div>
+    </div>
+ <!-- Centered Rectangular Buttons -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <a href="#show-details" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Show Details
+      </a>
+      <a href="#reserve-now" class="inline-block py-2 px-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-colors">
+        Reserve Now
+      </a>
     </div>
   </div>
-
-
 </div>
+
 <!-- End of updated property cards -->
 
 </section>
