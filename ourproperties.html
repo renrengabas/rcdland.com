@@ -9,11 +9,34 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
+    <style>
     body {
       font-family: 'Poppins', sans-serif;
     }
 
+    /* Fade-in effect */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Hover effect for the text */
+    .hover-text {
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .hover-text:hover {
+      color: #00c655; /* Change to green or any desired color */
+      transform: scale(1.05); /* Slightly enlarge the text */
+    }
+
+    /* Rest of your existing styles */
     .nav-link::after {
       content: '';
       position: absolute;
@@ -30,7 +53,6 @@
     .nav-link:hover::after {
       transform: scaleX(1);
     }
-
     .property-card {
       position: relative;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -84,27 +106,38 @@
     }
 
     .custom-select::after {
-  content: '▼'; /* down arrow */
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  transition: transform 0.3s ease;
-  font-size: 12px;
-  color: #125ec0;
+      content: '▼'; /* down arrow */
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      transition: transform 0.3s ease;
+      font-size: 12px;
+      color: #125ec0;
+    }
+
+    .custom-select.open::after {
+      content: '▲'; /* up arrow when open */
+    }
+
+    .text-shadow {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
+
+    .fade-text {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.custom-select.open::after {
-  content: '▲'; /* up arrow when open */
+/* Fade in when hovering over the property card */
+.property-card:hover .fade-text {
+  opacity: 1;
+  visibility: visible;
 }
 
-.text-shadow {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
 
-
-    
   </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -175,123 +208,123 @@ menuToggle.addEventListener('click', () => {
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
  <!-- Property Card 1 -->
-<div class="relative shadow-md rounded-lg overflow-hidden group">
+<div class="property-card relative shadow-md rounded-lg overflow-hidden group">
   <img src="img/ourproperties/phase-4.jpg" alt="Royale Homes Phase 4" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-  <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
+  <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
     <h3 class="font-semibold text-3xl text-shadow">Royale Homes Phase 4 Silang, Cavite</h3>
-    <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 4M - PHP 4.6M</p>
-    <p class="text-sm">Discover the cool serenity of RCD Royale Homes Silang Phase 4!</p>
-    <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+    <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 4M - PHP 4.6M</p>
+    <a href="#" class="text-white text-base hover:underline block mt-2">Click here to know more ></a>
+    <p class="text-sm mt-4 fade-text">Discover the cool serenity of RCD Royale Homes Silang Phase 4!</p>
   </div>
 </div>
 
   <!-- Property Card 2 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
+  <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
     <img src="img/ourproperties/rrh-balayan.jpg" alt="Royale Homes Balayan" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
+    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Royale Homes Balayan, Batangas</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 2M - PHP 2.6M</p>
-      <p class="text-sm">RCD Royale Homes Balayan is an 80,141 sqm subdivision which has a total of 509 saleable units</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+      <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 2M - PHP 2.6M</p>
+      <a href="#" class="text-white text-base hover:underline block mt-2">Click here to know more ></a>
+      <p class="text-sm mt-4 fade-text">RCD Royale Homes Balayan is an 80,141 sqm subdivision which has a total of 509 saleable units</p>
     </div>
   </div>
 
   <!-- Property Card 3 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
+  <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
     <img src="img/ourproperties/bf-townhomes-2.jpg" alt="RCD BF Homes" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
+    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">RCD BF Homes Paranaque City</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 6.3M - PHP 7.3M</p>
-      <p class="text-sm">Inside the largest village of Asia, RCD BF Homes Parañaque is your affordable option in this prime location.</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+      <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 6.3M - PHP 7.3M</p>
+      <a href="#" class="text-white text-base hover:underline block mt-2">Click here to know more ></a>
+      <p class="text-sm mt-4 fade-text">Inside the largest village of Asia, RCD BF Homes Parañaque is your affordable option in this prime location.</p>
     </div>
   </div>
 
   <!-- Property Card 4 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
+  <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
     <img src="img/ourproperties/rrh-silang.jpg" alt="Royale Homes Silang" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
+    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Royale Homes Silang, Cavite</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 2.3M - PHP 6.8M</p>
-      <p class="text-sm">Live your suburban dreams in RCD Royale Homes Silang!</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+      <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 2.3M - PHP 6.8M</p>
+      <a href="#" class="text-white text-base hover:underline block mt-2">Click here to know more ></a>
+      <p class="text-sm mt-4 fade-text">Live your suburban dreams in RCD Royale Homes Silang!</p>
     </div>
   </div>
 
   <!-- Property Card 5 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
+  <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
     <img src="img/ourproperties/rrh-tuy.jpg" alt="Royale Homes Tuy" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
+    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Royale Homes Tuy, Batangas</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 750K - PHP 1.7M</p>
-      <p class="text-sm">Your adventure awaits in RCD Royale Homes Tuy! With famous beaches and hiking spots...</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+      <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 750K - PHP 1.7M</p>
+      <a href="#" class="text-white text-base hover:underline block mt-2">Click here to know more ></a>
+      <p class="text-sm mt-4 fade-text">Your adventure awaits in RCD Royale Homes Tuy! With famous beaches and hiking spots...</p>
     </div>
   </div>
 
   <!-- Property Card 6 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
+  <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
     <img src="img/ourproperties/rrh-nor.jpg" alt="Royale Homes Norzagaray" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
+    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <<h3 class="font-semibold text-3xl text-shadow">Royale Homes Norzagaray, Bulacan</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 1.3M - PHP 1.7M</p>
-      <p class="text-sm">For that balanced lifestyle, RCD Royale Homes Bulacan is the best choice for you!</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+      <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 1.3M - PHP 1.7M</p>
+      <a href="#" class="text-white text-base hover:underline block mt-2">Click here to know more ></a>
+      <p class="text-sm mt-4 fade-text">For that balanced lifestyle, RCD Royale Homes Bulacan is the best choice for you!</p>
     </div>
   </div>
 
   <!-- Property Card 7 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
+  <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
     <img src="img/ourproperties/rrh-bat.jpg" alt="Royale Homes Mariveles" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
+    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Royale Homes Mariveles, Bulacan</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 730K - PHP 1.6M</p>
-      <p class="text-sm">RCD Royale Homes Bataan is a gated subdivision which offers 613 units of quality and affordable homes in a peaceful and tranquil community.</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+      <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 730K - PHP 1.6M</p>
+      <a href="#" class="text-white text-base hover:underline block mt-2">Click here to know more ></a>
+      <p class="text-sm mt-4 fade-text">RCD Royale Homes Bataan is a gated subdivision which offers 613 units of quality and affordable homes in a peaceful and tranquil community.</p>
     </div>
   </div>
 
   <!-- Property Card 8 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
+  <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
     <img src="img/ourproperties/villas-trece.jpg" alt="Villas De Trece" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
+    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Villas De Trece Martires, Cavite</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | PHP 680K - PHP 1.4M</p>
-      <p class="text-sm">Villas De Trece offers our homeowners to experience a suburban living but still accessible to the daily essentials of its people.</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+      <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 680K - PHP 1.4M</p>
+      <a href="#" class="text-white text-base hover:underline block mt-2">Click here to know more ></a>
+      <p class="text-sm mt-4 fade-text">Villas De Trece offers our homeowners to experience a suburban living but still accessible to the daily essentials of its people.</p>
     </div>
   </div>
 
   <!-- Property Card 9 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
+  <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
     <img src="img/ourproperties/villas-bacoor.jpg" alt="Villas De Bacoor" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
+    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Villas De Bacoor Dulong Bayan, Cavite</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | SOLD OUT</p>
-      <p class="text-sm">RCD Villas de Bacoor is the affordable choice in this prime city.</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+      <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | SOLD OUT</p>
+      <a href="#" class="text-white text-base hover:underline block mt-2">Click here to know more ></a>
+      <p class="text-sm mt-4 fade-text">RCD Villas de Bacoor is the affordable choice in this prime city.</p>
     </div>
   </div>
 
   <!-- Property Card 10 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
+  <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
     <img src="img/ourproperties/wbh-minuyan-bulacan.jpg" alt="Winterbreeze Homes Minuyan" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
+    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Winterbreeze Homes San Jose Del Monte, Bulacan</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE | SOLD OUT</p>
-      <p class="text-sm">Strategically located in the progressing city of San Jose del Monte in Bulacan</p>
-      <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+      <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | SOLD OUT</p>
+      <a href="#" class="text-white text-base hover:underline block mt-2">Click here to know more ></a>
+      <p class="text-sm mt-4 fade-text">Strategically located in the progressing city of San Jose del Monte in Bulacan</p>
     </div>
   </div>
 
   <!-- Property Card 11 -->
-  <div class="relative shadow-md rounded-lg overflow-hidden group">
+  <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
     <img src="img/ourproperties/wbh-alingaro-cavite.jpg" alt="Winterbreeze Homes General Trias" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
-    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4">
+    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Winterbreeze Homes General Trias, Cavite</h3>
-      <p class="text-sm font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block">PRICE|PHP 450K - PHP 700K</p>
-      <p class="text-sm">The subdivision is conveniently located in the city of General Trias.</p>
-     <a href="#" class="text-white font-semibold text-sm hover:underline block mt-1">Click here to know more</a>
+      <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE|PHP 450K - PHP 700K</p>
+     <a href="#" class="text-white text-base hover:underline block mt-2">Click here to know more ></a>
+     <p class="text-sm mt-4 fade-text">The subdivision is conveniently located in the city of General Trias.</p>
     </div>
   </div>
 
