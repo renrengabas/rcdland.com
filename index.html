@@ -196,52 +196,121 @@
   </div>
 </section>
 
-
-<!-- Additional Sections (to replicate full main page layout) -->
-<section class="bg-[#f6f6f6] py-16">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-gray-800 mb-6">Recommended for You</h2>
-    <p class="text-gray-600 mb-10">Explore our featured properties that fit your dream lifestyle.</p>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white p-4 shadow rounded">
-        <img src=".\img\main-src-imgs\properties-grid\bf-townhomes-2.jpg" alt="Project 3" class="w-full mb-4 rounded">
-        <h4 class="text-xl font-semibold mb-2">RCD BF Homes Parañaque City</h4>
-        <p class="text-gray-600">Inside the largest villest of Asia, RCD BF Homes Parañaque is your affordable option in this prime location.</p>
+<!-- Recommended For You Section -->
+ <section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">RECOMMENDED FOR YOU</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Property 1 -->
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+        <img src="./img/main-src-imgs/properties-grid/bf-townhomes-2.jpg" alt="RCD BF Homes Parañaque" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">RCD BF Homes Parañaque</h3>
+          <p class="text-gray-600 text-sm mt-2">Inside the largest village of Asia, RCD BF Homes Parañaque is your affordable option in this prime location.</p>
+          <a href="#" class="text-green-600 font-medium mt-4 inline-block">Click here to know more</a>
+        </div>
       </div>
-      <div class="bg-white p-4 shadow rounded">
-        <img src=".\img\main-src-imgs\properties-grid\rrh-silang.jpg" alt="Project 1" class="w-full mb-4 rounded">
-        <h4 class="text-xl font-semibold mb-2">RCD Royale Homes</h4>
-        <h4 class="text-xl font-semibold mb-2">Silang, Cavite</h4>
-        <p class="text-gray-600">Live your subburban dreams in RCD Royale Homes Silang.</p>
+      <!-- Property 2 -->
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+        <img src="./img/main-src-imgs/properties-grid/rrh-silang.jpg" alt="RCD Royale Homes Silang" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">RCD Royale Homes Silang</h3>
+          <p class="text-gray-600 text-sm mt-2">Live your suburban dreams in RCD Royale Homes Silang!</p>
+          <a href="#" class="text-green-600 font-medium mt-4 inline-block">Click here to know more</a>
+        </div>
       </div>
-      <div class="bg-white p-4 shadow rounded">
-        <img src=".\img\main-src-imgs\properties-grid\rrh-tuy.jpg" alt="Project 2" class="w-full mb-4 rounded">
-        <h4 class="text-xl font-semibold mb-2">RCD Royale Homes</h4>
-        <h4 class="tert-x1 font-semibold mb-2"></h4>
-        <p class="text-gray-600">Modern living with convenience and comfort.</p>
+      <!-- Property 3 -->
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+        <img src="./img/main-src-imgs/properties-grid/rrh-tuy.jpg" alt="RCD Royale Homes Tuy" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">RCD Royale Homes Tuy</h3>
+          <p class="text-gray-600 text-sm mt-2">Your adventure awaits in RCD Royale Homes Tuy! With famous beaches and hiking spots...</p>
+          <a href="#" class="text-green-600 font-medium mt-4 inline-block">Click here to know more</a>
+        </div>
       </div>
-            <div class="bg-white p-4 shadow rounded">
-        <img src=".\img\main-src-imgs\properties-grid\rrh-nor.jpg" alt="Project 2" class="w-full mb-4 rounded">
-        <h4 class="text-xl font-semibold mb-2">RCD Villas de Bacoor</h4>
-        <h4 class="tert-x1 font-semibold mb-2"></h4>
-        <p class="text-gray-600">Modern living with convenience and comfort.</p>
+      <!-- Property 4 -->
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+        <img src="./img/main-src-imgs/properties-grid/rrh-nor.jpg" alt="RCD Royale Homes Bulacan" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">RCD Royale Homes Bulacan</h3>
+          <p class="text-gray-600 text-sm mt-2">For that balanced lifestyle, RCD Royale Homes Bulacan is the best choice for you!</p>
+          <a href="#" class="text-green-600 font-medium mt-4 inline-block">Click here to know more</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.getElementById('menuToggle');
-      const mobileMenu = document.getElementById('mobileMenu');
-      if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-        });
-      }
-    });
-  </script>
-  
+
+<!-- Explore Model Section -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Explore Our Model House</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Model 1 -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-md">
+        <img src="./img/main-src-imgs/explore-model/th47.jpg" alt="Townhouse 47" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">TOWNHOUSE 47</h3>
+          <a href="#" class="text-green-600 font-medium mt-4 inline-block">Show Details</a>
+        </div>
+      </div>
+      <!-- Model 2 -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-md">
+        <img src="./img/main-src-imgs/explore-model/daphne.jpg" alt="Daphne" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">DAPHNE</h3>
+          <a href="#" class="text-green-600 font-medium mt-4 inline-block">Show Details</a>
+        </div>
+      </div>
+      <!-- Model 3 -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-md">
+        <img src="./img/main-src-imgs/explore-model/th65.jpg" alt="Townhouse 65" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold text-gray-800">TOWNHOUSE 65</h3>
+          <a href="#" class="text-green-600 font-medium mt-4 inline-block">Show Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News and Update Section-->
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">News & Updates</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- News 1 -->
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+        <img src="./img/main-src-imgs/post-2.jpg" alt="EY Entrepreneur of the Year Finalist 2015" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">EY Entrepreneur of the Year Finalist 2015</h3>
+          <p class="text-gray-600 text-sm mt-2">Mr. Roland Delantar, President and CEO of RCD Land Inc., competed for EY Entrepreneur of the Year last October 14, 2015.</p>
+          <a href="#" class="text-green-600 font-medium mt-4 inline-block">READ MORE</a>
+        </div>
+      </div>
+      <!-- News 2 -->
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+        <img src="./img/main-src-imgs/post-5.jpg" alt="APEA Entrepreneurship Award 2016" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">APEA Entrepreneurship Award 2016</h3>
+          <p class="text-gray-600 text-sm mt-2">Mr. Roland Delantar, President and CEO of RCD Land Inc., has been awarded the Asia Pacific Entrepreneurship Award for the Property Development Industry last December 1, 2016.</p>
+          <a href="#" class="text-green-600 font-medium mt-4 inline-block">READ MORE</a>
+        </div>
+      </div>
+      <!-- News 3 -->
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+        <img src="./img/main-src-imgs/post-7.jpg" alt="Asia CEO Awards 2018" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">Asia CEO Awards 2018</h3>
+          <p class="text-gray-600 text-sm mt-2">RCD Land Inc. has been awarded the Circle of Excellence Award for the SME Company of the Year in the Asia CEO Awards 2018.</p>
+          <a href="#" class="text-green-600 font-medium mt-4 inline-block">READ MORE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <!-- Footer -->
   <footer class="bg-gray-100 py-12 text-sm text-gray-700">
   <div class="container mx-auto px-4">
