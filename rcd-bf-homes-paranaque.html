@@ -148,14 +148,9 @@
     position: relative;
   }
 
-  .green-underline {
-  border-bottom: 4px solid #00c655; /* Green underline */
-  display: inline-block; /* Keeps the text inline but allows styling */
-  width: auto;  /* Adjust width to fit content length */
-  max-width: 25%;  /* This controls how long the underline can be */
-  white-space: nowrap;  /* Prevents wrapping of the text */
-  padding-bottom: 2px;  /* Adjusts vertical positioning if necessary */
-}
+   .tab-link:hover {
+    color: black !important;
+  }
 
 
 </style>
@@ -286,7 +281,8 @@ menuToggle.addEventListener('click', () => {
 
       <!-- Quick Summary -->
       <div class="text-lg text-gray-800 leading-relaxed">
-        <p class="mt-6 font-bold text-3xl mb-2 green-underline">Quick Summary</p>
+        <p class="mt-6 font-bold text-3xl mb-2">Quick Summary</p>
+        <div class="w-16 h-1 bg-green-500 mb-6"></div>
         <p><span class="font-bold text-sm">Location:</span> <span class="text-sm">Parañaque City</span></p>
         <p><span class="font-bold text-sm">Property Type:</span> <span class="text-sm">3 Storey Townhouse</span></p>
         <p><span class="font-bold text-sm">Status:</span><span class="text-sm">For Sale</span></p>
@@ -295,31 +291,113 @@ menuToggle.addEventListener('click', () => {
 
     <!-- Right Side: Property Description -->
     <div class="text-lg text-gray-800 leading-relaxed md:w-3/5">
-      <p class="mt-6 font-bold text-3xl mb-2 green-underline">Property Description</p>
-      <p class="mt-4 text-sm">Inside the largest village of Asia, RCD BF Homes Parañaque is your affordable option in this prime location. A pocket development of 22 units standing on 1792 sqm of land, RCD BF Homes offers aesthetically-pleasing townhomes and single-attached units that are of quality, affordable, and are ready for occupancy.</p>
-      <p class="mt-4 text-sm">Life is close to everything with goods and services that are readily available in the area. Encompassing the cities of Las Piñas, Parañaque, and Muntinlupa, going between cities is made more convenient and hassle-free with the village’s exit gates connecting to the main roads. And of course, public transportation options ranging from shuttle services, jeepneys, and tricycles are easily accessible inside and outside the village.For just P6 million, you can own your 3-storey home in this top-tier village. RCD BF Homes is definitely the best choice for you in the Metro South.</p>
+      <p class="mt-6 font-bold text-3xl mb-2">Property Description</p>
+      <div class="w-16 h-1 bg-green-500 mb-6"></div>
+      <p class="mt-4 text-sm text-gray-600">Inside the largest village of Asia, RCD BF Homes Parañaque is your affordable option in this prime location. A pocket development of 22 units standing on 1792 sqm of land, RCD BF Homes offers aesthetically-pleasing townhomes and single-attached units that are of quality, affordable, and are ready for occupancy.</p>
+      <p class="mt-4 text-sm text-gray-600">Life is close to everything with goods and services that are readily available in the area. Encompassing the cities of Las Piñas, Parañaque, and Muntinlupa, going between cities is made more convenient and hassle-free with the village’s exit gates connecting to the main roads. And of course, public transportation options ranging from shuttle services, jeepneys, and tricycles are easily accessible inside and outside the village.For just P6 million, you can own your 3-storey home in this top-tier village. RCD BF Homes is definitely the best choice for you in the Metro South.</p>
       
-      <!-- Right Column: Amenities -->
-      <div class="mt-8 text-lg text-gray-800 leading-relaxed">
-        <p class="mt-6 font-bold text-3xl mb-2 green-underline">Amenities</p>
-        <div class="grid grid-cols-1 gap-4">
-          <div class="flex space-x-4 text-sm">
-            <p class="text-gray-600">_ Balcony</p>
-            <p class="text-gray-600">_ Deck</p>
-            <p class="text-gray-600">_ Gate</p>
-          </div>
-          <div class="flex space-x-4 text-sm">
-            <p class="text-gray-600">_ Parking</p>
-            <p class="text-gray-600">_ Sun Room</p>
-            <p class="text-gray-600">_ Concrete Flooring</p>
-          </div>
-        </div>
-      </div>
+       <h2 class="mt-6 font-bold text-3xl mb-2">Amenities</h2>
+  <div class="w-16 h-1 bg-green-500 mb-6"></div>
+
+  <div class="grid grid-cols-3 gap-y-3 gap-x-8 text-sm text-gray-700">
+    <div class="flex items-center space-x-2">
+      <span class="text-black">–</span>
+      <span>Balcony</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <span class="text-black">–</span>
+      <span>Deck</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <span class="text-black">–</span>
+      <span>Gate</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <span class="text-black">–</span>
+      <span>Parking</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <span class="text-black">–</span>
+      <span>Sun Room</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <span class="text-black">–</span>
+      <span>Concrete Flooring</span>
     </div>
   </div>
 </section>
 
-  
+<!-- Nav Pills -->
+<div class="max-w-4xl mx-auto mt-10 border-b border-gray-300">
+  <ul id="tabs" class="flex">
+    <li class="mr-6">
+      <button
+        class="tab-link inline-block py-2 px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
+        data-tab="video"
+      >
+        Video
+      </button>
+    </li>
+    <li class="mr-6">
+      <button
+        class="tab-link inline-block py-2 px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
+        data-tab="floorplan"
+      >
+        Floor Plan
+      </button>
+    </li>
+    <li class="mr-6">
+      <button
+        class="tab-link inline-block py-2 px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
+        data-tab="ubication"
+      >
+        Ubication
+      </button>
+    </li>
+  </ul>
+</div>
+
+
+  <!-- Tab Content -->
+  <div id="video" class="tab-content hidden">
+  <div class="w-full max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden">
+    <div class="relative" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="Property Video"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+    <div id="floorplan" class="tab-content hidden">
+      <!-- Floor plan image or content -->
+      <img
+        src="img/floor-plan/bf-townhouse.jpg"
+        alt="Floor Plan"
+        class="w-full max-w-4xl mx-auto rounded-lg shadow-md"
+      />
+    </div>
+
+    <div id="ubication" class="tab-content hidden">
+  <div class="w-full max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden">
+    <div class="relative" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute top-0 left-0 w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1365.9358183556985!2d121.00935493989054!3d14.458835077716385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ce159c04cc2b%3A0xab75f4581a59f1!2sRCD%20BF%20Homes%20Paranaque!5e0!3m2!1sen!2sph!4v1616477132615!5m2!1sen!2sph"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+
   <!-- Footer -->
   <footer class="bg-gray-100 py-12 text-sm text-gray-700">
   <div class="container mx-auto px-4">
@@ -428,6 +506,36 @@ dots.forEach((dot, index) => {
 
 // Initialize the carousel
 showSlide(currentIndex);
+
+const tabs = document.querySelectorAll('.tab-link');
+  const contents = document.querySelectorAll('.tab-content');
+
+  function resetTabs() {
+    tabs.forEach(tab => {
+      tab.classList.remove('border-green-600', 'font-bold');
+      tab.classList.add('text-gray-600');
+    });
+    contents.forEach(content => {
+      content.classList.add('hidden');
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      resetTabs();
+      tab.classList.add('border-green-600', 'font-bold');
+      tab.classList.remove('text-gray-600');
+
+      const tabId = tab.getAttribute('data-tab');
+      document.getElementById(tabId).classList.remove('hidden');
+    });
+  });
+
+  // Initialize first tab as active on page load
+  if (tabs.length > 0) {
+    tabs[0].click();
+  }
+
 </script>
 
 </body>
