@@ -10,27 +10,156 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Navigation link underline hover effect */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #00c655;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Parallax background */
+  .parallax {
+    background-image: url(img/parallax-bg/bf-townhomes-2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+  }
+
+  @media only screen and (max-device-width: 1024px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+
+  /* Overlay gradient */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.1) 27%,
+      rgba(0, 0, 0, 0.33) 90%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: flex-flex start;
+    padding-top: 200px;
+    padding-bottom: 4rem;
+  }
+
+  /* Project title styles */
+  .proj-title {
+    font-size: 60px;
+    font-weight: 500;
+    color: white;
+    line-height: 1.0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    margin: 0 0 8px;
+    
+  }
+
+  .header-text {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    margin-top: 1rem;
+    max-width: 720px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .proj-title {
+      font-size: 36px;
+      text-align: center;
     }
 
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 2px;
-      background-color: #00c655;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
+    .header-text {
+      text-align: justify; 
+    text-justify: inter-word; 
+    padding-right: 50px;
     }
 
-    .nav-link:hover::after {
-      transform: scaleX(1);
+    .overlay {
+      align-items: flex-end;
+      padding-bottom: 3rem;
+      text-align: center;
     }
-  </style>
+  }
+
+  /* Carousel Button (Square Button) */
+  .carousel-button {
+    background-color: #00c655;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    width: 50px; /* Square button width */
+    height: 50px; /* Square button height */
+  }
+
+  .carousel-button:hover {
+    background-color: #028c3e;
+  }
+
+  /* Positioning the carousel buttons to the upper right */
+  .carousel-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+  z-index: 2; /* Ensure buttons are above the image */
+}
+
+  /* Hide default carousel controls */
+  .carousel-prev, .carousel-next {
+    display: none;
+  }
+
+  /* Carousel Section */
+  .carousel-container {
+    position: relative;
+  }
+
+  .green-underline {
+  border-bottom: 4px solid #00c655; /* Green underline */
+  display: inline-block; /* Keeps the text inline but allows styling */
+  width: auto;  /* Adjust width to fit content length */
+  max-width: 25%;  /* This controls how long the underline can be */
+  white-space: nowrap;  /* Prevents wrapping of the text */
+  padding-bottom: 2px;  /* Adjusts vertical positioning if necessary */
+}
+
+
+</style>
+
 </head>
 <body class="bg-white text-gray-800">
 
@@ -68,141 +197,130 @@ menuToggle.addEventListener('click', () => {
 });
 </script>
 
-<div class="parallax">
-  <div class="overlay">
-
-    <!-- Project-header content -->
-
-    <div class="container">
-      <div class="proj-header mx-auto max-w-[90%] lg:max-w-[80%] text-center lg:text-left text-white">
+  <!-- Parallax Section -->
+  <div class="parallax">
+    <div class="overlay">
+      <div class="container pt-[65px] mx-auto max-w-[90%] lg:max-w-[80%] text-center lg:text-left text-white">
         <div>
           <img src="img/project-logo/bf-homes.png" alt="" class="img-a img-fluid mx-auto lg:mx-0" style="width: 400px;">
           <h1 class="proj-title">Inside the Largest </h1>
-          <h1 class="proj-title">Village of Asia</h1>
-          <p class="header-text" style="">Encompassing the cities of Las Piñas, Parañaque, and Muntinlupa, going between cities is </p>
-          <p class="header-text style="">made more convenient and hassle-free with the village’s exit gates connecting to the main </p>
-          <p class="header-text style="">roads.</p>
+          <h1 class="proj-title">Village in Asia</h1>
+          <p class="header-text">Encompassing the cities of Las Piñas, Parañaque, and Muntinlupa, going between cities is made more convenient and hassle-free with the village’s exit gates connecting to the main roads.</p>
         </div>
-      </div> 
-    </div>
-
-  </div>
-</div>
-
-<style>
-  @media (min-width: 992px) {
-    .proj-header {
-      padding-top: 300px; 
-      color: white;
-    }
-    .proj-title{
-      color: white; 
-      font-size: 60px;
-    }
-    .overlay {
-      content: ' ';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 90%;
-      z-index: 1;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 0%) 27%, rgb(0 0 0 / 33%) 90%);
-    }
-  }
-  @media (min-width: 576px) {
-    .parallax {
-      height: 90vh;
-    }
-    .overlay {
-      content: ' ';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 90%;
-      z-index: 1;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 0%) 27%, rgb(0 0 0 / 33%) 90%);
-    }
-    .proj-header {
-      padding-top: 250px; 
-      color: white;
-    }
-    .proj-title{
-      color: white; 
-      font-size: 60px;
-      text-shadow: 2px 2px 4px #000000;
-    }
-    .header-text{
-      text-align: justify; 
-      text-justify: inter-word; 
-      padding-right: 50px;
-    }
-  }
-  @media (max-width: 767px){
-    .parallax {
-      height: 90vh;
-    }
-    .overlay {
-      content: ' ';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 90%;
-      z-index: 1;
-    }
-    .proj-header {
-      padding-top: 250px; 
-      color: white;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-    .proj-title{
-      color: white; 
-      font-size: 45px;
-      text-shadow: 3px 3px 2px #000000;
-    }
-    .header-text { 
-      color: white;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-  }
-
-  .parallax { 
-    background-image: url(img/parallax-bg/bf-townhomes-2.jpg);
-    height: 77vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  @media only screen and (max-device-width: 1024px) {
-    .parallax {
-      background-attachment: scroll;
-    }
-  }
-</style>
-
-<!-- Intro Single star -->
-<section class="intro-single" style="padding-top: 40px;"></section>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 col-lg-8">
-      <div class="title-single-box">
-        <h1 class="title-single">RCD BF HOMES</h1>
-        <span class="color-text-a">Parañaque City</span>
       </div>
     </div>
   </div>
 
-<!-- Footer -->
+ <!-- Property Section -->
+<section class="mt-0 pt-10 pb-16 bg-[#f7f7f7]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="mb-12 flex justify-between items-start max-w-7xl mx-auto px-4">
+  <!-- Left side: title and vertical line -->
+  <div class="flex items-center space-x-4">
+    <div class="w-1 h-28 bg-green-500"></div>
+    <div>
+      <h2 class="text-4xl font-bold text-gray-800">RCD BF HOMES</h2>
+      <p class="text-gray-600 text-base mt-1 max-w-2xl">Parañaque City</p>
+    </div>
+  </div>
+
+  <!-- Right side: breadcrumb -->
+  <div class="text-sm text-gray-600 space-x-1 mt-2">
+    <a href="#" class="hover:text-yellow-600">Home</a>
+    <span>/</span>
+    <a href="#" class="hover:text-yellow-600">Properties</a>
+    <span>/</span>
+    <span class="text-gray-800 font-light">RCD BF Homes</span>
+  </div>
+</div>
+
+ <!-- Carousel Section -->
+<section class="mt-0 pt-0 pb-16 bg-[#f7f7f7]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="carousel-container mt-4">
+      <div class="relative">
+        <div class="relative w-full overflow-hidden">
+  <div class="flex transition-transform duration-500 ease-in-out" id="carouselSlides">
+    <!-- Slide 1 -->
+    <div class="w-full flex-shrink-0">
+      <img src="img/project-slider/bf-1.jpg" alt="bf-1" class="w-full max-h-[500px] object-cover mx-auto">
+    </div>
+    <!-- Slide 2 -->
+    <div class="w-full flex-shrink-0">
+      <img src="img/project-slider/bf-2.jpg" alt="bf-2" class="w-full max-h-[500px] object-cover mx-auto">
+    </div>
+    <!-- Slide 3 -->
+    <div class="w-full flex-shrink-0">
+      <img src="img/project-slider/bf-3.jpg" alt="bf-3" class="w-full max-h-[500px] object-cover mx-auto">
+    </div>
+  </div>
+
+  <!-- Carousel Controls -->
+  <div class="absolute top-1/2 transform -translate-y-1/2 left-4">
+    <button id="prev" class="carousel-button text-white bg-green-600 hover:bg-green-700 p-2 rounded-full">‹</button>
+  </div>
+  <div class="absolute top-1/2 transform -translate-y-1/2 right-4">
+    <button id="next" class="carousel-button text-white bg-green-600 hover:bg-green-700 p-2 rounded-full">›</button>
+  </div>
+
+  <!-- Carousel Dots -->
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+    <span class="carousel-indicator w-3 h-3 rounded-full bg-gray-400 cursor-pointer"></span>
+    <span class="carousel-indicator w-3 h-3 rounded-full bg-gray-400 cursor-pointer"></span>
+    <span class="carousel-indicator w-3 h-3 rounded-full bg-gray-400 cursor-pointer"></span>
+  </div>
+</div>
+
+<!-- Price, Summary, and Description Section -->
+<div class="max-w-7xl mx-auto px-4 mt-10">
+  <div class="flex flex-col md:flex-row items-start justify-between space-y-6 md:space-y-0 md:space-x-8">
+    
+    <!-- Left Side: Price and Quick Summary -->
+    <div class="flex flex-col items-center space-y-6 md:items-start">
+      <!-- Centered Price Box -->
+      <div class="flex justify-center items-center w-full">
+        <div class="text-gray-900 text-3xl font-bold shadow-lg text-center w-[150px] h-[150px] flex items-center justify-center border-4 border-yellow-500">
+          ₱5M to ₱7M
+        </div>
+      </div>
+
+      <!-- Quick Summary -->
+      <div class="text-lg text-gray-800 leading-relaxed">
+        <p class="mt-6 font-bold text-3xl mb-2 green-underline">Quick Summary</p>
+        <p><span class="font-bold text-sm">Location:</span> <span class="text-sm">Parañaque City</span></p>
+        <p><span class="font-bold text-sm">Property Type:</span> <span class="text-sm">3 Storey Townhouse</span></p>
+        <p><span class="font-bold text-sm">Status:</span><span class="text-sm">For Sale</span></p>
+      </div>
+    </div>
+
+    <!-- Right Side: Property Description -->
+    <div class="text-lg text-gray-800 leading-relaxed md:w-3/5">
+      <p class="mt-6 font-bold text-3xl mb-2 green-underline">Property Description</p>
+      <p class="mt-4 text-sm">Inside the largest village of Asia, RCD BF Homes Parañaque is your affordable option in this prime location. A pocket development of 22 units standing on 1792 sqm of land, RCD BF Homes offers aesthetically-pleasing townhomes and single-attached units that are of quality, affordable, and are ready for occupancy.</p>
+      <p class="mt-4 text-sm">Life is close to everything with goods and services that are readily available in the area. Encompassing the cities of Las Piñas, Parañaque, and Muntinlupa, going between cities is made more convenient and hassle-free with the village’s exit gates connecting to the main roads. And of course, public transportation options ranging from shuttle services, jeepneys, and tricycles are easily accessible inside and outside the village.For just P6 million, you can own your 3-storey home in this top-tier village. RCD BF Homes is definitely the best choice for you in the Metro South.</p>
+      
+      <!-- Right Column: Amenities -->
+      <div class="mt-8 text-lg text-gray-800 leading-relaxed">
+        <p class="mt-6 font-bold text-3xl mb-2 green-underline">Amenities</p>
+        <div class="grid grid-cols-1 gap-4">
+          <div class="flex space-x-4 text-sm">
+            <p class="text-gray-600">_ Balcony</p>
+            <p class="text-gray-600">_ Deck</p>
+            <p class="text-gray-600">_ Gate</p>
+          </div>
+          <div class="flex space-x-4 text-sm">
+            <p class="text-gray-600">_ Parking</p>
+            <p class="text-gray-600">_ Sun Room</p>
+            <p class="text-gray-600">_ Concrete Flooring</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- Footer -->
   <footer class="bg-gray-100 py-12 text-sm text-gray-700">
   <div class="container mx-auto px-4">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -222,6 +340,7 @@ menuToggle.addEventListener('click', () => {
           <p>Fridays 8am-5pm</p>
         </div>
       </div>
+
 
       <!-- Contact Info -->
       <div>
@@ -270,5 +389,47 @@ menuToggle.addEventListener('click', () => {
     </div>
   </div>
 </footer>
+<script>
+  let currentIndex = 0;
+const slides = document.querySelectorAll('#carouselSlides > div');
+const totalSlides = slides.length;
+const slideContainer = document.getElementById('carouselSlides');
+const dots = document.querySelectorAll('.carousel-indicator');
+
+// Function to show the slide based on currentIndex
+function showSlide(index) {
+  // Update the transform property to slide the images
+  slideContainer.style.transform = `translateX(-${index * 100}%)`;
+
+  // Update the active dot
+  dots.forEach(dot => dot.classList.remove('bg-green-600'));
+  dots[index].classList.add('bg-green-600');
+}
+
+// Prev button functionality
+document.getElementById('prev').addEventListener('click', () => {
+  currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+  showSlide(currentIndex);
+});
+
+// Next button functionality
+document.getElementById('next').addEventListener('click', () => {
+  currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+  showSlide(currentIndex);
+});
+
+// Dot navigation
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    showSlide(currentIndex);
+  });
+});
+
+// Initialize the carousel
+showSlide(currentIndex);
+</script>
+
+</body>
 </body>
 </html>
