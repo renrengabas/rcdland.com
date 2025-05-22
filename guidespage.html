@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RCD Land, Inc.</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: #00c655;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+<nav class="bg-[#ffc600] h-[81px] shadow-md flex flex-col items-center justify-center fixed top-0 left-0 w-full z-50">
+  <div class="flex items-center justify-center space-x-10">
+    <a href="#" class="text-[28px] font-bold tracking-wide text-gray-900 leading-none">RCD Land, Inc.</a>
+      <div class="flex md:hidden">
+        <button id="menuToggle" class="text-gray-900 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+        <div id="mobileMenu" class="hidden md:flex md:flex-row md:space-x-5 absolute md:static bg-[#ffc600] w-full md:w-auto left-0 top-[81px] md:top-auto px-4 md:px-0 py-4 md:py-0 z-50 font-semibold flex-col md:flex-row">
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Home</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">About</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Properties</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Guides</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">What's New</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Contact</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Careers</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Inquire Now</p>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[100px] mb-10">
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6" style="margin-left: 129px;">
+    <!-- Left: Guide Title and Description -->
+    <div class="md:w-2/3">
+      <div class="flex items-start gap-6 mb-8 md:mb-0">
+        <div class="w-1.5 h-28 bg-green-500 mr-6"></div>
+        <div>
+          <h1 class="text-2xl md:text-4xl font-semibold text-gray-900 mb-2">BUYER'S &amp; SELLER'S GUIDE</h1>
+          <span class="text-gray-700 text-base">
+            Here's everything you need to know in owning a RCD Land property. Learn more about the ins and outs of your RCD Land property with this comprehensive guide.
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- Right: Breadcrumb -->
+    <div class="md:w-1/3 flex md:justify-end">
+      <nav aria-label="breadcrumb">
+        <ol class="flex space-x-2 text-sm text-gray-600">
+          <li>
+            <a href="index.php" class="hover:underline text-yellow-600 font-semibold">Home</a>
+          </li>
+          <li>
+            <span>/</span>
+          </li>
+          <li class="text-gray-900 font-semibold">
+            Guides
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- Hero Section -->
+<div class="relative rounded-xl overflow-hidden mb-16">
+  <img alt="Two people, a man and a woman, looking at blueprints on a table in an office environment with natural light"
+    class="w-full max-w-5xl mx-auto h-[400px] md:h-[500px] object-cover rounded-xl"
+    src="./img/guides-img/guide.jpg"
+    loading="lazy"/>
+  <div class="absolute bottom-8 left-[408px] bg-yellow-500/70 text-black p-6 md:p-8 w-full md:w-[18%] rounded-lg shadow-xl">
+    <h2 class="text-2xl md:text-3xl font-bold leading-tight">
+      Since 1987
+    </h2>
+    <p class="text-xs md:text-sm mt-2 font-medium text-gray-600">
+      RCD LAND, INC.
+    </p>
+  </div>
+</div>
+
+<section class="max-w-7xl mx-auto px-4 py-10">
+  <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4 text-center">BUYER'S GUIDE</h2>
+  <p class="text-lg text-gray-700 mb-8 text-center">
+    5 Easy Steps in Acquiring a Quality and Affordable Home from RCD Land, Inc.
+  </p>
+
+  <!-- All Steps: Responsive Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center items-stretch">
+
+    <!-- Step 1 -->
+    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center md:w-[370px] h-[730px]">
+      <img class="w-48 h-auto mb-4"
+           src="./img/guides-img/buyers-1.png" alt="Pre-reservation">
+      <p class="text-[20px] font-semibold mb-2 text-gray-900 text-center">
+        First Step:<br>Pre-reservation
+      </p>
+      <p class="text-gray-700 text-sm text-justify">
+        <span class="font-semibold">(Tripping, Choosing of Unit, and Qualifying)</span>
+        In this stage, our Sales Representative will accompany the client in a site viewing 
+        to present detailed information about the project. Availability, prices, house specifications,
+        and deliverables will be discussed during the tripping. Once the client is satisfied, 
+        he/she may now choose a specific house unit. Then, our Sales Representative will conduct 
+        a screening and explain different payment options and easy financing schemes to choose from 
+        to help the buyer in purchasing a specific unit.
+      </p>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center md:w-[370px] h-[730px]">
+      <img class="w-48 h-auto mb-4"
+           src="./img/guides-img/buyers-2.png" alt="Reservation & Booking">
+      <p class="text-[20px] font-semibold mb-2 text-gray-900 text-center">
+        Second Step:<br>Reservation &amp; Booking
+      </p>
+      <p class="text-gray-700 text-sm text-justify">
+        Upon payment of reservation fee, buyers will fill out Reservation Agreement/Buyer's 
+        Information Sheet and submit three (3) initial documents such as:
+        <br><br>
+        <span class="font-semibold">1. Proof of Identity:</span> 2 Valid IDs<br>
+        <span class="font-semibold">2. Proof of Address:</span> Billing Statement<br>
+        <span class="font-semibold">3. Proof of Income:</span> COE or Payslip
+      </p>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center md:w-[370px] h-[730px]">
+      <img class="w-48 h-auto mb-4"
+           src="./img/guides-img/buyers-3.png" alt="Downpayment">
+      <p class="text-[20px] font-semibold mb-2 text-gray-900 text-center">
+        Third Step:<br>Downpayment
+      </p>
+      <p class="text-gray-700 text-sm text-justify">
+        <span class="font-semibold">Buyer can choose from two schemes for downpayment:</span><br><br>
+        Installment and Cash. For Installment Scheme, payment of equity will start 30 days after
+        reservation as stated in the standard price list. On the other hand, the Cash Downpayment
+        Scheme requires buyers to give the full Downpayment subject for a discount, depending on 
+        the number of days after the reservation date.
+      </p>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center md:w-[370px] h-[730px]">
+      <img class="w-48 h-auto mb-4"
+           src="./img/guides-img/buyers-4.png" alt="Loan Process and Take Out">
+      <p class="text-[20px] font-semibold mb-2 text-gray-900 text-center">
+        Fourth Step:<br>Loan Process and Take Out
+      </p>
+      <p class="text-gray-700 text-sm text-justify">
+        Upon 85% house completion, client will be required to submit the complete loan documents and sign necessary
+        Bank/HDMF documents to initiate processing of their Housing Loan. RCD Land Loan Processor will help the buyer
+        process his/her loan for convenience. For Bank/Pag-Ibig Financing, client will need the ff:
+         MSVS, ESAV, Updated Job Contract/ COE, Updated Proof of Billing, 6 Months Payslip, Notarized/ Consularized 
+         SPA if applicable, 2x2 ID Picture, Signed Housing Application Form, and Signed CTS.</p>
+     <p class="text-gray-700 text-sm text-justify">
+        Upon take out, client is required to settle bank charges, insurances and other charges. 
+        Loan/bank processor must inform and send take out letter to buyers. For In-House Financing 
+        (RCD Land, Inc.), buyers must update their accounts once unit has been completed and issue post-dated
+         checks prior to application for move in.
+      </p>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center md:w-[370px] h-[730px]">
+      <img class="w-48 h-auto mb-4"
+       src="./img/guides-img/buyers-5.png" alt="Move In">
+      <p class="text-[20px] font-semibold mb-2 text-gray-900 text-center">
+        Fifth Step:<br>Move In
+      </p>
+      <p class="text-gray-700 text-sm text-justify">
+        RCD Land’s Customer Relations Officer will assist buyer for their inspection schedule and other important matters regarding move in.<br><br>
+       Our Turnover Officer will conduct a unit inspection with buyer, will also rectify buyer’s concern on their Punchlist Form. Once concerns have 
+       been addressed, the Property Management Department will turnover unit keys to buyers and orient them regarding Deed of Restrictions.
+      </p>
+    </div>
+
+    <!-- Step 6 -->
+    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center md:w-[370px] h-[730px]">
+      <img class="w-48 h-auto mb-4"
+           src="./img/guides-img/buyers-6.png" alt="Turn Over Property">
+      <p class="text-[20px] font-semibold mb-2 text-gray-900 text-center">
+        Sixth Step:<br>Turn Over Property
+      </p>
+      <p class="text-gray-700 text-sm text-justify">
+        <span class="font-semibold">(Property Inspection, Acceptance and Turnover)</span><br><br>
+        To release the title, the buyer will have to coordinate with the assigned personnel or organization. 
+        For Bank/Pag-ibig Financing, the corresponding Bank/Pag-ibig branch must inform the buyer regarding the
+        title process and the date of release. If buyer is under In-house financing, our Credit and Collection 
+        Officer must inform the buyer regarding the title process and date of release once account is fully paid.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="w-full py-3 mb-4">
+  <div class="text-center">
+    <button
+      type="button"
+      class="application-form inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white text-[17px] font-semibold py-4 px-12 rounded-lg shadow transition-all duration-200"
+      onclick="document.getElementById('buyerModal').classList.remove('hidden')"
+    >
+      <i class="fa fa-file-text" aria-hidden="true"></i>
+      Buyer's Application
+    </button>
+  </div>
+</div>
+
+<!-- Buyer's Application Modal -->
+<div id="buyerModal" class="hidden fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
+  <div class="bg-white rounded-lg shadow p-8 max-w-lg w-full relative">
+    <button
+      class="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+      onclick="document.getElementById('buyerModal').classList.add('hidden')"
+      aria-label="Close"
+    >
+      <i class="fas fa-times"></i>
+    </button>
+    <h2 class="text-2xl font-bold mb-4">Buyer's Application</h2>
+    <!-- Example Form -->
+       <form>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">First Name:</label>
+        <input type="text"
+          class="w-full border rounded px-3 py-2"
+          required
+          placeholder="Enter First name here">
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">Last Name:</label>
+        <input type="text"
+          class="w-full border rounded px-3 py-2"
+          required
+          placeholder="Enter Last name here">
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">E-mail Address:</label>
+        <input type="email" 
+          class="w-full border rounded px-3 py-2"
+          required
+          placeholder="Enter your E-mail address here">
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">Address:</label>
+        <input type="address" 
+          class="w-full border rounded px-3 py-2"
+          required
+          placeholder="Enter your Address here">
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">Contact Number:</label>
+        <input type="contact number" 
+          class="w-full border rounded px-3 py-2"
+          required
+          placeholder="Enter your Contact number here">
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">Note:</label>
+        <textarea 
+          class="w-full border rounded px-3 py-2"
+          rows="3"
+          placeholder="Type your message here"></textarea>
+      </div>
+      <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- SELLER'S GUIDE SECTION -->
+<div class="w-full my-8">
+  <div class="text-center">
+    <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4 text-center">SELLER'S GUIDE</h1>
+    <p class="text-lg text-gray-600 font-semibold mb-1">Licensed Broker? Join Us!</p>
+    <p class="text-[17px] text-gray-700 mb-8 text-center">
+      If you wish to be part of RCD Land’s Brokers Group, you may contact our Brokers Network Group to facilitate your accreditation.
+    </p>
+  </div>
+</div>
+
+<div class="flex flex-col md:flex-row justify-center items-stretch gap-y-6 md:gap-x-9 max-w-6xl mx-auto mb-12">
+  <!-- Step 1 -->
+  <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center md:w-[370px] h-[630px]">
+    <img class="w-48 h-auto mb-4"
+         src="./img/guides-img/seller-1.png"
+         alt="Broker Accreditation Form">
+    <p class="text-[20px] font-semibold mb-2 text-gray-900 text-center">
+      Step 1: SUBMIT
+    </p>
+    <p class="text-gray-700 text-sm text-justify mb-3">
+      <span class="font-semibold">
+        Submit completely filled up Broker’s Accreditation Form, together with the following requirements:
+      </span>
+    </p>
+    <ul class="list-disc list-inside text-gray-700 text-sm text-justify space-y-1">
+      <li>Photocopy of your Real Estate Broker’s License</li>
+      <li>Photocopy of the Certificate of Registration</li>
+      <li>Photocopy of BIR Certification</li>
+      <li>
+        Photocopy of the DTI or Securities and Exchange Commission (SEC) Registration
+        (if broker is engaged in business as a partnership or corporation)
+      </li>
+    </ul>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center md:w-[370px] h-[630px]">
+    <img class="w-48 h-auto mb-4"
+         src="./img/guides-img/seller-2.png"
+         alt="Knowledge Seminar">
+    <p class="text-[20px] font-semibold mb-2 text-gray-900 text-center">
+      Step 2: ATTEND
+    </p>
+    <p class="text-gray-700 text-sm text-justify flex-1">
+      <span class="font-semibold">As soon as your application for accreditation has been received, our Broker’s
+        Coordinator will contact you to schedule a Project Knowledge Seminar and Site Orientation.
+      </span>
+      <br><br>
+      Once accredited, you will constantly receive updates, availability of inventory and latest
+      promos/incentives from the broker’s coordinator assigned to you.
+    </p>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center md:w-[370px] h-[630px]">
+    <img class="w-48 h-auto mb-4"
+         src="./img/guides-img/seller-3.png"
+         alt="Enjoy Broker Benefits">
+    <p class="text-[20px] font-semibold mb-2 text-gray-900 text-center">
+      Step 3: ENJOY
+    </p>
+    <p class="text-gray-700 text-sm text-justify mb-3">
+      <span class="font-semibold">
+        Being an accredited broker of RCD Land, you can enjoy the following benefits, promos and incentives:
+      </span>
+    </p>
+    <ul class="list-disc list-inside text-gray-700 text-sm text-justify space-y-1">
+      <li>Per Unit Incentive</li>
+      <li>Monthly Incentives</li>
+      <li>Quarterly Incentives</li>
+      <li>Annual Seller’s Incentives</li>
+      <li>Full Marketing Support</li>
+      <li>Free Seminars and Trainings</li>
+      <li>Attend Quarterly Broker’s Meeting</li>
+    </ul>
+  </div>
+</div>
+
+<div class="w-full py-3 mb-4">
+  <div class="text-center">
+    <button
+      type="button"
+      class="application-form inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white text-[17px] font-semibold py-4 px-12 rounded-lg shadow transition-all duration-200"
+      onclick="document.getElementById('sellerModal').classList.remove('hidden')"
+    >
+      <i class="fa fa-file-text" aria-hidden="true"></i>
+      Seller's Application
+    </button>
+  </div>
+</div>
+
+<!-- Seller's Application Modal -->
+<div id="sellerModal" class="hidden fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
+  <div class="bg-white rounded-lg shadow p-8 max-w-lg w-full relative">
+    <button
+      class="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+      onclick="document.getElementById('sellerModal').classList.add('hidden')"
+      aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2 class="text-2xl font-bold mb-4">Seller's Application</h2>
+    <!-- Example Form -->
+    <form>
+       <form>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">First Name:</label>
+        <input type="text"
+          class="w-full border rounded px-3 py-2"
+          required
+          placeholder="Enter First name here">
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">Last Name:</label>
+        <input type="text"
+          class="w-full border rounded px-3 py-2"
+          required
+          placeholder="Enter Last name here">
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">E-mail Address:</label>
+        <input type="email" 
+          class="w-full border rounded px-3 py-2"
+          required
+          placeholder="Enter your E-mail address here">
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">Address:</label>
+        <input type="address" 
+          class="w-full border rounded px-3 py-2"
+          required
+          placeholder="Enter your Address here">
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">Contact Number:</label>
+        <input type="contact number" 
+          class="w-full border rounded px-3 py-2"
+          required
+          placeholder="Enter your Contact number here">
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-1">Note:</label>
+        <textarea 
+          class="w-full border rounded px-3 py-2"
+          rows="3"
+          placeholder="Type your message here"></textarea>
+      </div>
+      <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-100 w-full py-12 text-sm text-gray-700">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Company Info -->
+      <div>
+        <h3 class="font-bold text-4xl mb-2">RCD LAND, INC.</h3>
+        <p>RCD Land, Inc. is a real estate development company who makes your dream home come to life. Building Quality Homes Since 1987</p>
+        <br>
+        <div>
+          <h3 class="mb-2 flex items-center font-semibold">
+            <svg class="w-7 h-7 text-gray-800 mt-1 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+            </svg>
+            Business Hours</h3>
+            <p>Mondays to Thursday 8am-6pm</p>
+            <p>Fridays 8am-5pm</p>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-4xl font-semibold mb-2 flex items-center">
+          <svg class="w-10 h-10 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 
+              1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z"/>
+          </svg>
+          Contact Us
+        </h3>
+        <p>Main Office:<a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300"> (02) 8-893-7451</a>/</p>
+        <p><a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300">52 local 108</a></p>
+        <p>Phone (Manila): <a href="tel:0284033490" class="hover:text-yellow-500 transition-colors duration-300">(02)8-403-3490</a></p>
+        <p>Sales & Marketing: <a href="tel:0286175364" class="hover:text-yellow-500 transition-colors duration-300">(02) 8-617-5364</a></p>
+        <p>Mobile: <a href="tel:639177001109" class="hover:text-yellow-500 transition-colors duration-300">(+63) 917-7001-109</a>(GLOBE)</p>
+
+        <h3 class="font-semibold mt-4 mb-2 flex items-center">
+          <svg class="w-5 h-5 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+              d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+          </svg>
+          Email
+        </h3>
+        <p>For Inquiries: <a target="_blank" href="mailto:inquiry@rcdland.com" class="hover:text-yellow-500 transition-colors duration-300">inquiry@rcdland.com</a></p>
+        <p>For Customer Care: <a target="_blank" href="mailto:rcd.csr@rcdland.com"  class="hover:text-yellow-500 transition-colors duration-300">rcd.csr@rcdland.com</a></p>
+      </div>
+
+      <!-- Location Info -->
+      <div>
+        <h3 class="text-4xl font-semibold mb-2 flex items-center">
+          <svg class="w-10 h-10 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 
+              6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+              clip-rule="evenodd" />
+          </svg>
+          Find us in
+        </h3>
+        <p><a href="https://maps.app.goo.gl/h1TfTrETZJSj1oQY9" target="_blank" class="hover:text-yellow-500 transition-colors duration-300">5th Flr. Unit 501 & 505 Chateau de Baie Condo., Roxas Blvd. corner Airport Road, Parañaque City</a></p>
+        <p>Unit 309 - Loans & Accounts Management</p>
+        <p>Unit 409 - Sales & Marketing</p>
+      </div>
+    </div>
+
+    <div class="mt-8 border-t pt-4 text-center">
+      <p class="mt-2">&copy; 2025 RCD LAND, INC. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Responsive Navigation Toggle Script -->
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuToggle && menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Optional: Close modals when clicking outside their content
+  window.addEventListener('click', function(event) {
+    const buyerModal = document.getElementById('buyerModal');
+    const sellerModal = document.getElementById('sellerModal');
+    if (buyerModal && !buyerModal.classList.contains('hidden') && !buyerModal.contains(event.target) && event.target.closest('.application-form') == null && !event.target.closest('.bg-white')) {
+      buyerModal.classList.add('hidden');
+    }
+    if (sellerModal && !sellerModal.classList.contains('hidden') && !sellerModal.contains(event.target) && event.target.closest('.application-form') == null && !event.target.closest('.bg-white')) {
+      sellerModal.classList.add('hidden');
+    }
+  });
+</script>
+</body>
+</html>
