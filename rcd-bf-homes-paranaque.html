@@ -10,161 +10,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 2px;
-      background-color: #00c655;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-    }
-
-    .nav-link:hover::after {
-      transform: scaleX(1);
-    }
-
-    
-  </style>
-</head>
-<body class="bg-white text-gray-800">
-
-<nav class="bg-[#ffc600] h-[81px] shadow-md flex flex-col items-center justify-center">
-  <div class="flex items-center justify-center space-x-10">
-    <a href="#" class="text-[28px] font-bold tracking-wide text-gray-900 leading-none">RCD Land, Inc.</a>
-    <ul class="hidden md:flex items-center space-x-5 font-semibold">
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Home</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">About</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Properties</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Guides</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">What's New</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Contact</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Careers</a></li>
-      <li><a class="nav-link relative hover:text-[#00c655]" href="#">Inquire Now</a></li>
-    </ul>
-  </div>
-</nav>
-
-<div class="parallax">
-  <div class="overlay">
-
-    <!-- Project-header content -->
-
-    <div class="container">
-      <div class="proj-header mx-auto max-w-[90%] lg:max-w-[80%] text-center lg:text-left text-white">
-        <div>
-          <img src="img/project-logo/bf-homes.png" alt="" class="img-a img-fluid mx-auto lg:mx-0" style="width: 400px;">
-          <h1 class="proj-title">Inside the Largest </h1>
-          <h1 class="proj-title">Village of Asia</h1>
-          <p class="header-text" style="">Encompassing the cities of Las Piñas, Parañaque, and Muntinlupa, going between cities is </p>
-          <p class"header-text style="">made more convenient and hassle-free with the village’s exit gates connecting to the main </p>
-          <p class"header-text style="">roads.</p>
-        </div>
-      </div> 
-    </div>
-
-  </div>
-</div>
-
-<style>
-  @media (min-width: 992px) {
-    .proj-header {
-      padding-top: 300px; 
-      color: white;
-    }
-    .proj-title{
-      color: white; 
-      font-size: 60px;
-    }
-    .overlay {
-      content: ' ';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 90%;
-      z-index: 1;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 0%) 27%, rgb(0 0 0 / 33%) 90%);
-    }
-  }
-  @media (min-width: 576px) {
-    .parallax {
-      height: 90vh;
-    }
-    .overlay {
-      content: ' ';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 90%;
-      z-index: 1;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 0%) 27%, rgb(0 0 0 / 33%) 90%);
-    }
-    .proj-header {
-      padding-top: 250px; 
-      color: white;
-    }
-    .proj-title{
-      color: white; 
-      font-size: 60px;
-      text-shadow: 2px 2px 4px #000000;
-    }
-    .header-text{
-      text-align: justify; 
-      text-justify: inter-word; 
-      padding-right: 50px;
-    }
-  }
-  @media (max-width: 767px){
-    .parallax {
-      height: 90vh;
-    }
-    .overlay {
-      content: ' ';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 90%;
-      z-index: 1;
-    }
-    .proj-header {
-      padding-top: 250px; 
-      color: white;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-    .proj-title{
-      color: white; 
-      font-size: 45px;
-      text-shadow: 3px 3px 2px #000000;
-    }
-    .header-text { 
-      color: white;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
+  body {
+    font-family: 'Poppins', sans-serif;
   }
 
-  .parallax { 
+  /* Navigation link underline hover effect */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #00c655;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Parallax background */
+  .parallax {
     background-image: url(img/parallax-bg/bf-townhomes-2.jpg);
-    height: 77vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 90vh;
+    position: relative;
   }
 
   @media only screen and (max-device-width: 1024px) {
@@ -172,54 +48,496 @@
       background-attachment: scroll;
     }
   }
+
+  /* Overlay gradient */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.1) 27%,
+      rgba(0, 0, 0, 0.33) 90%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: flex-flex start;
+    padding-top: 200px;
+    padding-bottom: 4rem;
+  }
+
+  /* Project title styles */
+  .proj-title {
+    font-size: 60px;
+    font-weight: 500;
+    color: white;
+    line-height: 1.0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    margin: 0 0 8px;
+    
+  }
+
+  .header-text {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    margin-top: 1rem;
+    max-width: 720px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .proj-title {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    .header-text {
+      text-align: justify; 
+    text-justify: inter-word; 
+    padding-right: 50px;
+    }
+
+    .overlay {
+      align-items: flex-end;
+      padding-bottom: 3rem;
+      text-align: center;
+    }
+  }
+
+  /* Carousel Button (Square Button) */
+  .carousel-button {
+    background-color: #00c655;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    width: 50px; /* Square button width */
+    height: 50px; /* Square button height */
+  }
+
+  .carousel-button:hover {
+    background-color: #028c3e;
+  }
+
+  /* Positioning the carousel buttons to the upper right */
+  .carousel-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+  z-index: 2; /* Ensure buttons are above the image */
+}
+
+  /* Hide default carousel controls */
+  .carousel-prev, .carousel-next {
+    display: none;
+  }
+
+  /* Carousel Section */
+  .carousel-container {
+    position: relative;
+  }
+
+   .tab-link:hover {
+    color: black !important;
+  }
+
+
 </style>
 
-<!-- Intro Single star -->
-<section class="intro-single" style="padding-top: 40px;"></section>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 col-lg-8">
-      <div class="title-single-box">
-        <h1 class="title-single">RCD BF HOMES</h1>
-        <span class="color-text-a">Parañaque City</span>
+</head>
+<body class="bg-white text-gray-800">
+
+<nav class="bg-[#ffc600] h-[81px] shadow-md flex flex-col items-center justify-center fixed top-0 left-0 w-full z-50">
+  <div class="flex items-center justify-center space-x-10">
+    <a href="#" class="text-[28px] font-bold tracking-wide text-gray-900 leading-none">RCD Land, Inc.</a>
+      <div class="flex md:hidden">
+        <button id="menuToggle" class="text-gray-900 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+        <div id="mobileMenu" class="hidden md:flex md:flex-row md:space-x-5 absolute md:static bg-[#ffc600] w-full md:w-auto left-0 top-[81px] md:top-auto px-4 md:px-0 py-4 md:py-0 z-50 font-semibold flex-col md:flex-row">
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Home</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">About</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Properties</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Guides</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">What's New</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Contact</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Careers</p>
+        <p class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Inquire Now</p>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
+</script>
+
+  <!-- Parallax Section -->
+  <div class="parallax">
+    <div class="overlay">
+      <div class="container pt-[65px] mx-auto max-w-[90%] lg:max-w-[80%] text-center lg:text-left text-white">
+        <div>
+          <img src="img/project-logo/bf-homes.png" alt="" class="img-a img-fluid mx-auto lg:mx-0" style="width: 400px;">
+          <h1 class="proj-title">Inside the Largest </h1>
+          <h1 class="proj-title">Village in Asia</h1>
+          <p class="header-text">Encompassing the cities of Las Piñas, Parañaque, and Muntinlupa, going between cities is made more convenient and hassle-free with the village’s exit gates connecting to the main roads.</p>
+        </div>
       </div>
     </div>
   </div>
 
-<!-- Footer -->
-<footer class="bg-gray-100 py-12 text-sm text-gray-700">
+ <!-- Property Section -->
+<section class="mt-0 pt-10 pb-16 bg-[#f7f7f7]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="mb-12 flex justify-between items-start max-w-7xl mx-auto px-4">
+  <!-- Left side: title and vertical line -->
+  <div class="flex items-center space-x-4">
+    <div class="w-1 h-28 bg-green-500"></div>
+    <div>
+      <h2 class="text-4xl font-bold text-gray-800">RCD BF HOMES</h2>
+      <p class="text-gray-600 text-base mt-1 max-w-2xl">Parañaque City</p>
+    </div>
+  </div>
+
+  <!-- Right side: breadcrumb -->
+  <div class="text-sm text-gray-600 space-x-1 mt-2">
+    <a href="#" class="hover:text-yellow-600">Home</a>
+    <span>/</span>
+    <a href="#" class="hover:text-yellow-600">Properties</a>
+    <span>/</span>
+    <span class="text-gray-800 font-light">RCD BF Homes</span>
+  </div>
+</div>
+
+ <!-- Carousel Section -->
+<section class="mt-0 pt-0 pb-16 bg-[#f7f7f7]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="carousel-container mt-4">
+      <div class="relative">
+        <div class="relative w-full overflow-hidden">
+  <div class="flex transition-transform duration-500 ease-in-out" id="carouselSlides">
+    <!-- Slide 1 -->
+    <div class="w-full flex-shrink-0">
+      <img src="img/project-slider/bf-1.jpg" alt="bf-1" class="w-full max-h-[500px] object-cover mx-auto">
+    </div>
+    <!-- Slide 2 -->
+    <div class="w-full flex-shrink-0">
+      <img src="img/project-slider/bf-2.jpg" alt="bf-2" class="w-full max-h-[500px] object-cover mx-auto">
+    </div>
+    <!-- Slide 3 -->
+    <div class="w-full flex-shrink-0">
+      <img src="img/project-slider/bf-3.jpg" alt="bf-3" class="w-full max-h-[500px] object-cover mx-auto">
+    </div>
+  </div>
+
+  <!-- Carousel Controls -->
+  <div class="absolute top-1/2 transform -translate-y-1/2 left-4">
+    <button id="prev" class="carousel-button text-white bg-green-600 hover:bg-green-700 p-2 rounded-full">‹</button>
+  </div>
+  <div class="absolute top-1/2 transform -translate-y-1/2 right-4">
+    <button id="next" class="carousel-button text-white bg-green-600 hover:bg-green-700 p-2 rounded-full">›</button>
+  </div>
+
+  <!-- Carousel Dots -->
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+    <span class="carousel-indicator w-3 h-3 rounded-full bg-gray-400 cursor-pointer"></span>
+    <span class="carousel-indicator w-3 h-3 rounded-full bg-gray-400 cursor-pointer"></span>
+    <span class="carousel-indicator w-3 h-3 rounded-full bg-gray-400 cursor-pointer"></span>
+  </div>
+</div>
+
+<!-- Price, Summary, and Description Section -->
+<div class="max-w-7xl mx-auto px-4 mt-10">
+  <div class="flex flex-col md:flex-row items-start justify-between space-y-6 md:space-y-0 md:space-x-8">
+    
+    <!-- Left Side: Price and Quick Summary -->
+    <div class="flex flex-col items-center space-y-6 md:items-start">
+      <!-- Centered Price Box -->
+      <div class="flex justify-center items-center w-full">
+        <div class="text-gray-900 text-3xl font-bold shadow-lg text-center w-[150px] h-[150px] flex items-center justify-center border-4 border-yellow-500">
+          ₱5M to ₱7M
+        </div>
+      </div>
+
+      <!-- Quick Summary -->
+      <div class="text-lg text-gray-800 leading-relaxed">
+        <p class="mt-6 font-bold text-3xl mb-2">Quick Summary</p>
+        <div class="w-16 h-1 bg-green-500 mb-6"></div>
+        <p><span class="font-bold text-sm">Location:</span> <span class="text-sm">Parañaque City</span></p>
+        <p><span class="font-bold text-sm">Property Type:</span> <span class="text-sm">3 Storey Townhouse</span></p>
+        <p><span class="font-bold text-sm">Status:</span><span class="text-sm">For Sale</span></p>
+      </div>
+    </div>
+
+    <!-- Right Side: Property Description -->
+    <div class="text-lg text-gray-800 leading-relaxed md:w-3/5">
+      <p class="mt-6 font-bold text-3xl mb-2">Property Description</p>
+      <div class="w-16 h-1 bg-green-500 mb-6"></div>
+      <p class="mt-4 text-sm text-gray-600">Inside the largest village of Asia, RCD BF Homes Parañaque is your affordable option in this prime location. A pocket development of 22 units standing on 1792 sqm of land, RCD BF Homes offers aesthetically-pleasing townhomes and single-attached units that are of quality, affordable, and are ready for occupancy.</p>
+      <p class="mt-4 text-sm text-gray-600">Life is close to everything with goods and services that are readily available in the area. Encompassing the cities of Las Piñas, Parañaque, and Muntinlupa, going between cities is made more convenient and hassle-free with the village’s exit gates connecting to the main roads. And of course, public transportation options ranging from shuttle services, jeepneys, and tricycles are easily accessible inside and outside the village.For just P6 million, you can own your 3-storey home in this top-tier village. RCD BF Homes is definitely the best choice for you in the Metro South.</p>
+      
+       <h2 class="mt-6 font-bold text-3xl mb-2">Amenities</h2>
+  <div class="w-16 h-1 bg-green-500 mb-6"></div>
+
+  <div class="grid grid-cols-3 gap-y-3 gap-x-8 text-sm text-gray-700">
+    <div class="flex items-center space-x-2">
+      <span class="text-black">–</span>
+      <span>Balcony</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <span class="text-black">–</span>
+      <span>Deck</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <span class="text-black">–</span>
+      <span>Gate</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <span class="text-black">–</span>
+      <span>Parking</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <span class="text-black">–</span>
+      <span>Sun Room</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <span class="text-black">–</span>
+      <span>Concrete Flooring</span>
+    </div>
+  </div>
+</section>
+
+<!-- Nav Pills -->
+<div class="max-w-4xl mx-auto mt-10 border-b border-gray-300">
+  <ul id="tabs" class="flex">
+    <li class="mr-6">
+      <button
+        class="tab-link inline-block py-2 px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
+        data-tab="video"
+      >
+        Video
+      </button>
+    </li>
+    <li class="mr-6">
+      <button
+        class="tab-link inline-block py-2 px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
+        data-tab="floorplan"
+      >
+        Floor Plan
+      </button>
+    </li>
+    <li class="mr-6">
+      <button
+        class="tab-link inline-block py-2 px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
+        data-tab="ubication"
+      >
+        Ubication
+      </button>
+    </li>
+  </ul>
+</div>
+
+
+  <!-- Tab Content -->
+  <div id="video" class="tab-content hidden">
+  <div class="w-full max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden">
+    <div class="relative" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="Property Video"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+    <div id="floorplan" class="tab-content hidden">
+      <!-- Floor plan image or content -->
+      <img
+        src="img/floor-plan/bf-townhouse.jpg"
+        alt="Floor Plan"
+        class="w-full max-w-4xl mx-auto rounded-lg shadow-md"
+      />
+    </div>
+
+    <div id="ubication" class="tab-content hidden">
+  <div class="w-full max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden">
+    <div class="relative" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute top-0 left-0 w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1365.9358183556985!2d121.00935493989054!3d14.458835077716385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ce159c04cc2b%3A0xab75f4581a59f1!2sRCD%20BF%20Homes%20Paranaque!5e0!3m2!1sen!2sph!4v1616477132615!5m2!1sen!2sph"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-12 text-sm text-gray-700">
   <div class="container mx-auto px-4">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Company Info -->
       <div>
-        <h3 class="font-bold text-lg mb-2">RCD LAND, INC.</h3>
+        <h3 class="font-bold text-4xl mb-2">RCD LAND, INC.</h3>
         <p>RCD Land, Inc. is a real estate development company who makes your dream home come to life. Building Quality Homes Since 1987</p>
-      </div>
+        <br>
       <div>
-        <h3 class="font-semibold mb-2">Contact Us</h3>
-        <p>Main Office: (02) 8-893-7451/52 local 108</p>
-        <p>Phone (Manila): (02) 8-403-3490</p>
-        <p>Sales & Marketing: (02) 8-617-5364</p>
-        <p>Mobile: (+63) 917-7001-109 (GLOBE)</p>
-        <p>Fax: 519-8703</p>
+        <h3 class="mb-2 flex items-center font-semibold">
+          <svg class="w-7 h-7 text-gray-800 mt-1 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+          </svg>
+           Business Hours</h3>
+          <p>Mondays to Thursday 8am-6pm</p>
+          <p>Fridays 8am-5pm</p>
+        </div>
       </div>
+
+
+      <!-- Contact Info -->
       <div>
-        <h3 class="font-semibold mb-2">Email</h3>
-        <p>For Inquiries: inquiry@rcdland.com</p>
-        <p>For Customer Care: rcd.csr@rcdland.com</p>
-        <h3 class="font-semibold mt-4 mb-2">Find us in</h3>
-        <p>5th Flr. Unit 501 & 505 Chateau de Baie Condo., Roxas Blvd. corner Airport Road, Parañaque City</p>
+        <h3 class="text-4xl font-semibold mb-2 flex items-center">
+          <svg class="w-10 h-10 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z"/>
+          </svg>
+          Contact Us
+        </h3>
+        <p>Main Office:<a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300"> (02) 8-893-7451</a>/</p>
+        <p><a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300">52 local 108</a></p>
+        <p>Phone (Manila): <a href="tel:0284033490" class="hover:text-yellow-500 transition-colors duration-300">(02)8-403-3490</a></p>
+        <p>Sales & Marketing: <a href="tel:0286175364" class="hover:text-yellow-500 transition-colors duration-300">(02) 8-617-5364</a></p>
+        <p>Mobile: <a href="tel:639177001109" class="hover:text-yellow-500 transition-colors duration-300">(+63) 917-7001-109</a>(GLOBE)</p>
+
+        <h3 class="font-semibold mt-4 mb-2 flex items-center">
+          <svg class="w-5 h-5 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+              d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+          </svg>
+          Email
+        </h3>
+        <p>For Inquiries: <a target="_blank" href="mailto:inquiry@rcdland.com" class="hover:text-yellow-500 transition-colors duration-300">inquiry@rcdland.com</a></p>
+        <p>For Customer Care: <a target="_blank" href="mailto:rcd.csr@rcdland.com"  class="hover:text-yellow-500 transition-colors duration-300">rcd.csr@rcdland.com</a></p>
+      </div>
+
+      <!-- Location Info -->
+      <div>
+        <h3 class="text-4xl font-semibold mb-2 flex items-center">
+          <svg class="w-10 h-10 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+              clip-rule="evenodd" />
+          </svg>
+          Find us in
+        </h3>
+        <p><A href="https://maps.app.goo.gl/h1TfTrETZJSj1oQY9" target="_blank" class="hover:text-yellow-500 transition-colors duration-300">5th Flr. Unit 501 & 505 Chateau de Baie Condo., Roxas Blvd. corner Airport Road, Parañaque City</A></p>
         <p>Unit 309 - Loans & Accounts Management</p>
         <p>Unit 409 - Sales & Marketing</p>
       </div>
     </div>
+
     <div class="mt-8 border-t pt-4 text-center">
-      <p>Business Hours: Mondays to Thursday 8am-6pm | Fridays 8am-5pm</p>
-      <p class="mt-2">Home | About | Property | Blog | Contact</p>
       <p class="mt-2">&copy; 2025 RCD LAND, INC. All Rights Reserved.</p>
-      <p class="mt-1">Designed by IT Department</p>
     </div>
   </div>
 </footer>
+<script>
+  let currentIndex = 0;
+const slides = document.querySelectorAll('#carouselSlides > div');
+const totalSlides = slides.length;
+const slideContainer = document.getElementById('carouselSlides');
+const dots = document.querySelectorAll('.carousel-indicator');
 
+// Function to show the slide based on currentIndex
+function showSlide(index) {
+  // Update the transform property to slide the images
+  slideContainer.style.transform = `translateX(-${index * 100}%)`;
+
+  // Update the active dot
+  dots.forEach(dot => dot.classList.remove('bg-green-600'));
+  dots[index].classList.add('bg-green-600');
+}
+
+// Prev button functionality
+document.getElementById('prev').addEventListener('click', () => {
+  currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+  showSlide(currentIndex);
+});
+
+// Next button functionality
+document.getElementById('next').addEventListener('click', () => {
+  currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+  showSlide(currentIndex);
+});
+
+// Dot navigation
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    showSlide(currentIndex);
+  });
+});
+
+// Initialize the carousel
+showSlide(currentIndex);
+
+const tabs = document.querySelectorAll('.tab-link');
+  const contents = document.querySelectorAll('.tab-content');
+
+  function resetTabs() {
+    tabs.forEach(tab => {
+      tab.classList.remove('border-green-600', 'font-bold');
+      tab.classList.add('text-gray-600');
+    });
+    contents.forEach(content => {
+      content.classList.add('hidden');
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      resetTabs();
+      tab.classList.add('border-green-600', 'font-bold');
+      tab.classList.remove('text-gray-600');
+
+      const tabId = tab.getAttribute('data-tab');
+      document.getElementById(tabId).classList.remove('hidden');
+    });
+  });
+
+  // Initialize first tab as active on page load
+  if (tabs.length > 0) {
+    tabs[0].click();
+  }
+
+</script>
+
+</body>
 </body>
 </html>
