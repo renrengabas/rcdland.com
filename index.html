@@ -10,7 +10,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Flowbite Carousel JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -101,10 +101,10 @@
 
       <div id="mobileMenu"
         class="hidden md:flex md:flex-row md:space-x-5 absolute md:static bg-[#ffc600] w-full md:w-auto left-0 top-[81px] md:top-auto px-4 md:px-0 py-4 md:py-0 z-50 font-semibold flex-col md:flex-row">
-        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Home</a>
-        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">About</a>
-        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="ourproperties.html">Properties</a>
-        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Guides</a>
+        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="index.html">Home</a>
+        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="about-us.html">About</a>
+        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="our-properties.html">Properties</a>
+        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="guidespage.html">Guides</a>
         <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">What's New</a>
         <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Contact</a>
         <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Careers</a>
@@ -125,29 +125,29 @@
 
   </script>
 
- <!-- Swiper Carousel Section -->
-<section class="relative w-full pt-[81px]">
-  <div class="swiper w-full h-[500px] sm:h-[600px] md:h-[700px]">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="./img/main-src-imgs/carousel/royale-virtual-tour.jpg" class="w-full h-full object-cover" />
+  <!-- Swiper Carousel Section -->
+  <section class="relative w-full pt-[81px]">
+    <div class="swiper w-full aspect-[16/9] sm:aspect-[16/7] md:aspect-[16/6]">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./img/main-src-imgs/carousel/royale-virtual-tour.jpg" class="w-full h-full object-cover" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/main-src-imgs/carousel/brooky-cover.jpg" class="w-full h-full object-cover" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/main-src-imgs/carousel/careers-cover.jpg" class="w-full h-full object-cover" />
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="./img/main-src-imgs/carousel/brooky-cover.jpg" class="w-full h-full object-cover" />
-      </div>
-      <div class="swiper-slide">
-        <img src="./img/main-src-imgs/carousel/careers-cover.jpg" class="w-full h-full object-cover" />
-      </div>
+
+      <!-- Pagination Dots -->
+      <div class="swiper-pagination !bottom-6"></div>
+
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-prev !text-yellow-400 !hover:text-green-700"></div>
+      <div class="swiper-button-next !text-yellow-400 !hover:text-green-700"></div>
     </div>
-
-    <!-- Pagination Dots -->
-    <div class="swiper-pagination !bottom-6"></div>
-
-    <!-- Navigation Buttons -->
-    <div class="swiper-button-prev !text-yellow-400 !hover:text-green-700"></div>
-    <div class="swiper-button-next !text-yellow-400 !hover:text-green-700"></div>
-  </div>
-</section>
+  </section>
 
   <!-- Swiper JS (must load BEFORE init) -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -171,23 +171,26 @@
         },
         speed: 600,
         effect: 'slide',
-        
+
       });
     });
   </script>
 
   <style>
-  .swiper-pagination-bullet {
-    background-color: #F7C948 !important; /* Yellow */
-    opacity: 0.6;
-  }
+    .swiper-pagination-bullet {
+      background-color: #F7C948 !important;
+      /* Yellow */
+      opacity: 0.6;
+    }
 
-  .swiper-pagination-bullet-active {
-    background-color: #3A843A !important; /* Green */
-    opacity: 1;
-  }
-</style>
+    .swiper-pagination-bullet-active {
+      background-color: #3A843A !important;
+      /* Green */
+      opacity: 1;
+    }
+  </style>
 
+  <!-- Mobile App Section -->
   <section class="bg-gray-100 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-center gap-12 min-h-[500px]">
@@ -198,18 +201,27 @@
         </div>
 
         <!-- Right Side Content -->
-        <div class="w-full md:w-1/2 flex flex-col justify-center md:items-center md:text-center items-start text-left space-y-4">
+          <div class="w-full md:w-1/2 flex flex-col justify-center items-center text-center space-y-4">
 
-          <h2 class="text-3xl md:text-4xl font-semibold text-gray-800">THE RCD LAND NEWEST MOBILE APP</h2>
-          <p class="text-sm text-gray-700">Enable Contact-less Transactions and Online Reservations.</p>
-          <p class="text-sm text-gray-700">Get Instantly Connected Anytime Anywhere for RCD Land, Inc. Brokers and
-            Agents.</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800">
+            THE RCD LAND NEWEST MOBILE APP
+          </h2>
+
+          <p class="text-sm text-gray-700">
+            Enable Contact-less Transactions and Online Reservations.
+          </p>
+
+          <p class="text-sm text-gray-700">
+            Get Instantly Connected Anytime Anywhere for RCD Land, Inc. Brokers and Agents.
+          </p>
 
           <!-- QR Code -->
-          <img src="./img/main-src-imgs/rrh-qrcode.png" alt="QR Code" class="w-32 h-32">
+          <div class="pt-2">
+            <img src="./img/main-src-imgs/rrh-qrcode.png" alt="QR Code" class="w-28 sm:w-32 h-auto">
+          </div>
 
           <!-- App Store Buttons -->
-          <div class="flex space-x-4 pt-2 justify-center">
+          <div class="flex space-x-4 pt-2 justify-start md:justify-center">
             <a href="https://apps.apple.com/us/app/rcd-land-brooky/id1559684152" target="_blank">
               <img src="./img/main-src-imgs/app-store.png" alt="App Store" class="h-12">
             </a>
@@ -217,7 +229,8 @@
               <img src="./img/main-src-imgs/google-play.png" alt="Google Play" class="h-12">
             </a>
           </div>
-          <p>For ios or Android</p>
+
+          <p class="text-sm text-gray-700">For iOS or Android</p>
         </div>
       </div>
     </div>
@@ -403,78 +416,155 @@
   <!-- Explore Model Section -->
   <section class="bg-gray-50 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Explore Our Model House</h2>
+      <h2 class="text-3xl font-semibold text-gray-800 mb-2 text-center">Explore Our Model House</h2>
+      <div class="text-center mb-12">
+        <p>You Can Now Experience Virtual Tour</p>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Model 1 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-          <img src="./img/main-src-imgs/explore-model/th47.jpg" alt="Townhouse 47" class="w-full h-48 object-cover">
-          <div class="p-4 text-center">
-            <h3 class="text-xl font-semibold text-gray-800">TOWNHOUSE 47</h3>
-            <a href="#" class="text-green-600 font-medium mt-4 inline-block">Show Details</a>
+
+        <!-- Single Card Template -->
+        <div class="relative group overflow-hidden rounded-xl shadow-lg h-[600px]">
+          <img src="./img/main-src-imgs/explore-model/th47.jpg" alt="Townhouse 47"
+            class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+
+          <!-- Overlay Fade -->
+          <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-10 transition-all duration-500">
+          </div>
+
+          <!-- Top-left Title -->
+          <div class="absolute top-4 left-4 z-10">
+            <h3 class="text-l text-white drop-shadow-lg">TOWNHOUSE 47</h3>
+          </div>
+
+          <!-- Bottom-left "Show Details" -->
+          <div class="absolute bottom-4 left-4 z-10">
+            <a href="#" class="text-white text-sm font-medium drop-shadow-md hover:underline">Show Details</a>
+          </div>
+
+          <!-- Bottom-right Arrow Icon -->
+          <div class="absolute bottom-4 right-4 z-10">
+            <a href="#" class="text-white text-xl transition-colors duration-300 hover:text-yellow-400 drop-shadow-lg">
+              <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
           </div>
         </div>
-        <!-- Model 2 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-          <img src="./img/main-src-imgs/explore-model/daphne.jpg" alt="Daphne" class="w-full h-48 object-cover">
-          <div class="p-4 text-center">
-            <h3 class="text-xl font-semibold text-gray-800">DAPHNE</h3>
-            <a href="#" class="text-green-600 font-medium mt-4 inline-block">Show Details</a>
+
+        <!-- Daphne Card -->
+        <div class="relative group overflow-hidden rounded-xl shadow-lg h-[600px]">
+          <img src="./img/main-src-imgs/explore-model/daphne.jpg" alt="Daphne"
+            class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-10 transition-all duration-500">
+          </div>
+
+          <div class="absolute top-4 left-4 z-10">
+            <h3 class="text-l text-white drop-shadow-lg">DAPHNE</h3>
+          </div>
+
+          <div class="absolute bottom-4 left-4 z-10">
+            <a href="#" class="text-white text-sm font-medium drop-shadow-md hover:underline">Show Details</a>
+          </div>
+
+          <div class="absolute bottom-4 right-4 z-10">
+            <a href="#"
+              class="text-white text-xl transition-colors duration-300 hover:text-yellow-400 drop-shadow-lg"><svg
+                class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
           </div>
         </div>
-        <!-- Model 3 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-          <img src="./img/main-src-imgs/explore-model/th65.jpg" alt="Townhouse 65" class="w-full h-48 object-cover">
-          <div class="p-4 text-center">
-            <h3 class="text-xl font-semibold text-gray-800">TOWNHOUSE 65</h3>
-            <a href="#" class="text-green-600 font-medium mt-4 inline-block">Show Details</a>
+
+        <!-- Townhouse 65 Card -->
+        <div class="relative group overflow-hidden rounded-xl shadow-lg h-[600px]">
+          <img src="./img/main-src-imgs/explore-model/th65.jpg" alt="Townhouse 65"
+            class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-10 transition-all duration-500">
+          </div>
+
+          <div class="absolute top-4 left-4 z-10">
+            <h3 class="text-l text-white drop-shadow-md">TOWNHOUSE 65</h3>
+          </div>
+
+          <div class="absolute bottom-4 left-4 z-10">
+            <a href="#" class="text-white text-sm font-medium drop-shadow-md hover:underline">Show Details</a>
+          </div>
+
+          <div class="absolute bottom-4 right-4 z-10">
+            <a href="#" class="text-white text-xl transition-colors duration-300 hover:text-yellow-400 drop-shadow-lg">
+              <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- News and Update Section-->
+
+  <!-- News and Update Section -->
   <section class="bg-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">News & Updates</h2>
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-5xl font-semibold text-[#B5CB00] mb-5">News & Updates</h2>
+            <div class="mb-12">
+        <p>Get to know the latest news and updates about RCD Homes.</p>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- News 1 -->
-        <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
-          <img src="./img/main-src-imgs/post-2.jpg" alt="EY Entrepreneur of the Year Finalist 2015"
-            class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-gray-800">EY Entrepreneur of the Year Finalist 2015</h3>
-            <p class="text-gray-600 text-sm mt-2">Mr. Roland Delantar, President and CEO of RCD Land Inc., competed for
-              EY Entrepreneur of the Year last October 14, 2015.</p>
-            <a href="#" class="text-green-600 font-medium mt-4 inline-block">READ MORE</a>
+        <!-- News Card -->
+        <div class="group relative h-[350px] overflow-hidden shadow-lg cursor-pointer">
+          <img src="./img/main-src-imgs/post-2.jpg" alt="EY Entrepreneur of the Year Finalist 2015" class="w-full h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 space-y-3 transition-all duration-500 text-white">
+            <h3 class="text-xl font-semibold">EY Entrepreneur of the Year Finalist 2015</h3>
+            <p class="text-sm">Mr. Roland Delantar, President and CEO of RCD Land Inc., competed for EY Entrepreneur of
+              the Year last October 14, 2015.</p>
+            <a href="#"
+              class="self-start bg-green-600 hover:bg-gray-500 transition-colors duration-300 text-white px-6 py-2 rounded-full text-sm font-medium mt-2">READ
+              MORE</a>
           </div>
         </div>
-        <!-- News 2 -->
-        <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+
+        <!-- News Card -->
+        <div class="group relative overflow-hidden shadow-lg cursor-pointer">
           <img src="./img/main-src-imgs/post-5.jpg" alt="APEA Entrepreneurship Award 2016"
-            class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-gray-800">APEA Entrepreneurship Award 2016</h3>
-            <p class="text-gray-600 text-sm mt-2">Mr. Roland Delantar, President and CEO of RCD Land Inc., has been
-              awarded the Asia Pacific Entrepreneurship Award for the Property Development Industry last December 1,
-              2016.</p>
-            <a href="#" class="text-green-600 font-medium mt-4 inline-block">READ MORE</a>
+            class="w-full h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-110" />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 space-y-3 transition-all duration-500 text-white">
+            <h3 class="text-xl font-semibold">APEA Entrepreneurship Award 2016</h3>
+            <p class="text-sm">Mr. Roland Delantar, President and CEO of RCD Land Inc., received the Asia Pacific
+              Entrepreneurship Award last December 1, 2016.</p>
+            <a href="#"
+              class="self-start bg-green-600 hover:bg-gray-500 transition-colors duration-300 text-white px-6 py-2 rounded-full text-sm font-medium mt-2">READ
+              MORE</a>
           </div>
         </div>
-        <!-- News 3 -->
-        <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
-          <img src="./img/main-src-imgs/post-7.jpg" alt="Asia CEO Awards 2018" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-xl font-semibold text-gray-800">Asia CEO Awards 2018</h3>
-            <p class="text-gray-600 text-sm mt-2">RCD Land Inc. has been awarded the Circle of Excellence Award for the
-              SME Company of the Year in the Asia CEO Awards 2018.</p>
-            <a href="#" class="text-green-600 font-medium mt-4 inline-block">READ MORE</a>
+
+        <!-- News Card -->
+        <div class="group relative overflow-hidden shadow-lg cursor-pointer">
+          <img src="./img/main-src-imgs/post-7.jpg" alt="Asia CEO Awards 2018"
+            class="w-full h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-110" />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 space-y-3 transition-all duration-500 text-white">
+            <h3 class="text-xl font-semibold">Asia CEO Awards 2018</h3>
+            <p class="text-sm">RCD Land Inc. received the Circle of Excellence Award for SME Company of the Year in
+              2018.</p>
+            <a href="#"
+              class="self-start bg-green-600 hover:bg-gray-500 transition-colors duration-300 text-white px-6 py-2 rounded-full text-sm font-medium mt-2">READ
+              MORE</a>
           </div>
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- Footer -->
   <footer class="bg-gray-100 py-12 text-sm text-gray-700">
@@ -511,14 +601,15 @@
             Contact Us
           </h3>
           <p>Main Office:<a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300"> (02)
-              8-893-7451</a>/</p>
-          <p><a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300">52 local 108</a></p>
-          <p>Phone (Manila): <a href="tel:0284033490"
-              class="hover:text-yellow-500 transition-colors duration-300">(02)8-403-3490</a></p>
+              8-893-7451 </a>/</p>
+          <p><a href="tel:0288937452" class="hover:text-yellow-500 transition-colors duration-300">(02) 8-893-7452</a>
+          </p>
+          <p>Phone (Manila): <a href="tel:0284033490" class="hover:text-yellow-500 transition-colors duration-300">(02)
+              8-403-3490</a></p>
           <p>Sales & Marketing: <a href="tel:0286175364"
               class="hover:text-yellow-500 transition-colors duration-300">(02) 8-617-5364</a></p>
           <p>Mobile: <a href="tel:639177001109" class="hover:text-yellow-500 transition-colors duration-300">(+63)
-              917-7001-109</a>(GLOBE)</p>
+              917-7001-109 </a>(GLOBE)</p>
 
           <h3 class="font-semibold mt-4 mb-2 flex items-center">
             <svg class="w-5 h-5 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -557,6 +648,7 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  </body>
+</body>
 </footer>
+
 </html>
