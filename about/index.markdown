@@ -1,0 +1,327 @@
+---
+layout: default
+title: About
+permalink: /about/
+---
+
+<!-- About Us Section -->
+<section class="pt-[100px] pl-20 px-4 md:px-10">
+  <div class="flex items-center mb-10 pt-[30px]" style="margin-left: 445px;">
+    <div class="w-1 h-20 bg-green-500 mr-6"></div>
+    <h1 class="text-3xl md:text-4xl font-semibold text-black-600">About Us</h1>
+  </div>
+</section>
+
+<!-- Hero Section -->
+
+    <div class="relative rounded-xl overflow-hidden mb-16">
+      <img alt="Two people, a man and a woman, looking at blueprints on a table in an office environment with natural light"
+      class="w-full max-w-4xl mx-auto h-[400px] md:h-[500px] object-cover rounded-xl"
+      src="./img/aboutus-src/slide-about-1.jpg"/>
+      <div class="absolute bottom-5 left-[472px] bg-green-500/70 text-black p-6 md:p-8 w-full md:w-[25%] rounded-lg shadow-xl">
+        <h2 class="text-2xl md:text-3xl font-bold leading-tight">
+          Building Quality Homes —<br/>Since 1987
+        </h2>
+        <p class="text-xs md:text-sm mt-2 font-medium text-gray-600">
+          RCD LAND, INC.
+        </p>
+      </div>
+    </div>
+
+   <!-- About Content Section -->
+   <section class="max-w-4xl mx-auto mt-10 text-gray-700 text-sm leading-relaxed space-y-6">
+  <div class="prose prose-lg text-gray-700">
+    <p class="text-justify mb-6">
+      A company who grows through achieving your dreams, 
+      RCD Land Inc. is a real estate development company 
+      who makes your dream home come to life. A heart to 
+      create and a passion to improve the lives of Filipinos 
+      drive us to build quality and affordable homes in a community
+      which enables the ideal lifestyle for our homeowners.
+    </p>
+    <p class="text-justify mb-6">
+      We believe that everyone deserves their own home—impelling 
+      us to create affordable houses for the middle-segment to 
+      low-segment earners. Our purpose goes beyond building communities
+      but also to contribute in solving the pressing issue of the 
+      growing housing backlog in the Philippines and to help relieve 
+      the congestion of Metro Manila. Realizing the great opportunities 
+      and fast development of the neighboring provinces of the Metro, 
+      RCD Land Inc. focuses on building communities in Cavite, Batangas, 
+      Bulacan, Batac, and Quezon which remain easily accessible from the city.
+    </p>
+    <p class="text-justify mb-6">
+      Through our more than 30 years of experience in the industry, 
+      RCD Land Inc. continues to grow and evolve with the market by 
+      acknowledging the demand for less expensive homes. The rise of 
+      the middle-income segment, the increase in the number of people
+      considering to move to provinces next to the cities, and the 
+      continued infrastructure development through the Build-Build-Build 
+      (BBB) Program have a huge impact on driving retail demand in Real 
+      Estate. Thus, this gives an opportunity for us to continue in working
+      on our mission and to focus on delivering houses outside Metro Manila 
+      that are of quality yet affordable.
+    </p>
+    <p class="text-justify">
+      A professional management team with years of combined experience
+      in real estate development and field of expertise empowers our
+      success. Through our sustained team effort, we aim to become 
+      one of the market leaders in the affordable housing segment 
+      which continues to motivate and drive our employees, stakeholders
+      and valued clients.
+    </p>
+  </div>
+</section>
+
+    <!-- History Section -->
+    <section class="py-12 bg-white">
+    <div class="flex flex-col md:flex-row max-w-6xl mx-auto px-4 md:px-8 gap-12 items-start">
+
+    <!-- Left Image + Caption -->
+
+  <div class="md:w-1/2 flex items-center mt-80 md:mt-55 w-full flex flex-col items-start">
+  <img src="./img/aboutus-src/about-2.jpg" 
+    alt="RCD Office" 
+    class="w-full max-w-[400px] h-auto rounded-xl shadow-lg object-cover"/>
+   </div>
+
+    <!-- Right Text Content -->
+
+  <div class="flex-1 max-w-3xl">
+  <h2 class="mt-24 text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">
+    <span>OUR</span>
+    <span class="text-gray-400 ml-2">HISTORY</span>
+  </h2>
+
+  <div class="w-16 h-1 bg-green-700 mb-4"></div>
+
+  <!-- RCD Label Below Heading -->
+  <div class="text-left text-gray-500 font-semibold text-lg md:text-xl mb-8">
+    RCD LAND INC. - Since 1987
+  </div>
+  <div class="w-16 h-1 mb-8"></div>
+
+      <div class="space-y-6 text-gray-700 text-sm text-justify">
+            <p class="text-sm text-justify">
+            The leadership an d success of RCD Land Inc. roots from a humble beginning.
+            Our founder, Roland C. Delantar, was just a simple man from Leyte who had big
+            dreams and vision. Determination and passion were his only assets when he started
+            this journey. With a single table and a telephone to call as his office,
+            Mr. Delantar started his own real estate brokerage company in 1987. This company,
+            RCD Realty Corporation, focuses on marketing affordable housing projects for big
+            developers. Under the management of our founder, Mr. Delantar, RCD Realty Corporation
+            grew and became part of the top marketing companies of 17 developers.
+            </p>
+
+            <p class="text-sm text-justify">
+            With the company's success and realized opportunities in the real estate industry,
+            we evolved into a housing contractor for single-unit projects and small pocket
+            developments by the year 1997. The whole Asia experienced a financial crisis by the
+            same year, putting the company in a more challenging state.
+            </p>
+
+            <p class="text-sm text-justify ">
+            Nevertheless, we stood strong and firm with our mission to help people achieve their dreams.
+            The real estate industry came to a rebound and grew immensely by the year 2000, enabling us
+            to continue with our mission and expand the business further. With a heart and vision to improve
+            the lives of Filipinos by building affordable and quality homes, RCD Land Inc. ventured into becoming
+            a full-pledge housing developer in 2005. Our blueprint for housing is more than just providing quality
+            and affordable homes, it encompasses the passion to improve the lives of the Filipinos by creating
+            masterfully-planned residential projects in an environment that creates a balanced lifestyle for the homeowners.
+            RCD Land Inc's success continues and plays an active and vital role in the real estate industry as
+            a comprehensive real estate development enterprise that provides quality yet affordable homes to every Filipino.
+            </p>
+
+            <p class="text-sm text-justify">
+            Vital to our success is a dynamic and highly-responsive network of brokers and agents who help potential
+            buyers find the perfect home. Maintaining a relationship with over 500 brokers, RCD Land Inc. ensures that
+            these people contribute and uplift the company's mission and vision of improving lives while their lives are
+            also being improved. As a company who started as a marketing arm which grew and evolved, we understand and
+            realize the needs and aspirations of both our sellers and clients. Thus, RCD Land Inc. continues to help these
+            people in achieving their dreams.
+            </p>
+
+            <p class="text-sm text-justify">
+            Today, RCD Land Inc. is a company with over 100 professional and experienced employees who continue to empower
+            our success. From a single table and a telephone, our company now has 7 offices all-over Luzon with our main
+            office located in Parañaque and 6 branch offices in Makati, Laguna, Batangas, Cavite, Pampanga, and Bulacan.
+            With more than 5,000 housing units built on almost 100 hectares of land in 5 different provinces, our company
+            stands strong to fulfill our mission to improve the lives of our fellow Filipinos while continuously working
+            on our vision to be one of the market leaders in the real estate industry.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <body class="bg-white text-gray-700">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+   <div class="flex flex-col md:flex-row md:items-start md:space-x-16">
+    <div class="flex-shrink-0 mb-10 md:mb-0 md:w-1/3">
+     <img alt="RCD Group logo with two yellow houses and sun rays behind, text 'RCD GROUP Improving Lives RCD LAND, INC. BUILDING QUALITY HOMES SINCE 1987' on a yellowish background" 
+     class="w-full h-auto object-contain" height="500" src="./img/aboutus-src/rcd-vision-mission.jpg" width="500"/>
+    </div>
+    <div class="md:w-2/3 space-y-12">
+     <section>
+      <h2 class="text-2xl font-extrabold text-black">
+       OUR
+       <span class="text-gray-400 font-extrabold">
+        VISION
+       </span>
+      </h2>
+      <div class="w-16 h-1 bg-green-600 mt-2 mb-6">
+      </div>
+      <p class="text-sm leading-relaxed max-w-xl">
+       Our vision is to be among the country’s major real estate
+        orporations by improving the lives of Filipinos through building
+        affordable and sustainable homes using progressive designs,
+        concepts, and approaches.
+      </p>
+     </section>
+     <section>
+      <h2 class="text-2xl font-extrabold text-black">
+       OUR
+       <span class="text-gray-400 font-extrabold">
+        MISSION
+       </span>
+      </h2>
+      <div class="w-16 h-1 bg-green-600 mt-2 mb-6">
+      </div>
+      <p class="text-sm leading-relaxed max-w-xl">
+       RCD Land, Inc. remains to be a beacon of hope for every Filipino to
+       realize their dream of owning a home. Our purpose goes beyond the
+       growth of our company, it encompasses and fulfills the success of
+       all our employees, stakeholders, and valued clients. The company’s
+       name, RCD, embodies who we are and what we want to achieve. Thus,
+       carrying our three main undertakings:
+      </p>
+     </section>
+    </div>
+   </div>
+  </div>
+
+<main class="py-16 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-2xl font-semibold mb-10">
+      Our three main undertakings:
+    </h2>
+     <section class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
+      <!-- ...each article unchanged, just update classes as shown... -->
+      <article class="text-center">
+        <div class="inline-flex border-4 border-yellow-400 p-10 mb-4 justify-center items-center text-black-500">
+          <i class="fas fa-home text-6xl"></i>
+        </div>
+        <h3 class="text-lg md:text-xl font-extrabold leading-tight">
+          Realizing<br />Dreams
+        </h3>
+        <p class="text-xs md:text-sm text-gray-600 mt-2 max-w-xs mx-auto">
+          and fulfilling every Filipino’s housing needs by providing quality and affordable homes.
+        </p>
+      </article>
+      <!-- ...repeat for other articles... -->
+      <article class="text-center">
+        <div class="inline-flex border-4 border-yellow-400 p-10 mb-4 justify-center items-center text-black-500">
+          <i class="fas fa-check-square text-6xl"></i>
+        </div>
+        <h3 class="text-lg md:text-xl font-extrabold leading-tight">
+          Creating<br />Opportunities
+        </h3>
+        <p class="text-xs md:text-sm text-gray-600 mt-2 max-w-xs mx-auto">
+          for all the members of the organization by providing a platform for Career Advancement and Financial Success.
+        </p>
+      </article>
+      <article class="text-center">
+        <div class="inline-flex border-4 border-yellow-400 p-10 mb-4 justify-center items-center text-black-500">
+          <i class="fas fa-key text-6xl"></i>
+        </div>
+        <h3 class="text-lg md:text-xl font-extrabold leading-tight">
+          Delivering<br />Commitments
+        </h3>
+        <p class="text-xs md:text-sm text-gray-600 mt-2 max-w-xs mx-auto">
+          with consciousness of its role in Nation Building that will create impact in home provision and wealth creation.
+        </p>
+      </article>
+    </section>
+  </div>
+</main>
+
+<!-- Core Values Section -->
+<section class="text-center mx-auto">
+  <h2 class="text-2xl md:text-4xl font-semibold mb-6">
+    Our Core Values
+  </h2>
+  <p class="text-xs md:text-sm text-gray-600 mb-16 px-4 max-w-4xl mx-auto">
+    At the heart of our company are four essential values that define who we are and guide everything we do.
+    These values form the foundation of our culture and fuel our commitment to serving the Filipino people.
+    Represented by the acronym HOPE, they reflect our dedication to:
+ </section>
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center">
+    <!-- HONESTY -->
+    <div>
+      <div class="mx-auto w-28 h-28 md:w-40 md:h-40 rounded-full flex items-center justify-center mb-4 md:mb-6">
+        <img src="./img/aboutus-src/honesty.png" alt="Icon representing honesty: a hand over a heart" class="w-full h-full object-contain" />
+      </div>
+      <h3 class="text-base md:text-lg font-extrabold text-gray-700 mb-2">HONESTY</h3>
+      <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+        Honesty is the cornerstone of trust. At RCD Land, Inc., we uphold fairness and truthfulness in all our actions to earn and protect the confidence of the people we serve.
+      </p>
+    </div>
+    <div>
+      <!-- ONENESS -->
+      <div class="mx-auto w-28 h-28 md:w-40 md:h-40 rounded-full flex items-center justify-center mb-4 md:mb-6">
+        <img src="./img/aboutus-src/oneness.png" alt="Icon representing oneness: two hands shaking" class="w-full h-full object-contain" />
+      </div>
+      <h3 class="text-base md:text-lg font-extrabold text-gray-700 mb-2">ONENESS</h3>
+      <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+        Unity fuels our success. RCD Land, Inc. embraces oneness in purpose and action, empowering people to achieve their goals together.
+      </p>
+    </div>
+    <div>
+      <!-- PROACTIVE -->
+      <div class="mx-auto w-28 h-28 md:w-40 md:h-40 rounded-full flex items-center justify-center mb-4 md:mb-6">
+        <img src="./img/aboutus-src/proactive.png" alt="Icon representing proactiveness: a lightbulb" class="w-full h-full object-contain" />
+      </div>
+      <h3 class="text-base md:text-lg font-extrabold text-gray-700 mb-2">PROACTIVE</h3>
+      <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+        We anticipate and innovate. RCD Land, Inc. takes initiative, plans for the future, and acts decisively to drive long-term success.
+      </p>
+    </div>
+    <div>
+      <!--EXCELLENCE -->
+      <div class="mx-auto w-28 h-28 md:w-40 md:h-40 rounded-full flex items-center justify-center mb-4 md:mb-6">
+        <img src="./img/aboutus-src/excellence.png" alt="Icon representing excellence: a medal" class="w-full h-full object-contain" />
+      </div>
+      <h3 class="text-base md:text-lg font-extrabold text-gray-700 mb-2">EXCELLENCE</h3>
+      <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+        We strive for outstanding quality. Excellence defines the caliber of service we offer, delivering our promises with distinction and pride.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Awards Section -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <h2 class="text-center text-black font-semibold text-4xl mb-12 select-none">
+    AWARDS
+  </h2>
+  <div class="flex flex-nowrap justify-center items-center gap-x-20">
+    <img alt="Asia CEO Awards 2018 logo with gold text and map on black background" 
+      class="object-contain" 
+      style="width: 200px; height: 200px;" 
+      src="./img/aboutus-src/asia ceo.jpg" />
+    <img alt="APEA Asia Pacific Entrepreneurship Awards gold logo with hand and circular design on white background" 
+      class="object-contain" 
+      style="width: 200px; height: 200px;" 
+      src="./img/aboutus-src/apea.png" />
+    <img alt="EY Entrepreneur Of The Year 2015 Finalist logo in gray on white background" 
+      class="object-contain" 
+      style="width: 200px; height: 200px;" 
+      src="./img/aboutus-src/ey.png" />
+    <img alt="Subdivision & Housing Developers Association, Inc. SHDA green logo with text on white background" 
+      class="object-contain" 
+      style="width: 200px; height: 200px;" 
+      src="./img/aboutus-src/shda.png" />
+  </div>
+</main>
