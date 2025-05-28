@@ -129,7 +129,25 @@
       opacity: 1;
     }
     /* Parallax background */
-  .parallax {
+    .parallax-1 {
+    background-image: url(../../assets/img/parallax-bg/phase4-sideview.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+  }
+  .parallax-2 {
+    background-image: url(../../assets/img/parallax-bg/rrh-balayan.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+  }
+  .parallax-3 {
     background-image: url(../../assets/img/parallax-bg/bf-townhomes-2.jpg);
     background-attachment: fixed;
     background-position: center;
@@ -138,6 +156,25 @@
     height: 90vh;
     position: relative;
   }
+  .parallax-4 {
+    background-image: url(../../assets/img/parallax-bg/wbh-minuyan.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+  }
+  .parallax-5 {
+    background-image: url(../../assets/img/parallax-bg/wbh-cavite.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+  }
+  
 
   @media only screen and (max-device-width: 1024px) {
     .parallax {
