@@ -35,7 +35,7 @@ permalink: /properties/
 
  <!-- Property Card 1 -->
 <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
-  <img src="img/ourproperties/phase-4.jpg" alt="Royale Homes Phase 4" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
+  <img src="../assets/img/ourproperties/phase-4.jpg" alt="Royale Homes Phase 4" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
   <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
     <h3 class="font-semibold text-3xl text-shadow">Royale Homes Phase 4 Silang, Cavite</h3>
     <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 4M - PHP 4.6M</p>
@@ -46,7 +46,7 @@ permalink: /properties/
 
   <!-- Property Card 2 -->
   <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/ourproperties/rrh-balayan.jpg" alt="Royale Homes Balayan" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="../assets/img/ourproperties/rrh-balayan.jpg" alt="Royale Homes Balayan" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
     <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Royale Homes Balayan, Batangas</h3>
       <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 2M - PHP 2.6M</p>
@@ -57,7 +57,7 @@ permalink: /properties/
 
   <!-- Property Card 3 -->
   <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/ourproperties/bf-townhomes-2.jpg" alt="RCD BF Homes" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="../assets/img/ourproperties/bf-townhomes-2.jpg" alt="RCD BF Homes" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
     <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">RCD BF Homes Paranaque City</h3>
       <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 6.3M - PHP 7.3M</p>
@@ -68,7 +68,7 @@ permalink: /properties/
 
   <!-- Property Card 4 -->
   <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/ourproperties/rrh-silang.jpg" alt="Royale Homes Silang" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="../assets/img/ourproperties/rrh-silang.jpg" alt="Royale Homes Silang" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
     <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Royale Homes Silang, Cavite</h3>
       <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 2.3M - PHP 6.8M</p>
@@ -79,7 +79,7 @@ permalink: /properties/
 
   <!-- Property Card 5 -->
   <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/ourproperties/rrh-tuy.jpg" alt="Royale Homes Tuy" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="../assets/img/ourproperties/rrh-tuy.jpg" alt="Royale Homes Tuy" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
     <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Royale Homes Tuy, Batangas</h3>
       <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 750K - PHP 1.7M</p>
@@ -90,7 +90,7 @@ permalink: /properties/
 
   <!-- Property Card 6 -->
   <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/ourproperties/rrh-nor.jpg" alt="Royale Homes Norzagaray" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="../assets/img/ourproperties/rrh-nor.jpg" alt="Royale Homes Norzagaray" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
     <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <<h3 class="font-semibold text-3xl text-shadow">Royale Homes Norzagaray, Bulacan</h3>
       <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 1.3M - PHP 1.7M</p>
@@ -101,7 +101,7 @@ permalink: /properties/
 
   <!-- Property Card 7 -->
   <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/ourproperties/rrh-bat.jpg" alt="Royale Homes Mariveles" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="../assets/img/ourproperties/rrh-bat.jpg" alt="Royale Homes Mariveles" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
     <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Royale Homes Mariveles, Bulacan</h3>
       <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 730K - PHP 1.6M</p>
@@ -112,7 +112,7 @@ permalink: /properties/
 
   <!-- Property Card 8 -->
   <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/ourproperties/villas-trece.jpg" alt="Villas De Trece" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="../assets/img/ourproperties/villas-trece.jpg" alt="Villas De Trece" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
     <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Villas De Trece Martires, Cavite</h3>
       <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | PHP 680K - PHP 1.4M</p>
@@ -123,7 +123,7 @@ permalink: /properties/
 
   <!-- Property Card 9 -->
   <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/ourproperties/villas-bacoor.jpg" alt="Villas De Bacoor" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="../assets/img/ourproperties/villas-bacoor.jpg" alt="Villas De Bacoor" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
     <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Villas De Bacoor Dulong Bayan, Cavite</h3>
       <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | SOLD OUT</p>
@@ -134,7 +134,7 @@ permalink: /properties/
 
   <!-- Property Card 10 -->
   <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/ourproperties/wbh-minuyan-bulacan.jpg" alt="Winterbreeze Homes Minuyan" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="../assets/img/ourproperties/wbh-minuyan-bulacan.jpg" alt="Winterbreeze Homes Minuyan" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
     <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Winterbreeze Homes San Jose Del Monte, Bulacan</h3>
       <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE | SOLD OUT</p>
@@ -145,7 +145,7 @@ permalink: /properties/
 
   <!-- Property Card 11 -->
   <div class="property-card relative shadow-md rounded-lg overflow-hidden group">
-    <img src="img/ourproperties/wbh-alingaro-cavite.jpg" alt="Winterbreeze Homes General Trias" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="../assets/img/ourproperties/wbh-alingaro-cavite.jpg" alt="Winterbreeze Homes General Trias" class="w-full h-[450px] object-cover transition-transform duration-300 group-hover:scale-105">
     <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-0 text-white p-4 text-shadow">
       <h3 class="font-semibold text-3xl text-shadow">Winterbreeze Homes General Trias, Cavite</h3>
       <p class="text-lg font-medium text-white border-2 border-yellow-500 rounded-full p-2 inline-block mt-2">PRICE|PHP 450K - PHP 700K</p>
