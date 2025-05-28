@@ -1,142 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: RCD Land Inc.
+---
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RCD Land, Inc.</title>
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- Flowbite Carousel JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link rel="icon" type="image/x-icon" href="favicon.png">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 2px;
-      background-color: #00c655;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-    }
-
-    .nav-link:hover::after {
-      transform: scaleX(1);
-    }
-
-    .image-container {
-      overflow: visible;
-      max-height: none;
-      height: auto;
-    }
-
-    .app-highlight {
-      background-color: #f9f9f9;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .app-highlight h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-
-    .app-highlight p {
-      font-size: 1.2em;
-      margin-bottom: 10px;
-    }
-
-    .cta-buttons {
-      margin: 30px 0;
-    }
-
-    .cta-buttons a {
-      display: inline-block;
-      margin: 0 10px;
-    }
-
-    .cta-buttons img {
-      height: 50px;
-    }
-
-    .app-image img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-
-<body class="bg-white text-gray-800">
-
-  <nav class="bg-[#ffc600] h-[81px] shadow-md flex flex-col items-center justify-center fixed top-0 left-0 w-full z-50">
-    <div class="flex items-center justify-center space-x-10">
-      <a href="#" class="text-[28px] font-bold tracking-wide text-gray-900 leading-none">RCD Land, Inc.</a>
-      <div class="flex md:hidden">
-        <button id="menuToggle" class="text-gray-900 focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-
-      <div id="mobileMenu"
-        class="hidden md:flex md:flex-row md:space-x-5 absolute md:static bg-[#ffc600] w-full md:w-auto left-0 top-[81px] md:top-auto px-4 md:px-0 py-4 md:py-0 z-50 font-semibold flex-col md:flex-row">
-        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="index.html">Home</a>
-        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="about-us.html">About</a>
-        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="our-properties.html">Properties</a>
-        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="guidespage.html">Guides</a>
-        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">What's New</a>
-        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Contact</a>
-        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Careers</a>
-        <a class="nav-link relative hover:text-gray-800 py-2 md:py-0" href="#">Inquire Now</a>
-      </div>
-    </div>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu Toggle Script -->
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-  </script>
-
-  <!-- Swiper Carousel Section -->
+<!-- Swiper Carousel Section -->
   <section class="relative w-full pt-[81px]">
     <div class="swiper w-full aspect-[16/9] sm:aspect-[16/7] md:aspect-[16/6]">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./img/main-src-imgs/carousel/royale-virtual-tour.jpg" class="w-full h-full object-cover" />
+          <img src="./assets/img/main-src-imgs/carousel/royale-virtual-tour.jpg" class="w-full h-full object-cover" />
         </div>
         <div class="swiper-slide">
-          <img src="./img/main-src-imgs/carousel/brooky-cover.jpg" class="w-full h-full object-cover" />
+          <img src="./assets/img/main-src-imgs/carousel/brooky-cover.jpg" class="w-full h-full object-cover" />
         </div>
         <div class="swiper-slide">
-          <img src="./img/main-src-imgs/carousel/careers-cover.jpg" class="w-full h-full object-cover" />
+          <img src="./assets/img/main-src-imgs/carousel/careers-cover.jpg" class="w-full h-full object-cover" />
         </div>
       </div>
 
@@ -149,47 +27,6 @@
     </div>
   </section>
 
-  <!-- Swiper JS (must load BEFORE init) -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Swiper Initialization -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const swiper = new Swiper('.swiper', {
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        speed: 600,
-        effect: 'slide',
-
-      });
-    });
-  </script>
-
-  <style>
-    .swiper-pagination-bullet {
-      background-color: #F7C948 !important;
-      /* Yellow */
-      opacity: 0.6;
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: #3A843A !important;
-      /* Green */
-      opacity: 1;
-    }
-  </style>
-
   <!-- Mobile App Section -->
   <section class="bg-gray-100 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -197,7 +34,7 @@
 
         <!-- Left Side Image -->
         <div class="w-full md:w-1/2 flex justify-center">
-          <img src="./img/main-src-imgs/iphone-tablet.png" alt="App Mockup" class="w-72 md:w-96 lg:w-[500px] h-auto">
+          <img src="./assets/img/main-src-imgs/iphone-tablet.png" alt="App Mockup" class="w-72 md:w-96 lg:w-[500px] h-auto">
         </div>
 
         <!-- Right Side Content -->
@@ -217,47 +54,31 @@
 
           <!-- QR Code -->
           <div class="pt-2">
-            <img src="./img/main-src-imgs/rrh-qrcode.png" alt="QR Code" class="w-28 sm:w-32 h-auto">
+            <img src="./assets/img/main-src-imgs/rrh-qrcode.png" alt="QR Code" class="w-28 sm:w-32 h-auto">
           </div>
 
           <!-- App Store Buttons -->
           <div class="flex space-x-4 pt-2 justify-start md:justify-center">
             <a href="https://apps.apple.com/us/app/rcd-land-brooky/id1559684152" target="_blank">
-              <img src="./img/main-src-imgs/app-store.png" alt="App Store" class="h-12">
+              <img src="./assets/img/main-src-imgs/app-store.png" alt="App Store" class="h-12">
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.brooky.rcdlandinc" target="_blank">
-              <img src="./img/main-src-imgs/google-play.png" alt="Google Play" class="h-12">
+              <img src="./assets/img/main-src-imgs/google-play.png" alt="Google Play" class="h-12">
             </a>
           </div>
 
-          <p class="text-sm text-gray-700">For iOS or Android</p>
+          <p class="text-sm text-gray-700">For IOS or Android</p>
         </div>
       </div>
     </div>
   </section>
-
-  <style>
-    .card-category-b {
-      margin-top: 20px;
-    }
-
-    .card-header-b .category-b:hover {
-      font-size: .9rem;
-      background-color: #9e9e9eab;
-      padding: .3rem .7rem;
-      color: white;
-      letter-spacing: 0.030em;
-      border-radius: 50px;
-      text-decoration: none;
-    }
-  </style>
 
   <!-- Recommended For You Section -->
   <section class="bg-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
         <h2 class="text-4xl font-semibold text-[#B5CB00]">RECOMMENDED FOR YOU</h2>
-        <a href="./ourproperties.html"
+        <a href="our-properties.html"
           class="inline-block text-sm font-medium text-[#B5CB00] border border-[#B5CB00] px-4 py-2 rounded-full hover:bg-[#B5CB00] hover:text-white transition">
           View All Properties
         </a>
@@ -273,14 +94,14 @@
           <!-- Card Template -->
           <div
             class="snap-start shrink-0 w-[330px] h-[440px] group relative overflow-hidden shadow-lg bg-white cursor-pointer">
-            <img src="./img/main-src-imgs/properties-grid/bf-townhomes-2.jpg" alt="RCD BF Homes Parañaque"
+            <img src="./assets/img/main-src-imgs/properties-grid/bf-townhomes-2.jpg" alt="RCD BF Homes Parañaque"
               class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out z-0">
 
             <!-- Overlay -->
             <div
               class="absolute bottom-0 left-0 right-0 px-4 py-5 transition-all duration-500 group-hover:translate-y-[-4rem]">
               <h3 class="text-white text-3xl">RCD BF Homes Parañaque</h3>
-              <a href="#"
+              <a href="rcd-bf-homes-paranaque.html"
                 class="inline-flex items-center justify-center gap-2 mt-2 px-4 py-1 text-sm font-medium text-white bg-[#B5CB00] rounded-full hover:bg-[#9e9e9e] hover:text-white transition-all duration-500">
                 Click here to know more
                 <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -303,7 +124,7 @@
           <!-- Repeat for other properties -->
           <div
             class="snap-start shrink-0 w-[330px] h-[440px] group relative overflow-hidden shadow-lg bg-white cursor-pointer">
-            <img src="./img/main-src-imgs/properties-grid/rrh-silang.jpg" alt="RCD Royale Homes Silang"
+            <img src="./assets/img/main-src-imgs/properties-grid/rrh-silang.jpg" alt="RCD Royale Homes Silang"
               class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out z-0">
             <div
               class="absolute bottom-0 left-0 right-0 px-4 py-3 transition-all duration-500 group-hover:translate-y-[-3.5rem]">
@@ -326,7 +147,7 @@
 
           <div
             class="snap-start shrink-0 w-[330px] h-[440px] group relative overflow-hidden shadow-lg bg-white cursor-pointer">
-            <img src="./img/main-src-imgs/properties-grid/rrh-tuy.jpg" alt="RCD Royale Homes Tuy"
+            <img src="./assets/img/main-src-imgs/properties-grid/rrh-tuy.jpg" alt="RCD Royale Homes Tuy"
               class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out z-0">
             <div
               class="absolute bottom-0 left-0 right-0 px-4 py-3 transition-all duration-500 group-hover:translate-y-[-4.7rem]">
@@ -351,7 +172,7 @@
 
           <div
             class="snap-start shrink-0 w-[330px] h-[440px] group relative overflow-hidden shadow-lg bg-white cursor-pointer">
-            <img src="./img/main-src-imgs/properties-grid/rrh-nor.jpg" alt="RCD Royale Homes Bulacan"
+            <img src="./assets/img/main-src-imgs/properties-grid/rrh-nor.jpg" alt="RCD Royale Homes Bulacan"
               class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out z-0">
             <div
               class="absolute bottom-0 left-0 right-0 px-4 py-3 transition-all duration-500 group-hover:translate-y-[-3.5rem]">
@@ -376,43 +197,6 @@
     </div>
   </section>
 
-  <!-- Hide scrollbar utility -->
-  <style>
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none;
-    }
-
-    .scrollbar-hide {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    .link-a {
-      background-color: #B5CB00;
-      padding: 5px 15px;
-      border-radius: 20px;
-      color: white;
-      font-size: 0.875rem;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .link-a:hover {
-      background-color: #9e9e9ea8;
-      color: #B5CB00;
-    }
-
-
-    /* Optional responsiveness if needed */
-    @media (max-width: 767px) {
-      .link-a {
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-        font-size: 14px;
-      }
-    }
-  </style>
-
   <!-- Explore Model Section -->
   <section class="bg-gray-50 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -424,7 +208,7 @@
 
         <!-- Single Card Template -->
         <div class="relative group overflow-hidden rounded-xl shadow-lg h-[600px]">
-          <img src="./img/main-src-imgs/explore-model/th47.jpg" alt="Townhouse 47"
+          <img src="./assets/img/main-src-imgs/explore-model/th47.jpg" alt="Townhouse 47"
             class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
 
           <!-- Overlay Fade -->
@@ -433,17 +217,17 @@
 
           <!-- Top-left Title -->
           <div class="absolute top-4 left-4 z-10">
-            <h3 class="text-l text-white drop-shadow-lg">TOWNHOUSE 47</h3>
+            <h3 class="text-l text-white text-shadow-strong">TOWNHOUSE 47</h3>
           </div>
 
           <!-- Bottom-left "Show Details" -->
           <div class="absolute bottom-4 left-4 z-10">
-            <a href="#" class="text-white text-sm font-medium drop-shadow-md hover:underline">Show Details</a>
+            <a href="#" class="text-white text-sm font-medium text-shadow-strong hover:underline">Show Details</a>
           </div>
 
           <!-- Bottom-right Arrow Icon -->
           <div class="absolute bottom-4 right-4 z-10">
-            <a href="#" class="text-white text-xl transition-colors duration-300 hover:text-yellow-400 drop-shadow-lg">
+            <a href="#" class="text-white text-xl hover:text-yellow-400 text-shadow-strong transition-colors duration-300">
               <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                 width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
@@ -455,23 +239,22 @@
 
         <!-- Daphne Card -->
         <div class="relative group overflow-hidden rounded-xl shadow-lg h-[600px]">
-          <img src="./img/main-src-imgs/explore-model/daphne.jpg" alt="Daphne"
+          <img src="./assets/img/main-src-imgs/explore-model/daphne.jpg" alt="Daphne"
             class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
           <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-10 transition-all duration-500">
           </div>
 
           <div class="absolute top-4 left-4 z-10">
-            <h3 class="text-l text-white drop-shadow-lg">DAPHNE</h3>
+            <h3 class="text-l text-white text-shadow-strong">DAPHNE</h3>
           </div>
 
           <div class="absolute bottom-4 left-4 z-10">
-            <a href="#" class="text-white text-sm font-medium drop-shadow-md hover:underline">Show Details</a>
+            <a href="#" class="text-white text-sm font-medium text-shadow-strong hover:underline">Show Details</a>
           </div>
 
           <div class="absolute bottom-4 right-4 z-10">
-            <a href="#"
-              class="text-white text-xl transition-colors duration-300 hover:text-yellow-400 drop-shadow-lg"><svg
-                class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            <a href="#" class="text-white text-xl hover:text-yellow-400 text-shadow-strong transition-colors duration-300">
+              <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                 width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
                   clip-rule="evenodd" />
@@ -482,21 +265,21 @@
 
         <!-- Townhouse 65 Card -->
         <div class="relative group overflow-hidden rounded-xl shadow-lg h-[600px]">
-          <img src="./img/main-src-imgs/explore-model/th65.jpg" alt="Townhouse 65"
+          <img src="./assets/img/main-src-imgs/explore-model/th65.jpg" alt="Townhouse 65"
             class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
           <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-10 transition-all duration-500">
           </div>
 
           <div class="absolute top-4 left-4 z-10">
-            <h3 class="text-l text-white drop-shadow-md">TOWNHOUSE 65</h3>
+            <h3 class="text-l text-white text-shadow-strong">TOWNHOUSE 65</h3>
           </div>
 
           <div class="absolute bottom-4 left-4 z-10">
-            <a href="#" class="text-white text-sm font-medium drop-shadow-md hover:underline">Show Details</a>
+            <a href="#" class="text-white text-sm font-medium text-shadow-strong hover:underline">Show Details</a>
           </div>
 
           <div class="absolute bottom-4 right-4 z-10">
-            <a href="#" class="text-white text-xl transition-colors duration-300 hover:text-yellow-400 drop-shadow-lg">
+            <a href="#" class="text-white text-xl hover:text-yellow-400 text-shadow-strong transition-colors duration-300">
               <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                 width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
@@ -505,10 +288,10 @@
             </a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
+
 
 
   <!-- News and Update Section -->
@@ -522,7 +305,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- News Card -->
         <div class="group relative h-[350px] overflow-hidden shadow-lg cursor-pointer">
-          <img src="./img/main-src-imgs/post-2.jpg" alt="EY Entrepreneur of the Year Finalist 2015" class="w-full h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-110" />
+          <img src="./assets/img/main-src-imgs/post-2.jpg" alt="EY Entrepreneur of the Year Finalist 2015" class="w-full h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-110" />
           <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 space-y-3 transition-all duration-500 text-white">
             <h3 class="text-xl font-semibold">EY Entrepreneur of the Year Finalist 2015</h3>
             <p class="text-sm">Mr. Roland Delantar, President and CEO of RCD Land Inc., competed for EY Entrepreneur of
@@ -535,7 +318,7 @@
 
         <!-- News Card -->
         <div class="group relative overflow-hidden shadow-lg cursor-pointer">
-          <img src="./img/main-src-imgs/post-5.jpg" alt="APEA Entrepreneurship Award 2016"
+          <img src="./assets/img/main-src-imgs/post-5.jpg" alt="APEA Entrepreneurship Award 2016"
             class="w-full h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-110" />
           <div
             class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 space-y-3 transition-all duration-500 text-white">
@@ -550,7 +333,7 @@
 
         <!-- News Card -->
         <div class="group relative overflow-hidden shadow-lg cursor-pointer">
-          <img src="./img/main-src-imgs/post-7.jpg" alt="Asia CEO Awards 2018"
+          <img src="./assets/img/main-src-imgs/post-7.jpg" alt="Asia CEO Awards 2018"
             class="w-full h-[350px] object-cover transform transition-transform duration-500 group-hover:scale-110" />
           <div
             class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 space-y-3 transition-all duration-500 text-white">
@@ -565,90 +348,3 @@
       </div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-100 py-12 text-sm text-gray-700">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Company Info -->
-        <div>
-          <h3 class="font-bold text-4xl mb-2">RCD LAND, INC.</h3>
-          <p>RCD Land, Inc. is a real estate development company who makes your dream home come to life. Building
-            Quality Homes Since 1987</p>
-          <br>
-          <div>
-            <h3 class="mb-2 flex items-center font-semibold">
-              <svg class="w-7 h-7 text-gray-800 mt-1 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
-              </svg>
-              Business Hours
-            </h3>
-            <p>Mondays to Thursday 8am-6pm</p>
-            <p>Fridays 8am-5pm</p>
-          </div>
-        </div>
-
-        <!-- Contact Info -->
-        <div>
-          <h3 class="text-4xl font-semibold mb-2 flex items-center">
-            <svg class="w-10 h-10 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z" />
-            </svg>
-            Contact Us
-          </h3>
-          <p>Main Office:<a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300"> (02)
-              8-893-7451 </a>/</p>
-          <p><a href="tel:0288937452" class="hover:text-yellow-500 transition-colors duration-300">(02) 8-893-7452</a>
-          </p>
-          <p>Phone (Manila): <a href="tel:0284033490" class="hover:text-yellow-500 transition-colors duration-300">(02)
-              8-403-3490</a></p>
-          <p>Sales & Marketing: <a href="tel:0286175364"
-              class="hover:text-yellow-500 transition-colors duration-300">(02) 8-617-5364</a></p>
-          <p>Mobile: <a href="tel:639177001109" class="hover:text-yellow-500 transition-colors duration-300">(+63)
-              917-7001-109 </a>(GLOBE)</p>
-
-          <h3 class="font-semibold mt-4 mb-2 flex items-center">
-            <svg class="w-5 h-5 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
-                d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
-            </svg>
-            Email
-          </h3>
-          <p>For Inquiries: <a target="_blank" href="mailto:inquiry@rcdland.com"
-              class="hover:text-yellow-500 transition-colors duration-300">inquiry@rcdland.com</a></p>
-          <p>For Customer Care: <a target="_blank" href="mailto:rcd.csr@rcdland.com"
-              class="hover:text-yellow-500 transition-colors duration-300">rcd.csr@rcdland.com</a></p>
-        </div>
-
-        <!-- Location Info -->
-        <div>
-          <h3 class="text-4xl font-semibold mb-2 flex items-center">
-            <svg class="w-10 h-10 text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-              viewBox="0 0 24 24">
-              <path fill-rule="evenodd"
-                d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
-                clip-rule="evenodd" />
-            </svg>
-            Find us in
-          </h3>
-          <p><A href="https://maps.app.goo.gl/h1TfTrETZJSj1oQY9" target="_blank"
-              class="hover:text-yellow-500 transition-colors duration-300">5th Flr. Unit 501 & 505 Chateau de Baie
-              Condo., Roxas Blvd. corner Airport Road, Parañaque City</A></p>
-          <p>Unit 309 - Loans & Accounts Management</p>
-          <p>Unit 409 - Sales & Marketing</p>
-        </div>
-      </div>
-
-      <div class="mt-8 border-t pt-4 text-center">
-        <p class="mt-2">&copy; 2025 RCD LAND, INC. All Rights Reserved.</p>
-      </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</body>
-</footer>
-
-</html>

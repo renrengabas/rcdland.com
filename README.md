@@ -27,3 +27,12 @@ bundle install
 
 Open your browser and go to:
 http://localhost:4000
+
+
+Launching Jekyll in new branch:
+
+1. Open command prompt or powershell and run:
+
+"bundle install"
+"bundle exec jekyll serve"
+
