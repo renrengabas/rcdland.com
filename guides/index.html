@@ -182,16 +182,18 @@ permalink: /guides/
 <!-- Buyer's Application Modal -->
 <div id="buyerModal" class="hidden fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
   <div class="bg-white rounded-lg shadow p-8 max-w-lg w-full relative">
+    <!-- X Button -->
     <button
-      class="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+      class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl font-bold"
       onclick="document.getElementById('buyerModal').classList.add('hidden')"
       aria-label="Close"
+      type="button"
     >
-      <i class="fas fa-times"></i>
+      &times;
     </button>
     <h2 class="text-2xl font-bold mb-4">Buyer's Application</h2>
     <!-- Example Form -->
-       <form>
+    <form>
       <div class="mb-4">
         <label class="block text-sm font-medium mb-1">First Name:</label>
         <input type="text"
@@ -334,11 +336,14 @@ permalink: /guides/
 <!-- Seller's Application Modal -->
 <div id="sellerModal" class="hidden fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
   <div class="bg-white rounded-lg shadow p-8 max-w-lg w-full relative">
+    <!-- X Button -->
     <button
-      class="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+      class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl font-bold"
       onclick="document.getElementById('sellerModal').classList.add('hidden')"
-      aria-label="Close">
-      <i class="fas fa-times"></i>
+      aria-label="Close"
+      type="button"
+    >
+      &times;
     </button>
     <h2 class="text-2xl font-bold mb-4">Seller's Application</h2>
     <!-- Example Form -->
