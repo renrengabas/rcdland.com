@@ -97,3 +97,11 @@ const tabs = document.querySelectorAll('.tab-link');
   if (tabs.length > 0) {
     tabs[0].click();
   }
+
+//Script to show the video on button click
+  function showVideo(button) {
+    const container = button.parentElement;
+    const iframe = container.querySelector("iframe");
+    button.style.display = "none"; // hide button
+    iframe.classList.remove("hidden"); // show video
+  }
