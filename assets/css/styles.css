@@ -284,3 +284,37 @@
    .tab-link:hover {
     color: black !important;
   }
+
+  /* Show desktop menu above 1030px, hide below */
+@media (max-width: 1030px) {
+  .desktop-menu {
+    display: none !important;
+  }
+  #menuToggle {
+    display: block !important;
+  }
+  #mobileMenu {
+    display: flex;
+  }
+}
+@media (min-width: 1031px) {
+  .desktop-menu {
+    display: flex !important;
+  }
+  #menuToggle {
+    display: none !important;
+  }
+  #mobileMenu {
+    display: none !important;
+  }
+}
+
+/* Mobile menu animation */
+#mobileMenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+#mobileMenu.open {
+  max-height: 500px;
+}
