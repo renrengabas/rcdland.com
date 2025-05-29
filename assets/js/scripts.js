@@ -97,3 +97,11 @@ const tabs = document.querySelectorAll('.tab-link');
   if (tabs.length > 0) {
     tabs[0].click();
   }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuToggle.addEventListener('click', function() {
+    mobileMenu.classList.toggle('open');
+  });
+});
