@@ -98,10 +98,10 @@ const tabs = document.querySelectorAll('.tab-link');
     tabs[0].click();
   }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-  menuToggle.addEventListener('click', function() {
-    mobileMenu.classList.toggle('open');
-  });
-});
+//Script to show the video on button click
+  function showVideo(button) {
+    const container = button.parentElement;
+    const iframe = container.querySelector("iframe");
+    button.style.display = "none"; // hide button
+    iframe.classList.remove("hidden"); // show video
+  }
