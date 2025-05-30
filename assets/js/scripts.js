@@ -105,3 +105,15 @@ const tabs = document.querySelectorAll('.tab-link');
     button.style.display = "none"; // hide button
     iframe.classList.remove("hidden"); // show video
   }
+
+// Custom select dropdown functionality for House-catalogue
+  const customSelect = document.querySelector('.custom-select');
+    const select = customSelect.querySelector('select');
+
+    select.addEventListener('focus', () => {
+      customSelect.classList.add('open');
+    });
+
+    select.addEventListener('blur', () => {
+      customSelect.classList.remove('open');
+    });
