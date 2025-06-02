@@ -117,3 +117,11 @@ const tabs = document.querySelectorAll('.tab-link');
     select.addEventListener('blur', () => {
       customSelect.classList.remove('open');
     });
+
+    // tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {},
+  },
+  plugins: [require('@tailwindcss/aspect-ratio')],
+}
