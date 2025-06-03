@@ -1,0 +1,67 @@
+---
+layout: default
+title: 360 Walkthrough: Townhouse 47
+permalink: /walkthrough/
+---
+
+<!DOCTYPE html>
+<style>
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000;
+  }
+
+  #container {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+</style>
+
+<div id="container"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.105.2/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/panolens@0.12.0/build/panolens.min.js"></script>
+
+<script>
+  const viewer = new PANOLENS.Viewer({ container: document.querySelector('#container') });
+
+  const livingRoomCube = new PANOLENS.CubePanorama([
+    '/assets/walkthrough/th47-walkthrough-tiles-0-th47_living-room/r.jpg',
+    '/assets/walkthrough/th47-walkthrough-tiles-0-th47_living-room/l.jpg',
+    '/assets/walkthrough/th47-walkthrough-tiles-0-th47_living-room/u.jpg',
+    '/assets/walkthrough/th47-walkthrough-tiles-0-th47_living-room/d.jpg',
+    '/assets/walkthrough/th47-walkthrough-tiles-0-th47_living-room/f.jpg',
+    '/assets/walkthrough/th47-walkthrough-tiles-0-th47_living-room/b.jpg'
+  ]);
+
+  const diningKitchenCube = new PANOLENS.CubePanorama([
+    '/assets/walkthrough/th47-walkthrough-tiles-0-th47_dining-kitchen/r.jpg',
+    '/assets/walkthrough/th47-walkthrough-tiles-0-th47_dining-kitchen/l.jpg',
+    '/assets/walkthrough/th47-walkthrough-tiles-0-th47_dining-kitchen/u.jpg',
+    '/assets/walkthrough/th47-walkthrough-tiles-0-th47_dining-kitchen/d.jpg',
+    '/assets/walkthrough/th47-walkthrough-tiles-0-th47_dining-kitchen/f.jpg',
+    '/assets/walkthrough/th47-walkthrough-tiles-0-th47_dining-kitchen/b.jpg'
+  ]);
+
+  livingRoomCube.link(diningKitchenCube, new THREE.Vector3(500, -1000, 3000));
+  diningKitchenCube.link(livingRoomCube, new THREE.Vector3(-500, 1000, -3000));
+
+  viewer.add(livingRoomCube, diningKitchenCube);
+  viewer.setPanorama(livingRoomCube);
+
+  livingRoomCube.addEventListener('error', function(e) {
+    console.error('Living Room Panorama Error:', e);
+  });
+  diningKitchenCube.addEventListener('error', function(e) {
+    console.error('Dining Kitchen Panorama Error:', e);
+  });
+</script>
