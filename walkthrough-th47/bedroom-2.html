@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bedroom 2 - 360 Walkthrough</title>
+  <style>
+    html, body, #container { width: 100vw; height: 100vh; margin: 0; padding: 0; background: #000; }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.105.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/panolens@0.12.0/build/panolens.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="{{ '/favicon.png' | relative_url }}">  
+  <script>
+    const viewer = new PANOLENS.Viewer({ container: document.querySelector('#container') });
+    const bedroom2 = new PANOLENS.CubePanorama([
+      '/assets/walkthrough/th47-walkthrough-tiles-5-th47_bedroom-2-2/r.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-5-th47_bedroom-2-2/l.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-5-th47_bedroom-2-2/u.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-5-th47_bedroom-2-2/d.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-5-th47_bedroom-2-2/f.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-5-th47_bedroom-2-2/b.jpg'
+    ]);
+    viewer.add(bedroom2);
+    viewer.setPanorama(bedroom2);
+
+    // Infospot to 2F Stairs (back wall)
+    const to2FStairs = new PANOLENS.Infospot(350, PANOLENS.DataImage.Arrow);
+    to2FStairs.position.set(-1500, -1000, 2000);
+    to2FStairs.addEventListener('click', () => {
+      window.location.href = '2f-stairs.html';
+    });
+    to2FStairs.tooltip = "Go to 2F Stairs";
+    bedroom2.add(to2FStairs);
+  </script>
+</body>
+</html>
