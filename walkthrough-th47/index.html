@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Living Room - 360 Walkthrough</title>
+  <style>
+    html, body, #container { width: 100vw; height: 100vh; margin: 0; padding: 0; background: #000; }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.105.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/panolens@0.12.0/build/panolens.min.js"></script>
+  <script>
+    const viewer = new PANOLENS.Viewer({ container: document.querySelector('#container') });
+    const livingRoomCube = new PANOLENS.CubePanorama([
+      '/assets/walkthrough/th47-walkthrough-tiles-0-th47_living-room/r.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-0-th47_living-room/l.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-0-th47_living-room/u.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-0-th47_living-room/d.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-0-th47_living-room/f.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-0-th47_living-room/b.jpg'
+    ]);
+    viewer.add(livingRoomCube);
+    viewer.setPanorama(livingRoomCube);
+
+    // Infospot to Kitchen (right wall)
+    const toKitchen = new PANOLENS.Infospot(350, PANOLENS.DataImage.Arrow);
+    toKitchen.position.set(300, -500, 2750);
+    toKitchen.addEventListener('click', () => {
+      window.location.href = 'dining-kitchen.html';
+    });
+    toKitchen.tooltip = "Go to Kitchen";
+    livingRoomCube.add(toKitchen);
+
+    // Infospot to Stairs (back wall)
+    const toStairs = new PANOLENS.Infospot(350, PANOLENS.DataImage.Arrow);
+    toStairs.position.set(2000, 0, -2000);
+    toStairs.addEventListener('click', () => {
+      window.location.href = 'groundfloor-stairs.html';
+    });
+    toStairs.tooltip = "Go to Stairs";
+    livingRoomCube.add(toStairs);
+  </script>
+</body>
+</html>

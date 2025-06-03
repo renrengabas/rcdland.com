@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Second Floor Stairs - 360 Walkthrough</title>
+  <style>
+    html, body, #container { width: 100vw; height: 100vh; margin: 0; padding: 0; background: #000; }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.105.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/panolens@0.12.0/build/panolens.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="{{ '/favicon.png' | relative_url }}">
+  <script>
+    const viewer = new PANOLENS.Viewer({ container: document.querySelector('#container') });
+    const secondFloorStairs = new PANOLENS.CubePanorama([
+      '/assets/walkthrough/th47-walkthrough-tiles-3-th47_2f_stairs/r.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-3-th47_2f_stairs/l.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-3-th47_2f_stairs/u.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-3-th47_2f_stairs/d.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-3-th47_2f_stairs/f.jpg',
+      '/assets/walkthrough/th47-walkthrough-tiles-3-th47_2f_stairs/b.jpg'
+    ]);
+    viewer.add(secondFloorStairs);
+    viewer.setPanorama(secondFloorStairs);
+
+    // Infospot to Ground Floor Stairs (front wall)
+    const toGroundFloor = new PANOLENS.Infospot(350, PANOLENS.DataImage.Arrow);
+    toGroundFloor.position.set(-1700, -1700, -1700);
+    toGroundFloor.addEventListener('click', () => {
+      window.location.href = 'groundfloor-stairs.html';
+    });
+    toGroundFloor.tooltip = "Go to Ground Floor Stairs";
+    secondFloorStairs.add(toGroundFloor);
+
+    // Infospot to Bedroom 1 (right wall)
+    const toBedroom1 = new PANOLENS.Infospot(350, PANOLENS.DataImage.Arrow);
+    toBedroom1.position.set(-2000, -1000, 1000);
+    toBedroom1.addEventListener('click', () => {
+      window.location.href = 'bedroom-1.html';
+    });
+    toBedroom1.tooltip = "Go to Bedroom 1";
+    secondFloorStairs.add(toBedroom1);
+
+    // Infospot to Bedroom 2 (left wall)
+    const toBedroom2 = new PANOLENS.Infospot(350, PANOLENS.DataImage.Arrow);
+    toBedroom2.position.set(-1750, -500, 2000);
+    toBedroom2.addEventListener('click', () => {
+      window.location.href = 'bedroom-2.html';
+    });
+    toBedroom2.tooltip = "Go to Bedroom 2";
+    secondFloorStairs.add(toBedroom2);
+  </script>
+</body>
+</html>
