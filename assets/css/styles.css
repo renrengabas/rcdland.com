@@ -318,3 +318,37 @@
 #mobileMenu.open {
   max-height: 500px;
 }
+
+/* House-catalogue CSS */
+
+.text-shadow {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+ .property-card .overlay-content > *:not(h3) {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 20px;
+  }
+
+  .property-card:hover .overlay-content > *:not(h3) {
+    opacity: 1;
+  }
+
+  .overlay-content {
+    transition: background 0.5s ease;
+  }
+
+  .property-card .overlay-content {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  transition: background 0.5s ease;
+  padding: 20px;
+}
+
+.property-card:hover .overlay-content {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+.property-card .overlay-content h3 {
+  margin-bottom: 16px; 
+}
