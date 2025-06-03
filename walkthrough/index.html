@@ -53,7 +53,7 @@ permalink: /walkthrough/
   ]);
 
   livingRoomCube.link(diningKitchenCube, new THREE.Vector3(500, -1000, 3000));
-  diningKitchenCube.link(livingRoomCube, new THREE.Vector3(-3000, 0, 0));
+  diningKitchenCube.link(livingRoomCube, new THREE.Vector3(-500, 1000, -3000));
 
   viewer.add(livingRoomCube, diningKitchenCube);
   viewer.setPanorama(livingRoomCube);
