@@ -163,7 +163,7 @@ permalink: /properties/rcd-bf-homes-paranaque/
           <li class="mr-6">
             <button
               class="tab-link inline-block py-2 px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
-              data-tab="ubication">
+              data-tab="location">
               Location
             </button>
           </li>
@@ -187,7 +187,7 @@ permalink: /properties/rcd-bf-homes-paranaque/
           class="w-full max-w-4xl mx-auto rounded-lg shadow-md" />
       </div>
 
-      <div id="ubication" class="tab-content hidden">
+      <div id="location" class="tab-content hidden">
         <div class="w-full max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden">
           <div class="relative" style="padding-top: 56.25%;">
             <iframe class="absolute top-0 left-0 w-full h-full"
@@ -196,6 +196,34 @@ permalink: /properties/rcd-bf-homes-paranaque/
           </div>
         </div>
       </div>
+
+      <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function () {
+          const tabLinks = document.querySelectorAll('.tab-link');
+          const tabContents = document.querySelectorAll('.tab-content');
+
+          // Show the first tab by default
+          if (tabLinks.length && tabContents.length) {
+            tabLinks[0].classList.add('border-green-600');
+            tabContents[0].classList.remove('hidden');
+          }
+
+          tabLinks.forEach(link => {
+            link.addEventListener('click', function () {
+              const tab = this.getAttribute('data-tab');
+
+              // Remove active styles and hide all contents
+              tabLinks.forEach(l => l.classList.remove('border-green-600'));
+              tabContents.forEach(c => c.classList.add('hidden'));
+
+              // Add active style to clicked tab and show corresponding content
+              this.classList.add('border-green-600');
+              document.getElementById(tab).classList.remove('hidden');
+            });
+          });
+        });
+      </script>
 
 
 </body>

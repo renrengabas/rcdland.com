@@ -168,7 +168,7 @@ permalink: /properties/rcd-winterbreeze-homes-cavite/
           <li class="mr-6">
             <button
               class="tab-link inline-block py-2 px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
-              data-tab="ubication">
+              data-tab="location">
               Location
             </button>
           </li>
@@ -180,7 +180,8 @@ permalink: /properties/rcd-winterbreeze-homes-cavite/
       <div id="video" class="tab-content hidden">
         <div class="w-full max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden">
           <div class="relative" style="padding-top: 56.25%;">
-            <iframe class="absolute top-0 left-0 w-full h-full" src="" title="Property Video" frameborder="0"
+            <iframe class="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/oA0QghL3Vrs?si=hMzZQnFnP97Bco-v" title="Property Video" frameborder="0"
               allowfullscreen></iframe>
           </div>
         </div>
@@ -192,14 +193,42 @@ permalink: /properties/rcd-winterbreeze-homes-cavite/
           class="w-full max-w-4xl mx-auto rounded-lg shadow-md object-contain sm:max-w-full sm:rounded-md" />
       </div>
 
-      <div id="ubication" class="tab-content hidden">
+      <div id="location" class="tab-content hidden">
         <div class="w-full max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden sm:max-w-full sm:rounded-md">
           <div class="relative" style="padding-top: 56.25%;">
             <iframe class="absolute top-0 left-0 w-full h-full min-h-[250px] sm:min-h-[180px]"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.427157281032!2d120.90873464997769!3d14.228286283641634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7f42863ceccb%3A0xf2e772014dd51446!2sWinterbreeze+Homes+Gen+Trias+Cavite!5e0!3m2!1sen!2sph!4v1500879385950"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.4400795661745!2d120.90653317080361!3d14.227531255662022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7f42863ceccb%3A0xf2e772014dd51446!2sYanCel%20Digital%20Print!5e0!3m2!1sen!2sph!4v1749107780995!5m2!1sen!2sph"
               style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
+
+      <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function () {
+          const tabLinks = document.querySelectorAll('.tab-link');
+          const tabContents = document.querySelectorAll('.tab-content');
+
+          // Show the first tab by default
+          if (tabLinks.length && tabContents.length) {
+            tabLinks[0].classList.add('border-green-600');
+            tabContents[0].classList.remove('hidden');
+          }
+
+          tabLinks.forEach(link => {
+            link.addEventListener('click', function () {
+              const tab = this.getAttribute('data-tab');
+
+              // Remove active styles and hide all contents
+              tabLinks.forEach(l => l.classList.remove('border-green-600'));
+              tabContents.forEach(c => c.classList.add('hidden'));
+
+              // Add active style to clicked tab and show corresponding content
+              this.classList.add('border-green-600');
+              document.getElementById(tab).classList.remove('hidden');
+            });
+          });
+        });
+      </script>
 
 </body>
