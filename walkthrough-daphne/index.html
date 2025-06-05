@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Living Room - 360 Walkthrough</title>
+  <style>
+    html, body, #container { width: 100vw; height: 100vh; margin: 0; padding: 0; background: #000; }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <button id="copyLinkBtn" style="position:absolute;top:10px;right:10px;z-index:10;">Copy View Link</button>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.105.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/panolens@0.12.0/build/panolens.min.js"></script>
+  <script>
+    const viewer = new PANOLENS.Viewer({ container: document.querySelector('#container') });
+
+    const livingRoomCube = new PANOLENS.CubePanorama([
+      '/assets/walkthrough/daphne-walkthrough-tiles-0-gf/r.jpg',
+      '/assets/walkthrough/daphne-walkthrough-tiles-0-gf/l.jpg',
+      '/assets/walkthrough/daphne-walkthrough-tiles-0-gf/u.jpg',
+      '/assets/walkthrough/daphne-walkthrough-tiles-0-gf/d.jpg',
+      '/assets/walkthrough/daphne-walkthrough-tiles-0-gf/f.jpg',
+      '/assets/walkthrough/daphne-walkthrough-tiles-0-gf/b.jpg'
+    ]);
+    livingRoomCube.geometry.showWireframe = false;
+    viewer.add(livingRoomCube);
+
+    // Fix seams between cube faces
+    livingRoomCube.addEventListener('load', function() {
+      if (livingRoomCube.material && Array.isArray(livingRoomCube.material)) {
+        livingRoomCube.material.forEach(mat => {
+          if (mat.map) {
+            mat.map.wrapS = THREE.ClampToEdgeWrapping;
+            mat.map.wrapT = THREE.ClampToEdgeWrapping;
+            mat.map.minFilter = THREE.LinearFilter;
+            mat.map.generateMipmaps = false;
+            mat.map.needsUpdate = true;
+          }
+        });
+      }
+    });
+
+    // --- Save/restore view state in URL ---
+    function getUrlParams() {
+      const params = {};
+      window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value) {
+        params[key] = parseFloat(value);
+      });
+      return params;
+    }
+
+    // Set initial view from URL
+    const params = getUrlParams();
+    if (!isNaN(params.yaw) && !isNaN(params.pitch) && !isNaN(params.fov)) {
+      livingRoomCube.addEventListener('enter', function() {
+        viewer.tweenControlCenter(
+          new THREE.Vector3().setFromSphericalCoords(5000, Math.PI/2 - params.pitch, params.yaw),
+          params.fov,
+          0
+        );
+      });
+    }
+
+    // Update URL as user moves view
+    function updateUrl() {
+      const yaw = viewer.OrbitControls.getAzimuthalAngle();
+      const pitch = viewer.OrbitControls.getPolarAngle();
+      const fov = viewer.getCamera().fov;
+      const base = window.location.pathname;
+      const url = `${base}?yaw=${yaw.toFixed(3)}&pitch=${pitch.toFixed(3)}&fov=${fov.toFixed(1)}`;
+      window.history.replaceState({}, '', url);
+      return `${window.location.origin}${url}`;
+    }
+
+    // Automatically update URL as user moves view
+    viewer.addEventListener('viewChange', updateUrl);
+
+    // Copy link button
+    document.getElementById('copyLinkBtn').onclick = function() {
+      const url = updateUrl();
+      navigator.clipboard.writeText(url).then(() => {
+        this.textContent = "Copied!";
+        setTimeout(() => { this.textContent = "Copy View Link"; }, 1500);
+      });
+    };
+
+    // Infospot to Kitchen (right wall)
+    const toKitchen = new PANOLENS.Infospot(350, PANOLENS.DataImage.Arrow);
+    toKitchen.position.set(300, -500, 2750);
+    toKitchen.addEventListener('click', () => {
+      window.location.href = 'dining-kitchen.html';
+    });
+    toKitchen.tooltip = "Go to Kitchen";
+    livingRoomCube.add(toKitchen);
+
+    // Infospot to Stairs (back wall)
+    const toStairs = new PANOLENS.Infospot(350, PANOLENS.DataImage.Arrow);
+    toStairs.position.set(2000, 0, -2000);
+    toStairs.addEventListener('click', () => {
+      window.location.href = 'groundfloor-stairs.html';
+    });
+    toStairs.tooltip = "Go to Stairs";
+    livingRoomCube.add(toStairs);
+  </script>
+</body>
+</html>
