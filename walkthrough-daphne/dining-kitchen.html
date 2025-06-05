@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Dining Kitchen - 360 Walkthrough</title>
+  <style>
+    html,
+    body,
+    #container {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: #000;
+    }
+    #container canvas {
+  filter: brightness(0.9) contrast(1.2);
+}
+    #container::after {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: rgba(0,0,0,0.15); /* adjust alpha as needed */
+  z-index: 10;
+}
+  </style>
+</head>
+
+<body>
+  <div id="container"></div>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.105.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/panolens@0.12.0/build/panolens.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="{{ '/favicon.png' | relative_url }}">
+  <script>
+    // Initialize the PANOLENS viewer
+  const viewer = new PANOLENS.Viewer({ container: document.querySelector('#container') }); // <-- Add this line
+
+  const diningKitchenCube = new PANOLENS.CubePanorama([
+    '/assets/walkthrough/daphne-walkthrough-tiles-3-dining-kitchen/r.jpg',
+    '/assets/walkthrough/daphne-walkthrough-tiles-3-dining-kitchen/l.jpg',
+    '/assets/walkthrough/daphne-walkthrough-tiles-3-dining-kitchen/u.jpg',
+    '/assets/walkthrough/daphne-walkthrough-tiles-3-dining-kitchen/d.jpg',
+    '/assets/walkthrough/daphne-walkthrough-tiles-3-dining-kitchen/f.jpg',
+    '/assets/walkthrough/daphne-walkthrough-tiles-3-dining-kitchen/b.jpg'
+  ], { showHelper: false });
+  viewer.add(diningKitchenCube);
+  viewer.setPanorama(diningKitchenCube);
+
+    diningKitchenCube.addEventListener('enter', function () {
+      let attempts = 0;
+      const maxAttempts = 60; // ~2 seconds
+      function removeLinesRecursive(object) {
+        for (let i = object.children.length - 1; i >= 0; i--) {
+          const child = object.children[i];
+          if (child.type === "LineSegments") {
+            object.remove(child);
+          } else if (child.children && child.children.length > 0) {
+            removeLinesRecursive(child);
+          }
+          if (child.material && child.material.wireframe) {
+            child.material.wireframe = false;
+          }
+        }
+      }
+      function tryRemove() {
+        removeLinesRecursive(diningKitchenCube);
+        attempts++;
+        if (attempts < maxAttempts) {
+          requestAnimationFrame(tryRemove);
+        }
+      }
+      tryRemove();
+    });
+
+    // Infospot to Living Room (left wall)
+    const toLivingRoom = new PANOLENS.Infospot(350, PANOLENS.DataImage.Arrow);
+    toLivingRoom.position.set(0, -500, -3000);
+    toLivingRoom.addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+    toLivingRoom.tooltip = "Go to Living Room";
+    diningKitchenCube.add(toLivingRoom);
+  </script>
+</body>
+
+</html>
