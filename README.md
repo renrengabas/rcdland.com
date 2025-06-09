@@ -21,13 +21,25 @@ jekyll new new-site
 cd new-site
 bundle install
 
-4. Serve Your Site Locally
+4. Add _layouts and _includes folders for boilertemplate and header/footer template
+
+5. 'assets' folder should contain the following files source images, js scripts, and css styles.
+
+6. Serve Your Site Locally Using:
 
 "bundle exec jekyll serve"
 
 Open your browser and go to:
 http://localhost:4000
 
+
+Always include these files on gitignore:
+- _site
+- .sass-cache
+- .jekyll-cache
+- .jekyll-metadata
+- vendor
+- Gemfile.lock
 
 Launching Jekyll in new branch:
 
