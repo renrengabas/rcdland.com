@@ -168,12 +168,12 @@ title: RCD Land Inc.
 
         <!-- Bottom-left "Show Details" -->
         <div class="absolute bottom-4 left-4 z-10">
-          <a href="{{ '/walkthrough-th47/' | relative_url }}" class="text-white text-sm font-medium text-shadow-strong hover:underline">Show Details</a>
+          <a href="{{ '/walkthrough/th47/' | relative_url }}" class="text-white text-sm font-medium text-shadow-strong hover:underline">Show Details</a>
         </div>
 
         <!-- Bottom-right Arrow Icon -->
         <div class="absolute bottom-4 right-4 z-10">
-          <a href="{{ '/walkthrough-th47/' | relative_url }}"
+          <a href="{{ '/walkthrough/th47/' | relative_url }}"
             class="text-white text-xl hover:text-yellow-400 text-shadow-strong transition-colors duration-300">
             <svg class="w-8 h-8 text-gray-800 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
               width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -196,11 +196,11 @@ title: RCD Land Inc.
         </div>
 
         <div class="absolute bottom-4 left-4 z-10">
-          <a href="{{ '/walkthrough-daphne/' | relative_url }}" class="text-white text-sm font-medium text-shadow-strong hover:underline">Show Details</a>
+          <a href="{{ '/walkthrough/daphne/' | relative_url }}" class="text-white text-sm font-medium text-shadow-strong hover:underline">Show Details</a>
         </div>
 
         <div class="absolute bottom-4 right-4 z-10">
-          <a href="{{ '/walkthrough-daphne/' | relative_url }}"
+          <a href="{{ '/walkthrough/daphne/' | relative_url }}"
             class="text-white text-xl hover:text-yellow-400 text-shadow-strong transition-colors duration-300">
             <svg class="w-8 h-8 text-gray-800 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
               width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -241,7 +241,198 @@ title: RCD Land Inc.
   </div>
 </section>
 
+<!-- Schedule Site Viewing Section -->
+<section class="bg-white py-16">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-semibold text-[#B5CB00] mb-2">Schedule a Site Viewing</h2>
+    <p id="scheduleDesc" class="mb-8 text-gray-700">
+      Book a visit to your dream home. Fill out the form and our team will contact you to confirm your schedule.
+    </p>
+    <button id="openScheduleModal" class="bg-[#B5CB00] text-white px-8 py-3 rounded-full font-medium hover:bg-green-700 transition">Book Now</button>
+  </div>
 
+  <!-- Modal -->
+  <div id="scheduleModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl shadow-lg w-full max-w-md p-8 relative">
+      <button id="closeScheduleModal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-2xl">&times;</button>
+      <!-- Step 1: Date & Time -->
+      <div id="step1">
+        <h3 class="text-2xl font-semibold text-[#B5CB00] mb-4">Choose Date & Time</h3>
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-1" for="date">Preferred Date</label>
+          <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#B5CB00]" type="date" id="date" min="" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-1" for="time">Preferred Time</label>
+          <select id="time" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#B5CB00]" required>
+            <!-- JS will populate options -->
+          </select>
+        </div>
+        <button id="toStep2" class="w-full bg-[#B5CB00] text-white py-2 rounded-full font-medium hover:bg-green-700 transition">Next</button>
+      </div>
+      <!-- Step 2: Summary -->
+      <div id="step2" class="hidden">
+        <h3 class="text-2xl font-semibold text-[#B5CB00] mb-4">Confirm Your Schedule</h3>
+        <div class="mb-4 text-gray-700 text-center">
+          <div id="summaryTime" class="font-bold text-lg mb-2"></div>
+          <div>Asia/Manila (GMT+8)</div>
+        </div>
+        <div class="mb-4 text-sm text-gray-600 text-left">
+          Discover your dream home in just three easy steps! Start with a Discussion—talk to our friendly agents, schedule a free property viewing, and reserve your ideal home. Next, move on to Files Review by completing all necessary requirements with our team’s guidance. Finally, Acquire your new home, ready for move-in and turn-over. It’s that simple—your future begins here!
+        </div>
+        <button id="toStep3" class="w-full bg-[#B5CB00] text-white py-2 rounded-full font-medium hover:bg-green-700 transition mb-2">Next</button>
+        <button id="backToStep1" class="w-full bg-gray-200 text-gray-700 py-2 rounded-full font-medium hover:bg-gray-300 transition">Back</button>
+      </div>
+      <!-- Step 3: Details -->
+      <div id="step3" class="hidden">
+        <h3 class="text-2xl font-semibold text-[#B5CB00] mb-4">Your Details</h3>
+        <form id="siteViewingForm" class="space-y-4 text-left">
+          <div>
+            <label class="block text-gray-700 mb-1" for="name">Full Name</label>
+            <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#B5CB00]" type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-1" for="email">Email</label>
+            <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#B5CB00]" type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-1" for="phone">Contact Number</label>
+            <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#B5CB00]" type="tel" id="phone" name="phone" required>
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-1" for="property">Property Interested In</label>
+            <select id="property" name="property" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#B5CB00]" required>
+              <option value="">Select Property</option>
+              <option value="Townhouse 47">Townhouse 47</option>
+              <option value="Daphne">Daphne</option>
+              <option value="Townhouse 65">Townhouse 65</option>
+              <option value="RCD BF Homes Parañaque">RCD BF Homes Parañaque</option>
+              <option value="RCD Royale Homes Silang">RCD Royale Homes Silang</option>
+              <option value="RCD Royale Homes Tuy">RCD Royale Homes Tuy</option>
+              <option value="RCD Royale Homes Bulacan">RCD Royale Homes Bulacan</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full bg-[#B5CB00] text-white py-2 rounded-full font-medium hover:bg-green-700 transition">Schedule Meeting</button>
+          <p id="formSuccess" class="text-green-600 text-center mt-2 hidden">Thank you! We will contact you soon.</p>
+        </form>
+        <button id="backToStep2" class="w-full bg-gray-200 text-gray-700 py-2 rounded-full font-medium hover:bg-gray-300 transition mt-2">Back</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Schedule Site Viewing Section -->
+
+<!-- JS for Modal and Steps -->
+<script>
+// filepath: c:\Users\kaferenal\Desktop\rcdland.com\index.html
+document.addEventListener('DOMContentLoaded', function() {
+  // Modal elements
+  const openBtn = document.getElementById('openScheduleModal');
+  const closeBtn = document.getElementById('closeScheduleModal');
+  const modal = document.getElementById('scheduleModal');
+  const scheduleDesc = document.getElementById('scheduleDesc');
+
+  // Steps
+  const step1 = document.getElementById('step1');
+  const step2 = document.getElementById('step2');
+  const step3 = document.getElementById('step3');
+  const toStep2 = document.getElementById('toStep2');
+  const toStep3 = document.getElementById('toStep3');
+  const backToStep1 = document.getElementById('backToStep1');
+  const backToStep2 = document.getElementById('backToStep2');
+  const summaryTime = document.getElementById('summaryTime');
+
+  // Date & Time
+  const dateInput = document.getElementById('date');
+  const timeSelect = document.getElementById('time');
+
+  // Form
+  const form = document.getElementById('siteViewingForm');
+  const successMsg = document.getElementById('formSuccess');
+
+  // Set min date to today
+  const today = new Date();
+  dateInput.min = today.toISOString().split('T')[0];
+
+  // Populate time options (9AM to 4PM, 1-hour interval)
+  function populateTimes() {
+    timeSelect.innerHTML = '';
+    for (let h = 9; h <= 16; h++) {
+      let hour = h > 12 ? h - 12 : h;
+      let ampm = h < 12 ? 'AM' : 'PM';
+      let label = `${hour}:00 ${ampm} - ${hour}:30 ${ampm}`;
+      let value = `${h}:00`;
+      let option = document.createElement('option');
+      option.value = value;
+      option.textContent = label;
+      timeSelect.appendChild(option);
+    }
+  }
+  populateTimes();
+
+  // Modal open/close
+  openBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    step1.classList.remove('hidden');
+    step2.classList.add('hidden');
+    step3.classList.add('hidden');
+    scheduleDesc.textContent = "Book a visit to your dream home. Fill out the form and our team will contact you to confirm your schedule.";
+  });
+  closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.classList.add('hidden');
+  });
+
+  // Step navigation
+  toStep2.addEventListener('click', function() {
+    if (!dateInput.value || !timeSelect.value) {
+      dateInput.classList.add('ring-2', 'ring-red-400');
+      timeSelect.classList.add('ring-2', 'ring-red-400');
+      return;
+    }
+    dateInput.classList.remove('ring-2', 'ring-red-400');
+    timeSelect.classList.remove('ring-2', 'ring-red-400');
+    // Format summary
+    const selectedDate = new Date(dateInput.value);
+    const day = selectedDate.toLocaleDateString('en-US', { weekday: 'short' });
+    const month = selectedDate.toLocaleDateString('en-US', { month: 'short' });
+    const dayNum = selectedDate.getDate();
+    const year = selectedDate.getFullYear();
+    const hour = parseInt(timeSelect.value.split(':')[0]);
+    const ampm = hour < 12 ? 'AM' : 'PM';
+    const displayHour = hour > 12 ? hour - 12 : hour;
+    const nextHalf = hour + ':30 ' + ampm;
+    summaryTime.innerHTML = `30 Mins<br>${displayHour}:00 ${ampm} - ${displayHour}:30 ${ampm} , ${day}, ${month} ${dayNum}, ${year}`;
+    // Update description above modal
+    scheduleDesc.innerHTML = `30 Mins<br>${displayHour}:00 ${ampm} - ${displayHour}:30 ${ampm} , ${day}, ${month} ${dayNum}, ${year}<br>Asia/Manila (GMT+8)<br>Discover your dream home in just three easy steps! Start with a Discussion—talk to our friendly agents, schedule a free property viewing, and reserve your ideal home. Next, move on to Files Review by completing all necessary requirements with our team’s guidance. Finally, Acquire your new home, ready for move-in and turn-over. It’s that simple—your future begins here!`;
+    step1.classList.add('hidden');
+    step2.classList.remove('hidden');
+  });
+  backToStep1.addEventListener('click', function() {
+    step2.classList.add('hidden');
+    step1.classList.remove('hidden');
+  });
+  toStep3.addEventListener('click', function() {
+    step2.classList.add('hidden');
+    step3.classList.remove('hidden');
+  });
+  backToStep2.addEventListener('click', function() {
+    step3.classList.add('hidden');
+    step2.classList.remove('hidden');
+  });
+
+  // Form submit
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    form.reset();
+    successMsg.classList.remove('hidden');
+    setTimeout(() => {
+      modal.classList.add('hidden');
+      successMsg.classList.add('hidden');
+    }, 2000);
+  });
+});
+</script>
 
 <!-- News and Update Section -->
 <section class="bg-white py-16">
