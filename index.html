@@ -31,11 +31,7 @@ title: RCD Land Inc.
 <section class="bg-white py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
-      <h2 class="text-4xl font-semibold text-[#B5CB00]">RECOMMENDED FOR YOU</h2>
-      <a href="{{ '/properties/' | relative_url }}"
-        class="inline-block text-sm font-medium text-[#B5CB00] border border-[#B5CB00] px-4 py-2 rounded-full hover:bg-[#B5CB00] hover:text-white transition">
-        View All Properties
-      </a>
+      <h2 class="text-4xl font-semibold text-green-600">FEATURED PROPERTIES</h2>
     </div>
     <p class="max-w-2xl text-gray-700 mb-8">
       RCD Land, Inc. is a real estate development company that brings your dream home to life. Take a look at these
@@ -52,7 +48,7 @@ title: RCD Land Inc.
         <div class="absolute bottom-0 left-0 right-0 px-4 py-3 pb-8 transition-all duration-500 group-hover:translate-y-[-3.5rem]">
           <h3 class="text-white text-3xl">RCD BF Homes Parañaque</h3>
           <a href="{{ '/properties/rcd-bf-homes-paranaque/' | relative_url }}"
-            class="inline-flex items-center justify-center gap-2 mt-2 px-4 py-1 text-sm font-medium text-white bg-[#B5CB00] rounded-full hover:bg-[#9e9e9e] hover:text-white transition-all duration-600">
+            class="inline-flex items-center justify-center gap-2 mt-2 px-4 py-1 text-sm font-medium text-white bg-green-600 hover:bg-yellow-400 rounded-full hover:text-white transition-all duration-600">
             Click here to know more
             <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
               viewBox="0 0 24 24">
@@ -76,7 +72,7 @@ title: RCD Land Inc.
         <div class="absolute bottom-0 left-0 right-0 px-4 py-3 transition-all duration-500 group-hover:translate-y-[-3.5rem]">
           <h3 class="text-white text-3xl">RCD Royale Homes Silang</h3>
           <a href="{{'/properties/Royale-Homes-Silang-Phase-4/' | relative_url }}"
-            class="inline-flex items-center justify-center gap-2 mt-2 px-4 py-1 text-sm font-medium text-white bg-[#B5CB00] rounded-full hover:bg-[#9e9e9e] hover:text-white transition-all duration-500">
+            class="inline-flex items-center justify-center gap-2 mt-2 px-4 py-1 text-sm font-medium text-white bg-green-600 hover:bg-yellow-400 rounded-full hover:text-white transition-all duration-500">
             Click here to know more
             <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
               viewBox="0 0 24 24">
@@ -99,7 +95,7 @@ title: RCD Land Inc.
         <div class="absolute bottom-0 left-0 right-0 px-4 py-3 transition-all duration-500 group-hover:translate-y-[-4.7rem]">
           <h3 class="text-white text-3xl">RCD Royale Homes Tuy</h3>
           <a href="#"
-            class="inline-flex items-center justify-center gap-2 mt-2 px-4 py-1 text-sm font-medium text-white bg-[#B5CB00] rounded-full hover:bg-[#9e9e9e] hover:text-white transition-all duration-500">
+            class="inline-flex items-center justify-center gap-2 mt-2 px-4 py-1 text-sm font-medium text-white bg-green-600 hover:bg-yellow-400 rounded-full hover:text-white transition-all duration-500">
             Click here to know more
             <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
               viewBox="0 0 24 24">
@@ -116,28 +112,43 @@ title: RCD Land Inc.
       </div>
     </div>
 
-<!-- Second Row: Last Card, same shape as above -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-  <div class="md:col-start-2 shrink-0 w-full h-[440px] group relative overflow-hidden shadow-lg bg-white cursor-pointer">
-    <img src="./assets/img/main-src-imgs/properties-grid/rrh-nor.jpg" alt="RCD Royale Homes Bulacan"
-      draggable="false"
-      class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out z-0">
-    <div class="absolute bottom-0 left-0 right-0 px-4 py-3 transition-all duration-500 group-hover:translate-y-[-3.5rem]">
-      <h3 class="text-white text-3xl">RCD Royale Homes Bulacan</h3>
-      <a href="{{ '/properties/rcd-winterbreeze-homes-bulacan/' | relative_url }}"
-        class="inline-flex items-center justify-center gap-2 mt-2 px-4 py-1 text-sm font-medium text-white bg-[#B5CB00] rounded-full hover:bg-[#9e9e9e] hover:text-white transition-all duration-500">
-        Click here to know more
-        <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+<!-- Second Row: 2 Cards (Property + View More), centered under first row -->
+<div class="flex justify-center w-full">
+  <div class="flex flex-col md:flex-row gap-6" style="max-width: 920px;">
+    <!-- Property Card -->
+    <div class="shrink-0 w-full md:w-[389.34px] h-[440px] group relative overflow-hidden shadow-lg bg-white cursor-pointer">
+      <img src="./assets/img/main-src-imgs/properties-grid/rrh-nor.jpg" alt="RCD Royale Homes Bulacan"
+        draggable="false"
+        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out z-0">
+      <div class="absolute bottom-0 left-0 right-0 px-4 py-3 transition-all duration-500 group-hover:translate-y-[-3.5rem]">
+        <h3 class="text-white text-3xl">RCD Royale Homes Bulacan</h3>
+        <a href="{{ '/properties/rcd-winterbreeze-homes-bulacan/' | relative_url }}"
+          class="inline-flex items-center justify-center gap-2 mt-2 px-4 py-1 text-sm font-medium text-white bg-green-600 hover:bg-yellow-400 rounded-full hover:text-white transition-all duration-500">
+          Click here to know more
+          <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m7 16 4-4-4-4m6 8 4-4-4-4" />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="absolute inset-x-0 bottom-0 p-4 opacity-0 transform translate-y-full group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-20">
+        <p class="text-white text-sm">For that balanced lifestyle, RCD Royale Homes Bulacan is the best choice for you!</p>
+      </div>
+    </div>
+    <!-- View More Properties Card with Blur -->
+    <div class="shrink-0 w-full md:w-[389.34px] h-[440px] group relative overflow-hidden shadow-lg bg-gray-900 cursor-pointer flex items-center justify-center">
+      <img src="./assets/img/ourproperties/villas-trece.jpg" alt="View More Properties"
+        class="absolute inset-0 w-full h-full object-cover opacity-60" />
+      <div class="absolute inset-0 bg-gray-900 bg-opacity-60 backdrop-blur-md group-hover:backdrop-blur-0 transition-all duration-500"></div>
+      <a href="/properties/" class="relative z-10 flex flex-col items-center justify-center w-full h-full">
+        <span class="text-white text-2xl font-semibold">View more properties here</span>
+        <svg class="w-10 h-10 mt-4 text-white opacity-80" fill="none" stroke="currentColor" stroke-width="2"
           viewBox="0 0 24 24">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="m7 16 4-4-4-4m6 8 4-4-4-4" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
       </a>
-    </div>
-    <div
-      class="absolute inset-x-0 bottom-0 p-4 opacity-0 transform translate-y-full group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-20">
-      <p class="text-white text-sm">For that balanced lifestyle, RCD Royale Homes Bulacan is the best choice for
-        you!</p>
     </div>
   </div>
 </div>
@@ -243,202 +254,34 @@ title: RCD Land Inc.
 
 <!-- Schedule Site Viewing Section -->
 <section class="bg-white py-16">
-  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl font-semibold text-[#B5CB00] mb-2">Schedule a Site Viewing</h2>
-    <p id="scheduleDesc" class="mb-8 text-gray-700">
-      Book a visit to your dream home. Fill out the form and our team will contact you to confirm your schedule.
-    </p>
-    <button id="openScheduleModal" class="bg-[#B5CB00] text-white px-8 py-3 rounded-full font-medium hover:bg-green-700 transition">Book Now</button>
-  </div>
-
-  <!-- Modal -->
-  <div id="scheduleModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
-    <div class="bg-white rounded-xl shadow-lg w-full max-w-md p-8 relative">
-      <button id="closeScheduleModal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-2xl">&times;</button>
-      <!-- Step 1: Date & Time -->
-      <div id="step1">
-        <h3 class="text-2xl font-semibold text-[#B5CB00] mb-4">Choose Date & Time</h3>
-        <div class="mb-4">
-          <label class="block text-gray-700 mb-1" for="date">Preferred Date</label>
-          <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#B5CB00]" type="date" id="date" min="" required>
-        </div>
-        <div class="mb-4">
-          <label class="block text-gray-700 mb-1" for="time">Preferred Time</label>
-          <select id="time" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#B5CB00]" required>
-            <!-- JS will populate options -->
-          </select>
-        </div>
-        <button id="toStep2" class="w-full bg-[#B5CB00] text-white py-2 rounded-full font-medium hover:bg-green-700 transition">Next</button>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-8 items-start">
+    <!-- Left: Booking Form -->
+    <div class="w-full md:w-1/2">
+      <h2 class="text-3xl font-semibold text-green-600 mb-2">Schedule a Site Viewing</h2>
+      <p class="mb-8 text-gray-700">
+        Book a visit to your dream home. Fill out the form and our team will contact you to confirm your schedule.
+      </p>
+        <a href="https://forms.gle/6JHqJB3C34E575qp9" target="_blank" rel="noopener"
+          class="bg-green-600 text-white w-32 py-2 rounded-full font-medium text-base hover:bg-yellow-400 transition mx-auto text-center block">
+          Book Now
+        </a>
+    </div>
+    <!-- Right: Google Calendar Embed -->
+    <div class="w-full md:w-1/2">
+      <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+        <iframe src="https://calendar.google.com/calendar/embed?height=450&wkst=1&ctz=Asia%2FManila&showPrint=0&title=RCD%20Land%20Inc.&src=a2VuamlmZXJlbmFsQGdtYWlsLmNvbQ&src=ZDk4N2I0N2JhYTU5MGU5NGI0MGFkNGFjOTYwNDBkMWQ0YTEwNzYzNzI1YzU0ZTRiMTAzYWNjZjVkMzRjMWM0YUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237986cb&color=%23f6bf26&color=%230b8043" style="border:solid 1px #777" width="100%" height="450" frameborder="0" scrolling="no"></iframe>
       </div>
-      <!-- Step 2: Summary -->
-      <div id="step2" class="hidden">
-        <h3 class="text-2xl font-semibold text-[#B5CB00] mb-4">Confirm Your Schedule</h3>
-        <div class="mb-4 text-gray-700 text-center">
-          <div id="summaryTime" class="font-bold text-lg mb-2"></div>
-          <div>Asia/Manila (GMT+8)</div>
-        </div>
-        <div class="mb-4 text-sm text-gray-600 text-left">
-          Discover your dream home in just three easy steps! Start with a Discussion—talk to our friendly agents, schedule a free property viewing, and reserve your ideal home. Next, move on to Files Review by completing all necessary requirements with our team’s guidance. Finally, Acquire your new home, ready for move-in and turn-over. It’s that simple—your future begins here!
-        </div>
-        <button id="toStep3" class="w-full bg-[#B5CB00] text-white py-2 rounded-full font-medium hover:bg-green-700 transition mb-2">Next</button>
-        <button id="backToStep1" class="w-full bg-gray-200 text-gray-700 py-2 rounded-full font-medium hover:bg-gray-300 transition">Back</button>
-      </div>
-      <!-- Step 3: Details -->
-      <div id="step3" class="hidden">
-        <h3 class="text-2xl font-semibold text-[#B5CB00] mb-4">Your Details</h3>
-        <form id="siteViewingForm" class="space-y-4 text-left">
-          <div>
-            <label class="block text-gray-700 mb-1" for="name">Full Name</label>
-            <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#B5CB00]" type="text" id="name" name="name" required>
-          </div>
-          <div>
-            <label class="block text-gray-700 mb-1" for="email">Email</label>
-            <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#B5CB00]" type="email" id="email" name="email" required>
-          </div>
-          <div>
-            <label class="block text-gray-700 mb-1" for="phone">Contact Number</label>
-            <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#B5CB00]" type="tel" id="phone" name="phone" required>
-          </div>
-          <div>
-            <label class="block text-gray-700 mb-1" for="property">Property Interested In</label>
-            <select id="property" name="property" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#B5CB00]" required>
-              <option value="">Select Property</option>
-              <option value="Townhouse 47">Townhouse 47</option>
-              <option value="Daphne">Daphne</option>
-              <option value="Townhouse 65">Townhouse 65</option>
-              <option value="RCD BF Homes Parañaque">RCD BF Homes Parañaque</option>
-              <option value="RCD Royale Homes Silang">RCD Royale Homes Silang</option>
-              <option value="RCD Royale Homes Tuy">RCD Royale Homes Tuy</option>
-              <option value="RCD Royale Homes Bulacan">RCD Royale Homes Bulacan</option>
-            </select>
-          </div>
-          <button type="submit" class="w-full bg-[#B5CB00] text-white py-2 rounded-full font-medium hover:bg-green-700 transition">Schedule Meeting</button>
-          <p id="formSuccess" class="text-green-600 text-center mt-2 hidden">Thank you! We will contact you soon.</p>
-        </form>
-        <button id="backToStep2" class="w-full bg-gray-200 text-gray-700 py-2 rounded-full font-medium hover:bg-gray-300 transition mt-2">Back</button>
-      </div>
+      <p class="text-xs text-gray-500 mt-2">*View available schedules. For booking, use the form on the left.</p>
     </div>
   </div>
 </section>
 <!-- End Schedule Site Viewing Section -->
 
-<!-- JS for Modal and Steps -->
-<script>
-// filepath: c:\Users\kaferenal\Desktop\rcdland.com\index.html
-document.addEventListener('DOMContentLoaded', function() {
-  // Modal elements
-  const openBtn = document.getElementById('openScheduleModal');
-  const closeBtn = document.getElementById('closeScheduleModal');
-  const modal = document.getElementById('scheduleModal');
-  const scheduleDesc = document.getElementById('scheduleDesc');
-
-  // Steps
-  const step1 = document.getElementById('step1');
-  const step2 = document.getElementById('step2');
-  const step3 = document.getElementById('step3');
-  const toStep2 = document.getElementById('toStep2');
-  const toStep3 = document.getElementById('toStep3');
-  const backToStep1 = document.getElementById('backToStep1');
-  const backToStep2 = document.getElementById('backToStep2');
-  const summaryTime = document.getElementById('summaryTime');
-
-  // Date & Time
-  const dateInput = document.getElementById('date');
-  const timeSelect = document.getElementById('time');
-
-  // Form
-  const form = document.getElementById('siteViewingForm');
-  const successMsg = document.getElementById('formSuccess');
-
-  // Set min date to today
-  const today = new Date();
-  dateInput.min = today.toISOString().split('T')[0];
-
-  // Populate time options (9AM to 4PM, 1-hour interval)
-  function populateTimes() {
-    timeSelect.innerHTML = '';
-    for (let h = 9; h <= 16; h++) {
-      let hour = h > 12 ? h - 12 : h;
-      let ampm = h < 12 ? 'AM' : 'PM';
-      let label = `${hour}:00 ${ampm} - ${hour}:30 ${ampm}`;
-      let value = `${h}:00`;
-      let option = document.createElement('option');
-      option.value = value;
-      option.textContent = label;
-      timeSelect.appendChild(option);
-    }
-  }
-  populateTimes();
-
-  // Modal open/close
-  openBtn.addEventListener('click', () => {
-    modal.classList.remove('hidden');
-    step1.classList.remove('hidden');
-    step2.classList.add('hidden');
-    step3.classList.add('hidden');
-    scheduleDesc.textContent = "Book a visit to your dream home. Fill out the form and our team will contact you to confirm your schedule.";
-  });
-  closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.classList.add('hidden');
-  });
-
-  // Step navigation
-  toStep2.addEventListener('click', function() {
-    if (!dateInput.value || !timeSelect.value) {
-      dateInput.classList.add('ring-2', 'ring-red-400');
-      timeSelect.classList.add('ring-2', 'ring-red-400');
-      return;
-    }
-    dateInput.classList.remove('ring-2', 'ring-red-400');
-    timeSelect.classList.remove('ring-2', 'ring-red-400');
-    // Format summary
-    const selectedDate = new Date(dateInput.value);
-    const day = selectedDate.toLocaleDateString('en-US', { weekday: 'short' });
-    const month = selectedDate.toLocaleDateString('en-US', { month: 'short' });
-    const dayNum = selectedDate.getDate();
-    const year = selectedDate.getFullYear();
-    const hour = parseInt(timeSelect.value.split(':')[0]);
-    const ampm = hour < 12 ? 'AM' : 'PM';
-    const displayHour = hour > 12 ? hour - 12 : hour;
-    const nextHalf = hour + ':30 ' + ampm;
-    summaryTime.innerHTML = `30 Mins<br>${displayHour}:00 ${ampm} - ${displayHour}:30 ${ampm} , ${day}, ${month} ${dayNum}, ${year}`;
-    // Update description above modal
-    scheduleDesc.innerHTML = `30 Mins<br>${displayHour}:00 ${ampm} - ${displayHour}:30 ${ampm} , ${day}, ${month} ${dayNum}, ${year}<br>Asia/Manila (GMT+8)<br>Discover your dream home in just three easy steps! Start with a Discussion—talk to our friendly agents, schedule a free property viewing, and reserve your ideal home. Next, move on to Files Review by completing all necessary requirements with our team’s guidance. Finally, Acquire your new home, ready for move-in and turn-over. It’s that simple—your future begins here!`;
-    step1.classList.add('hidden');
-    step2.classList.remove('hidden');
-  });
-  backToStep1.addEventListener('click', function() {
-    step2.classList.add('hidden');
-    step1.classList.remove('hidden');
-  });
-  toStep3.addEventListener('click', function() {
-    step2.classList.add('hidden');
-    step3.classList.remove('hidden');
-  });
-  backToStep2.addEventListener('click', function() {
-    step3.classList.add('hidden');
-    step2.classList.remove('hidden');
-  });
-
-  // Form submit
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    form.reset();
-    successMsg.classList.remove('hidden');
-    setTimeout(() => {
-      modal.classList.add('hidden');
-      successMsg.classList.add('hidden');
-    }, 2000);
-  });
-});
-</script>
-
 <!-- News and Update Section -->
 <section class="bg-white py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
-      <h2 class="text-4xl font-semibold text-[#B5CB00]">NEWS & UPDATES</h2>
+      <h2 class="text-4xl font-semibold text-green-600">NEWS & UPDATES</h2>
     </div>
     <p class="max-w-2xl text-gray-700 mb-8">
       Get to know the latest news and updates about RCD Homes.
@@ -454,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="text-sm">Mr. Roland Delantar, President and CEO of RCD Land Inc., competed for EY Entrepreneur of
             the Year last October 14, 2015.</p>
           <a href="{{ '/whats-new/subpages-news/ey_entrepreneurship_of_the_yr' | relative_url }}"
-            class="self-start bg-green-600 hover:bg-gray-500 transition-colors duration-300 text-white px-6 py-2 rounded-full text-sm font-medium mt-2">
+            class="self-start bg-green-600 hover:bg-yellow-400 transition-colors duration-300 text-white px-6 py-2 rounded-full text-sm font-medium mt-2">
             READ MORE
           </a>
         </div>
@@ -469,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="text-sm">Mr. Roland Delantar, President and CEO of RCD Land Inc., received the Asia Pacific
             Entrepreneurship Award last December 1, 2016.</p>
           <a href="{{ '/whats-new/subpages-news/asia_pacific_entrepreneurship' | relative_url }}"
-            class="self-start bg-green-600 hover:bg-gray-500 transition-colors duration-300 text-white px-6 py-2 rounded-full text-sm font-medium mt-2">
+            class="self-start bg-green-600 hover:bg-yellow-400 transition-colors duration-300 text-white px-6 py-2 rounded-full text-sm font-medium mt-2">
             READ MORE
           </a>
         </div>
@@ -484,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="text-sm">RCD Land Inc. received the Circle of Excellence Award for SME Company of the Year in
             2018.</p>
           <a href="{{ '/whats-new/subpages-news/asia_ceo_awards' | relative_url }}"
-            class="self-start bg-green-600 hover:bg-gray-500 transition-colors duration-300 text-white px-6 py-2 rounded-full text-sm font-medium mt-2">
+            class="self-start bg-green-600 hover:bg-yellow-400 transition-colors duration-300 text-white px-6 py-2 rounded-full text-sm font-medium mt-2">
             READ MORE
           </a>
         </div>

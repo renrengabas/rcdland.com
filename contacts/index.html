@@ -6,11 +6,9 @@ permalink: /contacts/
 
 <section class="pt-24 pb-12 bg-gray-50 text-gray-800">
   <div class="max-w-6xl mx-auto px-4">
-    <!-- Decorative Title & Intro with Vertical Bar -->
+    <!-- Title & Intro -->
     <div class="flex items-start mb-8">
-      <!-- Vertical Green Bar -->
       <div class="w-2 md:w-3 h-full bg-green-600 rounded-full mr-6"></div>
-      <!-- Title and Intro -->
       <div>
         <h1 class="text-4xl font-bold text-gray-900 mb-2">Contact Us</h1>
         <p class="text-sm mb-1">If you have any questions or queries a member of staff will always be happy to help.</p>
@@ -18,13 +16,128 @@ permalink: /contacts/
         <p class="text-sm mb-6">We will be sure to get back to you as soon as possible.</p>
       </div>
     </div>
-
-    <!-- Embedded Google Map -->
-    <div class="w-full h-[400px] md:h-[500px] mb-8">
+    <!-- 70/30 Split -->
+<div class="flex flex-col md:flex-row gap-8 mb-8" style="min-height: 400px;">
+  <!-- Left: Map only -->
+  <div class="md:w-7/10 w-full">
+    <div class="w-full h-[300px] md:h-[400px]">
       <iframe
         class="w-full h-full rounded-md shadow"
         src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6495.500570324702!2d120.99069085733484!3d14.527816528392652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shttps%3A%2F%2Frcdland%20maps!5e0!3m2!1sen!2sph!4v1748496785984!5m2!1sen!2sph"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+  <!-- Right: Let's Talk + Typeform Selection -->
+  <div class="md:w-3/10 w-full flex flex-col gap-4 justify-center">
+    <div class="bg-white rounded-md shadow p-6 mb-2">
+      <h2 class="text-2xl font-bold mb-2">Let's Talk</h2>
+      <p class="mb-1">Reach out to us for any inquiries or assistance. We're here to help you!</p>
+      <p class="text-sm text-gray-500 mb-4">Phone: (02) 8-893-7451 / (02) 8-893-7452<br>Email: info@rcdland.com</p>
+      <h2 class="text-base font-bold mb-3">What would you like to do?</h2>
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+  <button class="typeform-card-wide" onclick="openModal('help')">
+    <div class="text-xl mr-2">🛠️</div>
+    <div class="font-semibold text-xs text-left">Get Help Using ChatBot</div>
+  </button>
+  <button class="typeform-card-wide" onclick="openModal('sales')">
+    <div class="text-xl mr-2">🤝</div>
+    <div class="font-semibold text-xs text-left">Contact Sales Department</div>
+  </button>
+  <button class="typeform-card-wide" onclick="openModal('billing')">
+    <div class="text-xl mr-2">😊</div>
+    <div class="font-semibold text-xs text-left">Contact Billing Department</div>
+  </button>
+  <button class="typeform-card-wide" onclick="openModal('marketing')">
+    <div class="text-xl mr-2">📈</div>
+    <div class="font-semibold text-xs text-left">Contact Marketing and Public Relations</div>
+  </button>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+      <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md relative">
+        <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-400 hover:text-gray-700">&times;</button>
+        <div id="modal-content">
+          <!-- Dynamic form content goes here -->
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+.typeform-card-wide {
+  display: flex;
+  align-items: center;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+  padding: 0.5rem 1rem;
+  min-height: 48px;
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+  gap: 0.5rem;
+}
+.typeform-card-wide:hover, .typeform-card-wide:focus {
+  border-color: #16a34a;
+  background: #e6f9ec;
+}
+</style>
+
+<script>
+function openModal(type) {
+  const modal = document.getElementById('modal');
+  const content = document.getElementById('modal-content');
+  let html = '';
+  if (type === 'help') {
+    html = `<h3 class="text-lg font-bold mb-2">Get help using Typeform</h3>
+      <form>
+        <input class="border p-2 w-full mb-2" placeholder="Your Name" required>
+        <input class="border p-2 w-full mb-2" placeholder="Your Email" type="email" required>
+        <textarea class="border p-2 w-full mb-2" placeholder="How can we help you?" required></textarea>
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
+      </form>`;
+  } else if (type === 'sales') {
+    html = `<h3 class="text-lg font-bold mb-2">Contact Sales Team</h3>
+      <form>
+        <input class="border p-2 w-full mb-2" placeholder="Your Name" required>
+        <input class="border p-2 w-full mb-2" placeholder="Your Email" type="email" required>
+        <input class="border p-2 w-full mb-2" placeholder="Company Name">
+        <textarea class="border p-2 w-full mb-2" placeholder="Your Inquiry" required></textarea>
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
+      </form>`;
+  } else if (type === 'billing') {
+    html = `<h3 class="text-lg font-bold mb-2">Contact Billing Team</h3>
+      <form>
+        <input class="border p-2 w-full mb-2" placeholder="Your Name" required>
+        <input class="border p-2 w-full mb-2" placeholder="Your Email" type="email" required>
+        <input class="border p-2 w-full mb-2" placeholder="Invoice Number">
+        <textarea class="border p-2 w-full mb-2" placeholder="Billing Concern" required></textarea>
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
+      </form>`;
+  } else if (type === 'marketing') {
+    html = `<h3 class="text-lg font-bold mb-2">Contact Marketing & PR</h3>
+      <form>
+        <input class="border p-2 w-full mb-2" placeholder="Your Name" required>
+        <input class="border p-2 w-full mb-2" placeholder="Your Email" type="email" required>
+        <input class="border p-2 w-full mb-2" placeholder="Company/Organization">
+        <textarea class="border p-2 w-full mb-2" placeholder="Your Message" required></textarea>
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
+      </form>`;
+  }
+  content.innerHTML = html;
+  modal.classList.remove('hidden');
+}
+function closeModal() {
+  document.getElementById('modal').classList.add('hidden');
+}
+</script>
