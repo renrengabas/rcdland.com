@@ -8,52 +8,64 @@ permalink: /new-properties/
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <style>
-/* Carousel effect like phirstparkhomes.com */
-.swiper {
-    overflow: visible !important;
-    width: 100%;
-    height: 100%;
-}
-.swiper-wrapper {
-    align-items: center;
-}
-.swiper-slide {
-    transition: filter 0.4s, transform 0.4s;
-    filter: blur(0) brightness(1);
-    transform: scale(1);
-    z-index: 1;
-}
-.swiper-slide-next,
-.swiper-slide-prev {
-    filter: blur(6px) brightness(0.85) !important;
-    transform: scale(0.92) !important;
-    z-index: 2;
-}
-.swiper-slide-active {
-    filter: none !important;
-    transform: scale(1.05) !important;
-    z-index: 3;
-}
-.swiper-button-next,
-.swiper-button-prev {
-    color: #B5CB00;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    top: 50%;
-    transform: translateY(-50%);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    z-index: 10;
-}
-.swiper-button-next:after,
-.swiper-button-prev:after {
-    font-size: 20px;
-}
-.swiper-pagination-bullets {
-    bottom: 10px !important;
-}
+    .swiper {
+        width: 100%;
+        height: 100%;
+        padding-left: 44px;
+        padding-right: 44px;
+        box-sizing: border-box;
+    }
 
+    .swiper-wrapper {
+        align-items: center;
+    }
+
+    .swiper-slide {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #B5CB00;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        z-index: 10;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .swiper-button-prev {
+        left: 0;
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        background: #B5CB00;
+        color: #fff;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 20px;
+    }
 </style>
 
 <section class="bg-white py-16 mt-24">
@@ -66,14 +78,15 @@ permalink: /new-properties/
                 View All Properties
             </a>
         </div>
-        <p class="max-w-2xl text-gray-700 mb-20 text-left">
+        <p class="max-w-2xl text-base text-gray-700 mb-20 text-left">
             RCD Land, Inc. is a real estate development company that brings your dream home to life. Take a look at
             these other communities!
         </p>
 
         <!-- Card 1: Image Carousel left, text right -->
         <div class="w-full flex items-center mb-24 justify-center">
-            <div class="shrink-0 w-[55%] h-[400px] flex justify-center items-center relative overflow-hidden shadow-lg bg-white cursor-pointer max-w-4xl">
+            <div
+                class="shrink-0 w-[55%] h-[400px] flex justify-center items-center relative overflow-hidden shadow-lg bg-white cursor-pointer max-w-4xl">
                 <!-- Swiper for Card 1 -->
                 <div class="swiper card-swiper-1 w-full h-full">
                     <div class="swiper-wrapper">
@@ -93,13 +106,14 @@ permalink: /new-properties/
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
+
                 </div>
             </div>
             <div class="w-[35%] pl-8 flex flex-col h-[400px] justify-between">
                 <div>
-                    <h3 class="text-[#B5CB00] text-4xl mb-5">Daffodil</h3>
-                    <p class="text-gray-700 mb-4">RCD Homes' Daffodil Model is a 54 square meter home on a 69 square
+                    <h3 class="text-[#B5CB00] text-4xl text-shadow  mb-5">Daffodil</h3>
+                    <p class="text-base text-gray-700 mb-4">RCD Homes' Daffodil Model is a 54 square meter home on a 69
+                        square
                         meter lot. It includes a living area, dining & kitchen, provision for 2 bedrooms, 2 toilets &
                         baths, and a service area.</p>
                 </div>
@@ -120,7 +134,7 @@ permalink: /new-properties/
         <div class="w-full flex items-center mb-24 justify-center">
             <div class="w-[35%] pr-8 flex flex-col h-[400px] justify-between">
                 <div>
-                    <h3 class="text-[#B5CB00] text-4xl mb-5">Daphne</h3>
+                    <h3 class="text-[#B5CB00] text-4xl text-shadow  mb-5">Daphne</h3>
                     <p class="text-gray-700 mb-4">RCD Homes' Daphne Model is a 54 square meter home on a 69 square meter
                         lot. It includes a living area, dining & kitchen, provision for 2 bedrooms, 2 toilets & baths,
                         and a service area.</p>
@@ -136,7 +150,8 @@ permalink: /new-properties/
                     CLICK HERE FOR MORE INFO
                 </a>
             </div>
-            <div class="shrink-0 w-[55%] h-[400px] flex justify-center items-center relative overflow-hidden shadow-lg bg-white cursor-pointer max-w-4xl">
+            <div
+                class="shrink-0 w-[55%] h-[400px] flex justify-center items-center relative overflow-hidden shadow-lg bg-white cursor-pointer max-w-4xl">
                 <!-- Swiper for Card 2 -->
                 <div class="swiper card-swiper-2 w-full h-full">
                     <div class="swiper-wrapper">
@@ -156,14 +171,15 @@ permalink: /new-properties/
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
+
                 </div>
             </div>
         </div>
 
         <!-- Card 3: Image Carousel left, text right -->
         <div class="w-full flex items-center mb-24 justify-center">
-            <div class="shrink-0 w-[55%] h-[400px] flex justify-center items-center relative overflow-hidden shadow-lg bg-white cursor-pointer max-w-4xl">
+            <div
+                class="shrink-0 w-[55%] h-[400px] flex justify-center items-center relative overflow-hidden shadow-lg bg-white cursor-pointer max-w-4xl">
                 <!-- Swiper for Card 3 -->
                 <div class="swiper card-swiper-3 w-full h-full">
                     <div class="swiper-wrapper">
@@ -183,12 +199,12 @@ permalink: /new-properties/
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
+
                 </div>
             </div>
             <div class="w-[35%] pl-8 flex flex-col h-[400px] justify-between">
                 <div>
-                    <h3 class="text-[#B5CB00] text-4xl mb-5">Townhouse 65</h3>
+                    <h3 class="text-[#B5CB00] text-4xl text-shadow  mb-5">Townhouse 65</h3>
                     <p class="text-gray-700 mb-4">RCD Homes' Townhouse 65 Model is a 65 square meter home on a 40 square
                         meter lot. It includes a living area, dining & kitchen, provision for 2 bedrooms, 2 toilet &
                         baths, 1 car garage, and a service area.</p>
@@ -210,7 +226,7 @@ permalink: /new-properties/
         <div class="w-full flex items-center mb-24 justify-center">
             <div class="w-[35%] pr-8 flex flex-col h-[400px] justify-between">
                 <div>
-                    <h3 class="text-[#B5CB00] text-4xl mb-5">Townhouse 47</h3>
+                    <h3 class="text-[#B5CB00] text-4xl text-shadow mb-5">Townhouse 47</h3>
                     <p class="text-gray-700 mb-4">RCD Homes' Townhouse 47 Model is a 47 square meter home on a 40 square
                         meter lot. It includes a living area, dining & kitchen, provision for 2 bedrooms, 1 toilet &
                         bath, and a service area.</p>
@@ -226,7 +242,8 @@ permalink: /new-properties/
                     CLICK HERE FOR MORE INFO
                 </a>
             </div>
-            <div class="shrink-0 w-[55%] h-[400px] flex justify-center items-center relative overflow-hidden shadow-lg bg-white cursor-pointer max-w-4xl">
+            <div
+                class="shrink-0 w-[55%] h-[400px] flex justify-center items-center relative overflow-hidden shadow-lg bg-white cursor-pointer max-w-4xl">
                 <!-- Swiper for Card 4 -->
                 <div class="swiper card-swiper-4 w-full h-full">
                     <div class="swiper-wrapper">
@@ -242,11 +259,12 @@ permalink: /new-properties/
                             <img src="../assets/img/main-src-imgs/properties-grid/rrh-nor.jpg"
                                 alt="RCD Royale Homes Bulacan 1" class="w-full h-full object-cover" />
                         </div>
+
                         <!-- Add more slides as needed -->
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
+
                 </div>
             </div>
         </div>
@@ -254,31 +272,28 @@ permalink: /new-properties/
 </section>
 
 <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-function createCardSwiper(selector) {
-    return new Swiper(selector, {
-        loop: true,
-        centeredSlides: true,
-        slidesPerView: 1.5,
-        spaceBetween: 0,
-        navigation: {
-            nextEl: selector + ' .swiper-button-next',
-            prevEl: selector + ' .swiper-button-prev',
-        },
-        pagination: {
-            el: selector + ' .swiper-pagination',
-            clickable: true,
-        },
-        speed: 600,
-        breakpoints: {
-            1024: { slidesPerView: 1.5 },
-            640: { slidesPerView: 1.1 }
-        }
-    });
-}
-createCardSwiper('.card-swiper-1');
-createCardSwiper('.card-swiper-2');
-createCardSwiper('.card-swiper-3');
-createCardSwiper('.card-swiper-4');
+    function createCardSwiper(selector) {
+        return new Swiper(selector, {
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 1, // Show one slide at a time for full image
+            spaceBetween: 0,
+            navigation: {
+                nextEl: selector + ' .swiper-button-next',
+                prevEl: selector + ' .swiper-button-prev',
+            },
+            speed: 700,
+            allowTouchMove: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+        });
+    }
+
+    createCardSwiper('.card-swiper-1');
+    createCardSwiper('.card-swiper-2');
+    createCardSwiper('.card-swiper-3');
+    createCardSwiper('.card-swiper-4');
 </script>
