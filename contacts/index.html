@@ -35,24 +35,24 @@ permalink: /contacts/
       <p class="mb-1">Reach out to us for any inquiries or assistance. We're here to help you!</p>
       <p class="text-sm text-gray-500 mb-4">Phone: (02) 8-893-7451 / (02) 8-893-7452<br>Email: info@rcdland.com</p>
       <h2 class="text-base font-bold mb-3">What would you like to do?</h2>
-      <div class="grid grid-cols-2 gap-2">
-        <button class="typeform-card-square-sm" onclick="openModal('help')">
-          <div class="text-xl mb-1">🛠️</div>
-          <div class="font-semibold text-xs text-center">Get Help Using ChatBot</div>
-        </button>
-        <button class="typeform-card-square-sm" onclick="openModal('sales')">
-          <div class="text-xl mb-1">🤝</div>
-          <div class="font-semibold text-xs text-center">Contact Sales Department</div>
-        </button>
-        <button class="typeform-card-square-sm" onclick="openModal('billing')">
-          <div class="text-xl mb-1">😊</div>
-          <div class="font-semibold text-xs text-center">Contact Billing Department</div>
-        </button>
-        <button class="typeform-card-square-sm" onclick="openModal('marketing')">
-          <div class="text-xl mb-1">📈</div>
-          <div class="font-semibold text-xs text-center">Contact Marketing and Public Relations</div>
-        </button>
-      </div>
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+  <button class="typeform-card-wide" onclick="openModal('help')">
+    <div class="text-xl mr-2">🛠️</div>
+    <div class="font-semibold text-xs text-left">Get Help Using ChatBot</div>
+  </button>
+  <button class="typeform-card-wide" onclick="openModal('sales')">
+    <div class="text-xl mr-2">🤝</div>
+    <div class="font-semibold text-xs text-left">Contact Sales Department</div>
+  </button>
+  <button class="typeform-card-wide" onclick="openModal('billing')">
+    <div class="text-xl mr-2">😊</div>
+    <div class="font-semibold text-xs text-left">Contact Billing Department</div>
+  </button>
+  <button class="typeform-card-wide" onclick="openModal('marketing')">
+    <div class="text-xl mr-2">📈</div>
+    <div class="font-semibold text-xs text-left">Contact Marketing and Public Relations</div>
+  </button>
+</div>
     </div>
   </div>
 </div>
@@ -71,25 +71,23 @@ permalink: /contacts/
 </section>
 
 <style>
-.typeform-card-square-sm {
+.typeform-card-wide {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  aspect-ratio: 1 / 1;
-  min-width: 0;
-  min-height: 60px;
-  max-width: 70px;
-  max-height: 70px;
   border: 2px solid #e5e7eb;
   border-radius: 8px;
   background: #f9fafb;
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.03);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  min-height: 48px;
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+  gap: 0.5rem;
 }
-.typeform-card-square-sm:hover, .typeform-card-square-sm:focus {
+.typeform-card-wide:hover, .typeform-card-wide:focus {
   border-color: #16a34a;
   background: #e6f9ec;
 }
