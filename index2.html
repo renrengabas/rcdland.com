@@ -1,0 +1,143 @@
+---
+layout: default
+title: RCD Land Inc.
+permalink: /index2/
+--- 
+
+
+<!-- Main Jumbotron Scrollable Sections -->
+<div class="snap-y snap-mandatory h-screen overflow-y-scroll">
+
+<!-- Section 1: Hero / Carousel Replacement -->
+<section class="relative min-h-screen flex items-center justify-center snap-start bg-black overflow-hidden">
+  <video 
+    src="/assets/vid/RRH-SILANG.mp4" 
+    class="absolute inset-0 w-full h-full object-cover opacity-80 z-0" 
+    autoplay 
+    loop 
+    muted 
+    playsinline>
+  </video>
+  <div class="absolute inset-0 bg-black opacity-40 z-0"></div>
+  <div class="relative z-10 text-center text-white">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">Welcome to RCD Land Inc.</h1>
+    <p class="text-xl md:text-2xl mb-8">Bringing your dream home to life.</p>
+    <a href="#featured" class="inline-block px-8 py-4 bg-green-600 hover:bg-yellow-400 rounded-full text-lg font-semibold transition">Explore More</a>
+  </div>
+</section>
+
+  <!-- Section 2: Featured Properties -->
+  <section id="featured" class="relative min-h-screen flex items-center justify-center snap-start">
+    <img src="/assets/img/main-src-imgs/properties-grid/bf-townhomes-2.jpg" alt="Featured" class="absolute inset-0 w-full h-full object-cover opacity-70" />
+    <div class="relative z-10 max-w-3xl mx-auto text-center text-white">
+      <h2 class="text-4xl md:text-5xl font-semibold mb-6">Featured Properties</h2>
+      <p class="mb-8 text-lg">Take a look at our communities!</p>
+      <div class="flex flex-col md:flex-row gap-6 justify-center">
+        <!-- Example property card (repeat for others) -->
+        <a href="/properties/rcd-bf-homes-paranaque/" class="bg-green-700 bg-opacity-80 rounded-xl p-6 hover:bg-yellow-400 hover:text-green-900 transition w-full md:w-1/3">
+          <h3 class="text-2xl font-bold mb-2">RCD BF Homes Parañaque</h3>
+          <p class="text-sm">Affordable option in a prime location.</p>
+        </a>
+        <a href="/properties/Royale-Homes-Silang-Phase-4/" class="bg-green-700 bg-opacity-80 rounded-xl p-6 hover:bg-yellow-400 hover:text-green-900 transition w-full md:w-1/3">
+          <h3 class="text-2xl font-bold mb-2">RCD Royale Homes Silang</h3>
+          <p class="text-sm">Live your suburban dreams!</p>
+        </a>
+        <a href="/properties/rcd-winterbreeze-homes-bulacan/" class="bg-green-700 bg-opacity-80 rounded-xl p-6 hover:bg-yellow-400 hover:text-green-900 transition w-full md:w-1/3">
+          <h3 class="text-2xl font-bold mb-2">RCD Royale Homes Bulacan</h3>
+          <p class="text-sm">Balanced lifestyle for you!</p>
+        </a>
+      </div>
+      <a href="/properties/" class="mt-8 inline-block px-8 py-3 bg-white text-green-700 font-bold rounded-full hover:bg-yellow-400 hover:text-green-900 transition">View All Properties</a>
+    </div>
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+  </section>
+
+  <!-- Section 3: Explore Model -->
+  <section class="relative min-h-screen flex items-center justify-center snap-start">
+    <img src="/assets/img/main-src-imgs/explore-model/th47.jpg" alt="Explore Model" class="absolute inset-0 w-full h-full object-cover opacity-70" />
+    <div class="relative z-10 text-center text-white">
+      <h2 class="text-4xl md:text-5xl font-semibold mb-6">Explore Our Model House</h2>
+      <p class="mb-8 text-lg">Experience our virtual tour now.</p>
+      <div class="flex flex-col md:flex-row gap-6 justify-center">
+        <a href="/walkthrough/th47/" class="bg-green-700 bg-opacity-80 rounded-xl p-6 hover:bg-yellow-400 hover:text-green-900 transition w-full md:w-1/3">
+          <h3 class="text-2xl font-bold mb-2">Townhouse 47</h3>
+        </a>
+        <a href="/walkthrough/daphne/" class="bg-green-700 bg-opacity-80 rounded-xl p-6 hover:bg-yellow-400 hover:text-green-900 transition w-full md:w-1/3">
+          <h3 class="text-2xl font-bold mb-2">Daphne</h3>
+        </a>
+        <a href="#" class="bg-green-700 bg-opacity-80 rounded-xl p-6 hover:bg-yellow-400 hover:text-green-900 transition w-full md:w-1/3">
+          <h3 class="text-2xl font-bold mb-2">Townhouse 65</h3>
+        </a>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+  </section>
+
+  <!-- Section 4: Schedule Site Viewing -->
+  <section class="relative min-h-screen flex items-center justify-center snap-start">
+    <img src="/assets/img/main-src-imgs/carousel/careers-cover.jpg" alt="Schedule Viewing" class="absolute inset-0 w-full h-full object-cover opacity-70" />
+    <div class="relative z-10 text-center text-white max-w-xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-semibold mb-6">Schedule a Site Viewing</h2>
+      <p class="mb-8 text-lg">Book a visit to your dream home. Choose your preferred date and time, and our team will contact you to confirm your schedule.</p>
+      <!-- Google Calendar Button (as before) -->
+      <div class="flex justify-center">
+        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+        (function() {
+          var target = document.currentScript;
+          window.addEventListener('load', function() {
+            calendar.schedulingButton.load({
+              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ02uMKJIs-3zx-XG0U5c6SiAejt5NJvKib8hP3vPDRND9ULmwUwaeFzVSjEp9rjWc6xAg8NzL_s?gv=true',
+              color: '#3A843A',
+              hoverColor: '#F7C948',
+              backgroundColor: '#F7C948',
+              label: 'Book an appointment',
+              target,
+            });
+          });
+        })();
+        </script>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+  </section>
+
+  <!-- Section 5: News & Updates -->
+  <section class="relative min-h-screen flex items-center justify-center snap-start">
+    <img src="/assets/img/main-src-imgs/post-2.jpg" alt="News" class="absolute inset-0 w-full h-full object-cover opacity-70" />
+    <div class="relative z-10 text-center text-white max-w-3xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-semibold mb-6">News & Updates</h2>
+      <p class="mb-8 text-lg">Get to know the latest news and updates about RCD Homes.</p>
+      <div class="flex flex-col md:flex-row gap-6 justify-center">
+        <a href="/whats-new/subpages-news/ey_entrepreneurship_of_the_yr" class="bg-green-700 bg-opacity-80 rounded-xl p-6 hover:bg-yellow-400 hover:text-green-900 transition w-full md:w-1/3">
+          <h3 class="text-2xl font-bold mb-2">EY Entrepreneur of the Year Finalist 2015</h3>
+        </a>
+        <a href="/whats-new/subpages-news/asia_pacific_entrepreneurship" class="bg-green-700 bg-opacity-80 rounded-xl p-6 hover:bg-yellow-400 hover:text-green-900 transition w-full md:w-1/3">
+          <h3 class="text-2xl font-bold mb-2">APEA Entrepreneurship Award 2016</h3>
+        </a>
+        <a href="/whats-new/subpages-news/asia_ceo_awards" class="bg-green-700 bg-opacity-80 rounded-xl p-6 hover:bg-yellow-400 hover:text-green-900 transition w-full md:w-1/3">
+          <h3 class="text-2xl font-bold mb-2">Asia CEO Awards 2018</h3>
+        </a>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+  </section>
+
+</div>
+
+<!-- Tailwind CSS snap utilities required for snap scrolling -->
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .snap-y {
+    scroll-snap-type: y mandatory;
+  }
+  .snap-start {
+    scroll-snap-align: start;
+  }
+</style>
