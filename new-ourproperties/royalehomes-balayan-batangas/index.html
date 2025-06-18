@@ -4,7 +4,6 @@ title: Royale Homes Balayan, Batangas
 permalink: /new-ourproperties/royalehomes-balayan-batangas/
 ---
 
-
 <body>
   <!-- Parallax Section -->
   <div class="parallax-2">
@@ -173,7 +172,6 @@ permalink: /new-ourproperties/royalehomes-balayan-batangas/
                 <h2 class="mt-6 font-bold text-3xl mb-2">Amenities</h2>
                 <div class="w-16 h-1 bg-green-500 mb-6"></div>
 
-
                 <div class="grid grid-cols-3 gap-y-3 gap-x-8 text-sm text-gray-700">
                   <div class="flex items-center space-x-2">
                     <span class="text-black">–</span>
@@ -194,87 +192,37 @@ permalink: /new-ourproperties/royalehomes-balayan-batangas/
                 </div>
       </section>
 
-      <!-- Nav Pills -->
-      <div class="max-w-4xl mx-auto mt-10 border-b border-gray-300">
-        <ul id="tabs" class="flex">
-          <li class="mr-6">
-            <button
-              class="tab-link inline-block py-2 px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
-              data-tab="video">
-              Video
-            </button>
-          </li>
-          <li class="mr-6">
-            <button
-              class="tab-link inline-block py-2 px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
-              data-tab="floorplan">
-              Floor Plan
-            </button>
-          </li>
-          <li class="mr-6">
-            <button
-              class="tab-link inline-block py-2 px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
-              data-tab="location">
-              Location
-            </button>
-          </li>
-        </ul>
-      </div>
-
-
-      <!-- Tab Content -->
-      <div id="video" class="tab-content hidden">
-        <div class="w-full max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden">
+      <!-- Video Section -->
+      <div class="max-w-4xl mx-auto mt-10" id="video-section">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Video</h2>
+        <div class="w-full rounded-lg shadow-md overflow-hidden mb-8">
           <div class="relative" style="padding-top: 56.25%;">
             <iframe class="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/oA0QghL3Vrs?si=hMzZQnFnP97Bco-v" title="Property Video" frameborder="0"
+              src="https://www.youtube.com/embed/oA0QghL3Vrs?si=9Bdbq2FL2YC411Bw" title="Property Video" frameborder="0"
               allowfullscreen></iframe>
           </div>
         </div>
       </div>
 
-      <div id="floorplan" class="tab-content hidden">
-        <!-- Floor plan image or content -->
+      <!-- Floor Plan Section -->
+      <div class="max-w-4xl mx-auto mt-10" id="floorplan-section">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Floor Plan</h2>
         <img src="../../assets/img/floor-plan/rrh-balayan.jpg" alt="Floor Plan"
-          class="w-full max-w-4xl mx-auto rounded-lg shadow-md" />
+          class="w-full rounded-lg shadow-md mb-8 object-contain" />
       </div>
 
-      <div id="location" class="tab-content hidden">
-        <div class="w-full max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden">
+      <!-- Location Section -->
+      <div class="max-w-4xl mx-auto mt-10" id="location-section">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Location</h2>
+        <div class="w-full rounded-lg shadow-md overflow-hidden mb-8">
           <div class="relative" style="padding-top: 56.25%;">
             <iframe class="absolute top-0 left-0 w-full h-full"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.858102663838!2d120.94986906077665!3d14.203085646853685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7f2fcec3a0cb%3A0x52e79150b27e5e31!2sRCD%20Royale%20Homes%20Phase%204B!5e0!3m2!1sen!2sph!4v1713842470525!5m2!1sen!2sph"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.1257104738447!2d120.6968404392408!3d13.9511196892909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bdbdf8d87acd67%3A0x71befb2afef82be1!2sRCD%20Royale%20Homes%20Balayan!5e0!3m2!1sen!2sph!4v1713840228354!5m2!1sen!2sph"
               style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
 
-      <script>
-        // Tab functionality
-        document.addEventListener('DOMContentLoaded', function () {
-          const tabLinks = document.querySelectorAll('.tab-link');
-          const tabContents = document.querySelectorAll('.tab-content');
-
-          // Show the first tab by default
-          if (tabLinks.length && tabContents.length) {
-            tabLinks[0].classList.add('border-green-600');
-            tabContents[0].classList.remove('hidden');
-          }
-
-          tabLinks.forEach(link => {
-            link.addEventListener('click', function () {
-              const tab = this.getAttribute('data-tab');
-
-              // Remove active styles and hide all contents
-              tabLinks.forEach(l => l.classList.remove('border-green-600'));
-              tabContents.forEach(c => c.classList.add('hidden'));
-
-              // Add active style to clicked tab and show corresponding content
-              this.classList.add('border-green-600');
-              document.getElementById(tab).classList.remove('hidden');
-            });
-          });
-        });
-      </script>
-
+    </div>
+  </section>
 </body>

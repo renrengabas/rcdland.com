@@ -1,9 +1,8 @@
 ---
 layout: default
 title: RCD Winterbreeze Homes Bulacan | RCD Land, Inc.
-permalink: /new-ourproperties/winter-breeze-homes-bulacan/
+permalink: /new-ourproperties/rcd-winter-breeze-homes-bulacan/
 ---
-
 
 <body>
   <!-- Parallax Section -->
@@ -157,52 +156,29 @@ permalink: /new-ourproperties/winter-breeze-homes-bulacan/
                 </div>
       </section>
 
-      <!-- Nav Pills -->
-      <div class="max-w-4xl mx-auto mt-8 sm:mt-10 border-b border-gray-300">
-        <ul id="tabs" class="flex flex-wrap">
-          <li class="mr-2 sm:mr-6 mb-2">
-            <button
-              class="tab-link inline-block py-2 px-4 sm:px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
-              data-tab="video">
-              Video
-            </button>
-          </li>
-          <li class="mr-2 sm:mr-6 mb-2">
-            <button
-              class="tab-link inline-block py-2 px-4 sm:px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
-              data-tab="floorplan">
-              Floor Plan
-            </button>
-          </li>
-          <li class="mr-2 sm:mr-6 mb-2">
-            <button
-              class="tab-link inline-block py-2 px-4 sm:px-6 font-bold text-black border-b-2 border-transparent hover:border-green-600 focus:outline-none"
-              data-tab="location">
-              Location
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Tab Content -->
-      <div id="video" class="tab-content hidden">
-        <div class="w-full max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden">
+      <!-- Video Section -->
+      <div class="max-w-4xl mx-auto mt-10" id="video-section">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Video</h2>
+        <div class="w-full rounded-lg shadow-md overflow-hidden mb-8">
           <div class="relative" style="padding-top: 56.25%;">
             <iframe class="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/oA0QghL3Vrs?si=hMzZQnFnP97Bco-v" title="Property Video" frameborder="0"
+              src="https://www.youtube.com/embed/RDG6Vvb_sd4?si=IvznbFV3yS_-4SrD" title="Property Video" frameborder="0"
               allowfullscreen></iframe>
           </div>
         </div>
       </div>
 
-      <div id="floorplan" class="tab-content hidden">
-        <!-- Floor plan image or content -->
+      <!-- Floor Plan Section -->
+      <div class="max-w-4xl mx-auto mt-10" id="floorplan-section">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Floor Plan</h2>
         <img src="../../assets/img/floor-plan/wbh-bulacan.jpg" alt="Floor Plan"
-          class="w-full max-w-4xl mx-auto rounded-lg shadow-md" />
+          class="w-full rounded-lg shadow-md mb-8 object-contain" />
       </div>
 
-      <div id="location" class="tab-content hidden">
-        <div class="w-full max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden">
+      <!-- Location Section -->
+      <div class="max-w-4xl mx-auto mt-10" id="location-section">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Location</h2>
+        <div class="w-full rounded-lg shadow-md overflow-hidden mb-8">
           <div class="relative" style="padding-top: 56.25%;">
             <iframe class="absolute top-0 left-0 w-full h-full"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.6725971314686!2d121.08539827511078!3d14.843622085672004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397a60770bd2757%3A0x29f5c5f194602b5f!2sWinter%20Breeze%20Homes%20Subdivision!5e0!3m2!1sen!2sph!4v1749107517400!5m2!1sen!2sph"
@@ -211,32 +187,6 @@ permalink: /new-ourproperties/winter-breeze-homes-bulacan/
         </div>
       </div>
 
-      <script>
-        // Tab functionality
-        document.addEventListener('DOMContentLoaded', function () {
-          const tabLinks = document.querySelectorAll('.tab-link');
-          const tabContents = document.querySelectorAll('.tab-content');
-
-          // Show the first tab by default
-          if (tabLinks.length && tabContents.length) {
-            tabLinks[0].classList.add('border-green-600');
-            tabContents[0].classList.remove('hidden');
-          }
-
-          tabLinks.forEach(link => {
-            link.addEventListener('click', function () {
-              const tab = this.getAttribute('data-tab');
-
-              // Remove active styles and hide all contents
-              tabLinks.forEach(l => l.classList.remove('border-green-600'));
-              tabContents.forEach(c => c.classList.add('hidden'));
-
-              // Add active style to clicked tab and show corresponding content
-              this.classList.add('border-green-600');
-              document.getElementById(tab).classList.remove('hidden');
-            });
-          });
-        });
-      </script>
-
+    </div>
+  </section>
 </body>
