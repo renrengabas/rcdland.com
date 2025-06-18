@@ -352,3 +352,165 @@
 .property-card .overlay-content h3 {
   margin-bottom: 16px; 
 }
+
+/*New- Ourproperties CSS*/
+/* Section background and spacing */
+    .properties-section {
+        margin-top: 81px;
+        padding: 40px 0;
+        background: #f7f7f7;
+    }
+
+    /* Card row layout */
+    .property-card-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+        flex-wrap: wrap;
+    }
+
+    .property-card-row:last-child {
+        margin-bottom: 0;
+    }
+
+    .property-card-row.reverse {
+        flex-direction: row-reverse;
+    }
+
+    /* Property image container */
+    .property-image {
+        flex: 1 1 340px;
+        min-width: 280px;
+        max-width: 55%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        margin: 0 12px;
+    }
+
+    .property-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Property info container */
+    .property-info {
+        flex: 1 1 220px;
+        min-width: 220px;
+        max-width: 35%;
+        padding: 0 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 400px;
+        margin: 0 12px;
+        position: relative;
+        padding-bottom: 64px;
+        /* Ensures button does not overlap text */
+    }
+
+    /* Property title */
+    .property-info h3 {
+        color: #16a34a;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+
+    /* Property description */
+    .property-info p {
+        color: #374151;
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+
+    /* "Know More" button */
+    .know-more-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #fff;
+        background: #16a34a;
+        border-radius: 6px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background 0.2s, color 0.2s;
+        position: absolute;
+        left: 0;
+        bottom: 24px;
+        z-index: 1;
+    }
+
+    .know-more-btn:hover {
+        background: #f7c940;
+        color: #fff;
+    }
+
+    .know-more-btn svg {
+        width: 20px;
+        height: 20px;
+        color: #fff;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1100px) {
+
+        .property-card-row,
+        .property-card-row.reverse {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .property-image,
+        .property-info {
+            max-width: 100%;
+            min-width: 0;
+            margin: 0 0 16px 0;
+            height: 260px;
+        }
+
+        .property-info {
+            height: auto;
+            padding: 0 0 64px 0;
+            /* Ensures button does not overlap text */
+        }
+
+        .know-more-btn {
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .properties-section {
+            padding: 20px 0;
+        }
+
+        .property-image,
+        .property-info {
+            height: 180px;
+        }
+
+        .property-info h3 {
+            font-size: 1.2rem;
+        }
+
+        .property-info p {
+            font-size: 0.95rem;
+        }
+
+        .know-more-btn {
+            font-size: 0.85rem;
+            padding: 10px 16px;
+        }
+    }
