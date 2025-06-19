@@ -25,9 +25,9 @@
     }
 
     .text-shadow-strong {
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 3);
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 3);
     }
-  
+
     .image-container {
       overflow: visible;
       max-height: none;
@@ -117,7 +117,7 @@
       text-decoration: none;
     }
 
-        .swiper-pagination-bullet {
+    .swiper-pagination-bullet {
       background-color: #F7C948 !important;
       /* Yellow */
       opacity: 0.6;
@@ -128,389 +128,439 @@
       /* Green */
       opacity: 1;
     }
+
     /* Parallax background */
     .parallax-1 {
-    background-image: url(../../assets/img/parallax-bg/phase4-sideview.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    position: relative;
-  }
-  .parallax-2 {
-    background-image: url(../../assets/img/parallax-bg/rrh-balayan.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    position: relative;
-  }
-  .parallax-3 {
-    background-image: url(../../assets/img/parallax-bg/bf-townhomes-2.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    position: relative;
-  }
-  .parallax-4 {
-    background-image: url(../../assets/img/parallax-bg/wbh-minuyan.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    position: relative;
-  }
-  .parallax-5 {
-    background-image: url(../../assets/img/parallax-bg/wbh-cavite.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    position: relative;
-  }
-  
-
-  @media only screen and (max-device-width: 1024px) {
-    .parallax {
-      background-attachment: scroll;
+      background-image: url(../../assets/img/parallax-bg/phase4-sideview.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 90vh;
+      position: relative;
     }
-  }
 
-  /* Overlay gradient */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.1) 27%,
-      rgba(0, 0, 0, 0.33) 90%
-    );
-    display: flex;
-    justify-content: center;
-    align-items: flex-flex start;
-    padding-top: 200px;
-    padding-bottom: 4rem;
-  }
+    .parallax-2 {
+      background-image: url(../../assets/img/parallax-bg/rrh-balayan.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 90vh;
+      position: relative;
+    }
 
-  /* Project title styles */
-  .proj-title {
-    font-size: 60px;
-    font-weight: 500;
-    color: white;
-    line-height: 1.0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    margin: 0 0 8px;
-    
-  }
+    .parallax-3 {
+      background-image: url(../../assets/img/parallax-bg/bf-townhomes-2.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 90vh;
+      position: relative;
+    }
 
-  .header-text {
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-    margin-top: 1rem;
-    max-width: 720px;
-  }
+    .parallax-4 {
+      background-image: url(../../assets/img/parallax-bg/wbh-minuyan.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 90vh;
+      position: relative;
+    }
 
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
+    .parallax-5 {
+      background-image: url(../../assets/img/parallax-bg/wbh-cavite.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 90vh;
+      position: relative;
+    }
+
+
+    @media only screen and (max-device-width: 1024px) {
+      .parallax {
+        background-attachment: scroll;
+      }
+    }
+
+    /* Overlay gradient */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.1) 27%,
+          rgba(0, 0, 0, 0.33) 90%);
+      display: flex;
+      justify-content: center;
+      align-items: flex-flex start;
+      padding-top: 200px;
+      padding-bottom: 4rem;
+    }
+
+    /* Project title styles */
     .proj-title {
-      font-size: 36px;
-      text-align: center;
+      font-size: 60px;
+      font-weight: 500;
+      color: white;
+      line-height: 1.0;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+      margin: 0 0 8px;
+
     }
 
     .header-text {
-      text-align: justify; 
-    text-justify: inter-word; 
-    padding-right: 50px;
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+      margin-top: 1rem;
+      max-width: 720px;
     }
 
-    .overlay {
-      align-items: flex-end;
-      padding-bottom: 3rem;
-      text-align: center;
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .proj-title {
+        font-size: 36px;
+        text-align: center;
+      }
+
+      .header-text {
+        text-align: justify;
+        text-justify: inter-word;
+        padding-right: 50px;
+      }
+
+      .overlay {
+        align-items: flex-end;
+        padding-bottom: 3rem;
+        text-align: center;
+      }
     }
-  }
 
-  /* Carousel Button (Square Button) */
-  .carousel-button {
-    background-color: #00c655;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 20px;
-    transition: background-color 0.3s;
-    width: 50px; /* Square button width */
-    height: 50px; /* Square button height */
-  }
+    /* Carousel Button (Square Button) */
+    .carousel-button {
+      background-color: #00c655;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 20px;
+      transition: background-color 0.3s;
+      width: 50px;
+      /* Square button width */
+      height: 50px;
+      /* Square button height */
+    }
 
-  .carousel-button:hover {
-    background-color: #028c3e;
-  }
+    .carousel-button:hover {
+      background-color: #028c3e;
+    }
 
-  /* Positioning the carousel buttons to the upper right */
-  .carousel-controls {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: space-between;
-  width: 50px;
-  z-index: 2; /* Ensure buttons are above the image */
-}
+    /* Positioning the carousel buttons to the upper right */
+    .carousel-controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      justify-content: space-between;
+      width: 50px;
+      z-index: 2;
+      /* Ensure buttons are above the image */
+    }
 
-  /* Hide default carousel controls */
-  .carousel-prev, .carousel-next {
-    display: none;
-  }
+    /* Hide default carousel controls */
+    .carousel-prev,
+    .carousel-next {
+      display: none;
+    }
 
-  /* Carousel Section */
-  .carousel-container {
-    position: relative;
-  }
+    /* Carousel Section */
+    .carousel-container {
+      position: relative;
+    }
 
-   .tab-link:hover {
-    color: black !important;
-  }
+    .tab-link:hover {
+      color: black !important;
+    }
 
-  /* Show desktop menu above 1030px, hide below */
-@media (max-width: 1030px) {
-  .desktop-menu {
-    display: none !important;
-  }
-  #menuToggle {
-    display: block !important;
-  }
-  #mobileMenu {
-    display: flex;
-  }
-}
-@media (min-width: 1031px) {
-  .desktop-menu {
-    display: flex !important;
-  }
-  #menuToggle {
-    display: none !important;
-  }
-  #mobileMenu {
-    display: none !important;
-  }
-}
+    /* Show desktop menu above 1030px, hide below */
+    @media (max-width: 1030px) {
+      .desktop-menu {
+        display: none !important;
+      }
 
-/* Mobile menu animation */
-#mobileMenu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
-}
-#mobileMenu.open {
-  max-height: 500px;
-}
+      #menuToggle {
+        display: block !important;
+      }
 
-/* House-catalogue CSS */
+      #mobileMenu {
+        display: flex;
+      }
+    }
 
-.text-shadow {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
+    @media (min-width: 1031px) {
+      .desktop-menu {
+        display: flex !important;
+      }
 
- .property-card .overlay-content > *:not(h3) {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    padding: 20px;
-  }
+      #menuToggle {
+        display: none !important;
+      }
 
-  .property-card:hover .overlay-content > *:not(h3) {
-    opacity: 1;
-  }
+      #mobileMenu {
+        display: none !important;
+      }
+    }
 
-  .overlay-content {
-    transition: background 0.5s ease;
-  }
+    /* Mobile menu animation */
+    #mobileMenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-  .property-card .overlay-content {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  transition: background 0.5s ease;
-  padding: 20px;
-}
+    #mobileMenu.open {
+      max-height: 500px;
+    }
 
-.property-card:hover .overlay-content {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
-}
+    /* House-catalogue CSS */
 
-.property-card .overlay-content h3 {
-  margin-bottom: 16px; 
-}
+    .text-shadow {
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
 
-/*New- Ourproperties CSS*/
-/* Section background and spacing */
+    .property-card .overlay-content>*:not(h3) {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      padding: 20px;
+    }
+
+    .property-card:hover .overlay-content>*:not(h3) {
+      opacity: 1;
+    }
+
+    .overlay-content {
+      transition: background 0.5s ease;
+    }
+
+    .property-card .overlay-content {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+      transition: background 0.5s ease;
+      padding: 20px;
+    }
+
+    .property-card:hover .overlay-content {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    }
+
+    .property-card .overlay-content h3 {
+      margin-bottom: 16px;
+    }
+
+    /*New- Ourproperties CSS*/
+    /* Section background and spacing */
     .properties-section {
-        margin-top: 81px;
-        padding: 40px 0;
-        background: #f7f7f7;
+      margin-top: 81px;
+      padding: 40px 0;
+      background: #f7f7f7;
     }
 
     /* Card row layout */
     .property-card-row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 100px;
-        flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 100px;
+      flex-wrap: wrap;
     }
 
     .property-card-row:last-child {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
 
     .property-card-row.reverse {
-        flex-direction: row-reverse;
+      flex-direction: row-reverse;
     }
 
     /* Property image container */
     .property-image {
-        flex: 1 1 340px;
-        min-width: 280px;
-        max-width: 55%;
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #fff;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
-        margin: 0 12px;
+      flex: 1 1 340px;
+      min-width: 280px;
+      max-width: 55%;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+      margin: 0 12px;
+      border-radius: 12px;
     }
 
     .property-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      /* Smooth transition */
+      border-radius: 12px;
+    }
+
+    .property-image:hover img {
+      transform: scale(1.08);
+      /* Zoom in on hover */
     }
 
     /* Property info container */
     .property-info {
-        flex: 1 1 220px;
-        min-width: 220px;
-        max-width: 35%;
-        padding: 0 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        height: 400px;
-        margin: 0 12px;
-        position: relative;
-        padding-bottom: 64px;
-        /* Ensures button does not overlap text */
+      flex: 1 1 220px;
+      min-width: 220px;
+      max-width: 35%;
+      padding: 0 24px;
+      /* bottom padding for button */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 400px;
+      margin: 0 12px;
+      position: relative;
+
     }
 
     /* Property title */
     .property-info h3 {
-        color: #16a34a;
-        font-size: 2rem;
-        margin-bottom: 20px;
-        font-weight: 600;
+      color: #16a34a;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      margin-left: 0;
+      font-weight: 600;
+      margin-left: 0;
     }
 
     /* Property description */
     .property-info p {
-        color: #374151;
-        font-size: 1rem;
-        margin-bottom: 16px;
+      color: #374151;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      margin-left: 0;
     }
 
     /* "Know More" button */
     .know-more-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 24px;
-        font-size: 0.95rem;
-        font-weight: 600;
-        color: #fff;
-        background: #16a34a;
-        border-radius: 6px;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: background 0.2s, color 0.2s;
-        position: absolute;
-        left: 0;
-        bottom: 24px;
-        z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fff;
+      background: #16a34a;
+      border-radius: 6px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background 0.2s, color 0.2s;
+      position: absolute;
+      left: 0;
+      bottom: 24px;
+      z-index: 1;
+      align-self: flex-start;
+      /* aligns button with h3 */
+      margin-top: 16px;
+      margin-left: 0;
+      /* ensures no extra left margin */
     }
 
     .know-more-btn:hover {
-        background: #f7c940;
-        color: #fff;
+      background: #f7c940;
+      color: #fff;
     }
 
     .know-more-btn svg {
-        width: 20px;
-        height: 20px;
-        color: #fff;
+      width: 20px;
+      height: 20px;
+      color: #fff;
     }
 
     /* Responsive adjustments */
     @media (max-width: 1100px) {
 
-        .property-card-row,
-        .property-card-row.reverse {
-            flex-direction: column;
-            align-items: stretch;
-        }
+      .property-card-row,
+      .property-card-row.reverse {
+        flex-direction: column;
+        align-items: stretch;
+      }
 
-        .property-image,
-        .property-info {
-            max-width: 100%;
-            min-width: 0;
-            margin: 0 0 16px 0;
-            height: 260px;
-        }
+      .property-image,
+      .property-info {
+        max-width: 100%;
+        min-width: 0;
+        margin: 0 0 16px 0;
+        height: 260px;
+      }
 
-        .property-info {
-            height: auto;
-            padding: 0 0 64px 0;
-            /* Ensures button does not overlap text */
-        }
+      .property-info {
+        height: auto;
+        padding: 0 0 64px 0;
+      }
 
-        .know-more-btn {
-            bottom: 0;
-            left: 0;
-        }
+      .know-more-btn {
+        bottom: 0;
+        left: 0;
+      }
     }
 
     @media (max-width: 700px) {
-        .properties-section {
-            padding: 20px 0;
-        }
+      .properties-section {
+        padding: 20px 0;
+      }
 
-        .property-image,
-        .property-info {
-            height: 180px;
-        }
+      .property-image,
+      .property-info {
+        height: 180px;
+      }
 
-        .property-info h3 {
-            font-size: 1.2rem;
-        }
+      .property-info h3 {
+        font-size: 1.2rem;
+      }
 
-        .property-info p {
-            font-size: 0.95rem;
-        }
+      .property-info p {
+        font-size: 0.95rem;
+      }
 
-        .know-more-btn {
-            font-size: 0.85rem;
-            padding: 10px 16px;
-        }
+      .know-more-btn {
+        font-size: 0.85rem;
+        padding: 10px 16px;
+        margin-top: 24px;
+        /* More space above button on mobile */
+      }
+
+      .flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 1rem;
+}
+.m-0 {
+  margin: 0;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+
     }
