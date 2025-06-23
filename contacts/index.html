@@ -6,64 +6,87 @@ permalink: /contacts/
 
 <section class="pt-24 pb-12 bg-gray-50 text-gray-800">
   <div class="max-w-6xl mx-auto px-4">
-    <!-- Title & Intro -->
-    <div class="flex items-start mb-2">
-      <div class="w-2 md:w-3 h-full bg-green-600 rounded-full mr-6"></div>
-      <div>
-        <h1 class="text-4xl font-bold text-[#16a34a] mb-2">Contact Us</h1>
-        <p class="text-sm mb-1">If you have any questions or queries a member of staff will always be happy to help.</p>
-        <p class="text-sm mb-1">Feel free to contact us by telephone and email or fill-up the inquiry form</p>
-        <p class="text-sm mb-6">We will be sure to get back to you as soon as possible.</p>
+
+    <!-- 1. Contact Us Title -->
+    <div class="mb-2">
+      <h1 class="text-4xl font-bold text-[#16a34a]">{{ page.title }}</h1>
+    </div>
+
+    <!-- 2. Contact Us Description -->
+    <div class="mb-6">
+      <p class="text-sm mb-1">If you have any questions or queries a member of staff will always be happy to help.</p>
+      <p class="text-sm mb-1">Feel free to contact us by telephone and email or fill-up the inquiry form.</p>
+      <p class="text-sm">We will be sure to get back to you as soon as possible.</p>
+    </div>
+
+    <!-- 3. Let's Talk and other details/buttons -->
+    <div class="mb-8">
+      <div class="bg-white rounded-md shadow p-6">
+        <h2 class="text-2xl text-[#16a34a] font-bold mb-2">Let's Talk</h2>
+        <p class="mb-1">Reach out to us for any inquiries or assistance. We're here to help you!</p>
+        <p>
+          Main Office:
+          <a href="tel:{{ site.data.contacts.main_office.phone1 | default: '0288937451' }}" class="hover:text-yellow-500 transition-colors duration-300">
+            (02) 8-893-7451
+          </a> /
+          <a href="tel:{{ site.data.contacts.main_office.phone2 | default: '0288937452' }}" class="hover:text-yellow-500 transition-colors duration-300">
+            (02) 8-893-7452
+          </a>
+        </p>
+        <p>
+          Email:
+          <a href="mailto:{{ site.data.contacts.main_office.email | default: 'info@rcdland.com' }}" class="hover:text-yellow-500 transition-colors duration-300">
+            {{ site.data.contacts.main_office.email | default: 'info@rcdland.com' }}
+          </a>
+        </p>
+        <h2 class="text-base font-bold mb-3 mt-4">What would you like to do?</h2>
+        <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+          <button class="typeform-card-wide" onclick="openModal('help')">
+            <div class="text-xl mr-2">🛠️</div>
+            <div class="font-semibold text-xs text-left">Get Help Using ChatBot</div>
+          </button>
+          <button class="typeform-card-wide" onclick="openModal('sales')">
+            <div class="text-xl mr-2">🤝</div>
+            <div class="font-semibold text-xs text-left">Contact Sales and Marketing Department</div>
+          </button>
+          <button class="typeform-card-wide" onclick="openModal('billing')">
+            <div class="text-xl mr-2">😊</div>
+            <div class="font-semibold text-xs text-left">Contact Billing Department</div>
+          </button>
+          <button class="typeform-card-wide" onclick="openModal('marketing')">
+            <div class="text-xl mr-2">📈</div>
+            <div class="font-semibold text-xs text-left">Contact Customer Service Relations</div>
+          </button>
+        </div>
       </div>
     </div>
-    <!-- 70/30 Split -->
-    <div class="flex flex-col md:flex-row gap-8 mb-8" style="min-height: 400px;">
-      <!-- Left: Map only -->
-      <div class="md:w-7/10 w-full">
-        <div class="w-full h-[300px] md:h-[450px]">
-          <iframe class="w-full h-full rounded-md shadow"
-            src="https://www.google.com/maps/d/u/0/embed?mid=1bMNZRa5Ol0gFg-c7zAoEBPPbSrhk3wE&ehbc=2E312F"
+
+    <!-- 4. Offices Directory (side by side, properties style) -->
+    <div class="office-directory">
+      {% for office in site.data.contacts.offices %}
+      <div class="property-card-row{% if forloop.index0 | modulo: 2 == 1 %} reverse{% endif %}">
+        <!-- Map -->
+        <div class="property-image">
+          <iframe class="w-full h-48 rounded-md"
+            src="{{ office.map }}"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
-
         </div>
-      </div>
-      <!-- Right: Let's Talk + Typeform Selection -->
-      <div class="md:w-3/10 w-full flex flex-col gap-4 justify-center">
-        <div class="bg-white rounded-md shadow p-6 mb-2">
-          <h2 class="text-2xl text-[#16a34a] font-bold mb-2">Let's Talk</h2>
-          <p class="mb-1">Reach out to us for any inquiries or assistance. We're here to help you!</p>
-          <p>
-            Main Office:<a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300">
-              (02) 8-893-7451 </a>/
-            <a href="tel:0288937452" class="hover:text-yellow-500 transition-colors duration-300">(02) 8-893-7452</a>
-          </p>
-          <p>
-            Email:
-            <a href="mailto:info@rcdland.com" class="hover:text-yellow-500 transition-colors duration-300">
-              info@rcdland.com</a>
-          </p>
-          <h2 class="text-base font-bold mb-3">What would you like to do?</h2>
-          <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-            <button class="typeform-card-wide" onclick="openModal('help')">
-              <div class="text-xl mr-2">🛠️</div>
-              <div class="font-semibold text-xs text-left">Get Help Using ChatBot</div>
-            </button>
-            <button class="typeform-card-wide" onclick="openModal('sales')">
-              <div class="text-xl mr-2">🤝</div>
-              <div class="font-semibold text-xs text-left">Contact Sales Department</div>
-            </button>
-            <button class="typeform-card-wide" onclick="openModal('billing')">
-              <div class="text-xl mr-2">😊</div>
-              <div class="font-semibold text-xs text-left">Contact Billing Department</div>
-            </button>
-            <button class="typeform-card-wide" onclick="openModal('marketing')">
-              <div class="text-xl mr-2">📈</div>
-              <div class="font-semibold text-xs text-left">Contact Marketing and Public Relations</div>
-            </button>
+        <!-- Details -->
+        <div class="property-info">
+          <div class="flex items-center space-x-4 mb-2">
+            <h3 class="m-0">{{ office.name }}</h3>
           </div>
+          <p class="mb-1">{{ office.address }}</p>
+          {% if office.phone1 %}
+          <p class="mb-1">Phone: <a href="tel:{{ office.phone1 }}" class="hover:text-yellow-500">{{ office.phone1 }}</a></p>
+          {% endif %}
+          {% if office.email %}
+          <p>Email: <a href="mailto:{{ office.email }}" class="hover:text-yellow-500">{{ office.email }}</a></p>
+          {% endif %}
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
 
@@ -76,7 +99,6 @@ permalink: /contacts/
       </div>
     </div>
   </div>
-  </div>
 </section>
 
 <style>
@@ -84,10 +106,8 @@ permalink: /contacts/
     display: flex;
     align-items: center;
     border: 2px solid #16a34a;
-    /* Green outline */
     border-radius: 8px;
     background: #f9fafb;
-    /* Light grey inner */
     cursor: pointer;
     transition: border-color 0.2s, background 0.2s, color 0.2s;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.03);
@@ -99,14 +119,54 @@ permalink: /contacts/
     gap: 0.5rem;
     color: #222;
   }
-
   .typeform-card-wide:hover,
   .typeform-card-wide:focus {
     border-color: #facc15;
-    /* Yellow outline on hover */
     background: #f9fafb;
-    /* Keep inner light grey */
     color: #222;
+  }
+  /* Properties-style card layout */
+  .office-directory {
+    margin-top: 2rem;
+  }
+  .property-card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+  .property-card-row.reverse {
+    flex-direction: row-reverse;
+  }
+  .property-image {
+    flex: 1 1 350px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+  }
+  .property-info {
+    flex: 1 1 250px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+  @media (max-width: 900px) {
+    .property-card-row, .property-card-row.reverse {
+      flex-direction: column !important;
+    }
+    .property-image, .property-info {
+      min-width: 0;
+      width: 100%;
+      padding: 1rem 0;
+    }
   }
 </style>
 

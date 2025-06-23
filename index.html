@@ -52,10 +52,10 @@ permalink: /index
 </nav>
 
 <!-- Main Jumbotron Scrollable Sections -->
-<div class="snap-y snap-mandatory h-screen overflow-y-scroll smooth-scroll">
+<div class="snap-y snap-mandatory h-screen overflow-y-auto smooth-scroll">
 
   <!-- Section 1: Hero / Carousel Replacement -->
-  <section id="hero" class="relative min-h-screen flex items-center justify-center snap-start bg-black overflow-hidden">
+  <section id="hero" class="snap-start snap-always scroll-mt-[81px] relative min-h-screen flex items-center justify-center snap-start bg-black overflow-hidden">
     <video src="/assets/vid/RRH-SILANG.mp4" class="absolute inset-0 w-full h-full object-cover opacity-80 z-0" autoplay
       loop muted playsinline></video>
     <div class="absolute inset-0 bg-black opacity-40 z-0"></div>
@@ -63,98 +63,98 @@ permalink: /index
       <h1 class="text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">Welcome to RCD Land Inc.</h1>
       <p class="text-xl md:text-2xl mb-8">Bringing your dream home to life.</p>
       <a href="#featured"
-        class="inline-block px-8 py-4 bg-green-600 hover:bg-yellow-400 rounded-full text-lg font-semibold transition">Explore
+        class="inline-block px-8 py-4 bg-green-600 hover:bg-yellow-400 rounded-full text-lg font-semibold transition">Know
         More</a>
     </div>
   </section>
 
   <!-- Section 2: Featured Properties -->
-  <section id="featured" class="relative min-h-screen flex items-center justify-center snap-start bg-white">
-    <img src="/assets/img/main-src-imgs/bg-fp.png" alt="Featured Properties"
-      class="absolute inset-0 w-full h-full object-cover opacity-70" />
-    <div class="relative z-10 max-w-5xl mx-auto w-full px-2 py-8">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-center text-green-700">Featured Properties</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <!-- Card 1 -->
-        <div class="bg-white shadow-lg flex flex-col w-full max-w-[350px] min-h-[160px] md:min-h-[200px] items-center">
-          <img src="/assets/img/main-src-imgs/properties-grid/bf-townhomes-2.jpg" alt="RCD BF Homes Parañaque"
-            class="w-full h-32 object-cover mb-4">
-          <h3 class="text-lg font-bold mb-1 text-green-700 text-center">RCD BF Homes Parañaque</h3>
-          <p class="text-gray-700 mb-4 text-center text-sm">Affordable option in a prime location inside the largest
-            village of Asia.</p>
-          <a href="/properties/rcd-bf-homes-paranaque/"
-            class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Learn
-            More</a>
-        </div>
-        <!-- Card 2 -->
-        <div class="bg-white shadow-lg flex flex-col max-w-[350px] min-h-[160px] md:min-h-[200px] items-center">
-          <img src="/assets/img/main-src-imgs/properties-grid/rrh-silang.jpg" alt="RCD Royale Homes Silang"
-            class="w-full h-32 object-cover mb-4">
-          <h3 class="text-lg font-bold mb-1 text-green-700 text-center">RCD Royale Homes Silang</h3>
-          <p class="text-gray-700 mb-4 text-center text-sm">Live your suburban dreams in RCD Royale Homes Silang!</p>
-          <a href="/properties/Royale-Homes-Silang-Phase-4/"
-            class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Learn
-            More</a>
-        </div>
-        <!-- Card 3 -->
-        <div class="bg-white shadow-lg flex flex-col max-w-[350px] min-h-[160px] md:min-h-[200px] items-center">
-          <img src="/assets/img/main-src-imgs/properties-grid/rrh-tuy.jpg" alt="RCD Royale Homes Tuy"
-            class="w-full h-32 object-cover mb-4">
-          <h3 class="text-lg font-bold mb-1 text-green-700 text-center">RCD Royale Homes Tuy</h3>
-          <p class="text-gray-700 mb-4 text-center text-sm">Balanced lifestyle for you in Batangas.</p>
-          <a href="/properties/rcd-winterbreeze-homes-bulacan/"
-            class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Learn
-            More</a>
-        </div>
+<section id="featured" class="snap-start snap-always scroll-mt-[81px] relative min-h-screen flex items-center justify-center bg-white">
+  <img src="/assets/img/main-src-imgs/bg-fp.png" alt="Featured Properties"
+    class="absolute inset-0 w-full h-full object-cover opacity-70" />
+  <div class="relative z-10 max-w-6xl mx-auto w-full px-2 py-8">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-center text-green-700">Featured Properties</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white shadow-lg flex flex-col w-full max-w-[440px] min-h-[200px] md:min-h-[250px] items-center">
+        <img src="/assets/img/main-src-imgs/properties-grid/bf-townhomes-2.jpg" alt="RCD BF Homes Parañaque"
+          class="w-full h-40 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-1 text-green-700 text-center">RCD BF Homes Parañaque</h3>
+        <p class="text-gray-700 mb-4 text-center text-base">Affordable option in a prime location inside the largest
+          village of Asia.</p>
+        <a href="/properties/rcd-bf-homes-paranaque/"
+          class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Know
+          More</a>
       </div>
-      <div class="flex justify-center mt-6">
-        <a href="/properties/"
-          class="inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">View
-          All Properties</a>
+      <!-- Card 2 -->
+      <div class="bg-white shadow-lg flex flex-col max-w-[440px] min-h-[200px] md:min-h-[250px] items-center">
+        <img src="/assets/img/main-src-imgs/properties-grid/rrh-silang.jpg" alt="RCD Royale Homes Silang"
+          class="w-full h-40 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-1 text-green-700 text-center">RCD Royale Homes Silang</h3>
+        <p class="text-gray-700 mb-4 text-center text-base">Live your suburban dreams in RCD Royale Homes Silang!</p>
+        <a href="/properties/Royale-Homes-Silang-Phase-4/"
+          class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Know
+          More</a>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white shadow-lg flex flex-col max-w-[440px] min-h-[200px] md:min-h-[250px] items-center">
+        <img src="/assets/img/main-src-imgs/properties-grid/rrh-tuy.jpg" alt="RCD Royale Homes Tuy"
+          class="w-full h-40 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-1 text-green-700 text-center">RCD Royale Homes Tuy</h3>
+        <p class="text-gray-700 mb-4 text-center text-base">Balanced lifestyle for you in Batangas.</p>
+        <a href="/properties/rcd-winterbreeze-homes-bulacan/"
+          class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Know
+          More</a>
       </div>
     </div>
-    <div class="absolute inset-0 bg-black opacity-10"></div>
-  </section>
+    <div class="flex justify-center mt-16">
+      <a href="/properties/"
+        class="inline-block px-8 py-4 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">View
+        All Properties</a>
+    </div>
+  </div>
+  <div class="absolute inset-0 bg-black opacity-10"></div>
+</section>
 
-  <!-- Section 3: Model House Walkthrough -->
-  <section id="walkthrough" class="relative min-h-screen flex items-center justify-center snap-start bg-white">
-    <div class="relative z-10 max-w-5xl mx-auto w-full px-2 py-8">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-center text-green-700">Model House Walkthrough</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <!-- Card 1 -->
-        <div class="bg-white shadow-lg flex flex-col items-center">
-          <img src="/assets/img/main-src-imgs/explore-model/th47.jpg" alt="Townhouse 47"
-            class="w-full h-32 object-cover mb-4">
-          <h3 class="text-lg font-bold mb-1 text-green-700 text-center">Townhouse 47</h3>
-          <p class="text-gray-700 mb-4 text-center text-sm">Experience our virtual tour of Townhouse 47.</p>
-          <a href="/walkthrough/th47/"
-            class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Learn
-            More</a>
-        </div>
-        <!-- Card 2 -->
-        <div class="bg-white shadow-lg flex flex-col items-center">
-          <img src="/assets/img/main-src-imgs/explore-model/daphne.jpg" alt="Daphne"
-            class="w-full h-32 object-cover mb-4">
-          <h3 class="text-lg font-bold mb-1 text-green-700 text-center">Daphne</h3>
-          <p class="text-gray-700 mb-4 text-center text-sm">Take a virtual walkthrough of our Daphne model.</p>
-          <a href="/walkthrough/daphne/"
-            class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Learn
-            More</a>
-        </div>
-        <!-- Card 3 -->
-        <div class="bg-white shadow-lg flex flex-col items-center">
-          <img src="/assets/img/main-src-imgs/explore-model/th65.jpg" alt="Townhouse 65"
-            class="w-full h-32 object-cover mb-4">
-          <h3 class="text-lg font-bold mb-1 text-green-700 text-center">Townhouse 65</h3>
-          <p class="text-gray-700 mb-4 text-center text-sm">Discover the spacious Townhouse 65 in 3D.</p>
-          <a href="#"
-            class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Learn
-            More</a>
-        </div>
+<!-- Section 3: Model House Walkthrough -->
+<section id="walkthrough" class="snap-start snap-always scroll-mt-[81px] relative min-h-screen flex items-center justify-center bg-white">
+  <div class="relative z-10 max-w-6xl mx-auto w-full px-2 py-8">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-center text-green-700">Model House Walkthrough</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white shadow-lg flex flex-col items-center max-w-[440px] min-h-[200px] md:min-h-[250px]">
+        <img src="/assets/img/main-src-imgs/explore-model/th47.jpg" alt="Townhouse 47"
+          class="w-full h-40 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-1 text-green-700 text-center">Townhouse 47</h3>
+        <p class="text-gray-700 mb-4 text-center text-base">Experience our virtual tour of Townhouse 47.</p>
+        <a href="/walkthrough/th47/"
+          class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Know
+          More</a>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white shadow-lg flex flex-col items-center max-w-[440px] min-h-[200px] md:min-h-[250px]">
+        <img src="/assets/img/main-src-imgs/explore-model/daphne.jpg" alt="Daphne"
+          class="w-full h-40 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-1 text-green-700 text-center">Daphne</h3>
+        <p class="text-gray-700 mb-4 text-center text-base">Take a virtual walkthrough of our Daphne model.</p>
+        <a href="/walkthrough/daphne/"
+          class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Know
+          More</a>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white shadow-lg flex flex-col items-center max-w-[440px] min-h-[200px] md:min-h-[250px]">
+        <img src="/assets/img/main-src-imgs/explore-model/th65.jpg" alt="Townhouse 65"
+          class="w-full h-40 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-1 text-green-700 text-center">Townhouse 65</h3>
+        <p class="text-gray-700 mb-4 text-center text-base">Discover the spacious Townhouse 65 in 3D.</p>
+        <a href="#"
+          class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Know
+          More</a>
       </div>
     </div>
-    <div class="absolute inset-0 bg-black opacity-10"></div>
-  </section>
+  </div>
+  <div class="absolute inset-0 bg-black opacity-10"></div>
+</section>
 
   <!-- Section 4: Schedule Site Viewing -->
   <section id="schedule" class="relative min-h-screen flex items-center justify-center snap-start">
@@ -176,35 +176,38 @@ permalink: /index
   </section>
 
   <!-- Section 5: News & Updates -->
-  <section id="news" class="relative min-h-screen flex items-center justify-center snap-start bg-white">
-    <div class="relative z-10 max-w-5xl mx-auto w-full px-2 py-8">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-center text-green-700">News & Updates</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <!-- Card 1 -->
-      <div class="bg-white shadow-lg flex flex-col items-center">
-<img src="/assets/img/main-src-imgs/post-2.jpg" ... class="w-full h-32 object-cover object-top mb-4">
-        <h3 class="text-lg font-bold mb-1 text-green-700 text-center">EY Entrepreneur of the Year Finalist 2015</h3>
-        <p class="text-gray-700 mb-2 text-center text-sm">Recognized for excellence in entrepreneurship.</p>
+<section id="news" class="relative min-h-screen flex items-center justify-center snap-start bg-white">
+  <div class="relative z-10 max-w-6xl mx-auto w-full px-2 py-8">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-center text-green-700">News & Updates</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white shadow-lg flex flex-col items-center max-w-[440px] min-h-[200px] md:min-h-[250px]">
+        <img src="/assets/img/main-src-imgs/post-2.jpg" alt="EY Entrepreneur of the Year Finalist 2015"
+          class="w-full h-40 object-cover object-top mb-4">
+        <h3 class="text-xl font-bold mb-1 text-green-700 text-center">EY Entrepreneur of the Year Finalist 2015</h3>
+        <p class="text-gray-700 mb-2 text-center text-base">Recognized for excellence in entrepreneurship.</p>
         <a href="/whats-new/subpages-news/ey_entrepreneurship_of_the_yr"
-          class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Learn
+          class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Know
           More</a>
       </div>
       <!-- Card 2 -->
-      <div class="bg-white shadow-lg flex flex-col items-center">
-<img src="/assets/img/main-src-imgs/post-5.jpg" ... class="w-full h-32 object-cover object-top mb-4">
-        <h3 class="text-lg font-bold mb-1 text-green-700 text-center">APEA Entrepreneurship Award 2016</h3>
-        <p class="text-gray-700 mb-2 text-center text-sm">Awarded at the Asia Pacific Entrepreneurship Awards.</p>
+      <div class="bg-white shadow-lg flex flex-col items-center max-w-[440px] min-h-[200px] md:min-h-[250px]">
+        <img src="/assets/img/main-src-imgs/post-5.jpg" alt="APEA Entrepreneurship Award 2016"
+          class="w-full h-40 object-cover object-top mb-4">
+        <h3 class="text-xl font-bold mb-1 text-green-700 text-center">APEA Entrepreneurship Award 2016</h3>
+        <p class="text-gray-700 mb-2 text-center text-base">Awarded at the Asia Pacific Entrepreneurship Awards.</p>
         <a href="/whats-new/subpages-news/asia_pacific_entrepreneurship"
-          class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Learn
+          class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Know
           More</a>
       </div>
       <!-- Card 3 -->
-      <div class="bg-white shadow-lg flex flex-col items-center">
-<img src="/assets/img/main-src-imgs/post-7.jpg" ... class="w-full h-32 object-cover object-top mb-4">
-        <h3 class="text-lg font-bold mb-1 text-green-700 text-center">Asia CEO Awards 2018</h3>
-        <p class="text-gray-700 mb-2 text-center text-sm">Honored at the Asia CEO Awards 2018.</p>
+      <div class="bg-white shadow-lg flex flex-col items-center max-w-[440px] min-h-[200px] md:min-h-[250px]">
+        <img src="/assets/img/main-src-imgs/post-7.jpg" alt="Asia CEO Awards 2018"
+          class="w-full h-40 object-cover object-top mb-4">
+        <h3 class="text-xl font-bold mb-1 text-green-700 text-center">Asia CEO Awards 2018</h3>
+        <p class="text-gray-700 mb-2 text-center text-base">Honored at the Asia CEO Awards 2018.</p>
         <a href="/whats-new/subpages-news/asia_ceo_awards"
-          class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Learn
+          class="mb-2 mt-auto inline-block px-4 py-2 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">Know
           More</a>
       </div>
     </div>
@@ -223,12 +226,30 @@ permalink: /index
     scroll-behavior: smooth;
   }
   .smooth-scroll {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
   }
   .snap-y {
-  scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
   }
   .snap-start {
-  scroll-snap-align: start;
+    scroll-snap-align: start;
+  }
+  section[id] {
+    scroll-margin-top: 81px;
+  }
+  section.snap-start {
+    scroll-snap-stop: always;
+  }
+  /* Responsive card sizing for mobile */
+  @media (max-width: 640px) {
+    .max-w-\[440px\] {
+      max-width: 95vw !important;
+    }
+    .min-h-\[200px\], .md\:min-h-\[250px\] {
+      min-height: 160px !important;
+    }
+    .h-40 {
+      height: 120px !important;
+    }
   }
 </style>
