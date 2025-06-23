@@ -369,205 +369,186 @@
     /* --- Properties Page Styles (Compiled & Cleaned) --- */
 
     .properties-section {
-      margin-top: 81px;
-      padding: 40px 0;
-      background: #f7f7f7;
-    }
+  margin-top: 81px;
+  padding: 40px 0;
+  background: #f7f7f7;
+}
 
-    .property-card-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 100px;
-      flex-wrap: wrap;
-    }
+.property-card-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin-bottom: 100px;
+  flex-wrap: wrap;
+}
+.property-card-row:last-child {
+  margin-bottom: 0;
+}
+.property-card-row.reverse {
+  flex-direction: row-reverse;
+}
 
-    .property-card-row:last-child {
-      margin-bottom: 0;
-    }
+.property-image,
+.property-card-row .property-image {
+  display: inline-flex;
+  align-items: stretch;
+  justify-content: center;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  margin: 0 12px;
+  border-radius: 12px;
+  padding: 0;
+  width: auto;
+  height: auto;
+  min-width: unset;
+  max-width: 100%;
+}
+.property-image img {
+  display: block;
+  max-width: 100%;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+  background: #fff;
+}
+.property-image:hover img {
+  transform: scale(1.08);
+}
 
-    .property-card-row.reverse {
-      flex-direction: row-reverse;
-    }
+.property-info {
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 35%;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 500px;
+  margin: 0 12px;
+  position: relative;
+}
+.property-info h3 {
+  color: #16a34a;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  margin-left: 0;
+}
+.property-info p {
+  color: #374151;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  margin-left: 0;
+}
 
-    /* Property image container */
-    .property-image {
-      flex: 1 1 340px;
-      min-width: 280px;
-      max-width: 55%;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
-      margin: 0 12px;
-      border-radius: 12px;
-    }
+.know-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: #16a34a;
+  border-radius: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.2s, color 0.2s;
+  margin-top: auto;
+  align-self: flex-start;
+  width: fit-content;
+}
+.know-more-btn:hover {
+  background: #f7c940;
+  color: #fff;
+}
+.know-more-btn svg {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+}
 
-    .property-card-row .property-image {
-      max-width: 65%;
-      flex: 1 1 480px;
-      height: 420px;
-    }
+/* Utility classes */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.space-x-4> :not([hidden])~ :not([hidden]) { margin-left: 1rem; }
+.m-0 { margin: 0; }
+.mb-2 { margin-bottom: 0.5rem; }
 
-    /* Show full image, no crop */
-    .property-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-      border-radius: 12px;
-      background: #fff;
-    }
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .property-card-row,
+  .property-card-row.reverse {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .property-image,
+  .property-card-row .property-image {
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 0 16px 0;
+    height: 260px;
+    flex-basis: auto;
+  }
+  .property-info {
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 0 16px 0;
+    height: auto;
+  }
+  .know-more-btn {
+    font-size: 0.95rem;
+    padding: 12px 24px;
+    margin-top: 24px;
+    width: fit-content;
+    align-self: flex-start;
+  }
+}
 
-    /* Remove zoom effect for contain images (optional, comment out if you want to keep) */
-    .property-image:hover img {
-      /* transform: scale(1.08); */
-    }
-
-    /* Property info container */
-    .property-info {
-      flex: 1 1 220px;
-      min-width: 220px;
-      max-width: 35%;
-      padding: 0 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      height: 400px;
-      margin: 0 12px;
-      position: relative;
-    }
-
-    .property-info h3 {
-      color: #16a34a;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      font-weight: 600;
-      margin-left: 0;
-    }
-
-    .property-info p {
-      color: #374151;
-      font-size: 1rem;
-      margin-bottom: 16px;
-      margin-left: 0;
-    }
-
-    /* "Know More" button */
-    .know-more-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #fff;
-      background: #16a34a;
-      border-radius: 6px;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: background 0.2s, color 0.2s;
-      margin-top: 16px;
-      width: fit-content;
-    }
-
-    .know-more-btn:hover {
-      background: #f7c940;
-      color: #fff;
-    }
-
-    .know-more-btn svg {
-      width: 20px;
-      height: 20px;
-      color: #fff;
-    }
-
-    /* Utility classes */
-    .flex {
-      display: flex;
-    }
-
-    .items-center {
-      align-items: center;
-    }
-
-    .space-x-4> :not([hidden])~ :not([hidden]) {
-      margin-left: 1rem;
-    }
-
-    .m-0 {
-      margin: 0;
-    }
-
-    .mb-2 {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1100px) {
-
-      .property-card-row,
-      .property-card-row.reverse {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .property-image,
-      .property-card-row .property-image {
-        max-width: 100%;
-        min-width: 0;
-        margin: 0 0 16px 0;
-        height: 260px;
-        flex-basis: auto;
-      }
-
-      .property-info {
-        max-width: 100%;
-        min-width: 0;
-        margin: 0 0 16px 0;
-        height: auto;
-      }
-
-      .know-more-btn {
-        position: static;
-        margin-top: 24px;
-        width: auto;
-        left: unset;
-        bottom: unset;
-        align-self: flex-start;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .properties-section {
-        padding: 20px 0;
-      }
-
-      .property-image,
-      .property-card-row .property-image {
-        height: 180px;
-      }
-
-      .property-info {
-        height: auto;
-      }
-
-      .property-info h3 {
-        font-size: 1.2rem;
-      }
-
-      .property-info p {
-        font-size: 0.95rem;
-      }
-
-      .know-more-btn {
-        font-size: 0.85rem;
-        padding: 10px 16px;
-        margin-top: 24px;
-        width: fit-content;
-      }
-    }
+@media (max-width: 700px) {
+  .properties-section {
+    padding: 20px 0;
+  }
+  .property-image,
+  .property-card-row .property-image {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0 0 16px 0;
+    border-radius: 12px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .property-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .property-info {
+    height: auto;
+  }
+  .property-info h3 {
+    font-size: 1.2rem;
+  }
+  .property-info p {
+    font-size: 0.95rem;
+  }
+  .know-more-btn {
+    font-size: 0.85rem;
+    padding: 10px 16px;
+    margin-top: 24px;
+    width: fit-content;
+    align-self: flex-start;
+  }
+}
