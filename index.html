@@ -52,7 +52,7 @@ permalink: /index
 </nav>
 
 <!-- Main Jumbotron Scrollable Sections -->
-<div class="snap-y snap-mandatory smooth-scroll">
+<body class="snap-y snap-mandatory smooth-scroll">
 
   <!-- Section 1: Hero / Carousel Replacement -->
   <section id="hero" class="snap-start snap-always scroll-mt-[81px] relative min-h-screen flex items-center justify-center snap-start bg-black overflow-hidden">
@@ -69,7 +69,7 @@ permalink: /index
   </section>
 
   <!-- Section 2: Featured Properties -->
-<section id="featured" class="snap-start snap-always scroll-mt-[81px] relative min-h-screen flex flex-col items-center justify-center bg-white">
+<section id="featured" class="min-h-screen snap-start snap-always scroll-mt-[81px] relative min-h-screen flex flex-col items-center justify-center bg-white">
   <img src="/assets/img/main-src-imgs/bg-fp.png" alt="Featured Properties"
     class="absolute inset-0 w-full h-full object-cover opacity-70" />
   <div class="relative z-10 max-w-6xl mx-auto w-full px-2 py-8 flex flex-col items-center">
@@ -149,7 +149,7 @@ permalink: /index
 </section>
 
   <!-- Section 4: Schedule Site Viewing -->
-  <section id="schedule" class="relative min-h-screen flex items-center justify-center snap-start">
+  <section id="schedule" class="flex-col relative min-h-screen flex items-center justify-center snap-start">
     <img src="/assets/img/main-src-imgs/carousel/careers-cover.jpg" alt="Schedule Viewing"
       class="absolute inset-0 w-full h-full object-cover opacity-70" />
     <div class="relative z-10 text-center text-white max-w-xl mx-auto">
@@ -203,7 +203,7 @@ permalink: /index
   </div>
   <div class="absolute inset-0 bg-black opacity-10"></div>
 </section>  
-  </div>
+</body>
 
   {% include footer.html %}
 
@@ -231,23 +231,12 @@ permalink: /index
   }
   /* Responsive card sizing for mobile */
 @media (max-width: 1024px) {
-  .max-w-\[260px\] { max-width: 94vw !important; }
-  .h-20, .md\:h-24 { height: 48px !important; }
-  h2 { font-size: 1.1rem !important; }
-  h3 { font-size: 1rem !important; }
-  .text-base { font-size: 0.95rem !important; }
-  .text-xs { font-size: 0.8rem !important; }
+  .max-w-\[220px\] { max-width: 92vw !important; }
+  .h-20, .md\:h-24 { height: 40px !important; }
 }
 @media (max-width: 640px) {
-  .grid-cols-3 { grid-template-columns: 1fr !important; }
-  .max-w-\[260px\] { max-width: 98vw !important; }
-  .h-20, .md\:h-24 { height: 36px !important; }
-  h2 { font-size: 1rem !important; }
-  h3 { font-size: 0.95rem !important; }
-  .text-base { font-size: 0.85rem !important; }
-  .text-xs { font-size: 0.75rem !important; }
-  .py-2, .py-4, .py-8 { padding-top: 0.25rem !important; padding-bottom: 0.25rem !important; }
-  .mb-6, .mb-4, .mb-2, .mb-1 { margin-bottom: 0.25rem !important; }
+  .max-w-\[220px\] { max-width: 98vw !important; }
+  .h-20, .md\:h-24 { height: 28px !important; }
 }
 </style>
 
