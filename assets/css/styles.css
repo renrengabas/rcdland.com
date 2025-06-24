@@ -378,7 +378,7 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 48px;
   flex-wrap: wrap;
 }
 .property-card-row:last-child {
@@ -459,7 +459,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: background 0.2s, color 0.2s;
-  margin-top: auto;
+  margin-top: auto !important;
   align-self: flex-start;
   width: fit-content;
 }
