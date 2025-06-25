@@ -366,7 +366,7 @@
       margin-bottom: 16px;
     }
 
-    /* --- Properties Page Styles (Compiled & Cleaned) --- */
+     /* --- Properties Page Styles (Compiled & Cleaned) --- */
 
     .properties-section {
   margin-top: 81px;
@@ -378,7 +378,7 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
-  margin-bottom: 48px;
+  margin-bottom: 100px;
   flex-wrap: wrap;
 }
 .property-card-row:last-child {
@@ -445,6 +445,17 @@
   margin-left: 0;
 }
 
+/* --- Amenities image uniform size --- */
+.property-info img[alt="Amenities"] {
+  width: 200px;
+  height: 120px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 8px;
+  display: block;
+}
+
 .know-more-btn {
   display: inline-flex;
   align-items: center;
@@ -459,7 +470,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: background 0.2s, color 0.2s;
-  margin-top: auto !important;
+  margin-top: auto;
   align-self: flex-start;
   width: fit-content;
 }
