@@ -4,104 +4,6 @@ title: Contacts
 permalink: /contacts/
 ---
 
-<section class="pt-24 pb-12 bg-gray-50 text-gray-800">
-  <div class="max-w-6xl mx-auto px-4">
-
-    <!-- 1. Contact Us Title -->
-    <div class="mb-2">
-      <h1 class="text-4xl font-bold text-[#16a34a]">{{ page.title }}</h1>
-    </div>
-
-    <!-- 2. Contact Us Description -->
-    <div class="mb-6">
-      <p class="text-sm mb-1">If you have any questions or queries a member of staff will always be happy to help.</p>
-      <p class="text-sm mb-1">Feel free to contact us by telephone and email or fill-up the inquiry form.</p>
-      <p class="text-sm">We will be sure to get back to you as soon as possible.</p>
-    </div>
-
-    <!-- 3. Let's Talk and other details/buttons -->
-    <div class="mb-8">
-      <div class="bg-white rounded-md shadow p-6">
-        <h2 class="text-2xl text-[#16a34a] font-bold mb-2">Let's Talk</h2>
-        <p class="mb-1">Reach out to us for any inquiries or assistance. We're here to help you!</p>
-        <p>
-          Main Office:
-          <a href="tel:{{ site.data.contacts.main_office.phone1 | default: '0288937451' }}" class="hover:text-yellow-500 transition-colors duration-300">
-            (02) 8-893-7451
-          </a> /
-          <a href="tel:{{ site.data.contacts.main_office.phone2 | default: '0288937452' }}" class="hover:text-yellow-500 transition-colors duration-300">
-            (02) 8-893-7452
-          </a>
-        </p>
-        <p>
-          Email:
-          <a href="mailto:{{ site.data.contacts.main_office.email | default: 'info@rcdland.com' }}" class="hover:text-yellow-500 transition-colors duration-300">
-            {{ site.data.contacts.main_office.email | default: 'info@rcdland.com' }}
-          </a>
-        </p>
-        <h2 class="text-base font-bold mb-3 mt-4">What would you like to do?</h2>
-        <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-          <button class="typeform-card-wide" onclick="openModal('help')">
-            <div class="text-xl mr-2">🛠️</div>
-            <div class="font-semibold text-xs text-left">Get Help Using ChatBot</div>
-          </button>
-          <button class="typeform-card-wide" onclick="openModal('sales')">
-            <div class="text-xl mr-2">🤝</div>
-            <div class="font-semibold text-xs text-left">Contact Sales and Marketing Department</div>
-          </button>
-          <button class="typeform-card-wide" onclick="openModal('billing')">
-            <div class="text-xl mr-2">😊</div>
-            <div class="font-semibold text-xs text-left">Contact Billing Department</div>
-          </button>
-          <button class="typeform-card-wide" onclick="openModal('marketing')">
-            <div class="text-xl mr-2">📈</div>
-            <div class="font-semibold text-xs text-left">Contact Customer Service Relations</div>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Adjusted office card row with responsive map -->
-<div class="office-directory">
-  {% for office in site.data.contacts.offices %}
-  <div class="property-card-row{% if forloop.index0 | modulo: 2 == 1 %} reverse{% endif %}">
-    <!-- Map -->
-    <div class="property-image">
-      <div class="map-wrapper">
-        <iframe
-          src="{{ office.map }}"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-    <!-- Details -->
-    <div class="property-info">
-      <h3 class="m-0">{{ office.name }}</h3>
-      <p class="mb-1">{{ office.address }}</p>
-      {% if office.phone1 %}
-      <p class="mb-1">Phone: <a href="tel:{{ office.phone1 }}" class="hover:text-yellow-500">{{ office.phone1 }}</a></p>
-      {% endif %}
-      {% if office.email %}
-      <p>Email: <a href="mailto:{{ office.email }}" class="hover:text-yellow-500">{{ office.email }}</a></p>
-      {% endif %}
-    </div>
-  </div>
-  {% endfor %}
-</div>
-
-  <!-- Modal -->
-  <div id="modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
-    <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md relative">
-      <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-400 hover:text-gray-700">&times;</button>
-      <div id="modal-content">
-        <!-- Dynamic form content goes here -->
-      </div>
-    </div>
-  </div>
-</section>
-
 <style>
 .property-image, .office-image {
   flex: 1 1 350px;
@@ -129,30 +31,164 @@ permalink: /contacts/
   background: #e5e7eb;
 }
 
-.typeform-card-wide {
-    display: flex;
-    align-items: center;
-    border: 2px solid #16a34a;
-    border-radius: 8px;
-    background: #f9fafb;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s, color 0.2s;
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.03);
-    padding: 0.5rem 1rem;
-    min-height: 48px;
-    min-width: 0;
-    width: 100%;
-    margin: 0;
-    gap: 0.5rem;
-    color: #222;
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 0.04);
+  min-height: 320px;
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+.contact-card:hover {
+  box-shadow: 0 6px 24px 0 rgb(22 163 74 / 0.10);
+}
+.contact-card-icon {
+  font-size: 2.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+.contact-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #16a34a;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.contact-card-desc {
+  font-size: 1rem;
+  color: #374151;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  flex: 1 1 auto;
+}
+.contact-card-btn {
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  margin-top: auto;
+}
+.contact-card-btn:hover,
+.contact-card-btn:focus {
+  background: #facc15;
+  color: #222;
+}
+
+/* Responsive grid for cards */
+@media (max-width: 1023px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .typeform-card-wide:hover,
-  .typeform-card-wide:focus {
-    border-color: #facc15;
-    background: #f9fafb;
-    color: #222;
+}
+@media (max-width: 639px) {
+  .grid-cols-4,
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
   }
+}
+.branch-card-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin-bottom: 1.5rem;
+}
+.branch-card-row.reverse {
+  flex-direction: row-reverse;
+}
 </style>
+
+<section class="pt-24 pb-12 bg-gray-50 text-gray-800">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- 1. Contact Us Title -->
+    <div class="mb-2">
+      <h1 class="text-4xl font-bold text-[#16a34a]">{{ page.title }}</h1>
+    </div>
+
+    <!-- 2. Contact Cards Section (Stripe-style) -->
+<div class="mb-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <!-- Sales Card -->
+    <div class="contact-card">
+      <div class="contact-card-icon bg-blue-100 text-blue-600">
+        🤝
+      </div>
+      <h3 class="contact-card-title">Sales</h3>
+      <p class="contact-card-desc">We'd love to talk about how we can work together.</p>
+      <button class="contact-card-btn" onclick="openModal('sales')">Contact sales</button>
+    </div>
+    <!-- Help & Support Card -->
+    <div class="contact-card">
+      <div class="contact-card-icon bg-green-100 text-green-600">
+        🛠️
+      </div>
+      <h3 class="contact-card-title">Help & Support</h3>
+      <p class="contact-card-desc">We're here to help with any questions.</p>
+      <button class="contact-card-btn" onclick="openModal('help')">Contact support</button>
+    </div>
+    <!-- Billing Card -->
+    <div class="contact-card">
+      <div class="contact-card-icon bg-yellow-100 text-yellow-600">
+        😊
+      </div>
+      <h3 class="contact-card-title">Billing</h3>
+      <p class="contact-card-desc">Questions about invoices or payments? Let us know.</p>
+      <button class="contact-card-btn" onclick="openModal('billing')">Contact billing</button>
+    </div>
+    <!-- Customer Service Card -->
+    <div class="contact-card">
+      <div class="contact-card-icon bg-purple-100 text-purple-600">
+        📈
+      </div>
+      <h3 class="contact-card-title">Customer Service</h3>
+      <p class="contact-card-desc">For feedback, PR, or general inquiries, reach out here.</p>
+      <button class="contact-card-btn" onclick="openModal('marketing')">Contact customer service</button>
+    </div>
+  </div>
+</div>
+
+    <!-- Adjusted office card row with responsive map -->
+<div class="office-directory">
+  {% for office in site.data.contacts.offices %}
+    <div class="branch-card-row {% if forloop.index0 | modulo: 2 == 1 %} reverse {% endif %}">
+      <div class="property-image">
+        <div class="map-wrapper">
+          <iframe
+            src="{{ office.map }}"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <div class="property-info">
+        <h3 class="m-0">{{ office.name }}</h3>
+        <p class="mb-1">{{ office.address }}</p>
+        {% if office.phone1 %}
+        <p class="mb-1">Phone: <a href="tel:{{ office.phone1 }}" class="hover:text-yellow-500">{{ office.phone1 }}</a></p>
+        {% endif %}
+        {% if office.phone2 %}
+        <p class="mb-1">Phone: <a href="tel:{{ office.phone2 }}" class="hover:text-yellow-500">{{ office.phone2 }}</a></p>
+        {% endif %}
+        {% if office.email %}
+        <p>Email: <a href="mailto:{{ office.email }}" class="hover:text-yellow-500">{{ office.email }}</a></p>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
 
 <script>
   function openModal(type) {
