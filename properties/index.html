@@ -4,6 +4,276 @@ title: ourproperties
 permalink: /properties/
 ---
 
+<style>
+    /* ==================== Base Styles ==================== */
+
+    .properties-section {
+        margin-top: 81px;
+        padding: 40px 0;
+        background: #fff;
+    }
+
+    /* ==================== Layout: Property Rows ==================== */
+
+    .property-card-row {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 120px;
+    }
+
+    .property-card-row:last-child {
+        margin-bottom: 0;
+    }
+
+    .property-card-row.reverse {
+        flex-direction: row-reverse;
+    }
+
+    /* ==================== Property Image ==================== */
+
+    .property-image,
+    .property-card-row .property-image {
+        display: inline-flex;
+        align-items: stretch;
+        justify-content: center;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 12px;
+        padding: 0;
+        border-radius: 12px;
+        max-width: 100%;
+    }
+
+    .property-image img {
+        display: block;
+        max-width: 100%;
+        max-height: 500px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 12px;
+        background: #fff;
+        transition: transform 0.3s ease;
+    }
+
+    .property-image:hover img {
+        transform: scale(1.08);
+    }
+
+    /* ==================== Property Info ==================== */
+
+    .property-info {
+        flex: 1 1 220px;
+        min-width: 220px;
+        max-width: 35%;
+        padding: 0 24px;
+        margin: 0 12px;
+        position: relative;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .property-info h3 {
+        color: #16a34a;
+        font-size: 2rem;
+        font-weight: 550;
+        margin-bottom: 8px;
+    }
+
+    .property-info p {
+        color: #374151;
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+
+    /* Amenities image */
+    .property-info img[alt="Amenities"] {
+        width: 200px;
+        height: 120px;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-top: 8px;
+        filter: grayscale(100%);
+        display: block;
+    }
+
+    /* ==================== Buttons ==================== */
+
+    .know-more-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #fff;
+        background: #16a34a;
+        border-radius: 6px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: auto;
+        align-self: flex-start;
+        width: fit-content;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .know-more-btn:hover {
+        background: #f7c940;
+        color: #fff;
+    }
+
+    .know-more-btn svg {
+        width: 20px;
+        height: 20px;
+        color: #fff;
+    }
+
+    /* ==================== Utility Classes ==================== */
+
+    .flex {
+        display: flex;
+    }
+
+    .items-center {
+        align-items: center;
+    }
+
+    .space-x-4> :not([hidden])~ :not([hidden]) {
+        margin-left: 1rem;
+    }
+
+    .m-0 {
+        margin: 0;
+    }
+
+    .mb-2 {
+        margin-bottom: 0.5rem;
+    }
+
+    /* ==================== Responsive Styles ==================== */
+
+    @media (max-width: 1100px) {
+
+        .property-card-row,
+        .property-card-row.reverse {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .property-image,
+        .property-card-row .property-image {
+            width: 100%;
+            min-width: 0;
+            max-width: 100%;
+            height: 260px;
+            margin: 0 0 16px 0;
+        }
+
+        .property-info {
+            max-width: 100%;
+            min-width: 0;
+            margin: 0 0 16px 0;
+            height: auto;
+        }
+
+        .know-more-btn {
+            font-size: 0.95rem;
+            padding: 12px 24px;
+            margin-top: 24px;
+            width: fit-content;
+        }
+    }
+
+    @media (min-width: 700px) and (max-width: 1100px) {
+
+        .property-image,
+        .property-card-row .property-image {
+            width: 100%;
+            height: 320px;
+            min-width: 0;
+            max-width: 100%;
+            margin: 0 0 16px 0;
+            border-radius: 12px;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .property-image img {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            background: #fff;
+            transition: transform 0.3s ease;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .properties-section {
+            padding: 20px 0;
+        }
+
+        .property-image,
+        .property-card-row .property-image {
+            width: 100%;
+            height: auto;
+            min-width: 0;
+            max-width: 100%;
+            margin: 0 0 16px 0;
+            border-radius: 12px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .property-image img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .property-info {
+            height: auto;
+        }
+
+        .property-info h3 {
+            font-size: 1.2rem;
+        }
+
+        .property-info p {
+            font-size: 0.95rem;
+        }
+
+        .know-more-btn {
+            font-size: 0.85rem;
+            padding: 10px 16px;
+            margin-top: 24px;
+            width: fit-content;
+        }
+
+        .property-info img[alt="Amenities"] {
+            width: 80px;
+            height: 50px;
+            min-width: 0;
+            max-width: 100px;
+            object-fit: contain;
+        }
+    }
+</style>
+
 <section class="properties-section">
     <div class="max-w-7xl mx-auto px-4">
         <div class="mb-12 flex items-start space-x-4 max-w-5xl">
@@ -39,7 +309,7 @@ permalink: /properties/
                         <li>BasketBall Court</li>
                     </ul>
                     <img src="../assets/img/ourproperties/amenities/GSCB.jpg" alt="Amenities"
-                        style="margin-top:2px; border-radius:8px; max-width:80%; width:80%; height:auto;">
+                        style="margin-top:16px; margin-bottom:16px border-radius:8px; max-width:80%; width:80%; height:auto;">
                 </div>
                 <a href="{{ '/properties/royale-homes-silang-phase4/' | relative_url }}" class="know-more-btn m-0">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -74,7 +344,7 @@ permalink: /properties/
                         <li>BasketBall Court</li>
                     </ul>
                     <img src=../assets/img/ourproperties/amenities/GSCB.jpg alt="Amenities"
-                        style="margin-top:2px; border-radius:8px; max-width:80%; width:80%; height:auto;">
+                        style="margin-top:16px; margin-bottom:16px border-radius:8px; max-width:80%; width:80%; height:auto;">
                 </div>
                 <a href="{{ '/properties/royalehomes-balayan-batangas/' | relative_url }}" class="know-more-btn m-0">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -103,7 +373,7 @@ permalink: /properties/
                 <div class="text-sm text-gray-700 mb-2">
                     <strong>AMENITIES</strong>
                     <ul
-                        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
+                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
                         <li>Balcony</li>
                         <li>Deck</li>
                         <li>Gate</li>
@@ -111,8 +381,8 @@ permalink: /properties/
                         <li>Sun Room</li>
                         <li>Concrete Flooring</li>
                     </ul>
-                    <img src="../assets/img/ourproperties/amenities/BGC.jpg" alt="Amenities"
-                        style="margin-top:2px; border-radius:8px; max-width:60%; width:75%; height:auto;">
+                    <img src="../assets/img/ourproperties/amenities/BDGPSC.jpg" alt="Amenities"
+                        style="margin-top:16px; margin-bottom:16px border-radius:8px; max-width:90%; width:90%; height:auto;">
                 </div>
                 <a href="{{ '/properties/rcd-bf-homes-paranaque-new/' | relative_url }}" class="know-more-btn m-0">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -147,7 +417,7 @@ permalink: /properties/
                         <li>Swimming pool</li>
                     </ul>
                     <img src="../assets/img/ourproperties/amenities/CGBS.jpg" alt="Amenities"
-                        style="margin-top:2px; border-radius:8px; max-width:80%; width:80%; height:auto;">
+                        style="margin-top:16px; margin-bottom:16pxborder-radius:8px; max-width:80%; width:80%; height:auto;">
                 </div>
                 <a href="{{'/properties/royale-homes-silang-phase4/' | relative_url }}" class="know-more-btn m-0">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -182,7 +452,7 @@ permalink: /properties/
                         <li>Swimming pool</li>
                     </ul>
                     <img src="../assets/img/ourproperties/amenities/CGBS.jpg" alt="Amenities"
-                        style="margin-top:2px; border-radius:8px; max-width:80%; width:80%; height:auto;">
+                        style="margin-top:16px; margin-bottom:16px border-radius:8px; max-width:80%; width:80%; height:auto;">
                 </div>
                 <a href="{{'/properties/royale-homes-tuy-batangas/' | relative_url }}" class="know-more-btn m-0">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -217,7 +487,7 @@ permalink: /properties/
                         <li>Swimming pool</li>
                     </ul>
                     <img src="../assets/img/ourproperties/amenities/CGBS.jpg" alt="Amenities"
-                        style="margin-top:2px; border-radius:8px; max-width:80%; width:80%; height:auto;">
+                        style="margin-top:16px; margin-bottom:16px border-radius:8px; max-width:80%; width:80%; height:auto;">
                 </div>
                 <a href="{{'/properties/royale-homes-norzagaray/' | relative_url }}" class="know-more-btn m-0">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -253,7 +523,7 @@ permalink: /properties/
                         <li>Guardhouse</li>
                     </ul>
                     <img src="../assets/img/ourproperties/amenities/CGBS.jpg" alt="Amenities"
-                        style="margin-top:2px; border-radius:8px; max-width:80%; width:80%; height:auto;">
+                        style="margin-top:16px; margin-bottom:16px border-radius:8px; max-width:80%; width:80%; height:auto;">
                 </div>
                 <a href="{{'/properties/royale-homes-mariveles-bataan/' | relative_url }}" class="know-more-btn m-0">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -288,7 +558,7 @@ permalink: /properties/
                         <li>Clubhouse</li>
                     </ul>
                     <img src="../assets/img/ourproperties/amenities/BGC.jpg" alt="Amenities"
-                        style="margin-top:2px; border-radius:8px; max-width:60%; width:75%; height:auto;">
+                        style="margin-top:16px; margin-bottom:16px border-radius:8px; max-width:60%; width:75%; height:auto;">
                 </div>
                 <a href="{{'/properties/villas-de-trece-martires-cavite/' | relative_url }}" class="know-more-btn m-0">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -322,7 +592,7 @@ permalink: /properties/
                         <li>Clubhouse</li>
                     </ul>
                     <img src="../assets/img/ourproperties/amenities/BGC.jpg" alt="Amenities"
-                        style="margin-top:2px; border-radius:8px; max-width:60%; width:75%; height:auto;">
+                        style="margin-top:16px; margin-bottom:16pxborder-radius:8px; max-width:60%; width:75%; height:auto;">
                 </div>
                 <a href="{{'/properties/villas-de-bacoor-dulongbayan/' | relative_url }}" class="know-more-btn m-0">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -359,7 +629,7 @@ permalink: /properties/
                         <li>Concrete Flooring</li>
                     </ul>
                     <img src="../assets/img/ourproperties/amenities/GBPSC.jpg" alt="Amenities"
-                        style="margin-top:2px; border-radius:8px; max-width:80%; width:80%; height:auto;">
+                        style="margin-top:16px; margin-bottom:16px border-radius:8px; max-width:80%; width:80%; height:auto;">
                 </div>
                 <a href="{{'/properties/rcd-winter-breeze-homes-bulacan/' | relative_url }}" class="know-more-btn m-0">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -396,7 +666,7 @@ permalink: /properties/
                         <li>Concrete Flooring</li>
                     </ul>
                     <img src="../assets/img/ourproperties/amenities/GBPSC.jpg" alt="Amenities"
-                        style="margin-top:2px; border-radius:8px; max-width:80%; width:80%; height:auto;">
+                        style="margin-top:16px; margin-bottom:16px border-radius:8px; max-width:80%; width:80%; height:auto;">
                 </div>
                 <a href="{{'/properties/rcd-winter-breeze-homes-cavite/' | relative_url }}" class="know-more-btn m-0">
                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
