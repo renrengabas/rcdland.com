@@ -5,108 +5,140 @@ permalink: /contacts/
 ---
 
 <style>
-.property-image, .office-image {
-  flex: 1 1 350px;
-  min-width: 300px;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  background: #f3f4f6;
-  /* Remove fixed height if present */
-}
+  .property-image,
+  .office-image {
+    flex: 1 1 350px;
+    min-width: 300px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background: #f3f4f6;
+    /* Remove fixed height if present */
+  }
 
-.map-wrapper {
-  width: 100%;
-  height: 100%;
-  min-height: 220px; /* or whatever minimum you want */
-  display: flex;
-}
+  .map-wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    /* or whatever minimum you want */
+    display: flex;
+  }
 
-.map-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 8px;
-  min-height: 220px; /* match min-height above */
-  background: #e5e7eb;
-}
+  .map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+    min-height: 220px;
+    /* match min-height above */
+    background: #e5e7eb;
+  }
 
-.contact-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fff;
-  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 0.04);
-  min-height: 320px;
-  transition: box-shadow 0.2s;
+  .card-overlay {
   position: relative;
+  padding-top: 48px; /* space for the icon */
 }
-.contact-card:hover {
-  box-shadow: 0 6px 24px 0 rgb(22 163 74 / 0.10);
-}
-.contact-card-icon {
-  font-size: 2.5rem;
-  width: 3.5rem;
-  height: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 9999px;
-  margin-bottom: 1rem;
-}
-.contact-card-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #16a34a;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-.contact-card-desc {
-  font-size: 1rem;
-  color: #374151;
-  text-align: center;
-  margin-bottom: 2.5rem;
-  flex: 1 1 auto;
-}
-.contact-card-btn {
-  background: #16a34a;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1.25rem;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-  width: 100%;
-  margin-top: auto;
-}
-.contact-card-btn:hover,
-.contact-card-btn:focus {
-  background: #facc15;
-  color: #222;
+.overlay-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 0.08);
 }
 
-/* Responsive grid for cards */
-@media (max-width: 1023px) {
-  .grid-cols-4 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .custom-contact-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 0.04);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 340px;
+    margin-bottom: 0;
   }
-}
-@media (max-width: 639px) {
-  .grid-cols-4,
-  .grid-cols-2 {
-    grid-template-columns: 1fr;
+
+  .custom-card-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 1.5rem auto 0.5rem auto;
   }
-}
-.branch-card-row {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  margin-bottom: 1.5rem;
-}
-.branch-card-row.reverse {
-  flex-direction: row-reverse;
-}
+
+  .custom-card-icon {
+    font-size: 2.5rem;
+  }
+
+  .custom-card-header {
+    position: relative;
+    z-index: 1;
+  }
+
+  .custom-card-title {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .custom-card-body {
+    padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+    text-align: center;
+    flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .custom-card-btn {
+    background: #16a34a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+  }
+
+  .custom-card-btn:hover,
+  .custom-card-btn:focus {
+    background: #facc15;
+    color: #222;
+  }
+
+  /* Responsive grid for cards */
+  @media (max-width: 1023px) {
+    .grid-cols-4 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 639px) {
+
+    .grid-cols-4,
+    .grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .branch-card-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin-bottom: 1.5rem;
+  }
+
+  .branch-card-row.reverse {
+    flex-direction: row-reverse;
+  }
 </style>
 
 <section class="pt-24 pb-12 bg-gray-50 text-gray-800">
@@ -118,93 +150,131 @@ permalink: /contacts/
     </div>
 
     <!-- 2. Contact Cards Section (Stripe-style) -->
-<div class="mb-8">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-    <!-- Sales Card -->
-    <div class="contact-card">
-      <div class="contact-card-icon bg-blue-100 text-blue-600">
-        🤝
-      </div>
-      <h3 class="contact-card-title">Sales</h3>
-      <p class="contact-card-desc">We'd love to talk about how we can work together.</p>
-      <button class="contact-card-btn" onclick="openModal('sales')">Contact sales</button>
-    </div>
-    <!-- Help & Support Card -->
-    <div class="contact-card">
-      <div class="contact-card-icon bg-green-100 text-green-600">
-        🛠️
-      </div>
-      <h3 class="contact-card-title">Help & Support</h3>
-      <p class="contact-card-desc">We're here to help with any questions.</p>
-      <button class="contact-card-btn" onclick="openModal('help')">Contact support</button>
-    </div>
-    <!-- Billing Card -->
-    <div class="contact-card">
-      <div class="contact-card-icon bg-yellow-100 text-yellow-600">
-        😊
-      </div>
-      <h3 class="contact-card-title">Billing</h3>
-      <p class="contact-card-desc">Questions about invoices or payments? Let us know.</p>
-      <button class="contact-card-btn" onclick="openModal('billing')">Contact billing</button>
-    </div>
-    <!-- Customer Service Card -->
-    <div class="contact-card">
-      <div class="contact-card-icon bg-purple-100 text-purple-600">
-        📈
-      </div>
-      <h3 class="contact-card-title">Customer Service</h3>
-      <p class="contact-card-desc">For feedback, PR, or general inquiries, reach out here.</p>
-      <button class="contact-card-btn" onclick="openModal('marketing')">Contact customer service</button>
-    </div>
-  </div>
-</div>
-
-    <!-- Adjusted office card row with responsive map -->
-<div class="office-directory">
-  {% for office in site.data.contacts.offices %}
-    <div class="branch-card-row {% if forloop.index0 | modulo: 2 == 1 %} reverse {% endif %}">
-      <div class="property-image">
-        <div class="map-wrapper">
-          <iframe
-            src="{{ office.map }}"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+    <div class="mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Sales Card -->
+        <div class="custom-contact-card">
+          <div class="custom-card-icon-wrapper bg-blue-100">
+            <span class="custom-card-icon text-blue-600">🤝</span>
+          </div>
+          <div class="custom-card-header bg-blue-600">
+            <h3 class="custom-card-title">Sales & Marketing</h3>
+          </div>
+          <div class="custom-card-body">
+            <div>
+              <div class="font-semibold mb-1">Landline:</div>
+              <a href="tel:0286175364" class="hover:text-yellow-500 transition-colors duration-300 block">(02)
+                8-617-5364</a>
+            </div>
+            <div>
+              <div class="font-semibold mb-1">Mobile:</div>
+              <a href="tel:639177001109" class="hover:text-yellow-500 transition-colors duration-300 block">(+63)
+                917-7001-109 (GLOBE)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Help & Support Card -->
+        <div class="custom-contact-card">
+          <div class="custom-card-icon-wrapper bg-green-100">
+            <span class="custom-card-icon text-green-600">🛠️</span>
+          </div>
+          <div class="custom-card-header bg-green-600">
+            <h3 class="custom-card-title">Help & Support</h3>
+          </div>
+          <div class="custom-card-body">
+            <div>
+              <div class="font-semibold mb-1">Need help?</div>
+              <span>Open the chatbot at the bottom right of your screen and ask your questions.</span>
+            </div>
+          </div>
+        </div>
+        <!-- Billing Card -->
+        <div class="custom-contact-card">
+          <div class="custom-card-icon-wrapper bg-yellow-100">
+            <span class="custom-card-icon text-yellow-600">💰</span>
+          </div>
+          <div class="custom-card-header bg-yellow-500">
+            <h3 class="custom-card-title">Billing</h3>
+          </div>
+          <div class="custom-card-body">
+            <div>
+              <div class="font-semibold mb-1">Email:</div>
+              <a href="mailto:inquiry@rcdland.com"
+                class="hover:text-yellow-500 transition-colors duration-300 block">inquiry@rcdland.com</a>
+            </div>
+          </div>
+        </div>
+        <!-- Customer Service Card -->
+        <div class="custom-contact-card">
+          <div class="custom-card-icon-wrapper bg-purple-100">
+            <span class="custom-card-icon text-purple-600">😊</span>
+          </div>
+          <div class="custom-card-header bg-purple-600">
+            <h3 class="custom-card-title">Customer Service</h3>
+          </div>
+          <div class="custom-card-body">
+            <div>
+              <div class="font-semibold mb-1">Landlines:</div>
+              <a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300 block">(02)
+                8-893-7451</a>
+              <a href="tel:0288937452" class="hover:text-yellow-500 transition-colors duration-300 block">(02)
+                8-893-7452</a>
+            </div>
+            <div>
+              <div class="font-semibold mb-1">Phone (Manila):</div>
+              <a href="tel:0284033490" class="hover:text-yellow-500 transition-colors duration-300 block">(02)
+                8-403-3490</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="property-info">
-        <h3 class="m-0">{{ office.name }}</h3>
-        <p class="mb-1">{{ office.address }}</p>
-        {% if office.phone1 %}
-        <p class="mb-1">Phone: <a href="tel:{{ office.phone1 }}" class="hover:text-yellow-500">{{ office.phone1 }}</a></p>
-        {% endif %}
-        {% if office.phone2 %}
-        <p class="mb-1">Phone: <a href="tel:{{ office.phone2 }}" class="hover:text-yellow-500">{{ office.phone2 }}</a></p>
-        {% endif %}
-        {% if office.email %}
-        <p>Email: <a href="mailto:{{ office.email }}" class="hover:text-yellow-500">{{ office.email }}</a></p>
-        {% endif %}
-      </div>
     </div>
-  {% endfor %}
-</div>
 
-<script>
-  function openModal(type) {
-    const modal = document.getElementById('modal');
-    const content = document.getElementById('modal-content');
-    let html = '';
-    if (type === 'help') {
-      html = `<h3 class="text-lg font-bold mb-2">Get help using Typeform</h3>
+    <!-- Adjusted office card row with responsive map -->
+    <div class="office-directory">
+      {% for office in site.data.contacts.offices %}
+      <div class="branch-card-row {% if forloop.index0 | modulo: 2 == 1 %} reverse {% endif %}">
+        <div class="property-image">
+          <div class="map-wrapper">
+            <iframe src="{{ office.map }}" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+        <div class="property-info">
+          <h3 class="m-0">{{ office.name }}</h3>
+          <p class="mb-1">{{ office.address }}</p>
+          {% if office.phone1 %}
+          <p class="mb-1">Phone: <a href="tel:{{ office.phone1 }}" class="hover:text-yellow-500">{{ office.phone1 }}</a>
+          </p>
+          {% endif %}
+          {% if office.phone2 %}
+          <p class="mb-1">Phone: <a href="tel:{{ office.phone2 }}" class="hover:text-yellow-500">{{ office.phone2 }}</a>
+          </p>
+          {% endif %}
+          {% if office.email %}
+          <p>Email: <a href="mailto:{{ office.email }}" class="hover:text-yellow-500">{{ office.email }}</a></p>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <script>
+      function openModal(type) {
+        const modal = document.getElementById('modal');
+        const content = document.getElementById('modal-content');
+        let html = '';
+        if (type === 'help') {
+          html = `<h3 class="text-lg font-bold mb-2">Get help using Typeform</h3>
       <form>
         <input class="border p-2 w-full mb-2" placeholder="Your Name" required>
         <input class="border p-2 w-full mb-2" placeholder="Your Email" type="email" required>
         <textarea class="border p-2 w-full mb-2" placeholder="How can we help you?" required></textarea>
         <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
       </form>`;
-    } else if (type === 'sales') {
-      html = `<h3 class="text-lg font-bold mb-2">Contact Sales Team</h3>
+        } else if (type === 'sales') {
+          html = `<h3 class="text-lg font-bold mb-2">Contact Sales Team</h3>
       <form>
         <input class="border p-2 w-full mb-2" placeholder="Your Name" required>
         <input class="border p-2 w-full mb-2" placeholder="Your Email" type="email" required>
@@ -212,8 +282,8 @@ permalink: /contacts/
         <textarea class="border p-2 w-full mb-2" placeholder="Your Inquiry" required></textarea>
         <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
       </form>`;
-    } else if (type === 'billing') {
-      html = `<h3 class="text-lg font-bold mb-2">Contact Billing Team</h3>
+        } else if (type === 'billing') {
+          html = `<h3 class="text-lg font-bold mb-2">Contact Billing Team</h3>
       <form>
         <input class="border p-2 w-full mb-2" placeholder="Your Name" required>
         <input class="border p-2 w-full mb-2" placeholder="Your Email" type="email" required>
@@ -221,8 +291,8 @@ permalink: /contacts/
         <textarea class="border p-2 w-full mb-2" placeholder="Billing Concern" required></textarea>
         <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
       </form>`;
-    } else if (type === 'marketing') {
-      html = `<h3 class="text-lg font-bold mb-2">Contact Marketing & PR</h3>
+        } else if (type === 'marketing') {
+          html = `<h3 class="text-lg font-bold mb-2">Contact Marketing & PR</h3>
       <form>
         <input class="border p-2 w-full mb-2" placeholder="Your Name" required>
         <input class="border p-2 w-full mb-2" placeholder="Your Email" type="email" required>
@@ -230,11 +300,11 @@ permalink: /contacts/
         <textarea class="border p-2 w-full mb-2" placeholder="Your Message" required></textarea>
         <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
       </form>`;
-    }
-    content.innerHTML = html;
-    modal.classList.remove('hidden');
-  }
-  function closeModal() {
-    document.getElementById('modal').classList.add('hidden');
-  }
-</script>
+        }
+        content.innerHTML = html;
+        modal.classList.remove('hidden');
+      }
+      function closeModal() {
+        document.getElementById('modal').classList.add('hidden');
+      }
+    </script>
