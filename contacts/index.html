@@ -4,171 +4,309 @@ title: Contacts
 permalink: /contacts/
 ---
 
-<section class="pt-24 pb-12 bg-gray-50 text-gray-800">
-  <div class="max-w-6xl mx-auto px-4">
-
-    <!-- 1. Contact Us Title -->
-    <div class="mb-2">
-      <h1 class="text-4xl font-bold text-[#16a34a]">{{ page.title }}</h1>
-    </div>
-
-    <!-- 2. Contact Us Description -->
-    <div class="mb-6">
-      <p class="text-sm mb-1">If you have any questions or queries a member of staff will always be happy to help.</p>
-      <p class="text-sm mb-1">Feel free to contact us by telephone and email or fill-up the inquiry form.</p>
-      <p class="text-sm">We will be sure to get back to you as soon as possible.</p>
-    </div>
-
-    <!-- 3. Let's Talk and other details/buttons -->
-    <div class="mb-8">
-      <div class="bg-white rounded-md shadow p-6">
-        <h2 class="text-2xl text-[#16a34a] font-bold mb-2">Let's Talk</h2>
-        <p class="mb-1">Reach out to us for any inquiries or assistance. We're here to help you!</p>
-        <p>
-          Main Office:
-          <a href="tel:{{ site.data.contacts.main_office.phone1 | default: '0288937451' }}" class="hover:text-yellow-500 transition-colors duration-300">
-            (02) 8-893-7451
-          </a> /
-          <a href="tel:{{ site.data.contacts.main_office.phone2 | default: '0288937452' }}" class="hover:text-yellow-500 transition-colors duration-300">
-            (02) 8-893-7452
-          </a>
-        </p>
-        <p>
-          Email:
-          <a href="mailto:{{ site.data.contacts.main_office.email | default: 'info@rcdland.com' }}" class="hover:text-yellow-500 transition-colors duration-300">
-            {{ site.data.contacts.main_office.email | default: 'info@rcdland.com' }}
-          </a>
-        </p>
-        <h2 class="text-base font-bold mb-3 mt-4">What would you like to do?</h2>
-        <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-          <button class="typeform-card-wide" onclick="openModal('help')">
-            <div class="text-xl mr-2">🛠️</div>
-            <div class="font-semibold text-xs text-left">Get Help Using ChatBot</div>
-          </button>
-          <button class="typeform-card-wide" onclick="openModal('sales')">
-            <div class="text-xl mr-2">🤝</div>
-            <div class="font-semibold text-xs text-left">Contact Sales and Marketing Department</div>
-          </button>
-          <button class="typeform-card-wide" onclick="openModal('billing')">
-            <div class="text-xl mr-2">😊</div>
-            <div class="font-semibold text-xs text-left">Contact Billing Department</div>
-          </button>
-          <button class="typeform-card-wide" onclick="openModal('marketing')">
-            <div class="text-xl mr-2">📈</div>
-            <div class="font-semibold text-xs text-left">Contact Customer Service Relations</div>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Adjusted office card row with responsive map -->
-<div class="office-directory">
-  {% for office in site.data.contacts.offices %}
-  <div class="property-card-row{% if forloop.index0 | modulo: 2 == 1 %} reverse{% endif %}">
-    <!-- Map -->
-    <div class="property-image">
-      <div class="map-wrapper">
-        <iframe
-          src="{{ office.map }}"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-    <!-- Details -->
-    <div class="property-info">
-      <h3 class="m-0">{{ office.name }}</h3>
-      <p class="mb-1">{{ office.address }}</p>
-      {% if office.phone1 %}
-      <p class="mb-1">Phone: <a href="tel:{{ office.phone1 }}" class="hover:text-yellow-500">{{ office.phone1 }}</a></p>
-      {% endif %}
-      {% if office.email %}
-      <p>Email: <a href="mailto:{{ office.email }}" class="hover:text-yellow-500">{{ office.email }}</a></p>
-      {% endif %}
-    </div>
-  </div>
-  {% endfor %}
-</div>
-
-  <!-- Modal -->
-  <div id="modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
-    <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md relative">
-      <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-400 hover:text-gray-700">&times;</button>
-      <div id="modal-content">
-        <!-- Dynamic form content goes here -->
-      </div>
-    </div>
-  </div>
-</section>
-
 <style>
-.property-image, .office-image {
-  flex: 1 1 350px;
-  min-width: 300px;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  background: #f3f4f6;
-  /* Remove fixed height if present */
-}
+  .property-image,
+  .office-image {
+    flex: 1 1 600px;
+    min-width: 300px;
+    max-width: 600px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background: #f3f4f6;
+    /* Remove fixed height if present */
+  }
 
-.map-wrapper {
-  width: 100%;
-  height: 100%;
-  min-height: 220px; /* or whatever minimum you want */
-  display: flex;
-}
+  .map-wrapper {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    min-height: 220px;
+    display: flex;
+    margin: 0 auto;
+  }
 
-.map-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 8px;
-  min-height: 220px; /* match min-height above */
-  background: #e5e7eb;
-}
+  .map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3/2;
+    border: 0;
+    border-radius: 8px;
+    min-height: 220px;
+    background: #e5e7eb;
+    max-width: 600px;
+    max-height: 400px;
+    display: block;
+    margin: 0 auto;
+  }
+  /* Responsive map for mobile: 3:4 aspect ratio, max width 100vw */
+  @media (max-width: 639px) {
+    .map-wrapper {
+      max-width: 100vw;
+      height: auto;
+      aspect-ratio: 3/4;
+      min-height: 0;
+    }
+    .map-wrapper iframe {
+      max-width: 100vw;
+      max-height: none;
+      aspect-ratio: 3/4;
+      height: auto;
+      min-height: 220px;
+    }
+  }
 
-.typeform-card-wide {
+  .card-overlay {
+    position: relative;
+    padding-top: 48px;
+    /* space for the icon */
+  }
+
+  .overlay-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 0.08);
+  }
+
+  .custom-contact-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 0.04);
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 340px;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .icon-outer {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 90px;
+    height: 90px;
     display: flex;
     align-items: center;
-    border: 2px solid #16a34a;
-    border-radius: 8px;
-    background: #f9fafb;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s, color 0.2s;
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.03);
-    padding: 0.5rem 1rem;
-    min-height: 48px;
-    min-width: 0;
-    width: 100%;
-    margin: 0;
-    gap: 0.5rem;
-    color: #222;
+    justify-content: center;
+    pointer-events: none;
   }
-  .typeform-card-wide:hover,
-  .typeform-card-wide:focus {
-    border-color: #facc15;
-    background: #f9fafb;
-    color: #222;
+
+  .custom-card-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 0.08);
+    margin: 0;
+  }
+
+  .custom-card-icon {
+    font-size: 2.5rem;
+  }
+
+  .custom-card-header {
+    width: 100%;
+    padding: 2.5rem 0 0.75rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    min-height: 56px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .header-blue {
+    background-color: #2563eb !important;
+  }
+  .header-yellow {
+    background-color: #eab308 !important;
+  }
+  .header-purple {
+    background-color: #9333ea !important;
+  }
+
+  .custom-card-title {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    background: transparent;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .custom-card-body {
+    padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+    text-align: center;
+    flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Responsive grid for cards */
+  @media (max-width: 1023px) {
+    .grid-cols-4 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 639px) {
+
+    .grid-cols-4,
+    .grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .branch-card-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin-bottom: 1.5rem;
+  }
+
+  .branch-card-row.reverse {
+    flex-direction: row-reverse;
   }
 </style>
 
-<script>
-  function openModal(type) {
-    const modal = document.getElementById('modal');
-    const content = document.getElementById('modal-content');
-    let html = '';
-    if (type === 'help') {
-      html = `<h3 class="text-lg font-bold mb-2">Get help using Typeform</h3>
+<section class="pt-24 pb-12 text-gray-800">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- 1. Contact Us Title -->
+    <div class="mb-14">
+      <h1 class="text-4xl font-bold text-[#16a34a]">{{ page.title }}</h1>
+    </div>
+
+    <!-- 2. Contact Cards Section (Stripe-style) -->
+    <div class="mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Sales Card -->
+        <div class="custom-contact-card card-overlay">
+          <div class="icon-outer">
+            <div class="custom-card-icon-wrapper bg-blue-100">
+              <span class="custom-card-icon text-blue-600">🤝</span>
+            </div>
+          </div>
+        <div class="custom-card-header header-blue">
+            <h3 class="custom-card-title">Sales & Marketing</h3>
+          </div>
+          <div class="custom-card-body">
+            <div>
+              <div class="font-semibold mb-1">Landline:</div>
+              <a href="tel:0286175364" class="hover:text-yellow-500 transition-colors duration-300 block">(02)
+                8-617-5364</a>
+            </div>
+            <div>
+              <div class="font-semibold mb-1">Mobile:</div>
+              <a href="tel:639177001109" class="hover:text-yellow-500 transition-colors duration-300 block">(+63)
+                917-7001-109 (GLOBE)</a>
+            </div>
+          </div>
+        </div>
+        <!-- Billing Card -->
+        <div class="custom-contact-card card-overlay">
+          <div class="icon-outer">
+            <div class="custom-card-icon-wrapper bg-yellow-100">
+              <span class="custom-card-icon text-yellow-600">💰</span>
+            </div>
+          </div>
+        <div class="custom-card-header header-yellow">
+            <h3 class="custom-card-title">Billing</h3>
+          </div>
+          <div class="custom-card-body">
+            <div>
+              <div class="font-semibold mb-1">Email:</div>
+              <a href="mailto:inquiry@rcdland.com"
+                class="hover:text-yellow-500 transition-colors duration-300 block">inquiry@rcdland.com</a>
+            </div>
+          </div>
+        </div>
+        <!-- Customer Service Card -->
+        <div class="custom-contact-card card-overlay">
+          <div class="icon-outer">
+            <div class="custom-card-icon-wrapper bg-purple-100">
+              <span class="custom-card-icon text-purple-600">😊</span>
+            </div>
+          </div>
+        <div class="custom-card-header header-purple">
+            <h3 class="custom-card-title">Customer Service</h3>
+          </div>
+          <div class="custom-card-body">
+            <div>
+              <div class="font-semibold mb-1">Landlines:</div>
+              <a href="tel:0288937451" class="hover:text-yellow-500 transition-colors duration-300 block">(02)
+                8-893-7451</a>
+              <a href="tel:0288937452" class="hover:text-yellow-500 transition-colors duration-300 block">(02)
+                8-893-7452</a>
+            </div>
+            <div>
+              <div class="font-semibold mb-1">Phone (Manila):</div>
+              <a href="tel:0284033490" class="hover:text-yellow-500 transition-colors duration-300 block">(02)
+                8-403-3490</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adjusted office card row with responsive map -->
+      <div class="office-directory mt-8">
+        {% for office in site.data.contacts.offices %}
+        <div class="branch-card-row {% if forloop.index0 | modulo: 2 == 1 %} reverse {% endif %}">
+          <div class="property-image map-wrapper">
+            <iframe src="{{ office.map }}" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="property-info">
+            <h3 class="m-0">{{ office.name }}</h3>
+            <p class="mb-1">{{ office.address }}</p>
+            {% if office.phone1 %}
+            <p class="mb-1">Phone: <a href="tel:{{ office.phone1 }}" class="hover:text-yellow-500">{{ office.phone1
+                }}</a>
+            </p>
+            {% endif %}
+            {% if office.phone2 %}
+            <p class="mb-1">Phone: <a href="tel:{{ office.phone2 }}" class="hover:text-yellow-500">{{ office.phone2
+                }}</a>
+            </p>
+            {% endif %}
+            {% if office.email %}
+            <p>Email: <a href="mailto:{{ office.email }}" class="hover:text-yellow-500">{{ office.email }}</a></p>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <script>
+        function openModal(type) {
+          const modal = document.getElementById('modal');
+          const content = document.getElementById('modal-content');
+          let html = '';
+          if (type === 'help') {
+            html = `<h3 class="text-lg font-bold mb-2">Get help using Typeform</h3>
       <form>
         <input class="border p-2 w-full mb-2" placeholder="Your Name" required>
         <input class="border p-2 w-full mb-2" placeholder="Your Email" type="email" required>
         <textarea class="border p-2 w-full mb-2" placeholder="How can we help you?" required></textarea>
         <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
       </form>`;
-    } else if (type === 'sales') {
-      html = `<h3 class="text-lg font-bold mb-2">Contact Sales Team</h3>
+          } else if (type === 'sales') {
+            html = `<h3 class="text-lg font-bold mb-2">Contact Sales Team</h3>
       <form>
         <input class="border p-2 w-full mb-2" placeholder="Your Name" required>
         <input class="border p-2 w-full mb-2" placeholder="Your Email" type="email" required>
@@ -176,8 +314,8 @@ permalink: /contacts/
         <textarea class="border p-2 w-full mb-2" placeholder="Your Inquiry" required></textarea>
         <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
       </form>`;
-    } else if (type === 'billing') {
-      html = `<h3 class="text-lg font-bold mb-2">Contact Billing Team</h3>
+          } else if (type === 'billing') {
+            html = `<h3 class="text-lg font-bold mb-2">Contact Billing Team</h3>
       <form>
         <input class="border p-2 w-full mb-2" placeholder="Your Name" required>
         <input class="border p-2 w-full mb-2" placeholder="Your Email" type="email" required>
@@ -185,8 +323,8 @@ permalink: /contacts/
         <textarea class="border p-2 w-full mb-2" placeholder="Billing Concern" required></textarea>
         <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
       </form>`;
-    } else if (type === 'marketing') {
-      html = `<h3 class="text-lg font-bold mb-2">Contact Marketing & PR</h3>
+          } else if (type === 'marketing') {
+            html = `<h3 class="text-lg font-bold mb-2">Contact Marketing & PR</h3>
       <form>
         <input class="border p-2 w-full mb-2" placeholder="Your Name" required>
         <input class="border p-2 w-full mb-2" placeholder="Your Email" type="email" required>
@@ -194,11 +332,11 @@ permalink: /contacts/
         <textarea class="border p-2 w-full mb-2" placeholder="Your Message" required></textarea>
         <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
       </form>`;
-    }
-    content.innerHTML = html;
-    modal.classList.remove('hidden');
-  }
-  function closeModal() {
-    document.getElementById('modal').classList.add('hidden');
-  }
-</script>
+          }
+          content.innerHTML = html;
+          modal.classList.remove('hidden');
+        }
+        function closeModal() {
+          document.getElementById('modal').classList.add('hidden');
+        }
+      </script>
