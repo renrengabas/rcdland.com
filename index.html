@@ -19,17 +19,19 @@ permalink: /index
     class="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-white hover:bg-yellow-400 transition shadow-lg"
     title="Featured Properties">
     <span class="sr-only">Featured Properties</span>
+    <!-- New icon: Star for Featured Properties -->
     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path d="M12 3v18m9-9H3" />
+      <polygon points="12 2 15 9 22 9.3 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9.3 9 9" stroke-linejoin="round"/>
     </svg>
   </a>
   <a href="#walkthrough"
     class="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-white hover:bg-yellow-400 transition shadow-lg"
     title="Model House Walkthrough">
     <span class="sr-only">Model House Walkthrough</span>
+    <!-- New icon: Eye for Walkthrough -->
     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="10" />
-      <path d="M8 12l2 2 4-4" />
+      <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" />
+      <circle cx="12" cy="12" r="3" />
     </svg>
   </a>
   <a href="#schedule"
@@ -45,9 +47,10 @@ permalink: /index
     class="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-white hover:bg-yellow-400 transition shadow-lg"
     title="Awards">
     <span class="sr-only">Awards</span>
+    <!-- New icon: Trophy for Awards -->
     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <rect x="4" y="4" width="16" height="16" rx="2" />
-      <path d="M8 9h8M8 13h6" />
+      <path d="M8 21h8M12 17v4M7 4v2a5 5 0 0010 0V4" />
+      <path d="M17 4h2a2 2 0 012 2v2a6 6 0 01-6 6h-2a6 6 0 01-6-6V6a2 2 0 012-2h2" />
     </svg>
   </a>
 </nav>
@@ -86,40 +89,55 @@ permalink: /index
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full place-items-center">
         <!-- Card 1 -->
         <div class="bg-white shadow-lg flex flex-col w-full max-w-[520px] min-h-[320px] md:min-h-[380px] items-center">
-          <img src="/assets/img/main-src-imgs/properties-grid/bf-townhomes-2.jpg" alt="RCD BF Homes Parañaque"
-            class="w-full h-56 object-cover mb-4">
+          <span class="card-img-zoom-wrapper"><img src="/assets/img/main-src-imgs/properties-grid/bf-townhomes-2.jpg" alt="RCD BF Homes Parañaque"
+            class="w-full h-56 object-cover mb-4 card-img-zoom"></span>
           <h3 class="text-2xl font-bold mb-1 text-green-700 text-center">RCD BF Homes Parañaque</h3>
           <p class="text-gray-700 mb-4 text-center text-md px-4">Affordable option in a prime location inside the
             largest village of Asia.</p>
           <a href="/properties/rcd-bf-homes-paranaque-new/"
-            class="mb-6 mt-auto inline-block px-2 py-1 bg-green-600 hover:bg-yellow-400 rounded-full text-md text-white transition">Know
-            More</a>
+            class="mb-6 mt-auto inline-flex items-center gap-2 px-2 py-1 bg-green-600 hover:bg-yellow-400 rounded-full text-md text-white transition">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" stroke="white"/>
+              <circle cx="12" cy="12" r="3" stroke="white"/>
+            </svg>
+            See Features
+          </a>
         </div>
         <!-- Card 2 -->
         <div class="bg-white shadow-lg flex flex-col w-full max-w-[520px] min-h-[320px] md:min-h-[380px] items-center">
-          <img src="/assets/img/main-src-imgs/properties-grid/rrh-silang.jpg" alt="RCD Royale Homes Silang"
-            class="w-full h-56 object-cover mb-4">
+          <span class="card-img-zoom-wrapper"><img src="/assets/img/main-src-imgs/properties-grid/rrh-silang.jpg" alt="RCD Royale Homes Silang"
+            class="w-full h-56 object-cover mb-4 card-img-zoom"></span>
           <h3 class="text-2xl font-bold mb-1 text-green-700 text-center">RCD Royale Homes Silang</h3>
           <p class="text-gray-700 mb-4 text-center text-md px-4">Live your suburban dreams in RCD Royale Homes Silang!
           </p>
           <a href="/properties/royale-homes-silang-phase4/"
-            class="mb-6 mt-auto inline-block px-2 py-1 bg-green-600 hover:bg-yellow-400 rounded-full text-md text-white transition">Know
-            More</a>
+            class="mb-6 mt-auto inline-flex items-center gap-2 px-2 py-1 bg-green-600 hover:bg-yellow-400 rounded-full text-md text-white transition">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" stroke="white"/>
+              <circle cx="12" cy="12" r="3" stroke="white"/>
+            </svg>
+            See Features
+          </a>
         </div>
         <!-- Card 3 -->
         <div class="bg-white shadow-lg flex flex-col w-full max-w-[520px] min-h-[320px] md:min-h-[380px] items-center">
-          <img src="/assets/img/main-src-imgs/properties-grid/rrh-tuy.jpg" alt="RCD Royale Homes Tuy"
-            class="w-full h-56 object-cover mb-4">
+          <span class="card-img-zoom-wrapper"><img src="/assets/img/main-src-imgs/properties-grid/rrh-tuy.jpg" alt="RCD Royale Homes Tuy"
+            class="w-full h-56 object-cover mb-4 card-img-zoom"></span>
           <h3 class="text-2xl font-bold mb-1 text-green-700 text-center">RCD Royale Homes Tuy</h3>
           <p class="text-gray-700 mb-4 text-center text-md px-4">Balanced lifestyle for <br>you in Batangas.</p>
           <a href="/properties/rcd-winter-breeze-homes-bulacan/"
-            class="mb-6 mt-auto inline-block px-2 py-1 bg-green-600 hover:bg-yellow-400 rounded-full text-md text-white transition">Know
-            More</a>
+            class="mb-6 mt-auto inline-flex items-center gap-2 px-2 py-1 bg-green-600 hover:bg-yellow-400 rounded-full text-md text-white transition">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" stroke="white"/>
+              <circle cx="12" cy="12" r="3" stroke="white"/>
+            </svg>
+            See Features
+          </a>
         </div>
       </div>
       <div class="flex justify-center items-center gap-4 mt-10">
         <a href="/properties/"
-          class="inline-block px-4 py-3 bg-green-600 hover:bg-yellow-400 rounded-full text-base font-semibold text-white transition">
+          class="inline-block px-10 py-4 bg-yellow-500 hover:bg-green-400 font-bold rounded-full text-2xl font-semibold text-black transition">
           View All Properties
         </a>
       </div>
@@ -136,8 +154,8 @@ permalink: /index
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full place-items-center">
         <!-- Card 1 -->
         <div class="bg-white shadow-lg flex flex-col w-full max-w-[520px] min-h-[320px] md:min-h-[380px] items-center">
-          <img src="/assets/img/main-src-imgs/explore-model/th47.jpg" alt="Townhouse 47"
-            class="w-full h-56 object-cover mb-4">
+          <span class="card-img-zoom-wrapper"><img src="/assets/img/main-src-imgs/explore-model/th47.jpg" alt="Townhouse 47"
+            class="w-full h-56 object-cover mb-4 card-img-zoom"></span>
           <h3 class="text-2xl font-bold mb-1 text-green-700 text-center">Townhouse 47</h3>
           <p class="text-gray-700 mb-4 text-center text-md px-4">Experience our virtual tour of Townhouse 47.</p>
           <a href="/walkthrough/th47/"
@@ -146,8 +164,8 @@ permalink: /index
         </div>
         <!-- Card 2 -->
         <div class="bg-white shadow-lg flex flex-col w-full max-w-[520px] min-h-[320px] md:min-h-[380px] items-center">
-          <img src="/assets/img/main-src-imgs/explore-model/daphne.jpg" alt="Daphne"
-            class="w-full h-56 object-cover mb-4">
+          <span class="card-img-zoom-wrapper"><img src="/assets/img/main-src-imgs/explore-model/daphne.jpg" alt="Daphne"
+            class="w-full h-56 object-cover mb-4 card-img-zoom"></span>
           <h3 class="text-2xl font-bold mb-1 text-green-700 text-center">Daphne</h3>
           <p class="text-gray-700 mb-4 text-center text-md px-4">Take a virtual walkthrough of our Daphne model.</p>
           <a href="/walkthrough/daphne/"
@@ -156,8 +174,8 @@ permalink: /index
         </div>
         <!-- Card 3 -->
         <div class="bg-white shadow-lg flex flex-col w-full w-[320px] min-h-[320px] md:min-h-[380px] items-center">
-          <img src="/assets/img/main-src-imgs/explore-model/th65.jpg" alt="Townhouse 65"
-            class="w-full h-56 object-cover mb-4">
+          <span class="card-img-zoom-wrapper"><img src="/assets/img/main-src-imgs/explore-model/th65.jpg" alt="Townhouse 65"
+            class="w-full h-56 object-cover mb-4 card-img-zoom"></span>
           <h3 class="text-2xl font-bold mb-1 text-green-700 text-center">Townhouse 65</h3>
           <p class="text-gray-700 mb-4 text-center text-md px-4">Discover the spacious Townhouse 65 in 3D.</p>
           <a href="#"
@@ -202,31 +220,28 @@ permalink: /index
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
         <!-- Card 1 -->
         <div class="bg-white shadow-lg flex flex-col w-full max-w-[520px] min-h-[320px] md:min-h-[380px] items-center">
-          <img src="/assets/img/main-src-imgs/post-2.jpg" alt="EY Entrepreneur of the Year Finalist 2015"
-            class="w-full h-56 object-cover object-top mb-4">
+          <span class="card-img-zoom-wrapper"><img src="/assets/img/main-src-imgs/post-2.jpg" alt="EY Entrepreneur of the Year Finalist 2015"
+            class="w-full h-56 object-cover object-top mb-4 card-img-zoom"></span>
           <h3 class="text-2xl font-bold mb-1 text-green-700 text-center">EY Entrepreneur of the Year Finalist 2015</h3>
-          <p class="text-gray-700 mb-2 text-center text-md px-4">Recognized for excellence in entrepreneurship.</p>
           <a href="/whats-new/subpages-news/ey_entrepreneurship_of_the_yr"
             class="mb-6 mt-auto inline-block px-2 py-1 bg-green-600 hover:bg-yellow-400 rounded-full text-md text-white transition">Know
             More</a>
         </div>
         <!-- Card 2 -->
         <div class="bg-white shadow-lg flex flex-col w-full max-w-[520px] min-h-[320px] md:min-h-[380px] items-center">
-          <img src="/assets/img/main-src-imgs/post-5.jpg" alt="APEA Entrepreneurship Award 2016"
-            class="w-full h-56 object-cover object-top mb-4">
+          <span class="card-img-zoom-wrapper"><img src="/assets/img/main-src-imgs/post-5.jpg" alt="APEA Entrepreneurship Award 2016"
+            class="w-full h-56 object-cover object-top mb-4 card-img-zoom"></span>
           <h3 class="text-2xl font-bold mb-1 text-green-700 text-center">APEA Entrepreneurship Award 2016</h3>
-          <p class="text-gray-700 mb-2 text-center text-md px-4">Awarded at the Asia Pacific Entrepreneurship Awards.
-          </p>
+
           <a href="/whats-new/subpages-news/asia_pacific_entrepreneurship"
             class="mb-6 mt-auto inline-block px-2 py-1 bg-green-600 hover:bg-yellow-400 rounded-full text-md text-white transition">Know
             More</a>
         </div>
         <!-- Card 3 -->
         <div class="bg-white shadow-lg flex flex-col w-full max-w-[520px] min-h-[320px] md:min-h-[380px] items-center">
-          <img src="/assets/img/main-src-imgs/post-7.jpg" alt="Asia CEO Awards 2018"
-            class="w-full h-56 object-cover object-top mb-4">
+          <span class="card-img-zoom-wrapper"><img src="/assets/img/main-src-imgs/post-7.jpg" alt="Asia CEO Awards 2018"
+            class="w-full h-56 object-cover object-top mb-4 card-img-zoom"></span>
           <h3 class="text-2xl font-bold mb-1 text-green-700 text-center">Asia CEO Awards 2018</h3>
-          <p class="text-gray-700 mb-2 text-center text-md px-4">Honored at the Asia CEO Awards 2018.</p>
           <a href="/whats-new/subpages-news/asia_ceo_awards"
             class="mb-6 mt-auto inline-block px-2 py-1 bg-green-600 hover:bg-yellow-400 rounded-full text-md text-white transition">Know
             More</a>
@@ -308,5 +323,22 @@ permalink: /index
     .md\:h-24 {
       height: 28px !important;
     }
+  }
+
+  /* Card image zoom on hover for featured, walkthrough, and awards */
+  .card-img-zoom {
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    will-change: transform;
+  }
+  .card-img-zoom-wrapper {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 14rem; /* h-56 = 224px = 14rem */
+    border-radius: 0.5rem;
+  }
+  .card-img-zoom-wrapper:hover .card-img-zoom,
+  .card-img-zoom-wrapper:focus .card-img-zoom {
+    transform: scale(1.08);
   }
 </style>
