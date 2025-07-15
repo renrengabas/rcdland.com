@@ -287,6 +287,19 @@ permalink: /contacts/
             {% if office.email %}
             <p>Email: <a href="mailto:{{ office.email }}" class="hover:text-yellow-500">{{ office.email }}</a></p>
             {% endif %}
+
+            
+            <div class="mb-1">
+          <h4 class="mb-1 flex items-center font-semibold text-base">
+            <svg class="w-5 h-5 text-white mt-1 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+            </svg>
+            Business Hours
+          </h4>
+          <p class="leading-tight">Mon-Thu 8am-6pm</p>
+          <p class="leading-tight">Fri 8am-5pm</p>
+        </div>
+
           </div>
         </div>
         {% endfor %}
