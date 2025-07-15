@@ -1,52 +1,30 @@
 <!-- Footer -->
-<footer class="bg-gray-200 py-6 text-sm">
-  <div class="container mx-auto px-4 max-w-5xl">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-start">
+<footer class="bg-gray-200 py-6 pt-12 text-sm relative overflow-hidden">
+  <div class="container mx-auto px-4 max-w-5xl relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-start">
       <!-- Company Info -->
       <div class="bg-transparent">
         <h3 class="font-bold text-2xl mb-1">RCD LAND, INC.</h3>
         <p class="mb-6 leading-tight">RCD Land, Inc. is a real estate development company who makes your dream home come to life. Building Quality Homes Since 1987</p>
-        <div class="mb-1">
-          <h4 class="mb-1 flex items-center font-semibold text-base">
-            <svg class="w-5 h-5 text-white mt-1 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
-            </svg>
-            Business Hours
-          </h4>
-          <p class="leading-tight">Mon-Thu 8am-6pm</p>
-          <p class="leading-tight">Fri 8am-5pm</p>
-        </div>
       </div>
 
       <!-- Top Links (Upper Mid Box) -->
       <div class="bg-transparent flex flex-col items-center">
-        <h3 class="font-bold text-base mb-1">Top Links</h3>
+        
+        <h3 class="font-bold text-base mb-1">Useful Links</h3>
         <ul class="space-y-0.5 text-center">
-          <li><a href="/" class="hover:text-yellow-500 transition-colors duration-300">Home</a></li>
-          <li><a href="/properties/" class="hover:text-yellow-500 transition-colors duration-300">Featured Properties</a></li>
-          <li><a href="/whats-new/" class="hover:text-yellow-500 transition-colors duration-300">Latest News</a></li>
-          <li><a href="/contact-us/" class="hover:text-yellow-500 transition-colors duration-300">Contact Us</a></li>
+          <li><a href="/construction-updates/" class="hover:text-yellow-500 transition-colors duration-300">Construction Updates</a></li>
           <li><a href="/house-catalogue/" class="hover:text-yellow-500 transition-colors duration-300">House Catalogue</a></li>
-          <li><a href="/walkthrough/" class="hover:text-yellow-500 transition-colors duration-300">Walkthroughs</a></li>
+          <li><a href="/privacy-policy/" class="hover:text-yellow-500 transition-colors duration-300">Privacy Policy</a></li>
+          <li><a href="/careers/" class="hover:text-yellow-500 transition-colors duration-300">Careers</a></li>
+          <li><a href="/faqs/" class="hover:text-yellow-500 transition-colors duration-300">FAQs</a></li>
+
         </ul>
       </div>
 
       <!-- Useful Links (Far Right Box) -->
       <div class="bg-transparent flex flex-col items-end md:items-start">
-        <h3 class="font-bold text-base mb-1">Useful Links</h3>
         <ul class="space-y-0.5 text-right md:text-left">
-          <li><a href="/about/" class="hover:text-yellow-500 transition-colors duration-300">About Us</a></li>
-          <li><a href="/whats-new/" class="hover:text-yellow-500 transition-colors duration-300">Events</a></li>
-          <li><a href="/faqs/" class="hover:text-yellow-500 transition-colors duration-300">FAQs</a></li>
-          <li><a href="/careers/" class="hover:text-yellow-500 transition-colors duration-300">Careers</a></li>
-          <li><a href="/blog/" class="hover:text-yellow-500 transition-colors duration-300">Blog</a></li>          
-          <li><a href="/guides/" class="hover:text-yellow-500 transition-colors duration-300">Buyer's Guide</a></li>
-          <li><a href="/sellers/" class="hover:text-yellow-500 transition-colors duration-300">Seller's Guide</a></li>
-          <li><a href="/sitemap/" class="hover:text-yellow-500 transition-colors duration-300">Sitemap</a></li>          
-          <li><a href="/testimonials/" class="hover:text-yellow-500 transition-colors duration-300">Testimonials</a></li>
-          <li><a href="/virtual-tours/" class="hover:text-yellow-500 transition-colors duration-300">Virtual Tours</a></li>
-          <li><a href="/privacy-policy/" class="hover:text-yellow-500 transition-colors duration-300">Privacy Policy</a></li>
-          <li><a href="/construction-updates/" class="hover:text-yellow-500 transition-colors duration-300">Construction Updates</a></li>
         </ul>
       </div>
     </div>
@@ -60,9 +38,9 @@
       <p class="mt-1 mb-2">&copy; 2025 RCD LAND, INC. All Rights Reserved.</p>
     </div>
   </div>
-  <div class="absolute inset-0 z-0">
-    <img src="/assets/img/footerbg.jpg" alt="Footer Background" class="w-full h-full object-cover object-top opacity-95" style="pointer-events:none;user-select:none;" />
-    <div style="position:absolute;inset:0;background:linear-gradient(100deg,#0a4d2c 50%,#1b7a3a 50%);opacity:0.04;"></div>
+  <div class="pointer-events-none select-none absolute inset-0 z-0">
+    <img src="/assets/img/footerbg.jpg" alt="Footer Background" class="w-full h-full object-cover object-top opacity-100" />
+    <div style="position:absolute;inset:0;background:linear-gradient(5deg,#0a421e 100%,#14532d 100%);opacity:0.01;"></div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </footer>

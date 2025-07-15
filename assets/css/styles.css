@@ -632,3 +632,36 @@
     object-fit: contain;
   }
 }
+
+footer {
+    position: relative;
+    color: #fff !important;
+    background: none !important;
+  }
+  footer .container {
+    position: relative;
+    z-index: 2;
+  }
+  footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(120deg, #0a4d2c 60%, #1b7a3a 100%);
+    opacity: 0.92;
+  }
+  footer * {
+    color: #fff !important;
+    transition: color 0.2s;
+  }
+  footer a:hover, footer a:focus {
+    color: #ffe066 !important;
+  }
+  /* Social icons */
+  footer .w-5.h-5 {
+    fill: #fff;
+    transition: fill 0.2s;
+  }
+  footer a:hover .w-5.h-5, footer a:focus .w-5.h-5 {
+    fill: #ffe066;
+  }
