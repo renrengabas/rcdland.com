@@ -158,77 +158,12 @@ permalink: /guides/
 
 <div class="w-full py-3 mb-4">
   <div class="text-center">
-    <button
-      type="button"
-      class="application-form inline-flex items-center gap-2 bg-green-600 hover:bg-yellow-400 text-white text-[17px] font-semibold py-4 px-12 rounded-lg shadow transition-all duration-200"
-      onclick="document.getElementById('buyerModal').classList.remove('hidden')"
+    <a
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@rcdland.com&su=Buyer%20Inquiry"
+      class="inline-flex items-center gap-2 bg-green-600 hover:bg-yellow-400 text-white text-[17px] font-semibold py-4 px-12 rounded-lg shadow transition-all duration-200"
     >
       <i class="fa fa-file-text" aria-hidden="true"></i>
-      Buyer's Application
-    </button>
+      Start a Conversation
+    </a>
   </div>
 </div>
-
-<!-- Buyer's Application Modal -->
-<div id="buyerModal" class="hidden fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
-  <div class="bg-white rounded-lg shadow p-8 max-w-lg w-full relative">
-    <!-- X Button -->
-    <button
-      class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl font-bold"
-      onclick="document.getElementById('buyerModal').classList.add('hidden')"
-      aria-label="Close"
-      type="button"
-    >
-      &times;
-    </button>
-    <h2 class="text-2xl font-bold mb-4">Buyer's Application</h2>
-    <!-- Example Form -->
-    <form>
-      <div class="mb-4">
-        <label class="block text-sm font-medium mb-1">First Name:</label>
-        <input type="text"
-          class="w-full border rounded px-3 py-2"
-          required
-          placeholder="Enter First name here">
-      </div>
-      <div class="mb-4">
-        <label class="block text-sm font-medium mb-1">Last Name:</label>
-        <input type="text"
-          class="w-full border rounded px-3 py-2"
-          required
-          placeholder="Enter Last name here">
-      </div>
-      <div class="mb-4">
-        <label class="block text-sm font-medium mb-1">E-mail Address:</label>
-        <input type="email" 
-          class="w-full border rounded px-3 py-2"
-          required
-          placeholder="Enter your E-mail address here">
-      </div>
-      <div class="mb-4">
-        <label class="block text-sm font-medium mb-1">Address:</label>
-        <input type="address" 
-          class="w-full border rounded px-3 py-2"
-          required
-          placeholder="Enter your Address here">
-      </div>
-      <div class="mb-4">
-        <label class="block text-sm font-medium mb-1">Contact Number:</label>
-        <input type="contact number" 
-          class="w-full border rounded px-3 py-2"
-          required
-          placeholder="Enter your Contact number here">
-      </div>
-      <div class="mb-4">
-        <label class="block text-sm font-medium mb-1">Note:</label>
-        <textarea 
-          class="w-full border rounded px-3 py-2"
-          rows="3"
-          placeholder="Type your message here"></textarea>
-      </div>
-      <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Submit</button>
-    </form>
-  </div>
-</div>
-</body>
-</html>
