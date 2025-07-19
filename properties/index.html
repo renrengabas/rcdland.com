@@ -5,660 +5,822 @@ permalink: /properties/
 ---
 
 <style>
-    .properties-section {
-        margin-top: 81px;
-        padding: 40px 0;
-        background: #fff;
+  .properties-section {
+    margin-top: 81px;
+    padding: 40px 0;
+    background: #fff;
+  }
+  .property-card-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+  }
+  .property-card-row.reverse {
+    flex-direction: row-reverse;
+  }
+  .property-card-row.last {
+    margin-bottom: 100px !important;
+  }
+  .property-image-col {
+    width: 420px;
+    max-width: 48vw;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    display: flex;
+    align-items: stretch;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+  }
+  .property-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 18px;
+    background: transparent;
+    box-shadow: none;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .property-image-col:hover .property-image,
+  .property-image-col:focus-within .property-image {
+    transform: scale(1.08);
+  }
+  .property-info {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .property-info h3 {
+    margin: 0 0 14px 0;
+    color: #16a34a;
+    font-size: 2.3rem;
+    font-weight: 550;
+    line-height: 1.13;
+    letter-spacing: -1px;
+    margin-bottom:  30px;
+  }
+  .price-pill {
+    margin-bottom: 22px;
+    display: inline-block;
+    border: 2px solid #f7c940;
+    border-radius: 30px;
+    padding: 8px 28px;
+    color: #222;
+    background: #fff;
+    font-weight: 500;
+    font-size: 1.09rem;
+    letter-spacing: 0.02em;
+  }
+  .property-info p {
+    color: #374151;
+    font-size: 1.06rem;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  .amenities-section {
+    margin-bottom: 10px;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .amenities-section strong {
+    display: block;
+    font-weight: 700;
+    font-size: 1.08rem;
+    margin-bottom: 2px;
+    color: #222;
+    letter-spacing: 0.01em;
+  }
+  .amenities-icons-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .amenity-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+    flex: 0 0 auto;
+    max-width: 110px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 0 4px;
+  }
+  .amenity-icon img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-bottom: 5px;
+  }
+  .amenity-label {
+    font-size: 0.97em;
+    color: #222;
+    margin-top: 2px;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    white-space: normal;
+    padding: 0 2px;
+    width: 100%;
+    max-width: 110px;
+  }
+  @media (max-width: 1300px) {
+    .max-w-7xl {
+      max-width: 98vw;
     }
-
-    /* ==================== Layout: Property Rows ==================== */
-
     .property-card-row {
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 120px;
+      gap: 24px;
     }
-
-    .property-card-row:last-child {
-        margin-bottom: 0;
+    .amenities-icons-row {
+      gap: 1.5em;
     }
-
+  }
+  @media (max-width: 1100px) {
+    .property-card-row,
     .property-card-row.reverse {
-        flex-direction: row-reverse;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
     }
-
-    /* ==================== Property Image ==================== */
-
-    .property-image,
-    .property-card-row .property-image {
-        display: inline-flex;
-        align-items: stretch;
-        justify-content: center;
-        background: #fff;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        margin: 0 12px;
-        padding: 0;
-        border-radius: 12px;
-        max-width: 100%;
+    .property-image-col {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 18px;
+      border-radius: 18px;
     }
-
-    .property-image img {
-        display: block;
-        max-width: 100%;
-        max-height: 500px;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-        border-radius: 12px;
-        background: #fff;
-        transition: transform 0.3s ease;
+    .property-image {
+      border-radius: 18px;
     }
-
-    .property-image:hover img {
-        transform: scale(1.08);
+  }
+  @media (max-width: 900px) {
+    .properties-section {
+      padding: 16px 0;
     }
-
-    /* ==================== Property Info ==================== */
-
-    .property-info {
-        flex: 1 1 220px;
-        min-width: 220px;
-        max-width: 35%;
-        padding: 0 24px;
-        margin: 0 12px;
-        position: relative;
-        height: 500px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+    .property-card-row {
+      margin-bottom: 70px;
     }
-
     .property-info h3 {
-        color: #16a34a;
-        font-size: 2rem;
-        font-weight: 550;
-        margin-bottom: 8px;
+      font-size: 1.55rem;
     }
-
-    .property-info p {
-        color: #374151;
-        font-size: 1rem;
-        margin-bottom: 16px;
+    .price-pill {
+      font-size: 1.01rem;
+      padding: 7px 18px;
     }
-
-    /* Amenities image */
-    .property-info img[alt="Amenities"] {
-        width: 100%;
-        max-width: 440px;
-        height: auto;
-        object-fit: contain;
-        border-radius: 8px;
-        display: block;
-        margin: 16px auto;
-        filter: grayscale(100%);
-    }
-
-    /* ==================== Buttons ==================== */
-
     .know-more-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 24px;
-        font-size: 0.95rem;
-        font-weight: 600;
-        color: #fff;
-        background: #16a34a;
-        border-radius: 6px;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-top: auto;
-        align-self: flex-start;
-        width: fit-content;
-        transition: background 0.2s, color 0.2s;
+      padding: 10px 18px;
+      font-size: 1rem;
+      margin-top: 26px;
     }
-
-    .know-more-btn:hover {
-        background: #f7c940;
-        color: #fff;
+    .amenity-label {
+      font-size: 0.92em;
     }
-
-    .know-more-btn svg {
-        width: 20px;
-        height: 20px;
-        color: #fff;
+    .amenity-icon img {
+      width: 32px;
+      height: 32px;
     }
-
-    /* ==================== Utility Classes ==================== */
-
-    .flex {
-        display: flex;
+  }
+  @media (max-width: 700px) {
+    .max-w-7xl,
+    .max-w-5xl {
+      max-width: 100vw !important;
+      padding: 0 !important;
     }
-
-    .items-center {
-        align-items: center;
+    .properties-section {
+      padding: 7vw 0 5vw 0;
+      margin-top: 50px;
     }
-
-    .space-x-4> :not([hidden])~ :not([hidden]) {
-        margin-left: 1rem;
+    .property-card-row {
+      margin-bottom: 40px;
+      flex-direction: column !important;
+      gap: 0;
     }
-
-    .m-0 {
-        margin: 0;
+    .property-image-col {
+      width: 100%;
+      max-width: 100vw;
+      margin-bottom: 10px;
+      min-width: 0;
+      border-radius: 13px;
+      box-shadow: none;
+      background: transparent;
+      padding: 0;
+      display: flex;
+      align-items: stretch;
     }
-
-    .mb-2 {
-        margin-bottom: 0.5rem;
+    .property-image {
+      width: 100%;
+      min-width: 0;
+      max-width: 100vw;
+      height: 54vw;
+      min-height: 180px;
+      max-height: 300px;
+      border-radius: 13px;
+      object-fit: cover;
+      margin: 0;
+      box-shadow: none;
+      background: transparent;
+      display: block;
     }
-
-    /* ==================== Responsive Styles ==================== */
-
-    @media (max-width: 1100px) {
-
-        .property-card-row,
-        .property-card-row.reverse {
-            flex-direction: column;
-            align-items: stretch;
-        }
-
-        .property-image,
-        .property-card-row .property-image {
-            width: 100%;
-            min-width: 0;
-            max-width: 100%;
-            height: 260px;
-            margin: 0 0 16px 0;
-        }
-
-        .property-info {
-            max-width: 100%;
-            min-width: 0;
-            margin: 0 0 16px 0;
-            height: auto;
-        }
-
-        .know-more-btn {
-            font-size: 0.95rem;
-            padding: 12px 24px;
-            margin-top: 24px;
-            width: fit-content;
-        }
+    .property-info {
+      padding: 0 14px;
     }
-
-    @media (min-width: 700px) and (max-width: 1100px) {
-
-        .property-image,
-        .property-card-row .property-image {
-            width: 100%;
-            height: 320px;
-            min-width: 0;
-            max-width: 100%;
-            margin: 0 0 16px 0;
-            border-radius: 12px;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .property-image img {
-            width: 100%;
-            height: 100%;
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
-            background: #fff;
-            transition: transform 0.3s ease;
-        }
+    .property-info h3 {
+      font-size: 1.1rem;
     }
-
-    @media (max-width: 700px) {
-        .properties-section {
-            padding: 20px 0;
-        }
-
-        .property-image,
-        .property-card-row .property-image {
-            width: 100%;
-            height: auto;
-            min-width: 0;
-            max-width: 100%;
-            margin: 0 0 16px 0;
-            border-radius: 12px;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .property-image img {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-
-        .property-info {
-            height: auto;
-        }
-
-        .property-info h3 {
-            font-size: 1.2rem;
-        }
-
-        .property-info p {
-            font-size: 0.95rem;
-        }
-
-        .know-more-btn {
-            font-size: 0.85rem;
-            padding: 10px 16px;
-            margin-top: 24px;
-            width: fit-content;
-        }
-
-        .property-info img[alt="Amenities"] {
-            max-width: 160px;
-        }
+    .price-pill {
+      font-size: 0.93rem;
+      padding: 6px 13px;
     }
+    .amenities-icons-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1em 0.6em;
+      justify-items: center;
+      align-items: start;
+    }
+    .amenity-icon {
+      flex: none;
+      max-width: 100%;
+      min-width: 0;
+      width: 100%;
+      margin-bottom: 4px;
+      padding: 0 4px;
+    }
+    .amenity-icon img {
+      width: 28px;
+      height: 28px;
+    }
+    .amenity-label {
+      font-size: 0.98em;
+      max-width: 100%;
+      padding: 0 2px;
+      white-space: normal;
+    }
+    .know-more-btn {
+      padding: 8px 10px;
+      font-size: 0.88rem;
+      margin-top: 22px;
+    }
+    .mb-16 {
+      margin-bottom: 20px !important;
+    }
+    .w-1.5.h-28 {
+      display: none !important;
+    }
+    .text-4xl {
+      font-size: 1.2rem !important;
+    }
+    .text-lg {
+      font-size: 0.96rem !important;
+    }
+  }
+  @media (max-width: 480px) {
+    .property-info h3 {
+      font-size: 0.98rem;
+    }
+    .price-pill {
+      font-size: 0.83rem;
+      padding: 5px 9px;
+    }
+    .know-more-btn {
+      padding: 6px 6px;
+      font-size: 0.83rem;
+      margin-top: 14px;
+    }
+    .amenities-icons-row {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.6em 0.3em;
+    }
+    .amenity-icon img {
+      width: 20px;
+      height: 20px;
+    }
+    .amenity-label {
+      font-size: 0.95em;
+      max-width: 100%;
+      padding: 0 1px;
+    }
+    .amenity-icon {
+      max-width: 100%;
+      margin-bottom: 4px;
+      padding: 0 2px;
+    }
+    .property-image {
+      min-height: 120px;
+      height: 36vw;
+      max-height: 180px;
+      border-radius: 10px;
+    }
+    .property-image-col {
+      border-radius: 10px;
+    }
+  }
+  .know-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 34px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    background: #16a34a;
+    border-radius: 7px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 26px;
+    align-self: flex-start;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.09);
+  }
+  .know-more-btn:hover,
+  .know-more-btn:focus {
+    background: #f7c940;
+    color: #fff;
+  }
+  .know-more-btn svg {
+    width: 22px;
+    height: 22px;
+  }
 </style>
 
-<section class="properties-section">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="mb-12 flex items-start space-x-4 max-w-5xl">
-            <div class="w-1 h-28 bg-green-500"></div>
-            <div>
-                <h2 class="text-4xl font-semibold text-gray-800">Our Amazing Properties</h2>
-                <p class="text-gray-600 text-base mt-1 mb- max-w-2xl">
-                    Find your perfect home within striking distance of the metro's bustling business and
-                    commercial centers at RCD Home's Exclusive Properties.
-                </p>
-            </div>
-        </div>
-
-        <!-- Card 1 -->
-        <div class="property-card-row">
-            <div class="property-image">
-                <img src="../assets/img/ourproperties/phase4-sideview.jpg" alt="Royale Homes Phase 4 Silang, Cavite" />
-            </div>
-            <div class="property-info">
-                <h3 class="m-0">Royale Homes Phase 4 Silang, Cavite</h3>
-                <p class="text-lg font-medium text-black border-2 border-yellow-500 rounded-full px-4 py-1 inline-block mt-2 bg-white"
-                    style="width: fit-content; box-shadow: none;">
-                    PRICE STARTS AT ₱ 5.5M
-                </p>
-                <p>Discover the cool serenity of RCD Royale Homes Silang Phase 4!</p>
-                <div class="text-sm text-gray-700 mb-2">
-                    <strong>AMENITIES</strong>
-                    <ul
-                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
-                        <li>Gate & Guard House</li>
-                        <li>Clubhouse</li>
-                        <li>BasketBall Court</li>
-                        <li>Swimming Pool</li>
-                    </ul>
-                    <img src="../assets/img/ourproperties/amenities/GCBS.jpg" alt="Amenities">
-
-                </div>
-                <a href="{{ '/properties/royale-homes-silang-phase4/' | relative_url }}" class="know-more-btn m-0">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
-                        <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    KNOW MORE
-                </a>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="property-card-row reverse">
-            <div class="property-image">
-                <img src="../assets/img/ourproperties/rrh-balayan.jpg" alt="Royale Homes Balayan, Batangas" />
-            </div>
-            <div class="property-info">
-                <h3 class="m-0">Royale Homes Balayan, Batangas</h3>
-                <p class="text-lg font-medium text-black border-2 border-yellow-500 rounded-full px-4 py-1 inline-block mt-2 bg-white"
-                    style="width: fit-content; box-shadow: none;">
-                    PRICE STARTS AT ₱ 1.3M
-                </p>
-                <p>RCD Royale Homes Balayan is an 80,141 sqm subdivision which has a total of 509 saleable units.</p>
-                <div class="text-sm text-gray-700 mb-2">
-                    <strong>AMENITIES</strong>
-                    <ul
-                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
-                        <li>Gate & Guard House</li>
-                        <li>Clubhouse</li>
-                        <li>BasketBall Court</li>
-                        <li>Swimming Pool</li>
-                    </ul>
-                    <img src="../assets/img/ourproperties/amenities/GCBS.jpg" alt="Amenities">
-
-                </div>
-                <a href="{{ '/properties/royale-homes-balayan-batangas/' | relative_url }}" class="know-more-btn m-0">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
-                        <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    KNOW MORE
-                </a>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="property-card-row">
-            <div class="property-image">
-                <img src="../assets/img/ourproperties/bf-townhomes-2.jpg" alt="RCD BF Homes Paranaque City" />
-            </div>
-            <div class="property-info">
-                <h3 class="m-0">RCD BF Homes Paranaque City</h3>
-                <p class="text-lg font-medium text-black border-2 border-yellow-500 rounded-full px-4 py-1 inline-block mt-2 bg-white"
-                    style="width: fit-content; box-shadow: none;">
-                    PRICE STARTS AT ₱ 8.8M
-                </p>
-                <p>Inside the largest village of Asia, RCD BF Homes Parañaque is your affordable option in this
-                    prime location.</p>
-                <div class="text-sm text-gray-700 mb-2">
-                    <strong>AMENITIES</strong>
-                    <ul
-                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
-                        <li>Gate</li>
-                        <li>Parking</li>
-
-                    </ul>
-                    <img src="../assets/img/ourproperties/amenities/GP.jpg" alt="Amenities">
-                </div>
-                <a href="{{ '/properties/rcd-bf-homes-paranaque/' | relative_url }}" class="know-more-btn m-0">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
-                        <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    KNOW MORE
-                </a>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="property-card-row reverse">
-            <div class="property-image">
-                <img src="../assets/img/ourproperties/rrh-silang.jpg" alt="Royale Homes Silang, Cavite" />
-            </div>
-            <div class="property-info">
-                <h3 class="m-0">Royale Homes Phase 3 Silang, Cavite</h3>
-                <p class="text-lg font-medium text-black border-2 border-yellow-500 rounded-full px-4 py-1 inline-block mt-2 bg-white"
-                    style="width: fit-content; box-shadow: none;">
-                    PRICE STARTS AT ₱ 3.6M
-                </p>
-                <p>Live your suburban dreams in RCD Royale Homes Silang!</p>
-                <div class="text-sm text-gray-700 mb-2">
-                    <strong>AMENITIES</strong>
-                    <ul
-                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
-                        <li>Gate & Guard House</li>
-                        <li>Clubhouse</li>
-                        <li>BasketBall Court</li>
-                        <li>Swimming Pool</li>
-                    </ul>
-                    <img src="../assets/img/ourproperties/amenities/GCBS.jpg" alt="Amenities">
-                </div>
-                <a href="{{'/properties/royale-homes-silang-phase3' | relative_url }}" class="know-more-btn m-0">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
-                        <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    KNOW MORE
-                </a>
-            </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="property-card-row">
-            <div class="property-image">
-                <img src="../assets/img/ourproperties/rrh-tuy.jpg" alt="Royale Homes Tuy, Batangas" />
-            </div>
-            <div class="property-info">
-                <h3 class="m-0">Royale Homes Tuy, Batangas</h3>
-                <p class="text-lg font-medium text-black border-2 border-yellow-500 rounded-full px-4 py-1 inline-block mt-2 bg-white"
-                    style="width: fit-content; box-shadow: none;">
-                    PRICE STARTS AT ₱ 1.3M
-                </p>
-                <p>Your adventure awaits in RCD Royale Homes Tuy! With famous beaches and hiking spots...</p>
-                <div class="text-sm text-gray-700 mb-2">
-                    <strong>AMENITIES</strong>
-                    <ul
-                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
-                        <li>Gate & Guard House</li>
-                        <li>Clubhouse</li>
-                        <li>BasketBall Court</li>
-                        <li>Swimming Pool</li>
-                    </ul>
-                    <img src="../assets/img/ourproperties/amenities/GCBS.jpg" alt="Amenities">
-                </div>
-                <a href="{{'/properties/royale-homes-tuy-batangas/' | relative_url }}" class="know-more-btn m-0">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
-                        <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    KNOW MORE
-                </a>
-            </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="property-card-row reverse">
-            <div class="property-image">
-                <img src="../assets/img/ourproperties/rrh-nor.jpg" alt="Royale Homes Norzagaray, Bulacan" />
-            </div>
-            <div class="property-info">
-                <h3 class="m-0">Royale Homes Norzagaray, Bulacan</h3>
-                <p class="text-lg font-medium text-black border-2 border-yellow-500 rounded-full px-4 py-1 inline-block mt-2 bg-white"
-                    style="width: fit-content; box-shadow: none;">
-                    PRICE STARTS AT ₱ 1.3M
-                </p>
-                <p>For that balanced lifestyle, RCD Royale Homes Bulacan is the best choice for you!</p>
-                <div class="text-sm text-gray-700 mb-2">
-                    <strong>AMENITIES</strong>
-                    <ul
-                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
-                        <li>Gate & Guard House</li>
-                        <li>Clubhouse</li>
-                        <li>BasketBall Court</li>
-                        <li>Swimming Pool</li>
-                    </ul>
-                    <img src="../assets/img/ourproperties/amenities/GCBS.jpg" alt="Amenities">
-                </div>
-                <a href="{{'/properties/royale-homes-norzagaray/' | relative_url }}" class="know-more-btn m-0">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
-                        <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    KNOW MORE
-                </a>
-            </div>
-        </div>
-
-        <!-- Card 7 -->
-        <div class="property-card-row">
-            <div class="property-image">
-                <img src="../assets/img/ourproperties/rrh-bat.jpg" alt="Royale Homes Mariveles, Bataan" />
-            </div>
-            <div class="property-info">
-                <h3 class="m-0">Royale Homes Mariveles, Bataan</h3>
-                <p class="text-lg font-medium text-black border-2 border-yellow-500 rounded-full px-4 py-1 inline-block mt-2 bg-white"
-                    style="width: fit-content; box-shadow: none;">
-                    PRICE STARTS AT ₱ 1.3M
-                </p>
-                <p>RCD Royale Homes Bataan is a gated subdivision which offers 613 units of quality and affordable
-                    homes in a peaceful and tranquil community.</p>
-                <div class="text-sm text-gray-700 mb-2">
-                    <strong>AMENITIES</strong>
-                    <ul
-                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
-                        <li>Gate & Guard House</li>
-                        <li>Clubhouse</li>
-                        <li>BasketBall Court</li>
-                        <li>Swimming Pool</li>
-                    </ul>
-                    <img src="../assets/img/ourproperties/amenities/GCBS.jpg" alt="Amenities">
-                </div>
-                <a href="{{'/properties/royale-homes-mariveles-bataan/' | relative_url }}" class="know-more-btn m-0">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
-                        <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    KNOW MORE
-                </a>
-            </div>
-        </div>
-
-        <!-- Card 8 -->
-        <div class="property-card-row reverse">
-            <div class="property-image">
-                <img src="../assets/img/ourproperties/villas-trece.jpg" alt="Villas De Trece Martires, Cavite" />
-            </div>
-            <div class="property-info">
-                <h3 class="m-0">Villas De Trece Martires, Cavite</h3>
-                <p class="text-lg font-medium text-black border-2 border-yellow-500 rounded-full px-4 py-1 inline-block mt-2 bg-white"
-                    style="width: fit-content; box-shadow: none;">
-                    PRICE STARTS AT ₱ 1.8M
-                </p>
-                <p>Villas De Trece offers our homeowners to experience a suburban living but still accessible to the
-                    daily essentials of its people.</p>
-                <div class="text-sm text-gray-700 mb-2">
-                    <strong>AMENITIES</strong>
-                    <ul
-                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
-                        <li>Guardhouse</li>
-                        <li>Clubhouse</li>
-                        <li>Basketball Court</li>
-                    </ul>
-                    <img src="../assets/img/ourproperties/amenities/GCB.jpg" alt="Amenities">
-                </div>
-                <a href="{{'/properties/villas-de-trece-martires-cavite/' | relative_url }}" class="know-more-btn m-0">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
-                        <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    KNOW MORE
-                </a>
-            </div>
-        </div>
-
-        <!-- Card 9 -->
-        <div class="property-card-row">
-            <div class="property-image">
-                <img src="../assets/img/ourproperties/villas-bacoor.jpg" alt="Villas De Bacoor Dulong Bayan, Cavite" />
-            </div>
-            <div class="property-info">
-                <h3 class="m-0">Villas De Bacoor Dulong Bayan, Cavite</h3>
-                <p class="text-lg font-medium text-black border-2 border-yellow-500 rounded-full px-4 py-1 inline-block mt-2 bg-white"
-                    style="width: fit-content; box-shadow: none;">
-                    SOLD OUT
-                </p>
-                <p>RCD Villas de Bacoor is the affordable choice in this prime city.</p>
-                <div class="text-sm text-gray-700 mb-2">
-                    <strong>AMENITIES</strong>
-                    <ul
-                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
-                        <li>Guardhouse</li>
-                        <li>Clubhouse</li>
-                        <li>Basketball Court</li>
-                    </ul>
-                    <img src="../assets/img/ourproperties/amenities/GCB.jpg" alt="Amenities">
-                </div>
-                <a href="{{'/properties/villas-de-bacoor-dulongbayan/' | relative_url }}" class="know-more-btn m-0">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
-                        <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    KNOW MORE
-                </a>
-            </div>
-        </div>
-
-        <!-- Card 10 -->
-        <div class="property-card-row reverse">
-            <div class="property-image">
-                <img src="../assets/img/ourproperties/wbh-minuyan-bulacan.jpg"
-                    alt="Winterbreeze Homes San Jose Del Monte, Bulacan" />
-            </div>
-            <div class="property-info">
-                <h3 class="m-0">Winterbreeze Homes San Jose Del Monte, Bulacan</h3>
-                <p class="text-lg font-medium text-black border-2 border-yellow-500 rounded-full px-4 py-1 inline-block mt-2 bg-white"
-                    style="width: fit-content; box-shadow: none;">
-                    SOLD OUT
-                </p>
-                <p>Strategically located in the progressing city of San Jose del Monte in Bulacan</p>
-                <div class="text-sm text-gray-700 mb-2">
-                    <strong>AMENITIES</strong>
-                    <ul
-                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
-                        <li>Gate & Guard House</li>
-                        <li>Basketball Court</li>
-                        <li>Parking</li>
-                        <li>Sun room</li>
-                        <li>Concrete Flooring</li>
-                    </ul>
-                    <img src="../assets/img/ourproperties/amenities/GBPSC.jpg" alt="Amenities">
-                </div>
-                <a href="{{'/properties/rcd-winter-breeze-homes-bulacan/' | relative_url }}" class="know-more-btn m-0">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
-                        <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    KNOW MORE
-                </a>
-            </div>
-        </div>
-
-        <!-- Card 11 -->
-        <div class="property-card-row">
-            <div class="property-image">
-                <img src="../assets/img/ourproperties/wbh-alingaro-cavite.jpg"
-                    alt="Winterbreeze Homes General Trias, Cavite" />
-            </div>
-            <div class="property-info">
-                <h3 class="m-0">Winterbreeze Homes General Trias, Cavite</h3>
-                <p class="text-lg font-medium text-black border-2 border-yellow-500 rounded-full px-4 py-1 inline-block mt-2 bg-white"
-                    style="width: fit-content; box-shadow: none;">
-                    PRICE STARTS AT ₱ 450K
-                </p>
-                <p>The subdivision is conveniently located in the city of General Trias.</p>
-                <div class="text-sm text-gray-700 mb-2">
-                    <strong>AMENITIES</strong>
-                    <ul
-                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 16px; margin-top: 4px; list-style: disc inside;">
-                        <li>Gate & Guard House</li>
-                        <li>Basketball Court</li>
-                        <li>Parking</li>
-                        <li>Sun room</li>
-                        <li>Concrete Flooring</li>
-                    </ul>
-                    <img src="../assets/img/ourproperties/amenities/GBPSC.jpg" alt="Amenities">
-                </div>
-                <a href="{{'/properties/rcd-winter-breeze-homes-cavite/' | relative_url }}" class="know-more-btn m-0">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
-                        <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    KNOW MORE
-                </a>
-            </div>
-        </div>
+<section class="properties-section bg-white py-24">
+  <div class="max-w-7xl mx-auto px-0">
+    <!-- Section Header -->
+    <div class="mb-16 flex items-start space-x-6 max-w-5xl">
+      <div class="w-1.5 h-28 bg-green-500 rounded"></div>
+      <div>
+        <h2 class="text-4xl font-bold text-gray-800">Our Amazing Properties</h2>
+        <p class="text-lg text-gray-600 mt-3">
+          Find your perfect home within striking distance of the metro's bustling business and
+          commercial centers at RCD Home's Exclusive Properties.
+        </p>
+      </div>
     </div>
+
+    <!-- Card 1 -->
+    <div class="property-card-row">
+      <div class="property-image-col" tabindex="0">
+        <img src="../assets/img/ourproperties/phase4-sideview.jpg" alt="Royale Homes Phase 4 Silang, Cavite"
+          class="property-image" />
+      </div>
+      <div class="property-info">
+        <h3>Royale Homes Phase 4 Silang, Cavite</h3>
+        <div class="price-pill">PRICE STARTS AT ₱ 5.5M</div>
+        <p>Discover the cool serenity of RCD Royale Homes Silang Phase 4!</p>
+        <div class="amenities-section">
+          <strong>AMENITIES</strong>
+          <div class="amenities-icons-row">
+            <div class="amenity-icon">
+              <img src="../assets/icons/guard-house.png" alt="Guard House" />
+              <div class="amenity-label">guardhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/clubhouse.png" alt="Clubhouse" />
+              <div class="amenity-label">clubhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/basketball-court.png" alt="Basketball Court" />
+              <div class="amenity-label">basketball court</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/swimming-pool.png" alt="Swimming Pool" />
+              <div class="amenity-label">swimming pool</div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ '/properties/royale-homes-silang-phase4/' | relative_url }}" class="know-more-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
+            <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          KNOW MORE
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="property-card-row reverse">
+      <div class="property-image-col" tabindex="0">
+        <img src="../assets/img/ourproperties/rrh-balayan.jpg" alt="Royale Homes Balayan, Batangas"
+          class="property-image" />
+      </div>
+      <div class="property-info">
+        <h3>Royale Homes Balayan, Batangas</h3>
+        <div class="price-pill">PRICE STARTS AT ₱ 1.3M</div>
+        <p>RCD Royale Homes Balayan is an 80,141 sqm subdivision which has a total of 509 saleable units.</p>
+        <div class="amenities-section">
+          <strong>AMENITIES</strong>
+          <div class="amenities-icons-row">
+            <div class="amenity-icon">
+              <img src="../assets/icons/guard-house.png" alt="Guard House" />
+              <div class="amenity-label">guardhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/clubhouse.png" alt="Clubhouse" />
+              <div class="amenity-label">clubhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/basketball-court.png" alt="Basketball Court" />
+              <div class="amenity-label">basketball court</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/swimming-pool.png" alt="Swimming Pool" />
+              <div class="amenity-label">swimming pool</div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ '/properties/royale-homes-balayan-batangas/' | relative_url }}" class="know-more-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
+            <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          KNOW MORE
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="property-card-row">
+      <div class="property-image-col" tabindex="0">
+        <img src="../assets/img/ourproperties/bf-townhomes-2.jpg" alt="RCD BF Homes Paranaque City"
+          class="property-image" />
+      </div>
+      <div class="property-info">
+        <h3>RCD BF Homes Paranaque City</h3>
+        <div class="price-pill">PRICE STARTS AT ₱ 8.8M</div>
+        <p>Inside the largest village of Asia, RCD BF Homes Parañaque is your affordable option in this prime location.
+        </p>
+        <div class="amenities-section">
+          <strong>AMENITIES</strong>
+          <div class="amenities-icons-row">
+            <div class="amenity-icon">
+              <img src="../assets/icons/gate.png" alt="Gate" />
+              <div class="amenity-label">gate</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/parking.png" alt="Parking" />
+              <div class="amenity-label">parking</div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ '/properties/rcd-bf-homes-paranaque/' | relative_url }}" class="know-more-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
+            <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          KNOW MORE
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="property-card-row reverse">
+      <div class="property-image-col" tabindex="0">
+        <img src="../assets/img/ourproperties/rrh-silang.jpg" alt="Royale Homes Silang, Cavite"
+          class="property-image" />
+      </div>
+      <div class="property-info">
+        <h3>Royale Homes Phase 3 Silang, Cavite</h3>
+        <div class="price-pill">PRICE STARTS AT ₱ 3.6M</div>
+        <p>Live your suburban dreams in RCD Royale Homes Silang!</p>
+        <div class="amenities-section">
+          <strong>AMENITIES</strong>
+          <div class="amenities-icons-row">
+            <div class="amenity-icon">
+              <img src="../assets/icons/guard-house.png" alt="Guard House" />
+              <div class="amenity-label">guardhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/clubhouse.png" alt="Clubhouse" />
+              <div class="amenity-label">clubhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/basketball-court.png" alt="Basketball Court" />
+              <div class="amenity-label">basketball court</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/swimming-pool.png" alt="Swimming Pool" />
+              <div class="amenity-label">swimming pool</div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ '/properties/royale-homes-silang-phase3/' | relative_url }}" class="know-more-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
+            <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          KNOW MORE
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="property-card-row">
+      <div class="property-image-col" tabindex="0">
+        <img src="../assets/img/ourproperties/rrh-tuy.jpg" alt="Royale Homes Tuy, Batangas" class="property-image" />
+      </div>
+      <div class="property-info">
+        <h3>Royale Homes Tuy, Batangas</h3>
+        <div class="price-pill">PRICE STARTS AT ₱ 1.3M</div>
+        <p>Your adventure awaits in RCD Royale Homes Tuy! With famous beaches and hiking spots...</p>
+        <div class="amenities-section">
+          <strong>AMENITIES</strong>
+          <div class="amenities-icons-row">
+            <div class="amenity-icon">
+              <img src="../assets/icons/guard-house.png" alt="Guard House" />
+              <div class="amenity-label">guardhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/clubhouse.png" alt="Clubhouse" />
+              <div class="amenity-label">clubhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/basketball-court.png" alt="Basketball Court" />
+              <div class="amenity-label">basketball court</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/swimming-pool.png" alt="Swimming Pool" />
+              <div class="amenity-label">swimming pool</div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ '/properties/royale-homes-tuy-batangas/' | relative_url }}" class="know-more-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
+            <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          KNOW MORE
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="property-card-row reverse">
+      <div class="property-image-col" tabindex="0">
+        <img src="../assets/img/ourproperties/rrh-nor.jpg" alt="Royale Homes Norzagaray, Bulacan"
+          class="property-image" />
+      </div>
+      <div class="property-info">
+        <h3>Royale Homes Norzagaray, Bulacan</h3>
+        <div class="price-pill">PRICE STARTS AT ₱ 1.3M</div>
+        <p>For that balanced lifestyle, RCD Royale Homes Bulacan is the best choice for you!</p>
+        <div class="amenities-section">
+          <strong>AMENITIES</strong>
+          <div class="amenities-icons-row">
+            <div class="amenity-icon">
+              <img src="../assets/icons/guard-house.png" alt="Guard House" />
+              <div class="amenity-label">guardhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/clubhouse.png" alt="Clubhouse" />
+              <div class="amenity-label">clubhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/basketball-court.png" alt="Basketball Court" />
+              <div class="amenity-label">basketball court</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/swimming-pool.png" alt="Swimming Pool" />
+              <div class="amenity-label">swimming pool</div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ '/properties/royale-homes-norzagaray/' | relative_url }}" class="know-more-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
+            <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          KNOW MORE
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="property-card-row">
+      <div class="property-image-col" tabindex="0">
+        <img src="../assets/img/ourproperties/rrh-bat.jpg" alt="Royale Homes Mariveles, Bataan"
+          class="property-image" />
+      </div>
+      <div class="property-info">
+        <h3>Royale Homes Mariveles, Bataan</h3>
+        <div class="price-pill">PRICE STARTS AT ₱ 1.3M</div>
+        <p>RCD Royale Homes Bataan is a gated subdivision which offers 613 units of quality and affordable homes in a
+          peaceful and tranquil community.</p>
+        <div class="amenities-section">
+          <strong>AMENITIES</strong>
+          <div class="amenities-icons-row">
+            <div class="amenity-icon">
+              <img src="../assets/icons/guard-house.png" alt="Guard House" />
+              <div class="amenity-label">guardhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/clubhouse.png" alt="Clubhouse" />
+              <div class="amenity-label">clubhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/basketball-court.png" alt="Basketball Court" />
+              <div class="amenity-label">basketball court</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/swimming-pool.png" alt="Swimming Pool" />
+              <div class="amenity-label">swimming pool</div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ '/properties/royale-homes-mariveles-bataan/' | relative_url }}" class="know-more-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
+            <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          KNOW MORE
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="property-card-row reverse">
+      <div class="property-image-col" tabindex="0">
+        <img src="../assets/img/ourproperties/villas-trece.jpg" alt="Villas De Trece Martires, Cavite"
+          class="property-image" />
+      </div>
+      <div class="property-info">
+        <h3>Villas De Trece Martires, Cavite</h3>
+        <div class="price-pill">PRICE STARTS AT ₱ 1.8M</div>
+        <p>Villas De Trece offers our homeowners to experience a suburban living but still accessible to the daily
+          essentials of its people.</p>
+        <div class="amenities-section">
+          <strong>AMENITIES</strong>
+          <div class="amenities-icons-row">
+            <div class="amenity-icon">
+              <img src="../assets/icons/guard-house.png" alt="Guardhouse" />
+              <div class="amenity-label">guardhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/clubhouse.png" alt="Clubhouse" />
+              <div class="amenity-label">clubhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/basketball-court.png" alt="Basketball Court" />
+              <div class="amenity-label">basketball court</div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ '/properties/villas-de-trece-martires-cavite/' | relative_url }}" class="know-more-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
+            <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          KNOW MORE
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="property-card-row">
+      <div class="property-image-col" tabindex="0">
+        <img src="../assets/img/ourproperties/villas-bacoor.jpg" alt="Villas De Bacoor Dulong Bayan, Cavite"
+          class="property-image" />
+      </div>
+      <div class="property-info">
+        <h3>Villas De Bacoor Dulong Bayan, Cavite</h3>
+        <div class="price-pill">SOLD OUT</div>
+        <p>RCD Villas de Bacoor is the affordable choice in this prime city.</p>
+        <div class="amenities-section">
+          <strong>AMENITIES</strong>
+          <div class="amenities-icons-row">
+            <div class="amenity-icon">
+              <img src="../assets/icons/guard-house.png" alt="Guardhouse" />
+              <div class="amenity-label">guardhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/clubhouse.png" alt="Clubhouse" />
+              <div class="amenity-label">clubhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/basketball-court.png" alt="Basketball Court" />
+              <div class="amenity-label">basketball court</div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ '/properties/villas-de-bacoor-dulongbayan/' | relative_url }}" class="know-more-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
+            <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          KNOW MORE
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="property-card-row reverse">
+      <div class="property-image-col" tabindex="0">
+        <img src="../assets/img/ourproperties/wbh-minuyan-bulacan.jpg"
+          alt="Winterbreeze Homes San Jose Del Monte, Bulacan" class="property-image" />
+      </div>
+      <div class="property-info">
+        <h3>Winterbreeze Homes San Jose Del Monte, Bulacan</h3>
+        <div class="price-pill">SOLD OUT</div>
+        <p>Strategically located in the progressing city of San Jose del Monte in Bulacan</p>
+        <div class="amenities-section">
+          <strong>AMENITIES</strong>
+          <div class="amenities-icons-row">
+            <div class="amenity-icon">
+              <img src="../assets/icons/guard-house.png" alt="Guard House" />
+              <div class="amenity-label">guardhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/basketball-court.png" alt="Basketball Court" />
+              <div class="amenity-label">basketball court</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/parking.png" alt="Parking" />
+              <div class="amenity-label">parking</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/sun-room.png" alt="Sun room" />
+              <div class="amenity-label">sun room</div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ '/properties/rcd-winter-breeze-homes-bulacan/' | relative_url }}" class="know-more-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
+            <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          KNOW MORE
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 11 -->
+    <div class="property-card-row last">
+      <div class="property-image-col" tabindex="0">
+        <img src="../assets/img/ourproperties/wbh-alingaro-cavite.jpg" alt="Winterbreeze Homes General Trias, Cavite"
+          class="property-image" />
+      </div>
+      <div class="property-info">
+        <h3>Winterbreeze Homes General Trias, Cavite</h3>
+        <div class="price-pill">PRICE STARTS AT ₱ 450K</div>
+        <p>The subdivision is conveniently located in the city of General Trias.</p>
+        <div class="amenities-section">
+          <strong>AMENITIES</strong>
+          <div class="amenities-icons-row">
+            <div class="amenity-icon">
+              <img src="../assets/icons/guard-house.png" alt="Guard House" />
+              <div class="amenity-label">guardhouse</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/basketball-court.png" alt="Basketball Court" />
+              <div class="amenity-label">basketball court</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/parking.png" alt="Parking" />
+              <div class="amenity-label">parking</div>
+            </div>
+            <div class="amenity-icon">
+              <img src="../assets/icons/sun-room.png" alt="Sun room" />
+              <div class="amenity-label">sun room</div>
+            </div>
+          </div>
+        </div>
+        <a href="{{ '/properties/rcd-winter-breeze-homes-cavite/' | relative_url }}" class="know-more-btn">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M1.5 12s3.5-7 10.5-7 10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12z" />
+            <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          KNOW MORE
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
