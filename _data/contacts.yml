@@ -4,47 +4,22 @@ offices:
     address: "Chateau De Baie Condominium Corporation Building, 149 Roxas Blvd, Paranaque City, Metro Manila, Philippines"
     phone1: "0288937451"
     phone2: "0288937452"
-    email: "info@rcdland.com"
+    email: "sales@rcdland.com"
 
   - name: "RCD Royale Homes Mariveles Sales Office"
     address: "Mountain View Village, 15 Roman Superhighway, Mariveles, Bataan, Philippines"
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2731.9441163143247!2d120.57436560395762!3d14.452938559399398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339623005f6e3ee5%3A0x3ca61b84f805f9c0!2sRCD%20Royale%20Homes%20Mariveles%20Sales%20Office!5e0!3m2!1sen!2sus!4v1750396892532!5m2!1sen!2sus"
     phone1: "09177001109"
+    email: "mariveles-sales@rcdland.com"
 
-  - name: "RCD Royale Homes TUY Sales Office"
+  - name: "RCD Royale Homes Tuy Sales Office"
     address: "Brgy. Poblacion 1, Tuy, Batangas, Philippines"
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.3417784621515!2d120.70226677375267!3d14.056983990157358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd9bbb8ae51e11%3A0xfdacd5fac1e1c98f!2sRCD%20Royale%20Homes%20Tuy%20Batangas!5e0!3m2!1sen!2sus!4v1750402212532!5m2!1sen!2sus"
+    email: "tuy-sales@rcdland.com"
 
   - name: "RCD Royale Homes Balayan Sales Office"
     address: "Brgy. Poblacion 1, Balayan, Batangas, Philippines"
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.128054525573!2d120.69579317375053!3d13.950973292653728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bdbdf8d87acd67%3A0x71befb2afef82be1!2sRCD%20Royale%20Homes%20Balayan!5e0!3m2!1sen!2sph!4v1750402278652!5m2!1sen!2sph"
     phone1: "09617541032"
+    email: "balayan-sales@rcdland.com"
 
-  - name: "RCD Realty Laguna Sales Office"
-    address: "One RCD Business Center, Manila S Road, Grand Riverstone Village, BRGY. DITA, STA.ROSA, LAGUNA, Philippines"
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13005.593471480772!2d121.10826162049759!3d14.277340720957481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9b3bdfc07bf%3A0xf255a52c56e6c43f!2sRCD%20Realty%20Marketing%20Corporation!5e0!3m2!1sen!2sph!4v1750399252414!5m2!1sen!2sph"
-    phone1: "09063882249"
-
-  - name: "RCD Realty Cavite Sales Office"
-    address: "2nd Floor, Dela Cuesta BLDG., BRGY. Sampaloc, Pala-Pala, Dasmarinas City, Cavite, Philippines"
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.885870626098!2d120.6886340148496!3d13.97864699083069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bdfc7a8e9b8c7b%3A0x5e6a9c8c8e4b4c5a!2sRCD%20Royale%20Homes%20Tuy%20Sales%20Office!5e0!3m2!1sen!2sus!4v1750396892532!5m2!1sen!2sus"
-    phone1: "09457851790"
-
-  - name: "RCD Realty Bulacan Sales Office"
-    address: "MacArthur Highway, Guiguinto, Bulucan"
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.9505864837565!2d120.87093856866294!3d14.828031139859238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339652ddd47df8e1%3A0xc02dcad003e4fccf!2sRcd%20Realty%20Marketing%20Corporation!5e0!3m2!1sen!2sph!4v1750400366888!5m2!1sen!2sph"
-    phone1: "09057887530"
-
-  - name: "RCD Realty Pampanga Sales Office"
-    address: "Brgy. San Nicolas, San Fernando, Pampanga, Philippines"
-    map: "https://www.google.com/maps/embed?pb=!3m2!1sen!2sph!4v1750400849939!5m2!1sen!2sph!6m8!1m7!1scImMHTbgI7g9xGkrmYGXqw!2m2!1d14.78125985184997!2d121.0741579491316!3f315.088414842813!4f5.477700402781906!5f3.325193203789971"
-    phone1: "(02) 975-3969"
-
-  - name: "RCD Realty Quezon Sales Office"
-    address: "UNIT 6 9640 Maharlika High-way, Brgy. LUsacan, Tiaong, Quezon Province"
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1775.396480546288!2d121.61249137473098!3d13.95116514912603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd4d59d1262307%3A0xe2286c8df8da4e34!2sRCD%20Realty%20Lucena!5e0!3m2!1sen!2sph!4v1750401168410!5m2!1sen!2sph"
-    phone1: "09177039270"
-
-  - name: "RCD Realty Lipa Sales Office"
-    address: "J.P. Laurel Highway, Brgy. Inosluban, Lipa City, Batangas"
-    map: "https://www.google.com/maps/embed?pb=!4v1750401751157!6m8!1m7!1sajkGK-dFrZRQP5n9oQ0vLQ!2m2!1d13.98319523656343!2d121.1679633480414!3f77.91817082473275!4f-14.713932181412247!5f0.6966724638303785"
