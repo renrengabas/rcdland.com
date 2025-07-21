@@ -58,18 +58,22 @@ permalink: /index
 
 <body class="snap-y snap-mandatory smooth-scroll">
 
-  <!-- Section 1: Hero / Carousel Replacement -->
+    <!-- Section 1: Hero / Carousel Replacement -->
   <section id="hero"
     class="snap-start snap-always scroll-mt-[81px] relative min-h-screen flex items-center justify-center snap-start bg-black overflow-hidden">
-    <!-- Replace video backgrounds with a static image -->
-    <img src="/assets/img/main-src-imgs/bg-hero.JPG" alt="Hero Background"
-      class="absolute inset-0 w-full h-full object-cover opacity-80 z-0" />
+    <!-- Desktop video -->
+    <video class="hero-video-desktop absolute inset-0 w-full h-full object-cover opacity-80 z-0"
+      src="/assets/vid/deskbg.mp4" autoplay loop muted playsinline></video>
+    <!-- Mobile video -->
+    <video class="hero-video-mobile absolute inset-0 w-full h-full object-cover opacity-80 z-0"
+      src="/assets/vid/mobbg.mp4" autoplay loop muted playsinline></video>
     <div class="absolute inset-0 bg-black opacity-40 z-0"></div>
     <div class="relative z-10 text-center text-white">
       <h1 class="text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">Welcome to RCD Land Inc.</h1>
-      <p class="text-xl font-regular mb-8">Bringing your dream home to life.</p>
+      <p class="text-xl md:text-2xl mb-8">Bringing your dream home to life.</p>
       <a href="#featured"
-        class="inline-block px-10 py-4 bg-yellow-500 hover:bg-green-600 text-black font-bold rounded-full text-2xl font-semibold transition">Browse Properties</a>
+        class="inline-block px-4 py-2 bg-yellow-500 hover:bg-green-600 text-black rounded-full text-lg transition">Know
+        More</a>
     </div>
   </section>
 
@@ -189,8 +193,6 @@ permalink: /index
 
   <!-- Section 4: Schedule Site Viewing -->
   <section id="schedule" class="flex-col relative min-h-screen flex items-center justify-center snap-start">
-    <img src="/assets/img/main-src-imgs/carousel/careers-cover.jpg" alt="Schedule Viewing"
-      class="absolute inset-0 w-full h-full object-cover opacity-70" />
     <div class="relative z-10 text-center text-white max-w-xl mx-auto">
       <h2 class="text-4xl md:text-5xl font-semibold mb-6">Schedule a Site Viewing</h2>
       <p class="mb-8 text-lg">Book a visit to your dream home. Choose your preferred date and time, and our team will
@@ -203,7 +205,9 @@ permalink: /index
         </a>
       </div>
     </div>
-    <div class="absolute inset-0 bg-black opacity-40"></div>
+    <img src="/assets/img/main-src-imgs/bg-hero.JPG" alt="Hero Background"
+      class="absolute inset-0 w-full h-full object-cover opacity-80 z-0" />
+    <div class="absolute inset-0 bg-black opacity-40 z-0"></div>
   </section>
 
   <!-- Section 5: Awards -->
