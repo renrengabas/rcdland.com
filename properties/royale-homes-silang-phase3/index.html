@@ -6,11 +6,23 @@ permalink: /properties/royale-homes-silang-phase3/
 
 <body>
   <!-- Parallax Section -->
-  <div class="parallax-1">
-    <div class="parallax-3"
-      style="background-image: url('../../../assets/img/ourproperties/parallax-bg/rrh-silang-aerial.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+  <div class="parallax-1 relative">
+    <!-- Video Background (Desktop Only) -->
+    <div class="hidden md:block absolute inset-0 w-full h-full overflow-hidden">
+      <video autoplay loop muted playsinline class="w-full h-full object-cover">
+        <source src="../../../assets\img\ourproperties\parallax-bg/RRH SILANG.mp4" type="video/mp4">
+        <!-- Fallback image if video doesn't load -->
+        <img src="../../../assets/img/ourproperties/parallax-bg/rrh-silang-aerial.jpg" alt=""
+          class="w-full h-full object-cover">
+      </video>
     </div>
-    <div class="overlay">
+
+    <!-- Image Background (Mobile Only) -->
+    <div class="md:hidden absolute inset-0 w-full h-full"
+      style="background-image: url('../../../assets/img/ourproperties/parallax-bg/rrh-silang-aerial.jpg'); background-size: cover; background-position: center;">
+    </div>
+
+    <div class="overlay relative">
       <div
         class="container pt-[65px] mx-auto max-w-[95%] sm:max-w-[90%] lg:max-w-[80%] text-center lg:text-left text-white">
         <div>
@@ -19,7 +31,7 @@ permalink: /properties/royale-homes-silang-phase3/
 
           <h1 class="proj-title">RCD Royale Homes</h1>
           <h1 class="proj-title">Silang, Cavite</h1>
-          <p class="header-text">fb.com/rcdlandincofficial instagram/rcdlandinc</p>
+
         </div>
       </div>
     </div>
@@ -108,7 +120,7 @@ permalink: /properties/royale-homes-silang-phase3/
                     <span class="font-bold text-sm">Location:</span>
                     <span class="text-sm">Silang, Cavite</span>
                   </p>
-                  
+
                   <p class="flex justify-between">
                     <span class="font-bold text-sm">Status:</span>
                     <span class="text-sm">FOR SALE</span>
