@@ -368,300 +368,310 @@
 
     /* ==================== Base Styles ==================== */
 
-.properties-section {
-  margin-top: 81px;
-  padding: 40px 0;
-  background: #fff;
-}
+    .properties-section {
+      margin-top: 81px;
+      padding: 40px 0;
+      background: #fff;
+    }
 
-/* ==================== Layout: Property Rows ==================== */
+    /* ==================== Layout: Property Rows ==================== */
 
-.property-card-row {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 140px;
-}
+    .property-card-row {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 140px;
+    }
 
-.property-card-row:last-child {
-  margin-bottom: 0;
-}
+    .property-card-row:last-child {
+      margin-bottom: 0;
+    }
 
-.property-card-row.reverse {
-  flex-direction: row-reverse;
-}
+    .property-card-row.reverse {
+      flex-direction: row-reverse;
+    }
 
-/* ==================== Property Image ==================== */
+    /* ==================== Property Image ==================== */
 
-.property-image,
-.property-card-row .property-image {
-  display: inline-flex;
-  align-items: stretch;
-  justify-content: center;
-  background: #fff;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 12px;
-  padding: 0;
-  border-radius: 12px;
-  max-width: 100%;
-}
+    .property-image,
+    .property-card-row .property-image {
+      display: inline-flex;
+      align-items: stretch;
+      justify-content: center;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin: 0 12px;
+      padding: 0;
+      border-radius: 12px;
+      max-width: 100%;
+    }
 
-.property-image img {
-  display: block;
-  max-width: 100%;
-  max-height: 500px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 12px;
-  background: #fff;
-  transition: transform 0.3s ease;
-}
+    .property-image img {
+      display: block;
+      max-width: 100%;
+      max-height: 500px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+      transition: transform 0.3s ease;
+    }
 
-.property-image:hover img {
-  transform: scale(1.08);
-}
+    .property-image:hover img {
+      transform: scale(1.08);
+    }
 
-/* ==================== Property Info ==================== */
+    /* ==================== Property Info ==================== */
 
-.property-info {
-  flex: 1 1 220px;
-  min-width: 220px;
-  max-width: 35%;
-  padding: 0 24px;
-  margin: 0 12px;
-  position: relative;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+    .property-info {
+      flex: 1 1 220px;
+      min-width: 220px;
+      max-width: 35%;
+      padding: 0 24px;
+      margin: 0 12px;
+      position: relative;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
 
-.property-info h3 {
-  color: #16a34a;
-  font-size: 2rem;
-  font-weight: 550;
-  margin-bottom: 8px;
-}
+    .property-info h3 {
+      color: #16a34a;
+      font-size: 2rem;
+      font-weight: 550;
+      margin-bottom: 8px;
+    }
 
-.property-info p {
-  color: #374151;
-  font-size: 1rem;
-  margin-bottom: 16px;
-}
+    .property-info p {
+      color: #374151;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
 
-/* Amenities image */
-.property-info img[alt="Amenities"] {
-  width: 200px;
-  height: 120px;
-  max-width: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-top: 8px;
-  filter: grayscale(100%);
-  background: none;
-  display: block;
-}
+    /* Amenities image */
+    .property-info img[alt="Amenities"] {
+      width: 200px;
+      height: 120px;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 8px;
+      filter: grayscale(100%);
+      background: none;
+      display: block;
+    }
 
-/* ==================== Buttons ==================== */
+    /* ==================== Buttons ==================== */
 
-.know-more-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
-  background: #16a34a;
-  border-radius: 6px;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: auto;
-  align-self: flex-start;
-  width: fit-content;
-  transition: background 0.2s, color 0.2s;
-}
+    .know-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fff;
+      background: #16a34a;
+      border-radius: 6px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: auto;
+      align-self: flex-start;
+      width: fit-content;
+      transition: background 0.2s, color 0.2s;
+    }
 
-.know-more-btn:hover {
-  background: #f7c940;
-  color: #fff;
-}
+    .know-more-btn:hover {
+      background: #f7c940;
+      color: #fff;
+    }
 
-.know-more-btn svg {
-  width: 20px;
-  height: 20px;
-  color: #fff;
-}
+    .know-more-btn svg {
+      width: 20px;
+      height: 20px;
+      color: #fff;
+    }
 
-/* ==================== Utility Classes ==================== */
+    /* ==================== Utility Classes ==================== */
 
-.flex {
-  display: flex;
-}
+    .flex {
+      display: flex;
+    }
 
-.items-center {
-  align-items: center;
-}
+    .items-center {
+      align-items: center;
+    }
 
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-  margin-left: 1rem;
-}
+    .space-x-4> :not([hidden])~ :not([hidden]) {
+      margin-left: 1rem;
+    }
 
-.m-0 {
-  margin: 0;
-}
+    .m-0 {
+      margin: 0;
+    }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
 
-/* ==================== Responsive Styles ==================== */
+    /* ==================== Responsive Styles ==================== */
 
-@media (max-width: 1100px) {
-  .property-card-row,
-  .property-card-row.reverse {
-    flex-direction: column;
-    align-items: stretch;
-  }
+    @media (max-width: 1100px) {
 
-  .property-image,
-  .property-card-row .property-image {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    height: 260px;
-    margin: 0 0 16px 0;
-  }
+      .property-card-row,
+      .property-card-row.reverse {
+        flex-direction: column;
+        align-items: stretch;
+      }
 
-  .property-info {
-    max-width: 100%;
-    min-width: 0;
-    margin: 0 0 16px 0;
-    height: auto;
-  }
+      .property-image,
+      .property-card-row .property-image {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        height: 260px;
+        margin: 0 0 16px 0;
+      }
 
-  .know-more-btn {
-    font-size: 0.95rem;
-    padding: 12px 24px;
-    margin-top: 24px;
-    width: fit-content;
-  }
-}
+      .property-info {
+        max-width: 100%;
+        min-width: 0;
+        margin: 0 0 16px 0;
+        height: auto;
+      }
 
-@media (min-width: 700px) and (max-width: 1100px) {
-  .property-image,
-  .property-card-row .property-image {
-    width: 100%;
-    height: 320px;
-    min-width: 0;
-    max-width: 100%;
-    margin: 0 0 16px 0;
-    border-radius: 12px;
-    padding: 0;
-    overflow: hidden;
-  }
+      .know-more-btn {
+        font-size: 0.95rem;
+        padding: 12px 24px;
+        margin-top: 24px;
+        width: fit-content;
+      }
+    }
 
-  .property-image img {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    background: #fff;
-    transition: transform 0.3s ease;
-  }
-}
+    @media (min-width: 700px) and (max-width: 1100px) {
 
-@media (max-width: 700px) {
-  .properties-section {
-    padding: 20px 0;
-  }
+      .property-image,
+      .property-card-row .property-image {
+        width: 100%;
+        height: 320px;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0 0 16px 0;
+        border-radius: 12px;
+        padding: 0;
+        overflow: hidden;
+      }
 
-  .property-image,
-  .property-card-row .property-image {
-    width: 100%;
-    height: auto;
-    min-width: 0;
-    max-width: 100%;
-    margin: 0 0 16px 0;
-    border-radius: 12px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+      .property-image img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        background: #fff;
+        transition: transform 0.3s ease;
+      }
+    }
 
-  .property-image img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
+    @media (max-width: 700px) {
+      .properties-section {
+        padding: 20px 0;
+      }
 
-  .property-info {
-    height: auto;
-  }
+      .property-image,
+      .property-card-row .property-image {
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0 0 16px 0;
+        border-radius: 12px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-  .property-info h3 {
-    font-size: 1.2rem;
-  }
+      .property-image img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
 
-  .property-info p {
-    font-size: 0.95rem;
-  }
+      .property-info {
+        height: auto;
+      }
 
-  .know-more-btn {
-    font-size: 0.85rem;
-    padding: 10px 16px;
-    margin-top: 24px;
-    width: fit-content;
-  }
+      .property-info h3 {
+        font-size: 1.2rem;
+      }
 
-  .property-info img[alt="Amenities"] {
-    width: 80px;
-    height: 50px;
-    min-width: 0;
-    max-width: 100px;
-    object-fit: contain;
-  }
-}
+      .property-info p {
+        font-size: 0.95rem;
+      }
 
-footer {
-    position: relative;
-    color: #fff !important;
-    background: none !important;
-  }
-  footer .container {
-    position: relative;
-    z-index: 2;
-  }
-  footer::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(120deg, #0a4d2c 60%, #1b7a3a 100%);
-    opacity: 0.92;
-  }
-  footer * {
-    color: #fff !important;
-    transition: color 0.2s;
-  }
-  footer a:hover, footer a:focus {
-    color: #ffe066 !important;
-  }
-  /* Social icons */
-  footer .w-5.h-5 {
-    fill: #fff;
-    transition: fill 0.2s;
-  }
-  footer a:hover .w-5.h-5, footer a:focus .w-5.h-5 {
-    fill: #ffe066;
-  }
+      .know-more-btn {
+        font-size: 0.85rem;
+        padding: 10px 16px;
+        margin-top: 24px;
+        width: fit-content;
+      }
+
+      .property-info img[alt="Amenities"] {
+        width: 80px;
+        height: 50px;
+        min-width: 0;
+        max-width: 100px;
+        object-fit: contain;
+      }
+    }
+
+    footer {
+      position: relative;
+      color: #fff !important;
+      background: none !important;
+    }
+
+    footer .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(120deg, #0a4d2c 60%, #1b7a3a 100%);
+      opacity: 0.92;
+    }
+
+    footer * {
+      color: #fff !important;
+      transition: color 0.2s;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      color: #ffe066 !important;
+    }
+
+    /* Social icons */
+    footer .w-5.h-5 {
+      fill: #fff;
+      transition: fill 0.2s;
+    }
+
+    footer a:hover .w-5.h-5,
+    footer a:focus .w-5.h-5 {
+      fill: #ffe066;
+    }
