@@ -1,22 +1,24 @@
 ---
 layout: default
-title: Commercial Lot
-permalink: /house-catalogue/commercial-lot/
+title: Townhouse 65
+permalink: /house-catalog/th65/
 ---
 
 <body class="bg-white text-gray-800">
-
   <!-- Parallax Hero Section -->
   <div class="relative h-[90vh] md:h-screen">
-    <!-- Desktop Image Background -->
+    <!-- Desktop Video -->
     <div class="hidden md:block absolute inset-0 w-full h-full overflow-hidden">
-      <img src="/assets/img/house-catalogue/gallery/commercial-lot.jpg" alt="Commercial Lot"
-        class="w-full h-full object-cover">
+      <video autoplay loop muted playsinline class="w-full h-full object-cover">
+        <source src="/assets/img/house-catalog/gallery/TH65_WALKTHROUGH.mp4" type="video/mp4">
+        <img src="/assets/img/house-catalog/gallery/TH-65_parallax.jpg" alt="Fallback image"
+          class="w-full h-full object-cover">
+      </video>
     </div>
 
     <!-- Mobile Image Background -->
     <div class="md:hidden absolute inset-0 bg-cover bg-center"
-      style="background-image: url('/assets/img/house-catalogue/gallery/COMMERCIAL LOT parallax.jpg');">
+      style="background-image: url('/assets/img/house-catalog/gallery/TH-65_parallax.jpg');">
     </div>
 
     <!-- Overlay Content -->
@@ -24,7 +26,7 @@ permalink: /house-catalogue/commercial-lot/
       <div class="container mx-auto px-4 text-center md:text-left text-white">
         <img src="/assets/img/rcd-logos/RCD Royale homes.png" alt="RCD Logo" class="w-24 mx-auto md:mx-0 mb-4">
         <h1 class="text-4xl md:text-5xl font-bold">RCD ROYALE HOMES</h1>
-        <h2 class="text-2xl md:text-3xl font-semibold mt-2">COMMERCIAL LOT</h2>
+        <h2 class="text-2xl md:text-3xl font-semibold mt-2">TOWNHOUSE 65 MODEL</h2>
       </div>
     </div>
   </div>
@@ -33,50 +35,60 @@ permalink: /house-catalogue/commercial-lot/
   <div class="max-w-6xl mx-auto px-4 mt-4 text-sm text-gray-600">
     <a href="{{ '/' | relative_url }}" class="hover:text-yellow-600">Home</a>
     <span class="mx-1">/</span>
-    <a href="{{ '/house-catalogue/' | relative_url }}" class="hover:text-yellow-600">House Catalogue</a>
+    <a href="{{ '/house-catalog/' | relative_url }}" class="hover:text-yellow-600">House catalog</a>
     <span class="mx-1">/</span>
-    <span class="text-gray-800 font-light">Commercial Lot</span>
+    <span class="text-gray-800 font-light">Townhouse 65</span>
   </div>
 
   <section class="py-16 bg-white text-gray-800">
     <div class="max-w-6xl mx-auto px-4">
-
       <div class="flex flex-col md:flex-row gap-10">
         <!-- LEFT: Features and Info -->
         <div class="md:w-1/2 space-y-6">
           <div>
-            <h3 class="text-lg font-semibold text-yellow-600">PRICE RANGE:</h3>
-            <p>Php 6.5M</p>
+            <h3 class="text-lg font-semibold text-yellow-600">HOUSE MODEL PRICE:</h3>
+            <p>Php 1.8M</p>
           </div>
 
           <div>
-            <h3 class="text-lg font-semibold text-yellow-600">🏢 COMMERCIAL LOT FEATURES:</h3>
+            <h3 class="text-lg font-semibold text-yellow-600">🏠 HOUSE FEATURES:</h3>
             <ul class="list-disc list-inside space-y-1">
-              <li><strong>Lot Area:</strong> 360 sqm.</li>
-              <li>Prime commercial location</li>
-              <li>High visibility and accessibility</li>
-              <li>Near major roads and establishments</li>
-              <li>Flexible zoning options</li>
-              <li>Ideal for retail, offices, or food businesses</li>
+              <li><strong>Floor Area:</strong> 65 sqm.</li>
+              <li><strong>Lot Area:</strong> 40 sqm.</li>
+              <li>Provision for 2 Bedrooms</li>
+              <li>1 Toilet & bath</li>
+              <li>Spacious Living Area</li>
+              <li>Dining Area</li>
+              <li>Kitchen Area</li>
+              <li>Carport</li>
+
             </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold text-yellow-600">TURNOVER CONDITION:</h3>
+            <p>Semi Complete</p>
           </div>
 
           <div>
             <h3 class="text-lg font-semibold text-yellow-600">📍 AVAILABLE LOCATIONS:</h3>
             <ul class="list-disc list-inside">
-              <li>Brgy.Sambat, Balayan, Batangas</li>
-
+              <li>Silang, Cavite</li>
+              <li>Norzagaray, Bulacan</li>
+              <li>Mariveles, Bataan</li>
+              <li>Tuy, Batangas</li>
             </ul>
           </div>
         </div>
 
-        <!-- RIGHT: Site Plan Images -->
+        <!-- RIGHT: Floor Plan Images -->
         <div class="md:w-1/2">
-          <h3 class="text-lg font-semibold text-yellow-600 mb-2">SITE PLAN:</h3>
+          <h3 class="text-lg font-semibold text-yellow-600 mb-2">FLOOR PLAN:</h3>
+          <p class="mb-4">Two Floors</p>
           <div class="flex justify-center md:justify-start">
-            <img src="" alt=""
+            <img src="/assets/img/house-catalog/floorplan/TH65-floorplan.png" alt="Townhouse 65 Floor Plan"
               class="w-full max-w-md md:max-w-lg rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-zoom-in"
-              onclick="openModal('')">
+              onclick="openModal('/assets/img/house-catalog/floorplan/TH65-floorplan.png')">
           </div>
         </div>
       </div>
@@ -84,22 +96,19 @@ permalink: /house-catalogue/commercial-lot/
       <!-- GALLERY -->
       <div class="mt-16">
         <h3 class="text-2xl font-bold mb-6 border-b-2 border-yellow-500 inline-block">GALLERY:</h3>
-
         <div class="grid md:grid-cols-2 gap-6">
-          <img src="/assets/img/house-catalogue/gallery/commercial lot-01.jpg" alt="Commercial Lot Overview"
+          <img src="/assets/img/house-catalog/gallery/TH-65_01.jpg" alt="Exterior View"
             class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-zoom-in"
-            onclick="openModal('/assets/img/house-catalogue/gallery/COMMERCIAL LOT parallax.jpg')">
-          <img src="/assets/img/house-catalogue/gallery/commercial lot-02.jpg" alt="Location View"
-            class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-zoom-in"
-            onclick="openModal('/assets/img/house-catalogue/gallery/commercial lot-02.jpg')">
+            onclick="openModal('/assets/img/house-catalog/gallery/TH-65_01.jpg')">
 
-          <img src="/assets/img/house-catalogue/gallery/commercial lot-04.jpg" alt="Potential Usage"
-            class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-zoom-in"
-            onclick="openModal('/assets/img/house-catalogue/gallery/commercial lot-04.jpg')">
         </div>
 
         <div class="text-center mt-10">
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@rcdland.com&su=Bhttps://mail.google.com/mail/u/0/?fs=1&to=sales@rcdland.com&su=Book+A+Tripping+-+RCD+Commercial+Lot&tf=cm" 
+          <a href="/walkthrough/th65/" target="_blank"
+            class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition-all duration-300">
+            Experience Walkthrough
+          </a>
+          <a href="https://mail.google.com/mail/u/0/?fs=1&to=sales@rcdland.com&su=Book+A+Tripping+-+RCD+Townhouse+65&tf=cm" 
             target="_blank"
             class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition-all duration-300">
             Book a Tripping
@@ -123,16 +132,15 @@ permalink: /house-catalogue/commercial-lot/
       const modalImg = document.getElementById('modalImage');
       modal.classList.remove('hidden');
       modalImg.src = src;
-      document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+      document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
       const modal = document.getElementById('imageModal');
       modal.classList.add('hidden');
-      document.body.style.overflow = 'auto'; // Re-enable scrolling
+      document.body.style.overflow = 'auto';
     }
 
-    // Close modal when clicking outside the image
     document.getElementById('imageModal').addEventListener('click', function (e) {
       if (e.target === this) {
         closeModal();

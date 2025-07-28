@@ -116,7 +116,7 @@ function showVideo(button) {
   iframe.classList.remove("hidden"); // show video
 }
 
-// Custom select dropdown functionality for House-catalogue
+// Custom select dropdown functionality for House-catalog
 const customSelect = document.querySelector('.custom-select');
 const select = customSelect.querySelector('select');
 
