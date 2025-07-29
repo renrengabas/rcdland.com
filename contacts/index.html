@@ -320,8 +320,12 @@ permalink: /contacts/
               <h4 class="mb-1 flex items-center font-semibold text-base">
                 Business Hours
               </h4>
-              <p class="leading-tight">MWF & Sat: 8am-6pm</p>
-              <p class="leading-tight">Sun: 8am-5pm</p>
+              {% if office.weekdays %}
+              <p class="leading-tight">{{ office.weekdays }}</p>
+              {% endif %}
+              {% if office.weekends %}
+              <p class="leading-tight">{{ office.weekends }}</p>
+              {% endif %}
             </div>
 
           </div>
